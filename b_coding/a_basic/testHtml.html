@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <title>첫번째 테스트 문서</title>
+    <style>
+	h1{background-color:#f06;}
+	p{color:#77f; margin:0; }
+	p .man{font-weight:bold; color:#333;}
+    </style>
+  </head>
+  <body>
+	<h1>문서 테스트</h1>
+	<p>첫번째 웹문서를 제작해보도록 하겠습니다.</p>
+	<p>두번째 내용을 작성해 보겠습니다.</p>
+	<p id="man">결과는 잘 나올까요?</p>
+	<p> <span class="man">추가내용</span> </p>
+
+    <script>
+      var myH = document.getElementsByTagName('h1')[0];
+       myH.addEventListener('mouseenter', function(){
+	  myH.style.backgroundColor="#3fa";  
+       });
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
