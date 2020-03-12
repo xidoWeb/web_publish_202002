@@ -10,12 +10,12 @@
 
   <title>시멘틱 구조 이해하기</title>
   <!-- css -->
-  <style></style>
+  <style>
+  </style>
 </head>
 <body>
   <!-- layout -->
-  <h1>영역을 나타내는 의미를 구조</h1>
-  <h2>시멘틱 구조에 대해 알아보기</h2>
+
   
   <div>
     <p>div는 의미가 없는 단순한 영역을 나타나게 하는 박스의 의미를 가진다.</p>
@@ -24,46 +24,88 @@
 
   <p>시멘틱 구조는, 각 영역별로 그 의미를 가지고 쓰이도록 처리된 영역</p>
   <p>header, nav, section, article, aside, main, footer, figure</p>
-  <p>
-    <strong>header</strong> : 
-    웹페이지의 상단에 존재, 웹의 로고/h1을 담으면서, <br />
-    전체 웹페이지 구조를 파악할 수 있는 nav영역을 함께 포함시키는 기능을 가진다. </p>
 
-  <p><strong>nav</strong>:
-    웹페이지 내부에서 클릭하면 해당하는 페이지로 이동하게 만들어주는 링크들의 집합/ navigation요소를 담아놓은 영역
-  </p>
+  <header id="headBox" class="full">
+    <h1>영역을 나타내는 의미를 구조</h1>
+    <h2>시멘틱 구조에 대해 알아보기</h2>
+    <p>
+      <strong>header</strong> : 
+      웹페이지의 상단에 존재, 웹의 로고/h1을 담으면서, <br />
+      전체 웹페이지 구조를 파악할 수 있는 nav영역을 함께 포함시키는 기능을 가진다. </p>
 
-  <p><strong>section</strong>:
-     하나의 대표 내용을 보여주는 영역으로 칭하며, 
-     다른 내용과 연계가 되어있는 부분, 본문  : 광고/banner
-  </p>
+      <nav>
+        <h2>navigation</h2>
+        <p><strong>nav</strong>:
+          웹페이지 내부에서 클릭하면 해당하는 페이지로 이동하게 만들어주는 링크들의 집합/ navigation요소를 담아놓은 영역
+        </p>
+      </nav>
+  </header>
 
-  <p><strong>article</strong>:
-     section 과 유사한 기능을 가진 영역, 
-     본문내용, 다른내용과 연계가 되지 않아도 별도의 독립영역으로 설정되어도 문제 없는 영역 : 게시판 안내/신문기사/공고
-  </p>
+ <main id="main_wrap">
+  <section id="viewBox" class="full area_box box1 total">
+    <h2>하나의 대표 내용을 보여주는 영역</h2>
+    <p><strong>section</strong>:
+       하나의 대표 내용을 보여주는 영역으로 칭하며, 
+       다른 내용과 연계가 되어있는 부분, 본문  : 광고/banner
+    </p>
+  </section>
 
-  <p><strong>aside</strong>:
-     another영역을 지칭하는 것으로, 사이트의 구성요소에 없어도 전혀~ 문제 되지 않는 영역, 있으면 도움이 되는 영역
-  </p>
+  <article>
+    <h2>다른내용과 연계가 되지 않아도 별도의 독립영역</h2>
+    <p><strong>article</strong>:
+       section 과 유사한 기능을 가진 영역, 
+       본문내용, 다른내용과 연계가 되지 않아도 별도의 독립영역으로 설정되어도 문제 없는 영역 : 게시판 안내/신문기사/공고
+    </p>
 
-  <p><strong>footer</strong>:
-     이름으로 해석하면 하단에 존재한다는 의미를 가지고 있지만, 실제로는 하단에만 존재하지는 않는다. <br />
-     footer는 회사/사이트의 정보를 담고 있는 영역을 지칭
-     주소, 연락처, 제작연도, 지침, family site <br />
-     정보가 보이지 않는다고 하더라도, 사이트에 대한 내용은 반드시 존재 해야한다
-  </p>
+    <figure>
+      <p><strong>figure</strong>:
+         figure는 이미지 요소를 담아서 관리하는 영역
+         figcaption요소와 함께 사용하게 되어 있다.
+         반응형웹제작시 imgset요소도 때에 따라 사용한다.
+      </p>
+      <figcaption>이미지 제목</figcaption>
+      <img src="./mask.png" alt="figure를 담는방법 설명하기위한 내용">
+    </figure>
 
-  <p><strong>main</strong>:
-     section,article의 영역을 정리해서 더 큰 영역으로 담는 곳
-     아직 대부분의 사이트에서는 완벽하게 지원하지 못하고 있다.
-  </p>
+  </article>
 
-  <p><strong>figure</strong>:
-     figure는 이미지 요소를 담아서 관리하는 영역
-     fitcaption요소와 함께 사용하게 되어 있다.
-     반응형웹제작시 imgset요소도 때에 따라 사용한다.
-  </p>
+  <aside>
+    <h2>another영역</h2>
+    <p><strong>aside</strong>:
+       another영역을 지칭하는 것으로, 사이트의 구성요소에 없어도 전혀~ 문제 되지 않는 영역, 있으면 도움이 되는 영역
+    </p>
+  </aside>
+    <p><strong>main</strong>:
+       section,article의 영역을 정리해서 더 큰 영역으로 담는 곳
+       아직 대부분의 사이트에서는 완벽하게 지원하지 못하고 있다.
+    </p>
+  </main>
+
+  <footer>
+    <h2>footer는 회사/사이트의 정보</h2>
+    <p><strong>footer</strong>:
+       이름으로 해석하면 하단에 존재한다는 의미를 가지고 있지만, 실제로는 하단에만 존재하지는 않는다. <br />
+       footer는 회사/사이트의 정보를 담고 있는 영역을 지칭
+       주소, 연락처, 제작연도, 지침, family site <br />
+       정보가 보이지 않는다고 하더라도, 사이트에 대한 내용은 반드시 존재 해야한다
+    </p>
+  </footer>
+
+ <!-- **  id/class 이름정의
+       id: 하나의 페이지에서 한번의 이름만 등록 가능(큰범위의 틀, 중요한 핵심기능, input)
+           이름짓는방법: 2단어 이상, 4단어 이하의 구성으로 camelCase 기법으로 사용 권장
+
+       class: 하나의 페이지에서 여러번의 이름이 재사용 가능/ 중첩
+            이름짓는방법: 2단어이상, 4단어 이하의 구성으로  snake_case 기법으로 사용 권장
+
+        이름을 사용할때에는 숫자가 1글자 X, 무조건 영문소문자를 첫글자, 특수문자 X(_, -, $ 예외)
+        *box_wrap, *Box, *_area
+
+        ** 시멘틱구조를 사용시에는
+        반드시 h* 제목이 따라 들어와야한다
+  -->
+
+
   <!-- script -->
   <script></script>
 </body>
