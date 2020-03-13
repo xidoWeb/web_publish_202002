@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- a_basic_mpbo.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--[if IE]>
+    <script src="./ie/html5shiv/dist/html5shiv.min.js"></script>
+  <![endif]-->
+  <title>MPBO 이해하기</title>
+  <!-- style -->
+  <style>
+    /* reset.css */
+    html,body{width:100%; height:100%;}
+    html,body, h1, h2, h3, h4, h5, h6, 
+    p, pre, img, div, 
+    ul, ol, li, dl, dt, dd {margin: 0; padding: 0; border: 0; outline: 0;}
+
+    ul, ol, li {list-style:none;}
+
+    /* design.css */
+    #wrap {margin:auto; padding-top:30px; width:800px; height:auto; min-height:500px; background-color: #ccc;}
+    h1{width:100%; hegiht:30px; 
+       background-color: #acf; font-size:1.2rem;}
+    h2{width:100%; height:40px; text-align:center; background-color:#f0f0f0;}
+    ul{margin:auto; width:700px; height:200px; background-color:#fff;}
+    li{float:left; width:100px; height:100px; background-color:#acc;}
+    li:nth-child(2n){background-color:#3aa;}
+
+  /* margin */
+  .margin_01{margin-top:30px; margin-bottom:20px;}
+    .m_01{margin:20px;} /* 4면전체 */
+    .m_02{margin:10px 20px;} /* 위아래 좌우 */
+    .m_03{margin:5px 20px 30px;} /* 위 좌우 아래 */
+    .m_04{margin:15px 10px 30px 50px;}/* 시계방향으로 위 우 아래 좌  */
+    
+  .margin_02{background-color: #ff4;}
+    .m2_01{margin-top:10px; margin-left:20px; margin-right:20px;}
+    .m2_03{margin:20px; margin-bottom:10px;}
+    .m2_04{margin:20px 10px; margin-left:5px; }
+
+  /* padding */
+    .p_01 {padding:20px;}
+    .p_02 {padding:20px 15px;}
+    .p_03 {padding:20px 10px 10px;}
+    .p_04 {padding:10px 50px 5px 15px;}
+    .padding_01 > li:last-child {padding:10px; box-sizing:border-box;}
+
+    .padding_02 {background-color: #acf;}
+    .p2_01 {padding-top:10px; padding-left:20px;}
+    .p2_02 {padding:10px; padding-left:40px;}
+    .p2_03 {padding:10px 5px; padding-right: 30px;}
+    /*.p2_04 {padding:auto;}*/
+
+/* border */
+/* border-style: solid | dotted | dashed | ridge | double;  */
+    .b_01 {border-width:5px; border-style:solid; border-color:salmon;}
+    .b_02 {border-width:10px; border-top-width:5px; border-left-width:15px;
+           border-style:solid; border-left-style:dotted; border-right-style:ridge;
+           border-color:red; border-left-color:blue; border-right-color:black;}
+    .b_03 {border:5px solid #13f;
+          /* border-width:5px; border-style:solid; border-color:#13f; */}   
+    .b_04 {border:10px solid #f96; border-left-width:2px; 
+          padding:10px; box-sizing:border-box;}
+    .b_05 {border:30px solid #adf;
+           border-image-source:url("./mask.png"); }
+
+/* outline */
+/* margin, padding, border -> 면적, 부피를 가진다  
+   outline -> 면적을 가지지만 부피는 없다(안개) */
+
+    .o_01 {outline-width:10px; outline-style:double; outline-color:#f60;}
+    .o_02 {outline:10px solid #ff0; outline-offset:30px;}
+
+  </style>
+</head>
+<body>
+  <!-- layout -->
+    <div id="wrap">
+      <h1>기본 마진 및 선의 개념 파악하기</h1>
+      <hr />
+
+<!-- margin -->
+      <h2>margin</h2>
+      <ul class="margin_01">
+        <li class="m_01">margin1</li>
+        <li class="m_02">margin2</li>
+        <li class="m_03">margin3</li>
+        <li class="m_04">marign4</li>
+        <li>not</li>
+      </ul>
+
+      <ul class="margin_02">
+        <li class="m2_01">margin_01</li>
+        <li class="m2_02">margin_02</li>
+        <li class="m2_03">margin_03</li>
+        <li class="m2_04">margin_04</li>
+        <li>not</li>
+      </ul>
+      <hr />
+<!-- padding -->
+      <h2>padding</h2>
+      <ul class="padding_01">
+        <li class="p_01">padding_01</li>
+        <li class="p_02">padding_02</li>
+        <li class="p_03">padding_03</li>
+        <li class="p_04">padding_04</li>
+        <li>not</li>
+      </ul>
+      <ul class="padding_02">
+        <li class="p2_01">padding_01</li>
+        <li class="p2_02">padding_02</li>
+        <li class="p2_03">padding_03</li>
+        <li class="p2_04">padding_04</li>
+        <li class="p2_05">padding_05</li>
+      </ul>
+     <hr /> 
+<!-- border -->
+      <h2>border</h2>
+      <ul class="border_01">
+        <li class="b_01">border_01</li>
+        <li class="b_02">border_02</li>
+        <li class="b_03">border_03</li>
+        <li class="b_04">border_04</li>
+        <li class="b_05">border_05</li>
+        <li class="b_06">border_06</li>
+      </ul>
+      <hr />
+<!-- outline -->
+      <h2>outline</h2>
+      <ul class="outline_01">
+        <li class="o_01">outline_01</li>
+        <li class="o_02">outline_02</li>
+        <li class="o_03">outline_03</li>
+      </ul>
+      <hr />
+    </div>
+  <!-- script -->
+  <script></script>
+</body>
+</html> 

@@ -17,20 +17,24 @@
     p,pre,div,img,ul,ol,li,dl,dt,dd {margin:0; padding:0;}
     ul,ol,li {list-style:none;}
 
+
     header,article,section,aside,nav,footer,main,figure {display:block;}
 
     /* design */
     #box{margin:200px auto; width:600px; height:auto;}
 
-    #headBox{width:100%; height:100px; background-color:pink;}
-    #sectionBox{width:100%; height:auto; background-color:yellow;}
-    .aside_area{float :left; width:40%; height:300px; background-color: #f06;}
-    .article_area{float :left; width:50%; height:300px; background-color: #f7f;}
+    #headBox{width:100%; height:100px; background-color:pink;
+            padding:10px; box-sizing:border-box;}
+      #headBox > h1{float:left; width:80px; height:80px; background-color: #fff;}
+      #navBox{float:right; margin-top:30px; width:400px; height:50px; background-color: #fff;}
 
-    .more {float:left; width:100px; height:100px; background-color:#fff; 
-            border-width:1px; border-color:#000; border-style:solid; }
+    #sectionBox{width:100%; height:auto;}
+      .section_child{float: left; width:70%; height:150px;}
+      .article_area{background-color: #f7f;}
+      .container_area{background-color: #333;}
+      .aside_area{float:right; margin-top:-150px; width:30%; height:300px; background-color: #f06;}
 
-    .pan {clear:both; width:100%; height:0; background-color: #777;} 
+      .pan {clear:both; width:100%; height:0; background-color: #777;} 
 
     #footBox{width:100%; height:100px; background-color:lightblue;}
 
@@ -40,42 +44,21 @@
   <!-- layout -->
   <div id="box">
     <!-- #headBox -->
-    <header id="headBox">      header    </header>    <!-- // #headBox -->
+    <header id="headBox"> 
+
+      <h1>site name</h1>
+      <nav id="navBox"></nav>
+
+    </header><!-- // #headBox -->
+
     <!-- #sectionBox -->
     <section id="sectionBox">
-      <aside class="aside_area"></aside>
-      <article class="article_area"></article>
-
-      <div class="more">임시 추가 상자</div>
-      <div class="more">임시 추가 상자</div>
-      <div class="more">임시 추가 상자</div>
-      <div class="more">임시 추가 상자</div>
-      <div class="more">임시 추가 상자</div>
-      <div class="more">임시 추가 상자</div>
-      <div class="more">임시 추가 상자</div>
-      <div class="more">임시 추가 상자</div>
-      <div class="more">임시 추가 상자</div>
-      <div class="more">임시 추가 상자</div>
-      <div class="more">임시 추가 상자</div>
-      <div class="more">임시 추가 상자</div>
-      <div class="more">임시 추가 상자</div>
-      <div class="more">임시 추가 상자</div>
-      <div class="more">임시 추가 상자</div>
-      <div class="more">임시 추가 상자</div>
-      <div class="more">임시 추가 상자</div>
-      <div class="more">임시 추가 상자</div>
-      <div class="more">임시 추가 상자</div>
-      <div class="more">임시 추가 상자</div>
-      <div class="more">임시 추가 상자</div>
-      <div class="more">임시 추가 상자</div>
-      <div class="more">임시 추가 상자</div>
-      <div class="more">임시 추가 상자</div>
-      <div class="more">임시 추가 상자</div>
+      <article class="article_area section_child"></article>
+      <article class="container_area section_child"></article>
+      <aside class="aside_area section_child"></aside>
 
       <div class="pan"></div>
-
-    </section>
-    <!-- // #sectionBox -->
+    </section><!-- // #sectionBox -->
 
     <!-- #footBox -->
     <footer id="footBox">
