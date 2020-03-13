@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- a_basic_layout_01.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--[if IE]>
+    <script src="./ie/html5shiv/dist/html5shiv.min.js"></script>
+  <![endif]-->
+  <title>Layout 연습하기1</title>
+  <!-- css -->
+  <style>
+    /* reset.css */
+    html, body {width:100%; height:100%;}
+    html,body,
+    h1,h2,h3,h4,h5,h6,
+    p,pre,div,img,ul,ol,li,dl,dt,dd {margin:0; padding:0;}
+    ul,ol,li {list-style:none;}
+
+    header,article,section,aside,nav,footer,main,figure {display:block;}
+
+    /* design */
+    #box{margin:200px auto; width:600px; height:auto;}
+
+    #headBox{width:100%; height:100px; background-color:pink;}
+    #sectionBox{width:100%; height:300px; background-color:yellow;}
+    #footBox{width:100%; height:100px; background-color:lightblue;}
+
+  </style>
+</head>
+<body>
+  <!-- layout -->
+  <div id="box">
+    <!-- #headBox -->
+    <header id="headBox">
+      header
+    </header>
+    <!-- // #headBox -->
+    
+    <!-- #sectionBox -->
+    <section id="sectionBox">
+      section
+    </section>
+    <!-- // #sectionBox -->
+
+    <!-- #footBox -->
+    <footer id="footBox">
+      footer
+    </footer>
+    <!-- // #footBox -->
+  </div>
+
+
+  <!-- script -->
+  <script></script>
+</body>
+</html>
