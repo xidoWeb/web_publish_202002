@@ -1,0 +1,87 @@
+/* position.css */
+@charset "utf-8";
+
+/* reset.css */
+html,body{width:100%; height:100%; }
+
+html,body,
+h1,h2,h3,h4,h5,h6,p,pre,
+div,img,ul,ol,dl,dt,dd,li{margin:0; padding:0; border:0; outline:0;
+ behavior:url('../../ie/pie/PIE.htc');}
+
+ul,ol,li{list-style:none;}
+header,article,section,aside,nav,footer,main,figure,figcaption{display:none;}
+
+/* design */
+#wrap{margin:auto; width:940px; height:auto; min-height:3500px; 
+	background-color: #dfdfdf;
+	background-image:linear-gradient(#a55, #af4, #fa7);
+    }
+h1{width:100%; height:40px;
+   font-size:1.2rem; text-align:center;}
+
+ .position{margin:auto; width:90%; height:400px;
+ 	background-color:#fff;
+ 	border:1px solid #333;	box-sizing:border-box;}
+
+ h2{margin-bottom:1rem; width:100%; height:auto; 
+ 	border-bottom:1px solid #acf;}
+
+ ul{width:100%; height:300px; background-color: #aaf;}
+ li{float:left; width:100px; height:100px; 
+ 	background-color: #fac;	border:1px solid #f7f;}
+ li:nth-child(2n){background-color: #afc;}
+
+/* ================================== */
+/* 
+position: static | fixed | absolute | relative | sticky;
+z-index:단위는 없고 수치만으로 사용하는 기능 위치값(z축)을 파악
+top, left, right, bottom와 함께 사용한다.
+*/
+
+.static{position:static;
+		top:100px; left:500px; 
+		z-index:-10000;
+	overflow:auto;}
+
+.fixed{position:fixed; top:0; right:0;
+	z-index:1000;}
+
+.absolute{position:absolute; bottom:0;right:50px;}
+
+.relative{position:relative; top:150px; left:50px;
+	z-index:100;}
+
+.position > ul {position:relative;
+	z-index:-1;}
+
+	/* ==== */
+.position_02{margin:20px auto; width:50%; height:100px; background-color: #fff;
+	position:-webkit-sticky; /* 크롬, 사파리,크로미움엣지 */
+    position:-moz-sticky; /* 모질라 : 파이어폭스 */
+    position:-ms-sticky;  /* microsoft(IE,EDGE) */
+    position:-o-sticky;  /* 오페라 */
+	position:sticky; 
+	top:10px;
+
+}
+
+.sticky{width:100%; height:100%; 
+		background-color: #f06; 
+		text-align:center; font-size:2rem; 
+		color:#fff; font-weight:bold;
+		text-transform:uppercase;}
+
+/* **벤더프리픽스(prefix) 
+벤더프리픽스란: 
+   새로나온 CSS기술에서 브라우저가 테스트용으로 기능을 부여하고도,
+   일반속성으로 사용이 안될때, 강제로 쓸수 있도록 처리하는 기능
+   앞뒤로 벤더(-)를 달고 내부에 해당 브라우저의 형식을 기입하도록 처리
+
+   -webkit-box-sizing:border-box;
+   -moz-box-sizing:border-box;
+   -ms-box-sizing:border-box;
+   -o-box-sizing:border-box;
+   box-sizing:border-box;
+
+*/
