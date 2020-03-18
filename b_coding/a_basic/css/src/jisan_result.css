@@ -19,6 +19,9 @@ a:active {color:#fac;}
 .hidden {display:block; position:absolute; z-index:-1;
          width: 0; height: 0; overflow: hidden;}
 
+.clearfix:after, .clearfix::after  {
+  content:" "; display: block; width: 100%; height: 0; clear:both;}
+
 
 /* design.css */
 #wrap{width:1900px; height:auto; min-height:800px;
@@ -75,33 +78,38 @@ a:active {color:#fac;}
   .guide_area > p {width: 100%; height: 30px; margin-bottom:57px;
                   background-color: #cca; 
                    color:#fff; font-size:16px; text-transform:uppercase;}
-    .guide_cont {width:100%; height:350px; background-color: #333;}
+    .guide_cont {width:100%; height:auto; background-color: #333;}
+
+    .guide_cont > div {float:left; height:350px; background-color: #fff;}
+    .guide_cont > div:nth-of-type(2n) {background-color: #fcf;}
+
+    .guide_cont:after, .guide_cont::after {content:" "; display:block; width:100%; height:0; clear:both;}
+    
 
 /* #viewBox ==================== */
 #viewBox{background-color: #555;}
-
 #viewBox h2 {height:115px;}
-
-/*#viewBox h2>span,
-#viewBox .guide_cont > p {position:absolute; z-index:-1;
-                      width:0; height:0; overflow:hidden;}*/
-
 #viewBox p {height:27px; margin-top:8px; font-size:20px;}
 
 
 /* #guideBox ==================== */
 #guideBox{background-color:#aaa;}
-  .guide_part > div {width:48%; height:100%; float:left; background-color: #fff;}
+  .guide_part > div {width:49.5%; }
+
+  .guide_part > div:first-child {padding:55px 24px 70px; box-sizing: border-box;
+          background-image:linear-gradient(90deg, #277DD6, #32C3A5);
+          }
+
   .guide_part > div:last-child {float:right;}
 
 /* #saleBox ==================== */
 #saleBox{background-color:#999;}
-  .sale_part > div {width:33.333333%; height:100%; float: left; background-color: #fff;}
+  .sale_part > div {width:33.333333%;}
       
 
 /* #newsBox ==================== */
 #newsBox{background-color:#ddd;}
-  .news_part > div {width:20%; height:100%; float: left; background-color: #fff;}
+  .news_part > div {width:20%;}
   /*.news_part > div:hover {transform:scale(1.1); background-color: #f60;}*/
 
 /* #jisanSideBox ==================== */
