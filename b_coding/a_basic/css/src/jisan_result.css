@@ -102,6 +102,21 @@ a:active {color:#fac;}
 
   .guide_part > div:last-child {float:right;}
 
+ .guide_part h3 {width:100%; height:42px; font-size:24px;}
+ .guide_part p {width: 100%; height:28px; font-size:16px;}
+
+  .guide_part_01 {color:#fff;}
+  .guide_part_01 > ul {width: 100%; height: 140px; margin-top: 26px;}
+  .guide_part_01 > ul > li {float: left; width: 25%; height:100%; 
+        padding:5px; border-right:1px solid #fff; box-sizing:border-box;}
+  .guide_part_01 > ul > li:last-child {border: 0;}
+
+  .guide_part_01 a {display: lock; width:100%; height:100%; font-weight:bold;}
+  .guide_part_01 a > i{display:block; width:100%; height:85px; margin-bottom:12px; background-color:#fff;}
+  .guide_part_01 a > span{display: block; width: 100%; height:26px; text-align:center;}
+
+  .guide_part_02 a {display:block; width: 100%; height: 100%; padding-top:240px; box-sizing:border-box;}
+
 /* #saleBox ==================== */
 #saleBox{background-color:#999;}
   .sale_part > div {width:33.333333%;}
