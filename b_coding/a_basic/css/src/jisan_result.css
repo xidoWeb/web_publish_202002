@@ -91,12 +91,18 @@ a:active {color:#fac;}
 
 /* #guideBox ==================== */
 #guideBox{background-color:#aaa;}
+  .guide_part > div {width:48%; height:100%; float:left; background-color: #fff;}
+  .guide_part > div:last-child {float:right;}
 
 /* #saleBox ==================== */
 #saleBox{background-color:#999;}
+  .sale_part > div {width:33.333333%; height:100%; float: left; background-color: #fff;}
+      
 
 /* #newsBox ==================== */
 #newsBox{background-color:#ddd;}
+  .news_part > div {width:20%; height:100%; float: left; background-color: #fff;}
+  /*.news_part > div:hover {transform:scale(1.1); background-color: #f60;}*/
 
 /* #jisanSideBox ==================== */
 #jisanSideBox{display:none;}
