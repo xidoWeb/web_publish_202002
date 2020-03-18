@@ -1,8 +1,7 @@
- jisan_result.css */
-
 @charset "utf-8";
+/* jisan_result.css */
 
-/* reset.css */
+ /*reset.css */
 html,body{width: 100%; height: 100%;}
 html,body,
 h1,h2,h3,h4,h5,h6,
@@ -12,6 +11,14 @@ ul,ol,li,dl,dt,dd,img{
   behavior:url('../../ie/pie/PIE.htc');}
 
 ul,ol,li{list-style:none;}
+a {color:inherit; text-decoration:none;}
+a:hover {color:#999;  text-decoration:underline;}
+a:active {color:#fac;}
+
+/* common.css */
+.hidden {display:block; position:absolute; z-index:-1;
+         width: 0; height: 0; overflow: hidden;}
+
 
 /* design.css */
 #wrap{width:1900px; height:auto; min-height:800px;
@@ -34,18 +41,31 @@ ul,ol,li{list-style:none;}
 /* #naviBox ==================== */
 #naviBox{float:right; width:1420px; height:60px;}
   
-  #naviBox>h2{position:absolute; z-index:-1; 
-              width:0; height:0; overflow:hidden;}
+/*  #naviBox>h2{position:absolute; z-index:-1; 
+              width:0; height:0; overflow:hidden;}*/
 
 /* IR 기법(image replace): 
 보여주고자하는 이미지는 나타나고 그 해석이되는 설명은 숨김처리하는 기법 */
 
-  .gnb{float:left; width:900px; height:60px; background-color:#aaa;}
-  .unb{float:right; width:450px; height:60px; background-color:#777;}
+  .gnb {float:left; width:900px; height:auto; background-color:#aaa; font-size:17px;}
+  .unb {float:right; width:450px; height:auto; background-color:#777; font-size:14px;}
+/*
+#naviBox h3 {position:absolute; z-index:-1; width:0; height:0; overflow: hidden}*/
+.header_navi > ul {width:100%; height:60px; text-align:center; line-height:60px;}
+
+.header_navi > ul > li {float:left; width:auto; height:100%; background-color: #fff;}
+.header_navi > ul > li:last-child {margin-right:0;}
+.header_navi > ul > li a {display:block; width:auto; height:100%;}
+
+.gnb >ul>li {margin-right:15px;}
+.gnb >ul>li>a {padding:0 20px;}
+
+.unb >ul>li{margin-right:6px;}
+.unb a > i{display:inline-block; width:30px; height:30px; margin-right:5px; background-color:#777;}
 
 
 /* 공통으로 적용된 화면에 꽉차는 박스 */
-.full_size{width:100%; height:900px; 
+.full_size {width:100%; height:900px; 
   padding-top:150px; box-sizing:border-box;}
   .guide_area {width:1100px; height:auto; 
               margin:100px auto; text-align:center;}
@@ -55,10 +75,19 @@ ul,ol,li{list-style:none;}
   .guide_area > p {width: 100%; height: 30px; margin-bottom:57px;
                   background-color: #cca; 
                    color:#fff; font-size:16px; text-transform:uppercase;}
-    .guide_cont {width:100%; height:390px; background-color: #333;}
+    .guide_cont {width:100%; height:350px; background-color: #333;}
 
 /* #viewBox ==================== */
 #viewBox{background-color: #555;}
+
+#viewBox h2 {height:115px;}
+
+/*#viewBox h2>span,
+#viewBox .guide_cont > p {position:absolute; z-index:-1;
+                      width:0; height:0; overflow:hidden;}*/
+
+#viewBox p {height:27px; margin-top:8px; font-size:20px;}
+
 
 /* #guideBox ==================== */
 #guideBox{background-color:#aaa;}
@@ -74,11 +103,11 @@ ul,ol,li{list-style:none;}
 
 /* #footBox ==================== */
 #footBox{width:100%; height:230px; background-color: #131313;}
-#footBox h2{position:absolute; z-index:-1; 
-            width:0; height:0; overflow:hidden;}
+/*#footBox h2{position:absolute; z-index:-1; 
+            width:0; height:0; overflow:hidden;}*/
 
   .foot_area {width:1100px; height:100%; margin:auto;}
-  
+
   .foot_part_01 {width: 100%; height:41px;
                 border-bottom:1px solid #2f2f2f;}
     .operation_guideline {float:left; width:600px; height:100%; background-color: #fff;}
