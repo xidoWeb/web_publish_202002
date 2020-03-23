@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="./css/src/selector2.css">
+  <!--[if IE]>
+    <script src="./ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="./ie/pie/PIE.js"></script>
+  <![endif]-->
+  <title>css 선택자2</title>
+</head>
+<body>
+  <div id="wrap">
+    <h1>선택자2</h1>
+  
+    <div class="part">
+      <h2>형제 선택자</h2> 
+      <ul class="sib">
+        <li>siblings_01</li>
+        <li>siblings_02</li>
+        <li class="set">siblings_03</li>
+        <li>siblings_04</li>
+        <li>siblings_05</li>
+        <li>siblings_06</li>
+        <li>siblings_07</li>
+        <li>siblings_08</li>
+        <li>siblings_09</li>
+        <li>siblings_10</li>
+      </ul>
+    </div>
+  
+    <div class="part">
+      <h2>nth선택자</h2>
+      <h3>nth-child</h3>
+      <ul class="n_child">
+        <li>nth-child 01</li>
+        <li>nth-child 02</li>
+        <li>nth-child 03</li>
+        <li>nth-child 04</li>
+        <li>nth-child 05</li>
+        <li>nth-child 06</li>
+        <li>nth-child 07</li>
+      </ul>
+  
+      <h3>nth-child2</h3>
+      <ul class="nth2">
+        <li>nth2-01</li>
+        <li>nth2-02</li>
+        <li>nth2-03</li>
+        <li>nth2-04</li>
+        <li>nth2-05</li>
+        <li>nth2-06</li>
+        <li>nth2-07</li>
+        <li>nth2-08</li>
+        <li>nth2-09</li>
+        <li>nth2-10</li>
+      </ul>
+  
+    </div>
+    <div class="part">
+      <h2>nth-of-type 선택자</h2>
+      <div class="of_type">
+        <p>of_type 01</p>
+        <p>of_type 02</p>
+        <p>of_type 03</p>
+        <p>of_type 04</p>
+        <pre>of_type 05</pre>
+        <pre>of_type 06</pre>
+        <p>of_type 07</p>
+        <p>of_type 08</p>
+        <p>of_type 09</p>
+        <h3>of_type 10</h3>
+        <q>of_type 11</q>
+        <h3>of_type 12</h3>
+        <p>of_type 13</p>
+      </div>
+    </div>
+  
+    <div class="part">
+      <h2>속성 선택자</h2>
+      <ul class="attr">
+        <li><a href="http://naver.com">naver</a></li>
+        <li><a target="_blank" href="http://daum.net">daum</a></li>
+        <li><a target="_blank" href="https://google.com">google</a></li>
+        <li><a href="https://unsplash.com">unsplash</a></li>
+        <li><img src="./img/user.png" alt="icon 이미지"></li>
+        <li><img src="./img/dress.jpg" alt="dress image"></li>
+        <li><img src="./img/dress2.jpg" alt="dress image"></li>
+        <li><img src="./img/android.png" alt="icon 이미지"></li>
+        <li class="list ls-01">ls list 9번째</li>
+        <li class="list last ls">마지막 list</li>
+      </ul>
+    </div><!-- // .part -->
+    <div class="part before_after">
+      <p>내용을 입력합니다.</p>
+      <p>내용을 입력합니다.</p>
+    </div>
+  </div>
+</body>
+</html>
