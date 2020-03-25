@@ -11,13 +11,27 @@
   .menu{width: 100%; height:auto; min-height:50px; background-color: #ccc;}
   .menu > li{float: left; width: 25%; height: auto; min-height:50px; 
              background-color: #acc;}
-
   .menu dl {width:100%; height:auto; text-align:center;}
-  .menu dt {width:100%; height:50px;}
-  .menu dd {width:100%; height:auto;}
+  .menu dt {width:100%; height:50px; font-weight: bold; font-size: 1.1rem;
+            padding:5px; box-sizing: border-box;}
+  .menu dd {width:100%; height:auto; display: none;}
   .menu dd>ul {width:100%; height:auto;}
-  .menu dd>ul li{width:100%; height:50px;}
+  .menu dd>ul li{width:100%; height:50px; 
+           padding:5px; box-sizing: border-box;}
 
+  .menu a {display: block; width: 100%; height: 100%; 
+          background-color: #fff; line-height:40px;}
+  .menu a:hover, 
+  .menu a:focus {background-color: #fa0;} 
+
+  .menu:hover dd {display: block;}
+
+/*
+  :focus기능은 
+  클릭의 형태가 아니라 그것을 클릭/내용작성 하기전 위치를 파악하는 기능
+
+  반드시: a , button, input, text-area, select 등의 어떠한 기능을 쓸수있는것에 처리 가능
+*/
 
 /* #viewBox ================================================ */
 #viewBox{width: 100%; height: 300px; background-color: #bfc;}
