@@ -9,12 +9,17 @@ img, figure, figcaption, hr,
 header,article,section,nav,footer,aside,main{
   margin:0; padding:0; border:0; outline:0;}
 
-ul,ol,li{list-style:none;}
-a{text-decoration: none; color:inherit;}
-address{font-style:normal;}
-abbr{text-decoration:none;}
+ul,ol,li {list-style:none;}
+a {text-decoration: none; color:inherit;}
+button {border:0; background-color: transparent; cursor:pointer;
+        border-radius:0;}
+a:focus, button:focus {outline:3px solid #fa0;}        
 
-hr{border-bottom:1px solid #333;}
+
+address {font-style:normal;}
+abbr {text-decoration:none;}
+
+hr {border-bottom:1px solid #333;}
 
 header,article,section,nav,footer,aside,main,
-figure, figcaption{display: block;}
+figure, figcaption {display: block;}
