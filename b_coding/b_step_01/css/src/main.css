@@ -8,7 +8,7 @@
         padding:10px; box-sizing:border-box; background-color: #fa1;}
   h1{float: left; width:140px; height:80px; background-color: #fff;}
   #gnb{float: right; width:800px; height:50px; margin-top:20px; background-color: #fff;}
-  .menu{width: 100%; height:auto; min-height:50px; background-color: #ccc;}
+  .menu{width: 100%; height:auto; min-height:50px; /* background-color: #ccc; */}
   .menu > li{float: left; width: 25%; height: auto; min-height:50px; 
              background-color: #acc;}
   .menu dl {width:100%; height:auto; text-align:center;}
@@ -25,6 +25,7 @@
   .menu a:focus {background-color: #fa0;} 
 
   .menu:hover dd {display: block;}
+  /*.menu li:hover dd {display: block;}*/
 
 /*
   :focus기능은 
@@ -34,10 +35,18 @@
 */
 
 /* #viewBox ================================================ */
-#viewBox{width: 100%; height: 300px; background-color: #bfc;}
+#viewBox {position:relative; width: 100%; height: 300px; background-color: #bfc;}
+  .view_area {width: 100%; height: 100%;}
+  .indicator {position:absolute; bottom:20px; left:50%; margin-left: -200px;
+              width:400px; height:30px; background-color: #0af;}
+  .view_btn {position:absolute; top:50%; left:5%; margin-top:-25px;
+             width: 90%; height:50px; background-color: #07a;}
+  .view_list {width:100%; height:100%; background-color: #fff;}
+
+
 
 /* #conBox ================================================ */
-#conBox{width: 100%; height:auto;}
+#conBox {width: 100%; height:auto;}
   .con_area {float:left; width:33.333333%; height:200px;}
   .notice_gallery {background-color: #5f1;}
   .info_news {background-color: #3f7;}
@@ -45,7 +54,7 @@
 
 
 /* #footBox ================================================ */
-#footBox{width: 100%; height:auto; padding:10px; box-sizing:border-box; }
+#footBox{width: 100%; height:auto; padding:10px; box-sizing:border-box; background-color: #ccc;}
 
   #footBox >h2 {float:left; width:100px; height:80px; margin-right:40px; 
                 background-color: #fff;}
