@@ -1,0 +1,7 @@
+/* bootstrap_01.css */
+
+.wrap {height:auto; min-height:500px; 
+       background-color: #dfdfdf;}
+.headBox{height:300px; background-color: #ccc;}
+.sectionBox{height:500px; background-color: #fa0;}
+.footBox{height:500px; background-color: #acf;}
