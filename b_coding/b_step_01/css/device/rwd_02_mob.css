@@ -1,0 +1,10 @@
+/* rwd_02_mob.css */
+
+/* design data : 320px */
+@media screen 
+       and (max-width:639px) {
+
+  body {background-color: #fa0;}
+
+/* @media end */
+}

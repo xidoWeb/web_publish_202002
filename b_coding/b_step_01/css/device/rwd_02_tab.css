@@ -1,0 +1,11 @@
+/* rwd_02_tab.css */
+
+/* design data :640px */
+@media screen 
+       and (min-width:640px) 
+       and (max-width:1023px) {
+
+  body {background-color: #acf;}
+
+/* @media end */
+}

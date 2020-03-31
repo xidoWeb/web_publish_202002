@@ -1,0 +1,11 @@
+/* rwd_02_pc.css */
+
+/* design data : 1024px */
+@media screen 
+       and (min-width:1024px) 
+       and (max-width:1439px) {
+
+body {background-color: #faf;}
+
+/* @media end */
+}
