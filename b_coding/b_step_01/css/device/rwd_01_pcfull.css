@@ -1,0 +1,8 @@
+/* rwd_01_pcfull.css */
+
+
+@media screen and (min-width:1600px) {
+  #wrap {background-color: #ffa;}
+  h1 {width: 20%; height: 10vh;}
+  p:after{content:" pc full 형식으로 1600이상 입니다.";}
+}
