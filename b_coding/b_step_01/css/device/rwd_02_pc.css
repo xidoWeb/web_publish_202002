@@ -4,8 +4,9 @@
 @media screen 
        and (min-width:1024px) 
        and (max-width:1439px) {
-
-body {background-color: #faf;}
-
+        
+  #viewBox {
+    height: 555px;    height: 34.6875rem;
+  }
 /* @media end */
 }

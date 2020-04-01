@@ -1,0 +1,9 @@
+/* rwd_03_result.css */
+@charset "utf-8";
+
+@import url("../device/rwd_03_result/rwd_03_base.css");
+@import url("../device/rwd_03_result/rwd_03_mob_v.css");
+@import url("../device/rwd_03_result/rwd_03_mob_h.css");
+@import url("../device/rwd_03_result/rwd_03_tab.css");
+@import url("../device/rwd_03_result/rwd_03_pc.css");
+

@@ -1,11 +1,13 @@
 /* rwd_02_tab.css */
-
 /* design data :640px */
 @media screen 
        and (min-width:640px) 
        and (max-width:1023px) {
-
-  body {background-color: #acf;}
-
+  #viewBox {
+    height: 405px;    height: 63.28125vw;
+    /* 405 /640 *100 */
+    min-height: 405px;    min-height: 25.3125rem;
+    max-height: 555px;    max-height: 34.6875rem;
+  }
 /* @media end */
 }

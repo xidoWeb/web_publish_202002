@@ -1,10 +1,26 @@
 /* rwd_02_base.css */
 
-body {background-color: #ccc;}
+/* 기준이되는 크기(16px) == 12pt == 100% == 1em == 1rem */
+/* vw 는 view width 의 약자로, 브라우저의 가로값을 100% 기준으로 잡는 크기 단위 */
+/* vh 는 view height 의 약자로, 브라우저의 세로값을 100% 기준으로 잡는 크기 단위 */
+/* vw 기준으로 사이즈 측정방법 : 기준수치(60px 예시) / 기분브라우저가로값(320px) * 100(100분율)  */
+
 
 #wrap {width: 100%; height: auto;}
-#headBox {width: 100%; height: 195px; margin-bottom: 30px; background-color: #fa0;}
-#viewBox {width: 100%; height: 120px; margin-bottom: 30px; background-color: #7f7;}
-#contentBox {width: 100%; height:705px; margin-bottom: 30px; background-color: #07f;}
-#noticeBox {width: 100%; height: 150px; margin-bottom: 30px; background-color: #aaa;}
+
+#headBox {width: 100%; 
+          height: 195px;  height: 12.1875rem; 
+          margin-bottom: 30px; margin-bottom: 1.875rem;
+          background-color: #fa0;}
+
+#viewBox {width: 100%; 
+          height: 120px; height: 7.5rem; 
+          margin:auto;
+          margin-bottom: 30px; background-color: #7f7;}
+
+
+#contentBox {width: 100%; height:705px; 
+            margin-bottom: 30px; background-color: #07f;}
+#noticeBox {width: 100%; height: 150px; 
+            margin-bottom: 30px; background-color: #aaa;}
 #footBox {width: 100%; height: 60px; background-color: #777;}

@@ -1,0 +1,15 @@
+/* rwd_03_pc.css */
+
+@media screen and 
+      (min-width:960px) {
+
+  /*#headBox{}*/
+  
+  #viewBox{ height: 450px; }
+  #contentBox{ max-width:1200px; height: 210px; margin:auto; }
+  #infoBox{ max-width:1200px; height: 540px; margin:auto; }
+  #footBox{ height: 120px; }
+
+
+/* @media end */
+}

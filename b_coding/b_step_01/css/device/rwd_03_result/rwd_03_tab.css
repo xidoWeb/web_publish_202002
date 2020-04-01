@@ -1,0 +1,15 @@
+/* rwd_03_tab.css */
+
+@media screen and 
+      (min-width:768px) and
+      (max-width:959px) {
+
+  /*#headBox{}*/
+  #viewBox{ height: 450px;}
+  #contentBox{ height: 210px; }
+  #infoBox{ height: 540px; }
+  #footBox{ height: 120px; }
+
+
+/* @media end */
+}
