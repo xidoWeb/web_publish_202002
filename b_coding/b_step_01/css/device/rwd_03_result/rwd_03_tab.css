@@ -5,9 +5,11 @@
       (max-width:959px) {
 
   /*#headBox{}*/
-  #viewBox{ height: 450px;}
+  #viewBox{height: 450px;}
   #contentBox{ height: 210px; }
   #infoBox{ height: 540px; }
+    .infoBox_container{display: block; float:left; width:50%;}
+    .more_content{display: none;}
   #footBox{ height: 120px; }
 
 

@@ -4,10 +4,11 @@
 
   /*#headBox{}*/
 
-  #viewBox{ height: 480px; }
-  #contentBox{ height: 480px; }
-  #infoBox{ height: 480px; }
-  #footBox{ height: 40px; }
+  #viewBox{padding-top:12.5vw; height: 480px; height:150vw; }
+  #contentBox{ height: 480px; height:150vw;}
+  #infoBox{ height: 480px; height:150vw;}
+    
+  #footBox{ height: 40px; height:150vw;}
 
 /* @media end */
 }

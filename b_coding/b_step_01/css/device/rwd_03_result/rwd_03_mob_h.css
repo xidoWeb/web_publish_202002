@@ -5,10 +5,11 @@
       (max-width:767px) {
 
   /*#headBox{}*/
-  #viewBox{ height: 720px;;}
-  #contentBox{ height: 720px; }
-  #infoBox{ height: 720px;}
-  #footBox{ height: 60px;}
+  #viewBox{height: 720px; height:150vw; }
+  #contentBox{ height: 720px;  height:150vw; }
+  #infoBox{ height: 720px; height:150vw; }
+   
+  #footBox{ height: 60px; height:150vw; }
 
 /* @media end */
 }

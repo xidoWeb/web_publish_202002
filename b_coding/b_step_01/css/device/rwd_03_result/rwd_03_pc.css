@@ -4,10 +4,13 @@
       (min-width:960px) {
 
   /*#headBox{}*/
-  
-  #viewBox{ height: 450px; }
+
+  #viewBox{height: 450px; }
   #contentBox{ max-width:1200px; height: 210px; margin:auto; }
   #infoBox{ max-width:1200px; height: 540px; margin:auto; }
+    .infoBox_container{display:block; float:left; width:33.333333%;}
+    .notice_area{width:33.333334%; }
+
   #footBox{ height: 120px; }
 
 

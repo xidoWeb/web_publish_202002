@@ -4,6 +4,10 @@
        height:auto;}
 
 #headBox {
+  position: fixed;
+  top:0; left:0;
+  z-index:500;
+
   width:100%; 
   height:40px; 
   height:12.5vw;
@@ -13,7 +17,15 @@
   max-height:3.75rem;
   background-color: #333;}
 
+.container{
+  width: 100%; height: 100%; margin: auto;
+  max-width:1200px; max-width:75rem; 
+  background-color: rgba(255,255,255,0.2);
+  }
+
+
 #viewBox {
+  padding-top:60px; 
   width:100%; 
   background-color: #ba7;}
 
@@ -24,6 +36,13 @@
 #infoBox {
   width:100%; 
   background-color: #ccc;}
+
+  .infoBox_container{
+    width: 100%; height: 100%; 
+    display: none;}
+  .new_area{background-color: #957de9;}
+  .notice_area{background-color: #95abe9;}
+  .more_content{background-color: #95d2e9;}
 
 #footBox {
   width:100%; 
