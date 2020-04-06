@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    :root{font-size:16px;}
+
+    .unit{background-color: #ccc; margin:0; margin-bottom:300px; padding:0;}
+    p{background-color: #fa0;  margin:0; padding:0;}
+    a{display: block; background-color: rgba(150,250,10,0.5);}
+    span{display: block; background-color: #0cf;}
+    i{display: block; background-color: #faf;}
+
+    /* px */
+    .unit:nth-of-type(1){border:2px solid #f3f; 
+                         width:300px; height:300px;
+                         font-size:30px;}
+
+      .unit:nth-of-type(1) p{width:200px; height:200px;
+                            font-size:20px;}
+
+      .unit:nth-of-type(1) a{width:400px; height:400px;
+                            font-size:40px;}
+      .unit:nth-of-type(1) span{width:200px; height:200px;
+                            font-size:20px;}
+
+      .unit:nth-of-type(1) i{width:100px; height:100px;
+                            font-size:10px;}
+
+
+    /* % : 우선 부모의 크기값을 따르기 때문에 첫 요소는 정확한 크기가 필요*/
+    .unit:nth-of-type(2){border:2px solid #1f5; width:300px; height:300px; font-size:30px;}
+      .unit:nth-of-type(2) p {width:67%; height:66%; font-size:67%;}
+      .unit:nth-of-type(2) a {width:200%; height:200%; font-size:200%;}
+      .unit:nth-of-type(2) span {width:50%; height:50%; font-size:50%;}
+      .unit:nth-of-type(2) i {width:50%; height:50%; font-size: 50%;}
+
+
+    /* pt: 16px == 12pt */
+    .unit:nth-of-type(3){border:2px solid #f35; width:225pt; height:225pt; 
+                        font-size:22.5pt;}
+      .unit:nth-of-type(3) p{width:150pt; height:150pt; font-size:15pt;}
+      .unit:nth-of-type(3) a{width:300pt; height:300pt; font-size:30pt;}
+      .unit:nth-of-type(3) span{width:150pt; height:150pt; font-size:15pt;}
+      .unit:nth-of-type(3) i{width:75pt; height:75pt; font-size:7.5pt;}
+
+    /* em */
+    .unit:nth-of-type(4){border:2px solid #13f; width:18.75em; height:18.75em;
+                        font-size:1.875em;}
+      .unit:nth-of-type(4) p{width:12.5em; height:12.5em; font-size:1.25em;}
+      .unit:nth-of-type(4) a{width:25em; height:25em; font-size:2.5em;}
+      .unit:nth-of-type(4) span{width:12.5em; height:12.5em; font-size:0.5em;}
+      .unit:nth-of-type(4) i{width:5.25em; height:6.25em; font-size: 0.5em;}
+
+    /* rem */
+    .unit:nth-of-type(5){border:2px solid #ff5; width:18.75rem; height:18.75rem; font-size:1.875rem;}
+      .unit:nth-of-type(5) p{width:12.5rem; height:12.5rem; font-size:1.25rem;}
+      .unit:nth-of-type(5) a{width:25rem; height:25rem; font-size:2.5rem;}
+      .unit:nth-of-type(5) span{width:12.5rem; height:12.5rem; font-size: 1.25rem;}
+      .unit:nth-of-type(5) i{width:5.25rem; height:6.25rem; font-size: 0.625rem;}
+
+  </style>
+</head>
+<body>
+  <h1>unit 단위 이해하기</h1>
+
+  <h2>px 개념 이해하기</h2>
+  <div class="unit">
+    큰 영역
+    <p>두번째 영역
+      <a href="#">
+        세번째 영역
+        <span>
+          네번째 영역
+          <i>다섯번째 영역</i>
+        </span>
+      </a>
+    </p>
+  </div>
+  <!--  -->
+   <h2>% 개념 이해하기</h2>
+    <div class="unit">
+    큰 영역
+    <p>두번째 영역
+      <a href="#">
+        세번째 영역
+        <span>
+          네번째 영역
+          <i>다섯번째 영역</i>
+        </span>
+      </a>
+    </p>
+  </div>
+  <!--  -->
+   <h2>pt 개념 이해하기</h2>
+    <div class="unit">
+    큰 영역
+    <p>두번째 영역
+      <a href="#">
+        세번째 영역
+        <span>
+          네번째 영역
+          <i>다섯번째 영역</i>
+        </span>
+      </a>
+    </p>
+  </div>
+  <!--  -->
+    <h2>em 개념 이해하기</h2>
+    <div class="unit">
+    큰 영역
+    <p>두번째 영역
+      <a href="#">
+        세번째 영역
+        <span>
+          네번째 영역
+          <i>다섯번째 영역</i>
+        </span>
+      </a>
+    </p>
+  </div>
+  <!--  -->
+    <h2>rem 개념 이해하기</h2>
+    <div class="unit">
+    큰 영역
+    <p>두번째 영역
+      <a href="#">
+        세번째 영역
+        <span>
+          네번째 영역
+          <i>다섯번째 영역</i>
+        </span>
+      </a>
+    </p>
+  </div>
+  <!--  -->
+</body>
+</html>
