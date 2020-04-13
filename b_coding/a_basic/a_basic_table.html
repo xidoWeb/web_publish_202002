@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- a_basic_table.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="./css/base/reset.css">
+  <link rel="stylesheet" href="./css/base/common.css">
+  <link rel="stylesheet" href="./css/src/a_basic_table.css">
+
+  <!--[if IE]>
+    <script src="./ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="./pie/PIE.js"></script>
+  <![endif]-->
+
+  <title>html 기본 구조 이해하기</title>
+</head>
+<body>
+  <h1>html 기본 구조 이해하기</h1>
+  <hr />
+  <h2>table구조 내용 이해하기</h2>
+  <p>table요소는 과거 웹페이지의 구조를 구성하는데 필요한 요소.<br />
+     현재는 웹페이지의 기본은 의미의 전달에 중점을 두고있기에 table은 사용하지 않는다.
+  </p>
+  <p>table의 기능은 표형식으로 구성되어 있기 때문에, 주식, 경기표, 날씨표, 달력...</p>
+  
+  <div class="wrap">
+    <table>
+      <caption>
+        <span class="hidden">2025년 4월 1일 </span>
+        대한그룹 장마감 주식차트
+      </caption>
+
+      <colgroup>
+        <col class="col1">
+        <col class="col2" span="3">
+        <!-- <col class="col3"> -->
+       <!--  <col class="col4">   -->      
+      </colgroup>
+
+      <thead>
+        <tr> <th colspan="2" class="t1">1</th>  <th>3</th> <th>4</th> </tr>
+      </thead>
+
+      <tbody>
+        <tr> <td rowspan="2" class="t1">1</td> <td>2</td> <td>3</td> <td>4</td> </tr>
+        <tr>                        <td>2</td> <td>3</td>    <td>4</td> </tr>
+        <tr> <td colspan="3" rowspan="2" class="t1">1</td>  <td>4</td> </tr>
+        <tr>                                                <td>4</td> </tr>
+      </tbody>
+
+      <tfoot>
+        <tr> <td class="t1">1</td> <td>2</td> <td>3</td> <td>4</td> </tr>
+      </tfoot>
+    </table>
+  </div>
+</body>
+</html>

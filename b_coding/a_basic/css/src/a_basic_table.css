@@ -1,0 +1,27 @@
+ a_basic_table.css */
+
+table,
+thead,tbody,tfoot,
+tr,th,td {border:1px solid #acf;
+          border-spacing:0; 
+          border-collapse:collapse;
+          text-align: center;}
+
+
+table {width:500px; height:auto;}
+
+/*thead,tfoot{background-color: #aca;}*/
+/*tbody{background-color: #fca;}*/
+
+tr{height:100px;}
+
+/*
+th:first-child,
+td:first-child{background-color: #aff;}
+*/
+
+.t1{color:#f06;}
+.col1{width:10%; background-color: #aaa;}
+.col2{width:40%; background-color: #aaf;}
+.col3{width:15%; background-color: #a5a;}
+.col4{width:35%; background-color: #f5a;}
