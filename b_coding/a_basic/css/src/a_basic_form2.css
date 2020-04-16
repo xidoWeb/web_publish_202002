@@ -1,0 +1,9 @@
+/* a_basic_form2.css */
+
+h1,h2{text-align: center;}
+
+.form_area{width:700px; height:auto; 
+					margin:1rem auto;
+					padding:1rem; border:2px solid #777;}
+
+
