@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/base/reset.css">
+	<link rel="stylesheet" href="./css/base/common.css">
+	<link rel="stylesheet" href="./css/src/a_basic_form.css">
+
 	<title>Document</title>
 </head>
 <body>
@@ -10,7 +13,30 @@
 		<h1>html 기초이해</h1>
 		<hr>
 		<h2>form이해하기</h2>
+		<p>form은 무언가를 체크/여러요소중의하나를 선택/입력하는데 사용하는 기능</p>
+		<p>양방향 통신으로 불리우기도 하며, 백엔드프로그램과 연동하여 사용하는 영역이기에,
+			<br /> 개발자와의 협업이 매우 중요하며, 보안에도 신경을 써야하는 부분
+		</p>
+
+		<h3>1차 기억해야할 순서</h3>
+		<ul>
+			<li>1. 보안의 처리방법 (post, get, delete, push, pull .....)</li>
+			<li>2. 연결될 파일 (서버파일: php, jsp, asp ...)</li>
+			<li>3. 표준에맞게 절차에 맞게 정확하게</li>
+			<li>4. 접근성 고려</li>
+			<li>5. 각 기능별 형태를 이해(입력,선택 및 체크, 버튼, 멀티, 기타)</li>
+		</ul>
+
 		<div class="form_01">
+			
+			<form action="#" method="post">
+				<fieldset>
+					<legend>영역의 제목</legend>
+					<label for="searchArea">검색할 내용을 입력하세요.</label>
+					<input type="text" id="searchArea" value="" />
+					<input type="button" value="전송" />
+				</fieldset>
+			</form>
 			
 		</div>
 	</div>
