@@ -17,6 +17,38 @@
 		<form action="#" method="POST">
 			<fieldset>
 				<legend>입력</legend>
+				<h3>이전부터 존재하는 기능</h3>
+				<label for="inputText">입력할 내용을 작성하세요.</label>
+				<input type="text" id="inputText" name="inputText" value="" 
+							placeholder="내용을 입력하세요." 
+							required="required"	/>
+				<br />
+
+				<label for="pwText">입력할 비밀번호 작성하세요.</label>
+				<input type="password" id="pwText" name="pwText" value="" />
+				<br />
+
+				<input type="hidden" id="hiddenText" name="hdText" value="" />
+
+				<hr />
+				<h3>html5이후에 존재하는 기능</h3>
+				<label for="searchArea">검색할 내용을 입력하세요.</label>
+				<input type="search" id="searchArea" name="searchArea" value="" required /> 
+				<br />
+
+				<label for="mailArea">사용하는 이메일주소를 입력하세요.</label>
+				<input type="email" id="mailArea" name="mailArea" value="" required />
+				<br />
+
+				<label for="urlArea">웹페이지 주소를 입력하세요.</label>
+				<input type="url" id="urlArea" name="urlArea" value="" required />
+
+				<br />
+				<label for="telArea">생년월일을 입력하세요.</label>
+				<input type="tel" id="telArea" name="telArea" value="" required />
+				
+				<br />
+				<input type="submit" value="전송">
 			</fieldset>
 			<!-- ========================= -->
 			<fieldset>
