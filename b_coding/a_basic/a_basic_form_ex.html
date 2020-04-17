@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- a_basic_form_ex.html -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./css/base/reset.css">
+	<link rel="stylesheet" href="./css/base/common.css">
+	<link rel="stylesheet" href="./css/src/a_basic_form_ex.css">
+	<title>Document</title>
+</head>
+<body>
+	<div class="wrap">
+
+		<h1>호텔스 컴바인 예약페이지 만들기</h1>
+
+		<div class="check">
+			<h2>예약</h2>
+			<form action="" method="get">
+				<fieldset>
+					<legend><span>여행지 검색</span></legend>
+					<div class="location_field">
+						<h3><label for="fieldTour">여행지</label></h3>
+						<div class="search_bar">
+							<i aria-hidden="true"></i>
+							<input type="search" id="fieldTour" name="fieldTour" value=""
+							       placeholder="도시 또는 호텔명을 검색해 보세요.">
+						</div>
+					</div>
+					<div class="check_in">
+						<h3><label for="checkInMonth">체크인</label></h3>
+						<div class="calender">
+							<div class="calender_btn"><button type="button"><i aria-hidden="true"></i>달력</button></div>
+							<div class="month">
+								<select name="checkInMonth" id="checkInMonth">
+									<option>월</option>
+									<option value="2020년 4월">2020년 4월</option>
+									<option value="2020년 5월">2020년 5월</option>
+									<option value="2020년 6월">2020년 6월</option>
+									<option value="2020년 7월">2020년 7월</option>
+									<option value="2020년 8월">2020년 8월</option>
+									<option value="2020년 9월">2020년 9월</option>
+									<option value="2020년 10월">2020년 10월</option>
+									<option value="2020년 11월">2020년 11월</option>
+									<option value="2020년 12월">2020년 12월</option>
+									<option value="2021년 1월">2021년 1월</option>
+								</select>
+							</div>
+							<div class="day">
+								<label for="checkInDay" class="hidden">체크인 날짜 선택</label>
+								<select name="checkInDay" id="checkInDay">
+									<option>일</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+									<option value="13">13</option>
+									<option value="14">14</option>
+									<option value="15">15</option>
+									<option value="16">16</option>
+									<option value="17">17</option>
+									<option value="18">18</option>
+									<option value="19">19</option>
+									<option value="20">20</option>
+									<option value="21">21</option>
+									<option value="22">22</option>
+									<option value="23">23</option>
+									<option value="24">24</option>
+									<option value="25">25</option>
+									<option value="26">26</option>
+									<option value="27">27</option>
+									<option value="28">28</option>
+									<option value="29">29</option>
+									<option value="30">30</option>
+									<option value="31">31</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="check_out">
+						<h3>체크아웃</h3>
+					</div>
+
+					<div class="person_count">
+						<h3>인원체크</h3>
+					</div>
+
+
+					<!-- ==================== -->
+					<div class="more_option">
+						<button type="button">추가 검색 옵션</button>
+
+						<fieldset class="more_area">
+							<legend>추가 예약 옵션 체크사항</legend>
+						</fieldset>
+					</div>				
+
+				</fieldset>				
+			</form>
+		</div>
+	</div>
+	<!-- =============================================== -->
+	<script>
+		
+	</script>
+</body>
+</html>
