@@ -6,4 +6,7 @@ h1,h2{text-align: center;}
 					margin:1rem auto;
 					padding:1rem; border:2px solid #777;}
 
-
+input#r_sel_01{width: 0; height: 0; z-index:-1; 
+	position: absolute; overflow: hidden;}
+i{color:#f06; font-size:1.5rem;}
+input[type="radio"]:checked + label>i{color:#07f;}

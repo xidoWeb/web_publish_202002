@@ -48,23 +48,81 @@
 				<input type="tel" id="telArea" name="telArea" value="" required />
 				
 				<br />
-				<input type="submit" value="전송">
+				<!-- <input type="submit" value="전송"> -->
 			</fieldset>
 			<!-- ========================= -->
 			<fieldset>
 				<legend>체크1</legend>
+				<p>다음 중 좋아하는 음식을 고르시오.</p>			
+				
+				<ul>
+					<li>
+						<input type="checkbox" checked="checked" id="sel_01" value="치킨" name="food" />
+						<label for="sel_01">치킨</label>
+					</li>
+					<li>
+						<input type="checkbox" id="sel_02" value="피자" name="food" />
+						<label for="sel_02">피자</label>
+					</li>
+					<li>
+						<input type="checkbox" id="sel_03" value="족발" name="food" />
+						<label for="sel_03">족발</label>
+					</li>
+					<li>
+						<input type="checkbox" id="sel_04" value="보쌈" name="food" />
+						<label for="sel_04">보쌈</label>
+					</li>
+				</ul>
+				<!-- 	var food = ["치킨", "피자", "보쌈"]; -->
+
+		
 			</fieldset>
 			<!-- ========================= -->
 			<fieldset>
 				<legend>체크2</legend>
+				<p>다음중 마음에 드는 사람을 고르시오</p>
+				<ul>
+					<li>
+						<input type="radio" id="r_sel_01" name="radioSel" value="엄마">
+						<label for="r_sel_01"><i>*</i>엄마</label>
+					</li>
+					<li>
+						<input type="radio" id="r_sel_02" name="radioSel" value="아빠">
+						<label for="r_sel_02">아빠</label>
+					</li>
+					<li>
+						<input type="radio" id="r_sel_03" name="radioSel" value="할머니">
+						<label for="r_sel_03">할머니</label>
+					</li>
+					<li>
+						<input type="radio" id="r_sel_04" name="radioSel" value="건물주">
+						<label for="r_sel_04">건물주</label>
+					</li>
+				</ul>
 			</fieldset>
 			<!-- ========================= -->
 			<fieldset>
 				<legend>버튼</legend>
+				<input type="submit" value="동의">
+				<input type="reset" value="취소">
+				<input type="image" value="동의" src="./img/android.png" alt="버튼이미지설명" />
+				<br />
+
+				<label for="postLink">우편번호 검색</label>
+				<input type="button" id="postLink" value="우편번호">
+				<br />
+
+				<label for="dataFile">첨부자료</label>
+				<input type="file" id="dataFile" value="" />
 			</fieldset>
 			<!-- ========================= -->
 			<fieldset>
 				 <legend>멀티/복합</legend>
+				 <p>여러줄의 내용을 입력하는 형태</p>
+				 <label for="comment"></label>
+				 <textarea name="" id="comment" cols="20" rows="10" readonly>
+					 계약서
+				 </textarea>
 			</fieldset>
 			<!-- ========================= -->
 			<fieldset>
