@@ -1,0 +1,64 @@
+/* font.css */
+
+
+.font_family  {
+	font-family:'Share Tech Mono',monospace,'Noto Sans KR',sans-serif;
+}
+
+.font_weight {
+	margin-top:30px;
+	font-family:'Noto Sans KR', sans-serif;
+}
+
+.w_01{font-weight:normal; font-style:normal;}
+.w_02{font-weight:bold;  /*600*/
+      font-style:italic;}
+.w_03{font-weight:lighter; /* 300*/
+      font-style:oblique; /* 강제 기울이기 */}
+.w_04{font-weight:200;
+		  font-style:inherit;}
+
+.line_height{margin-top:30px; margin-bottom: 50px;
+						background-color: #dfdfdf;
+						line-height:120%;}
+						
+.lh {width:150px; height:40px;
+		margin:150px auto;
+		text-align:center;
+		line-height:40px;
+		background-color: #fac;}
+
+:root{font-size:16px;}
+
+.font_size{padding:1rem;   
+	margin-bottom:3rem; 
+	background-color: #acf;
+	font-size:1rem;
+	text-align:justify;
+	text-transform:capitalize;
+	letter-spacing:-2px;
+	word-spacing:-5px;
+}
+
+button{text-transform:uppercase;
+			word-spacing:-0.2rem;}
+
+/* 
+
+font-weight: 100~900 | thin | lighter | normal | bold | bolder | black;
+font-style : normal | italic | oblique; 
+font-size  : 기본 px보다는 rem단위를 권장
+line-height: 행간(단위를 사용하지 않아도 동작하기 때문에 정확한 표현이 중요)
+font-family:['font-01'], ['font-02'], ['font-03'] ....['font 계통'];
+======================================================================================
+font: [weight] [style] [font-size] / [line-height] [font-family],[font-family]......;
+======================================================================================
+text-transform:uppercase | lowercase | capitalize;
+letter-spacing:글자 자간, 0을기준으로 -값은 간격을 좁힌다.
+word-spacing: 단어사이의 간격(어간), 0을 기준으로 -값일 경우 간격을 좁힌다.
+======================================================================================
+text-align:left | right | center | justify;
+======================================================================================
+
+
+*/

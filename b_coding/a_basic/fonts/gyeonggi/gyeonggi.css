@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'gt';
+    src: url('hinted-GyeonggiTitleB.eot');
+    src: local('GyeonggiTitle Bold'), local('GyeonggiTitleB'),
+        url('hinted-GyeonggiTitleB.eot?#iefix') format('embedded-opentype'),
+        url('hinted-GyeonggiTitleB.woff2') format('woff2'),
+        url('hinted-GyeonggiTitleB.woff') format('woff'),
+        url('hinted-GyeonggiTitleB.svg#GyeonggiTitleB') format('svg');
+    font-weight:600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gt';
+    src: url('hinted-GyeonggiTitleL.eot');
+    src: local('GyeonggiTitle Light'), local('GyeonggiTitleL'),
+        url('hinted-GyeonggiTitleL.eot?#iefix') format('embedded-opentype'),
+        url('hinted-GyeonggiTitleL.woff2') format('woff2'),
+        url('hinted-GyeonggiTitleL.woff') format('woff'),
+        url('hinted-GyeonggiTitleL.svg#GyeonggiTitleL') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gt';
+    src: url('hinted-GyeonggiTitleM.eot');
+    src: local('GyeonggiTitle Medium'), local('GyeonggiTitleM'),
+        url('hinted-GyeonggiTitleM.eot?#iefix') format('embedded-opentype'),
+        url('hinted-GyeonggiTitleM.woff2') format('woff2'),
+        url('hinted-GyeonggiTitleM.woff') format('woff'),
+        url('hinted-GyeonggiTitleM.svg#GyeonggiTitleM') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gt';
+    src: url('hinted-GyeonggiTitleV.eot');
+    src: local('GyeonggiTitleV Bold'), local('GyeonggiTitleV'),
+        url('hinted-GyeonggiTitleV.eot?#iefix') format('embedded-opentype'),
+        url('hinted-GyeonggiTitleV.woff2') format('woff2'),
+        url('hinted-GyeonggiTitleV.woff') format('woff'),
+        url('hinted-GyeonggiTitleV.svg#GyeonggiTitleV') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
