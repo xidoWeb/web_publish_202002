@@ -43,5 +43,63 @@ h2{
 .part_02 {
 	background-image: url('../../img/flower.png');
 	background-repeat: no-repeat;
-	background-position:0 0;
+	background-position:100% 30%;
+	/* background-position-y:50%; */
+}
+
+.in_box{
+	width:300px; height:300px;
+	background-color: #acc;
+	background-image: url('../../img/flower.png');
+	background-repeat: no-repeat;
+	background-position:-6.25rem -6.25rem;
+	/* %는 내용물의 이미지가 함께 %위치를 기준으로 배치가 되나,
+		 이외의 다른 단위는 내용 이미지는 0 0 좌료를 기준으로 위치 이동 
+	*/
+}
+
+.in_box > span {
+	display:block;
+	width:0; height:0;
+	overflow: hidden; background-color: #aca;
+}
+
+/* 
+	IR(image-replace): 내용을 text대신 이미지로 대체하여 보이게하는 기법
+
+	IS(image-sprite) : 여러개의 이미지를 하나의 파일에 담아서 처리하는 기법
+	1. 이미지는 작은이미지 여러개를 따로 띄우는 것 보다,
+	   여러개를 한번에 띄우는 형태가 더 로딩속도가 더 빠르다.
+	2. 여러개의 이미지를 관리하는 것보다,
+		 하나의 이미지를통해서 관리하는게 더 효율성이 높다.
+		 (단, 하나의 이미지에 들어있는 형태들은 유사이미지/각각의 좌표는 별도의 관리가 되는 것이 좋다.)
+*/
+
+
+.part_03 >ul{
+	width: 100%; height:auto;
+}
+.part_03 >ul:after,
+.part_03 >ul::after{
+	content:" "; display:block; clear:both;
+}
+
+.part_03 li {
+	float:left; width:60px; height:60px;	
+	margin:0.5rem; border:1px solid #777; 
+}
+
+.part_03 a { display:block; 
+	width:100%; height:100%; background-color: #fcf;
+	background-image:url('../../img/sprites_icon.jpg');
+	background-repeat: no-repeat;
+}
+
+.part_03 a > span{display: block;
+	width:0; height:0; position: absolute; z-index: -1;
+	overflow: hidden;
+}
+
+.part_03 li:nth-child(1)>a{
+	background-position:-30px -20px;
 }
