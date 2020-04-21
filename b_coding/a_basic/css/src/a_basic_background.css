@@ -103,3 +103,130 @@ h2{
 .part_03 li:nth-child(1)>a{
 	background-position:-30px -20px;
 }
+
+.part_03 li:nth-child(2)>a{
+	background-position:-412px -116px;
+	background-position:-25.75rem -7.25rem;
+}
+
+.part_03 li:nth-child(3)>a{
+	background-position:-30px -504px;
+	background-position:-1.875rem -31.5rem;
+}
+
+.part_03 li:nth-child(3)>a:hover{
+	background-position:-126px -504px;
+	background-position:-7.875rem -31.5rem;	
+}
+
+
+.part_03 li:nth-child(3)>a:active{
+	background-position:-222px -504px;
+	background-position:-13.875rem -31.5rem;	
+}
+
+.part_03 li:nth-child(3)>a:focus{
+	background-position:-318px -504px;
+	background-position:-19.875rem -31.5rem;	
+}
+
+
+
+/* 
+ * div{}
+ * 마우스 올릴때 -> div:hover{}
+ * 마우스 누르고있을때 -> div:active{}
+ * 방문한적이 있을때 -> div:visited{}
+ * link의 기능일때 -> div:linked{}
+ * 초점이 잡혔을때 -> div:focus{}
+ * 체크 되었을때 -> div:checked{}
+ * 내용상의 가상선택자(이전) -> div:before{}
+ * 내용상의 가상선택자(이후) -> div:after{}
+*/
+
+.part_03 li:nth-child(4)>a{
+	background-position:-608px -116px;
+	background-position:-38rem -7.25rem;
+}
+
+.part_03 li:nth-child(4)>a:hover{
+	background-position-x:-704px;
+	background-position-x:-44rem;
+}
+
+
+/* =========================== */
+.part_04{height:auto;}
+
+.bg_box_01 {
+	width:400px; height:100px;
+	background-image: url('../../img/background/bgi_001.jpg');
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	background-size:100% auto;
+}
+
+.bg_box_02{
+	width:200px; height:200px;
+	background-image: url('../../img/background/bgi_002.jpg');
+	background-repeat: no-repeat;	
+	background-position: 0 0;
+	background-size:auto 150%;
+	background-color: #fff;
+}
+
+.bg_box_03 {
+	width:300px; height:600px;
+	background-image: url('../../img/background/bgi_003.jpg');
+	background-repeat: no-repeat;
+	background-position:50% 50%;
+	background-size: cover;
+	background-color: #fff;
+}
+
+.bg_box_03:hover{
+	background-size: contain;
+}
+
+.bg_box_04{
+	width:100%; height:200px;
+	background-image: url('../../img/background/bgi_004.jpg');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 100% auto;
+	transition:all 300ms ease;
+}
+
+.bg_box_04:hover{
+	background-position: 50% 80%;
+	background-size: 120% auto;
+}	
+
+
+	/* background-size:
+	 * cover     -> 빈공간이 없이 꽉차게 처리하는것
+	 * contain	 -> 내용이미지를 모두 보게 만들기
+	*/
+
+/* ============================== */
+
+.part_05>div{
+	float:left; width:150px; height:150px;
+	margin:1rem; 
+	border:10px dotted #f07;
+	padding:10px; 
+	background-color: #7cf;
+	background-image: url('../../img/background/bgi_006.jpg');
+	background-repeat: no-repeat;
+	background-position:-2rem -2rem;
+	background-size:200% auto;
+  font-weight: bold;
+}
+
+.clip_01 {background-clip:border-box;}
+.clip_02 {background-clip:padding-box;}
+.clip_03 {background-clip:content-box;}
+.clip_04 {background-clip: text;
+					-webkit-background-clip: text;
+					color: transparent;
+				}
