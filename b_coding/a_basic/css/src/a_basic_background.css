@@ -8,7 +8,7 @@
 											 - 여러개의 이미지를 하나의 이미지로 저장하여 브라우저의 속도를 올릴 수 있는 기능(is기법)
 											 - img는 자주 변경하는 기능, bgi 디자이너들이 주로 사용, 한번세팅 크게변하지 않는 영역
 
- * background-repeat:;
+ * background-repeat: no-repeat | repeat-x | repeat-y | repeat;
  * background-position:;
  * background-size:;
  * background-clip:;
@@ -28,4 +28,20 @@
 
 h2{
 	width:100%; height:30px; font-size:1rem;
-	background-color: #acf;}
+	background-color: #acf;
+	display:none;
+}
+
+	/* ========================= */
+
+.part_01 {
+	background-image:url('../../img/glove.png');
+	background-repeat:repeat;
+	background-position:0 0;
+}
+
+.part_02 {
+	background-image: url('../../img/flower.png');
+	background-repeat: no-repeat;
+	background-position:0 0;
+}
