@@ -1,0 +1,31 @@
+/* a_basic_background.css */
+/* 
+ * background-color:배경색;
+ * background-image:;  - <img> 와 비슷한 개념이지만, img경우는 글자처럼 html요소 내부에 담아서 사용하는 기능
+											 - background-image의 경우는 배경에 색상대신 이미지로 대체 하는 기능
+											 - img는 새로고침의 경우 매번 새로 불러오는 형식
+											 - bgi는 임시로 저장해서 새로고침해도 추가 데이터를 소모하지 않는다.
+											 - 여러개의 이미지를 하나의 이미지로 저장하여 브라우저의 속도를 올릴 수 있는 기능(is기법)
+											 - img는 자주 변경하는 기능, bgi 디자이너들이 주로 사용, 한번세팅 크게변하지 않는 영역
+
+ * background-repeat:;
+ * background-position:;
+ * background-size:;
+ * background-clip:;
+
+ - IR기법, IS기법 의 내용을 찾아서 정리
+*/
+
+.bg_wrap {
+	width: 800px; height:auto;
+	margin:auto; padding:0.5rem; background-color: #dfdfdf;
+}
+
+.part{ 
+	width:100%; height:500px; border:1px solid #777;
+	margin-bottom:1rem;		
+}
+
+h2{
+	width:100%; height:30px; font-size:1rem;
+	background-color: #acf;}
