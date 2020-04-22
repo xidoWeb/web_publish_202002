@@ -23,6 +23,10 @@
 		background-color: #fa0;
 	}
 
+	h1 > a {
+		
+	}
+
 	#gnbBox {
 		width: 100%; height:auto;
 		margin-bottom: 10px;
@@ -131,6 +135,15 @@
 	background-color: #fac;	
 }
 
+.company_about > div {
+	float: left;
+	width:40px; height:40px;
+	background-color: #fff;
+}
+.company_about > div:first-of-type{
+	margin-right:10px;
+}
+
 .company_info{
 	float:left;
 	width:390px; height:54px; 
@@ -140,12 +153,23 @@
 .family_site{
 	position: absolute; top:-50px; right:42px;
 	width:300px; height:100px;
-	background-color: #7af;
+	line-height:50px;	text-indent:0.5rem;
+}
+
+.family_site dt {
+	float:left; width:95px; height:50%;
+	color:#fff;
+	background-color: #555;
+}
+.family_site dd {
+	float:left;	width:205px; height:50%;
+	color:#333;
+	background-color: #fff30d;
 }
 
 .site_comment{
-	float:right;
-	width:300px; height:20px;
+	float:right; width:300px; height:20px;
 	margin-top:34px;
-	background-color: #afc;
+	font-size:0.8rem;
+	letter-spacing:-0.1rem;
 }
