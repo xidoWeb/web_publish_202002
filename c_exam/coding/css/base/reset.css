@@ -18,3 +18,5 @@ a:focus, button:focus{outline:3px solid #fa0;}
 
 header,section,article,footer, nav, aside, main, figure,figcaption{display: block;}
 
+abbr { text-decoration: none; }
+
