@@ -1,0 +1,7 @@
+/* common.css */
+
+.hidden {position: absolute; z-index:-1; 
+         width: 0; height: 0; display: block; overflow: hidden;}
+
+.clearfix:after,        
+.clearfix::after {content:" "; display: block; clear: both;}
