@@ -87,9 +87,11 @@
 	background-color: #adadad;
 }
 
-.pattern_bg {
+#viewBox:before,
+#viewBox::before { content:" "; display: block;
 	width:100%; height:50px; background-color: #555;
-}
+} 
+
 .con_text {
 	float:right;
 	width:400px; height:560px; background-color: #acf;}
@@ -97,15 +99,53 @@
 .com_img {
 	position:absolute; left:80px; bottom:70px;
 	width:330px; height:520px; background-color: #cc7;
-	transition:all 500ms ease-out;
 } 
-.com_img:hover{left:150px;}
+
 
 /* #footBox */
 #footBox {
-	float:left;
+	float:left; position: relative;
 	width:100%; height: 110px;
+	padding:17px 42px 25px 48px; box-sizing: border-box;
+
 	/* background-color: #fff; */
-	background-color: #000;
-	border-top:1px solid #999;
+	background-color: #dadaff;
+	/* border-top:1px solid #999; */
+}
+
+#footBox:before,
+#footBox::before { content:""; display:block;
+	position: absolute; top:-1px; left: 0; z-index:100;
+	width:100%; height:1px;  background-color: #999;
+}
+
+#footBox h2{
+	float:left;
+	width:80px; height:54px; background-color: #fac;
+}
+
+.company_about{
+	float:left;
+	width:90px; height:54px; 
+	margin:0 15px;
+	background-color: #fac;	
+}
+
+.company_info{
+	float:left;
+	width:390px; height:54px; 
+	background-color: #acc;
+}
+
+.family_site{
+	position: absolute; top:-50px; right:42px;
+	width:300px; height:100px;
+	background-color: #7af;
+}
+
+.site_comment{
+	float:right;
+	width:300px; height:20px;
+	margin-top:34px;
+	background-color: #afc;
 }
