@@ -1,5 +1,6 @@
 /* common.css */
 
+body{background-color: #fff;}
 .hidden,
 .hidden_wrap a > span {position: absolute; z-index:-1; 
          width: 0; height: 0; display: block; overflow: hidden;
