@@ -11,10 +11,23 @@
 #headBox{
 	position:absolute; top:0; left:0; z-index:1500;
 	width:100%; height:120px;
-	padding:30px 90px; box-sizing: border-box;
+	padding:30px 90px; 
+	/* padding:1.875rem 4.6875vw;  */
+	box-sizing: border-box;
 	border-bottom:1px solid #333;
 	background-color: #fff;
 }
+
+/* #headBox:before{content:""; display: block; 
+	width: 100%; height: 100%;
+	background-color: #acc;
+} */
+
+/* .head_full {
+	width:90.625%; min-width:1000px; height:100%; 
+	margin:auto;
+	background-color: #aca;
+} */
 
 /* #viewBox ========================================= */
 #viewBox{
@@ -60,7 +73,7 @@
 
 /* #certiInfoBox ========================================= */
 #certiInfoBox{
-	padding-top:30px; padding-bottom:75px; box-sizing: border-box;
+	padding:30px 90px 75px; box-sizing: border-box;
 	background-color: #f06;
 }
 
