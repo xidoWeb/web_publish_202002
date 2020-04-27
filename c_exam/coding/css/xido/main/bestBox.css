@@ -4,6 +4,7 @@
 
 /* #bestBox ========================================= */
 #bestBox{
+	position: relative;
 	padding-top: 70px; padding-bottom: 90px; box-sizing: border-box;
 	background-color: #fff;
 }
@@ -14,8 +15,26 @@
 	font-size:3.5rem; text-align:center; text-transform:uppercase;
 }
 
+.best_btn_area {
+	position: absolute; top:50%; left:0; 
+	width: 100%; height: 100px; 
+	margin-top:-50px;
+	background-color: rgba(50,100,200,0.3);
+}
+
 #bestBox .part_area { 
+	overflow: hidden;
 	width:90%; max-width: 1260px; min-width:980px; height: 560px;
 	margin:auto;
 	background-color: #ccc;
+}
+
+#bestBox .part_wrap{
+	width:300%; height:100%; background-color: #fa0;
+}
+
+#bestBox .part_wrap > div{
+	float: left;
+	width:30%; height: 90%; margin-right: 2%;
+	background-color: #acf;
 }
