@@ -1,0 +1,24 @@
+/**  certiInfoBox.css
+  * 사이트 관련 자격증 정보 설명페이지
+*/
+
+
+/* #certiInfoBox ========================================= */
+#certiInfoBox{
+	padding:30px 90px 75px; box-sizing: border-box;
+	background-color: #f06;
+}
+
+#certiInfoBox > h2 {
+	float: left;
+	width:244px; height:260px;
+	background-color: #ccc;
+}
+
+.certi_con{
+	float: right;
+	width:70%; min-width:750px; max-width: 1200px; height: 670px;
+	background-color: #acc;
+}
+
+/* .certi_graphic{} */

@@ -1,0 +1,21 @@
+/* bestBox.css 
+  best and new 영역 설정
+*/
+
+/* #bestBox ========================================= */
+#bestBox{
+	padding-top: 70px; padding-bottom: 90px; box-sizing: border-box;
+	background-color: #fff;
+}
+
+#bestBox h2 {
+	width: 100%; height:80px;
+	margin-bottom:70px;
+	font-size:3.5rem; text-align:center; text-transform:uppercase;
+}
+
+#bestBox .part_area { 
+	width:90%; max-width: 1260px; min-width:980px; height: 560px;
+	margin:auto;
+	background-color: #ccc;
+}

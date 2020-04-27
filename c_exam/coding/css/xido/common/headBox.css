@@ -1,0 +1,38 @@
+/* headBox.css */
+
+/* #headBox ========================================= */
+#headBox{
+	position:absolute; top:0; left:0; z-index:1500;
+	width:100%; height:120px;
+	padding:30px 90px; box-sizing: border-box;
+	border-bottom:1px solid #333;
+	background-color: #fff;
+	box-shadow:0 0 1rem rgba(51,51,51,0.7);
+}
+
+	h1 {
+		float:left;
+		width:60px; height:60px;
+		background-color:#f06;
+	}
+	
+	#gnbBox{
+		float:right;
+		width:60px; height:60px;
+	}
+		.btn_area{
+			width:100%; height:100%;
+			background-color:#f06;
+		}
+		.btn_area > button {
+			width: 100%; height: 100%;
+			background-color: transparent;
+		}
+
+		.gnb_menu{
+			display: none;
+			position: absolute; right:0; top:100%;
+			width:100%; height:auto; min-height:700px;
+			background-color:#f06;
+			background-image:linear-gradient(#f06 10%, #26000F 12%);
+		}
