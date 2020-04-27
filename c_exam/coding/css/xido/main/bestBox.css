@@ -17,24 +17,83 @@
 
 .best_btn_area {
 	position: absolute; top:50%; left:0; 
-	width: 100%; height: 100px; 
-	margin-top:-50px;
+	width: 100%; height:0; 
 	background-color: rgba(50,100,200,0.3);
 }
+
+.best_btn_area button {
+	width:13.6458333vw;  height:19.2708333vw;
+	min-width:170px; min-height:240px; 
+	max-width:262px; max-height:370px; 
+	transform:translateY(-50%);
+	background-color: #777;
+}
+
+.best_btn_area .next_btn {float:right;}
+.best_btn_area .prev_btn {float:left;}
+
 
 #bestBox .part_area { 
 	overflow: hidden;
 	width:90%; max-width: 1260px; min-width:980px; height: 560px;
 	margin:auto;
-	background-color: #ccc;
 }
 
 #bestBox .part_wrap{
-	width:300%; height:100%; background-color: #fa0;
+	width:300%; height:100%; 
 }
 
-#bestBox .part_wrap > div{
+#bestBox .part_wrap > ul{
 	float: left;
-	width:30%; height: 90%; margin-right: 2%;
-	background-color: #acf;
+	width:33.333333%; height: 100%;
 }
+/* 
+.part_01{background-color: #ffa;}
+.part_02{background-color: #aff;}
+.part_03{background-color: #fdf;} */
+
+
+#bestBox .part_wrap > ul > li {
+	float:left; position: relative;
+	width:29%; height:94%; margin-right: 1%;
+	margin-right:5%;
+	box-shadow:5px 0 5px rgba(51, 51, 51, 0.5);
+}
+
+#bestBox .part_wrap > ul > li:last-child{ margin-right: 0; }
+
+#bestBox .number {
+	position:absolute; left:0; right:0; margin:auto; top:220px; z-index:100;
+	width: 60px; height: 60px;
+	color:#fff; text-align: center; line-height:60px;
+	background-color: #f06;
+}
+
+#bestBox .img_bg { width: 100%; height: 254px; background-color:#777; }
+
+#bestBox dl {
+	width: 100%; height:auto; max-height:300px;
+	padding:40px 24px; box-sizing: border-box;
+}
+
+#bestBox dt {	width: 100%; height: 40px; margin-bottom: 20px; }
+
+#bestBox dd:first-of-type {	width:100%; height:82px;  margin-bottom:20px; }
+
+#bestBox dd:nth-of-type(2){ width: 100%; height:auto;  margin-bottom:0;}
+
+#bestBox p { width: 100%; height: 24px; margin-bottom: 5px;}
+#bestBox p:last-of-type {  margin-bottom:0; }
+#bestBox p > em { font-style:normal; font-weight: bold; }
+
+/* #bestBox p > span {} */
+
+#bestBox dd > a {
+	float: left;
+	width: 150px; height: 50px; line-height:50px;
+	border-radius:50px; 
+	background-color: #f06;
+	color:#fff; font-weight: bold;	text-align: center;
+}
+
+#bestBox dd > a:last-child{ float:right;}
