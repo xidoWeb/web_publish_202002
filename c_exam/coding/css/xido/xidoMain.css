@@ -117,7 +117,7 @@
 }
 
 .guide_tip {
-	widows: 90%; min-width:980px; max-width: 1340px; height: 520px;
+	width: 90%; min-width:980px; max-width: 1340px; height: 520px;
 	margin:auto; 
 	background-color: #ccc;
 }
