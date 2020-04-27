@@ -136,6 +136,19 @@
 	 background-color: #f06;
 }
 
+#subAdBox > h2{
+	float:left;
+	width:244px; height:260px;
+	margin-right:150px;
+	background-color: #ccc;
+}
+
+.ad_con {
+	float: left;
+	width: 425px; height: 180px;
+	background-color: #aa8;
+}
+
 /* #programBox ========================================= */
 /* #programBox{} */
 
@@ -148,9 +161,29 @@
 	background-color: #f06;
 }
 
+#certiInfoBox > h2 {
+	float: left;
+	width:244px; height:260px;
+	background-color: #ccc;
+}
+
+.certi_con{
+	float: right;
+	width:70%; min-width:750px; max-width: 1200px; height: 670px;
+	background-color: #acc;
+}
+
+.certi_graphic{}
+
 /* #footBox ========================================= */
 #footBox{
 	 width:100%; height:60px;
 	 text-align:center;
 	 background-color: #333;
+}
+
+#footBox > p {
+	width:100%; height:auto;
+	text-align: center; line-height: 60px;
+	color:#fff;
 }
