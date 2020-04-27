@@ -28,11 +28,31 @@
 			width: 100%; height: 100%;
 			background-color: transparent;
 		}
+		.btn_area:hover + .gnb_menu {display: block;}
 
 		.gnb_menu{
 			display: none;
 			position: absolute; right:0; top:100%;
 			width:100%; height:auto; min-height:700px;
+			padding:60px 1.5%; box-sizing:border-box;
 			background-color:#f06;
-			background-image:linear-gradient(#f06 10%, #26000F 12%);
+			background-image:linear-gradient(#f06 7%, #26000F 7.2%);
+		}
+
+		.gnb_menu > h3 {
+			float:left; 
+			width: 244px; height: 350px;
+			background-color: #ccc;
+		}
+
+		.gnb_menu > .menu_area {
+			float:right;
+			width:57.3%; min-width:980px; max-width:1400px;
+			height:auto; min-height:600px;
+			background-color: #ccc;
+		}
+		
+		@media screen and (max-width:1280px) {
+			.gnb_menu > h3 {display:none;}
+			.gnb_menu > .menu_area {margin:auto; float:none;}
 		}
