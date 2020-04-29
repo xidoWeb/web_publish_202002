@@ -30,15 +30,20 @@ h1{
 
 /* 
  * transform: 
-					 1. 이동 - translate  
-					 2. 크기변경 - scale
-					 3. 회전 - rotate
-					 4. 기울이기 - skew
+					 1. 이동      - translate  
+					 2. 크기변경   - scale
+					 3. 회전       - rotate
+					 4. 기울이기    - skew
+					 5. 자체원근법  - perspective
 	단위: 이동 - px | rem | %  ...
 			  크기 - 1 == 100% , 0.5 == 50%, 3 == 300%
 				회전 - deg(각도)
 	조건:block요소 , float기능이 되었을때에는 일부 동작x것있음
 	축 : X | Y | Z  - 대부분X축을 기본으로 처리(회전은 Z축을 기본)
+	------------------------------------------------------------
+	* pespective:거리값;
+	* transform-origin:축의 기준위치를 변경;
+
  */
 /* .translate {
 	perspective:10000px;
@@ -89,9 +94,88 @@ h1{
 }
 
 .rotate{
-	perspective:500px;
+	position:relative;
+	/* perspective:500px; */
 }
 
 .rotate > div:nth-of-type(2){
 	transform:rotateX(45deg);
+}
+
+.rotate > div:nth-of-type(3){
+	position:absolute; top: 0; bottom: 0; left: 0; right: 0;
+	margin:auto;
+	transform:rotateY(20deg);
+}
+
+.rotate > div:nth-of-type(4){
+	transform-origin:0 0;
+	transform:rotate(40deg);
+}
+
+/*  ================================================== */
+
+.skew > div:nth-of-type(1) {
+	transform:skew(-45deg);	
+}
+
+.skew > div:nth-of-type(2) {
+	transform:skewY(45deg);	
+}
+
+.skew > div:nth-of-type(3) {
+	transform-origin:100% 100%;
+	/* background-position */
+	transform:skew(-15deg, 45deg);	
+}
+
+.skew > div:nth-of-type(4) {
+	background-color: #fa0;
+	padding:2rem; box-sizing: border-box;
+	transform:skew(-60deg);	
+}
+
+.skew div:nth-of-type(4)>span{
+	display:block;
+	transform:skew(60deg);
+}
+
+/* ====================================== */
+
+.per_wrap { 
+	position:relative;
+	perspective:700px; 
+	height:350px;
+}
+
+.per_wrap > div {
+	position:absolute; top: 0;  bottom: 0; left: 0; right: 0;
+	margin:auto;
+}
+
+.per_wrap > div:nth-of-type(1) { transform:translateX(-500px); }
+.per_wrap > div:nth-of-type(2) { transform:translateX(-250px); }
+.per_wrap > div:nth-of-type(3) { transform:translateX(50px); }
+.per_wrap > div:nth-of-type(4) { transform:translateX(300px); }
+.per_wrap > div { transition:all 1500ms;}
+.per_wrap:hover > div:nth-of-type(1) { transform:translateX(-500px) rotateY(540deg);}
+.per_wrap:hover > div:nth-of-type(2) { transform:translateX(-250px) rotateY(480deg);}
+.per_wrap:hover > div:nth-of-type(3) { transform:translateX(50px) rotateY(-480deg);}
+.per_wrap:hover > div:nth-of-type(4) { transform:translateX(300px) rotateY(-540deg);}
+
+
+/* ========================================== */
+.pers div:nth-of-type(1) {
+	transform:perspective(500px) rotateY(45deg);
+}
+
+.pers div{ transition:all 1000ms; }
+.pers:hover div:nth-of-type(2) {
+	transform:perspective(800px) rotateX(60deg) translate(400px);
+}
+.pers:hover div:nth-of-type(3) {
+	transform:translate(400px) rotate(60deg);
+}
+.pers:hover div:nth-of-type(4) {
+	transform:rotate(60deg) translate(400px);
 }
