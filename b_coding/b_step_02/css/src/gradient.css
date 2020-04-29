@@ -86,5 +86,24 @@ h2{
 										 1. linear-gradient(각도, 색1   위치, 색2   위치, 색3   위치 ...)
 										 2. radial-gradient([circle  |  closeset-side] at 위치  , 색1   위치, 색2   위치, 색3   위치 ...)
 										 3. repeating-[형태(linear | radial)]-gradient(내용은 위 두기능과 동일)
-										 
+
 */
+
+.test{width: 500px; height:500px; margin:auto; margin-bottom: 5rem; } 
+.test>li{float:left; width: 50%; height: 50%; }
+.test>li:nth-child(1){
+	background-image: linear-gradient(45deg, #02a, #a00); 
+	transform-origin:0 100%; transform:skewY(-30deg);
+}
+.test>li:nth-child(2){
+	background-image: linear-gradient(135deg, #02a, #a00); 
+	transform-origin:100% 0; transform:skewY(30deg);
+}
+.test>li:nth-child(3){
+	background-image: linear-gradient(-45deg, #02a, #a00); 
+	transform-origin:0 0; transform:skewY(30deg);
+}
+.test>li:nth-child(4){
+	background-image: linear-gradient(-135deg, #02a, #a00); 
+	transform-origin:100% 0; transform:skewY(-30deg);
+}
