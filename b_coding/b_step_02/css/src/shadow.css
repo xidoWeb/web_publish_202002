@@ -1,0 +1,74 @@
+/* shadow.css */
+
+.sample, .sample2 {
+	width: 800px; height: auto;
+	margin:auto; margin-bottom:5rem;
+	border:1px solid #777;
+}
+
+.sample > h2,
+.sample2 > h2 {
+	padding: 0.5em; background-color: #07f;
+	color:#fff; font-weight: bold; text-align: center;
+}
+
+.sample ul {
+	width: 100%; height:auto;
+	padding:1rem;	box-sizing: border-box;
+}
+
+.sample li {
+	float:left;
+	width:150px; height:50px;
+	margin:1rem;
+	font-size:1.2rem; color:#555; text-align: center; line-height: 50px;
+	background-color: #fca; border-radius:0.5rem;
+}
+/* box-shadow:X값이동치 Y값이동치 번짐의정도 부피의크기  색상;  */
+/* box-shadow:X값이동치 Y값이동치 번짐의정도 색상;  */
+
+.sample li:nth-child(1) {
+	box-shadow:0.5rem 0.5rem 0.5rem 0.5rem #057;
+}
+
+.sample li:nth-child(2) {
+	box-shadow:0.5rem 0.5rem #0f7;
+}
+
+.sample li:nth-child(3) {
+	box-shadow:0.5rem 0.5rem 0.2rem rgba(0,0,0,0.3);
+}
+
+.sample li:nth-child(4) {
+	box-shadow:1rem 1rem #00f inset;
+}
+
+.sample li:nth-child(5) {
+	box-shadow: 0.5rem 0.5rem #a0f,
+							-0.5rem -0.5rem #acf,
+							1rem 2rem #777,
+							-1rem 3rem 0.5rem #f06;
+}
+
+
+.sample2 li{
+	font-size:2rem; font-weight: 900;
+	margin-bottom: 1rem;
+	color:#aaa;
+}
+
+.sample2 li:nth-child(1) {
+	text-shadow:0.3rem 0.3rem #333;
+}
+
+.sample2 li:nth-child(2) {
+	text-shadow:0.3rem 0.3rem 0.5rem #f06;
+	/* text-shadow:  부피개념, inset 속성값 없다 */
+}
+
+.sample2 li:nth-child(3) {
+	text-shadow:0 0 0.02rem #fff,
+	           -0.05rem -0.05rem 0.05rem #333,
+							0.1rem 0.1rem 0.2rem #171717;
+	color:transparent;
+}
