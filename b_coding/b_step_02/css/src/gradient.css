@@ -1,0 +1,90 @@
+/* gradient.css */
+
+h1 {text-align: center;}
+
+.sample {
+	width: 800px; height: 500px; margin: auto;
+}
+
+h2{
+	padding: 0.5rem; background-color: #fca;
+}
+
+.sample > div {
+	float:left;
+	width: 10rem; height: 10rem;
+	margin:1rem; border:1px solid #333;
+}
+
+.linear div:nth-of-type(1) {
+	background-color: violet;
+	background-image: linear-gradient(violet, #fc0);
+}
+
+.linear div:nth-of-type(2) {
+	background-color: #0cf;
+	background-image: linear-gradient(-45deg, #0cf , #479);
+}
+
+.linear div:nth-of-type(3) {
+	background-color: #0cf;
+	background-image: linear-gradient(45deg, #fcf 50%, #479 55%);
+}
+
+.linear div:nth-of-type(4) {
+	background-color: #0cf;
+	background-image: linear-gradient(60deg, #fcf 50%, #f06 50%, #acd 80%, #479 90%);
+}
+
+/* ============================================== */
+
+.radial >div:nth-of-type(1) {
+	background-color: #fa0;
+	background-image: radial-gradient(#fa0, #f06);
+}
+
+.radial >div:nth-of-type(2) {
+	background-color: #fa0;
+	background-image: radial-gradient(#fa0 40%, #f06 40%);
+}
+
+.radial >div:nth-of-type(3) {
+	background-color: #fa0;
+	/* background-image: radial-gradient(circle, #fa0 40%, #f06 40%); */
+	background-image: radial-gradient(closest-side at 10% 30%, #fa0, #f06);
+}
+
+.radial >div:nth-of-type(4) {
+	background-color: #fa0;
+	/* background-image: radial-gradient(circle, #fa0 40%, #f06 40%); */
+	background-image: radial-gradient(circle at 10% 30%, #fa0, #f06);
+} 
+
+/* =========================================== */
+
+.repeat > div:nth-of-type(1) {
+	background-color: #acc;
+	background-image: 
+	   repeating-linear-gradient(45deg, #061 10%, #061 15%, #fff 15%, #fff 20%);
+}
+
+.repeat > div:nth-of-type(2) {
+	background-color: #acc;
+	background-image: 
+	   repeating-radial-gradient( #061 10%, #061 15%, #fff 15%, #fff 20%);
+}
+
+.repeat > div:nth-of-type(3) {
+	background-color: orange;
+	background-image: 
+	   repeating-radial-gradient(closest-side at 10% 30%, #061 10%, #061 15%, transparent 15%, transparent 20%);
+}
+
+/* 
+ * gradient 이미지를 대체하는 기능으로 인지
+ * background-image: 해당기능();
+										 1. linear-gradient(각도, 색1   위치, 색2   위치, 색3   위치 ...)
+										 2. radial-gradient([circle  |  closeset-side] at 위치  , 색1   위치, 색2   위치, 색3   위치 ...)
+										 3. repeating-[형태(linear | radial)]-gradient(내용은 위 두기능과 동일)
+										 
+*/
