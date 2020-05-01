@@ -123,3 +123,55 @@ h1 {text-align: center;}
 .sample_02:hover li:nth-child(7) {width:800px; background-color: #f77;}
 .sample_02:hover li:nth-child(8) {width:800px; background-color: #f77;}
 
+/* ==================================== */
+/* test: 마우스올리면 4면에 형태가 변경 */
+
+.test {
+	width: 960px; height: 250px;
+	margin:auto; 
+	margin-top:1rem; margin-bottom: 10rem;
+	background-color: #ddd;
+}
+
+.test_01 {
+	position: relative;
+	float: left;
+	width: 250px; height: 250px;
+	padding:2rem; box-sizing: border-box;
+	background-color: #0ac;
+}
+.test_01 a {
+	display: block; 
+	width: 100%; height: 100%;
+}
+
+.test_01  span {
+	display: block;
+	position: absolute;
+	background-color: #fa0;
+	transition-property:all;
+	transition-duration:500ms;
+	transition-timing-function:linear;
+}
+
+.line_01 {
+	width:0; height:1rem; top: 0; left: 0;
+  transition-delay:1500ms;
+}
+.line_02 {
+	width: 1rem; height: 0; top:0; right: 0; 
+  transition-delay:1000ms;
+}
+.line_03 {
+	width: 0; height: 1rem; bottom: 0; right: 0;
+  transition-delay:500ms;
+}
+.line_04 {
+	width: 1rem; height:0; bottom: 0; left: 0;
+  transition-delay:1ms;
+}
+
+.test_01 a:hover .line_01 {	width:100%;  transition-delay:1ms;}
+.test_01 a:hover .line_02 {	height:100%; transition-delay:500ms;}
+.test_01 a:hover .line_03 {	width:100%;  transition-delay:1000ms;}
+.test_01 a:hover .line_04 {	height:100%; transition-delay:1500ms;}
