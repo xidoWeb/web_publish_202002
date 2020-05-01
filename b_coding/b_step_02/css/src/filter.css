@@ -1,0 +1,23 @@
+/* filter.css */
+
+.filter {
+	width: 800px; height:auto;
+	border:1px solid #333;
+}
+
+.filter>div {
+	float:left;
+	width: 20rem; height:20rem;
+	margin:2rem;
+	background-color: #ccc;
+	background-image: url('../../img/hospital-icon.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.filter>div:nth-of-type(1) { filter:blur(10px); }
+.filter>div:nth-of-type(2) { filter:brightness(1.5); }
+.filter>div:nth-of-type(3) { filter:contrast(3); }
+.filter>div:nth-of-type(4) { box-shadow:10px 10px 5px #456;  background-color: transparent; 
+	                           filter:drop-shadow(-1rem -1rem 1rem #f06); }
+.filter>div:nth-of-type(5) { filter:hue-rotate(180deg) blur(5px); }
