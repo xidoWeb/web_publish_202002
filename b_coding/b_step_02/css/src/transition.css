@@ -79,3 +79,47 @@ h1 {text-align: center;}
 	width:700px;
 }
 
+
+.sample_02{
+	width: 800px;	height:1000px; height:62.5rem;
+	margin:auto;	border:1px solid #333;
+}
+.sample_02 > h2{
+	width: 100%;	height: 50px;
+	background-color: #06f;	color:#fff;
+}
+.sample_02 ul {
+	width: 100%; height:auto;
+	margin-top:1rem; 
+	background-color: #ddd;
+}
+.sample_02 li {
+	width:50px; height:50px; 
+	margin-top:1rem;
+	background-color: #4c7; 
+	color:#fff; line-height:50px; font-weight: bold;
+	transition-property:all;
+	transition-duration:2000ms;
+}
+
+.sample_02 li:nth-child(1) {background-image: url('../../img/hospital-icon.png');
+													background-size:auto 100%; background-repeat: no-repeat;}
+.sample_02 li:nth-child(2) {transition-timing-function:ease;}
+.sample_02 li:nth-child(3) {transition-timing-function:ease-in;}
+.sample_02 li:nth-child(4) {transition-timing-function:ease-out;}
+.sample_02 li:nth-child(5) {transition-timing-function:ease-in-out;}
+.sample_02 li:nth-child(6) {transition-timing-function:linear;}
+.sample_02 li:nth-child(7) {transition-timing-function:cubic-bezier(0,1.22,1,-0.06);}
+.sample_02 li:nth-child(8) {transition-timing-function:cubic-bezier(0,1.22,.98,-1.75);}
+
+
+.sample_02:hover li:nth-child(1) {width:800px; background-color: #96a; 
+																	background-size:auto 150%;	background-position: 100% 0;}
+.sample_02:hover li:nth-child(2) {width:800px; background-color: #fc6;}
+.sample_02:hover li:nth-child(3) {width:800px; background-color: #ca5;}
+.sample_02:hover li:nth-child(4) {width:800px; background-color: #a56;}
+.sample_02:hover li:nth-child(5) {width:800px; background-color: #2f5;}
+.sample_02:hover li:nth-child(6) {width:800px; background-color: #f3f;}
+.sample_02:hover li:nth-child(7) {width:800px; background-color: #f77;}
+.sample_02:hover li:nth-child(8) {width:800px; background-color: #f77;}
+
