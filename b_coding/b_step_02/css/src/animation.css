@@ -2,39 +2,96 @@
 
 /** animation: 연속성
 
-	* animation-name             : 이름
-		animation-direction        : 종료후 재처리방법
-		animation-delay            : 지연시간
-		animation-duration         : 사용시간
-		animation-interation-count : 반복회수
-		animation-play-state       : 재생/정지
-		animation-fill-mode        : 동작전/후에 처리되는 값
+	* animation-name             : 이름(직접 이름을 기입)
+		animation-direction        : 종료후 재처리방법( normal | alternate | reverse | alternate-reverse )
+		animation-delay            : 지연시간 
+		animation-duration         : 사용시간 
+		animation-interation-count : 반복회수 ( 정수형숫자 | infinite )
+		animation-play-state       : 재생/정지 ( running | paused )
+		animation-fill-mode        : 동작전/후에 처리되는 값 ( backward | forward )
 
 	* @keyframes {}              : 선택자에 animation기능을 수행할 이름을 지정하고, 지정된 이름의 기능을 별도로 수행명령내용을 따로 처리
  */
 
 
- h1{text-align: center;}
- .sample {
-	 width: 60rem; height:auto;
-	 margin:auto; padding:1rem; background-color: #ccc;
- }
+h1{text-align: center;}
+.sample {	 width: 60rem; height:auto;
+	margin:auto; padding:1rem; background-color: #ccc; }
+.sample h2 {	 border-bottom: 0.0625rem solid #777;}
+.sample ul{		width: 100%; height:auto;	}
+.sample li{
+	width: 6.25rem; height:6.25rem;
+	margin:1rem; border:5px solid #a66;
+	text-align: center; line-height: 6.25rem;
+	font-size: 2rem; border-radius:50%;
+	background-color: #79a; color:#fff; font-weight: bold;
+}
 
- .sample h2 {
-	 border-bottom: 0.0625rem solid #777;
-	}
+.sample li:nth-child(1){
+	animation-name:first;
+	animation-duration:1000ms;
+	animation-direction:normal;
+	animation-iteration-count:infinite;
+}
 
-	.sample ul{
-		width: 100%; height:auto;
-	}
+.sample li:nth-child(1):hover {
+	animation-play-state:paused;
+}
 
-	.sample li{
-		width: 6.25rem; height:6.25rem;
-		background-color: #aca;
-		margin:1rem; border:2px solid #a66;
-		text-align: center; line-height: 6.25rem;
-		font-size: 2rem;
-		border-radius:50%;
-	}
+.sample li:nth-child(2){
+	animation-name:first;
+	animation-duration:3000ms;
+	animation-direction:reverse;
+	animation-iteration-count:3;
+	animation-fill-mode:forwards;
+	animation-play-state:paused;
+}
 
-	
+.sample li:nth-child(2):hover{
+	animation-play-state:running;
+}
+
+
+@keyframes first {
+	0% {transform:translate(0);}
+	25% {transform:translate(10rem, 5rem);}
+	50% {transform:translate(20rem, -5rem);}
+	75% {transform:translate(30rem, 5rem);}
+	85% {transform:translate(40rem, 0);}
+	100% {transform:translate(50rem);}
+}
+/*  =================================  */
+.test {
+	width: 960px; height:auto;
+	background-color: #733;
+	margin:auto;
+}
+
+.test>p{
+	width: 100%; height: 100px;
+	margin-bottom: 300px;
+	font-size: 2rem; font-weight: bold;
+	color:#fff;
+}
+
+.test span {
+	display: inline-block;
+	width: 25px; height: 50px;
+	border:1px solid #fa0;
+	text-align: left;
+	text-indent:-50px;
+	overflow: hidden;
+	/* animation-name:text_move;
+	animation-duration:600ms;
+	animation-direction: normal;
+	animation-iteration-count:1; 
+	animation-delay:500ms;
+	*/
+	animation:text_move forwards 1500ms normal 1 500ms;
+}
+
+@keyframes text_move {
+	0% { text-indent:-50px; color:#fff;}
+	50% { text-indent:0; }
+	100% { text-indent:0; color:#fa0; border:0;}
+}
