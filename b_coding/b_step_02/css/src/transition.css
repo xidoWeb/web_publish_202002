@@ -137,7 +137,6 @@ h1 {text-align: center;}
 	position: relative;
 	float: left;
 	width: 250px; height: 250px;
-	padding:2rem; box-sizing: border-box;
 	background-color: #0ac;
 }
 .test_01 a {
@@ -175,3 +174,24 @@ h1 {text-align: center;}
 .test_01 a:hover .line_02 {	height:100%; transition-delay:500ms;}
 .test_01 a:hover .line_03 {	width:100%;  transition-delay:1000ms;}
 .test_01 a:hover .line_04 {	height:100%; transition-delay:1500ms;}
+
+.test_01 a:before {
+	content:" "; display:block;
+	position: absolute; top: 0; left: 0;
+	width: 100%; height: 100%;
+	background-color:rgba(255, 50, 200, 0.7);
+}
+.test_01 a {
+	padding:2rem; box-sizing: border-box;
+	background-image: url('../../img/hospital-icon.png');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	color:#fff;
+}
+
+
+.test_01 a {transition:all 500ms ease;}
+.test_01 a:before {transition:all 500ms ease;}
+.test_01 a:hover:before {	background-color:rgba(255, 50, 200, 0); }
+.test_01 a:hover {background-size: 130% auto;}
