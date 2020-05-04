@@ -46,4 +46,7 @@ h1,h2,h3 {text-align: center;}
 	border-bottom:1px solid #fff;
 }
 
-.drop_menu:hover dd {display: block;}
+/* .drop_menu:hover dd {display: block;} */
+
+
+dt:focus {background-color: #f06;}
