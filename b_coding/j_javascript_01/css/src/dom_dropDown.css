@@ -1,0 +1,49 @@
+/* dom_dropDown.css */
+
+h1,h2,h3 {text-align: center;}
+
+.drop_menu { 
+	width: 800px; height:50px; 
+	margin:auto; margin-top:20px;
+	background-color: #cdf;
+}
+
+.drop_menu > ul {
+	width: 100%; height:auto;
+	background-color: rgba(200, 150, 100, 0.5);
+}
+
+.drop_menu li {
+	float:left;
+	width: 25%; height:100%;
+	padding:5px; box-sizing:border-box;
+	text-align: center; 
+}
+
+.drop_menu dl {
+	width: 100%; height: auto; 
+}
+
+.drop_menu dt {
+	width: 100%; height: 40px;
+	line-height:40px; font-size:1.1rem; font-weight: bold;
+	cursor:pointer;
+	background-color: #fca;
+}
+
+.drop_menu dd { display: none;
+	width: 100%; height:auto;
+	padding-top:5px; box-sizing: border-box;
+	color:#fff;
+	background-color: #87a;
+}
+
+.drop_menu dd > a {
+	display: block;
+	width: 100%; height:35px;
+	margin-bottom:5px;
+	line-height:35px;
+	border-bottom:1px solid #fff;
+}
+
+.drop_menu:hover dd {display: block;}
