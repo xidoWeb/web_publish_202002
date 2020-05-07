@@ -66,7 +66,40 @@
 		// 자식선택자/자손선택자
 		// $("ul>li").css({"color":"#777"});
 		$("ul").children('li').css({"color":"#77f"});
-		$("ul").children('li').find('span').css({"fontSize":"1.5rem", "fontWeight":"bold"});
+
+		// $('ul > li span').css({"fontSize":"1.5rem", "fontWeight":"bold"});
+		// $("ul").children('li').find('span').css( {"fontSize":"1.5rem", "fontWeight":"bold"} );
+
+		var myCss = {"fontSize":"1.5rem", "fontWeight":"bold"};
+		var myUl = $('ul');
+		var myLi = myUl.children('li').find('span');
+		myLi.css(myCss);
+		// =================================================================
+
+		$('.three').prev('li').css({"border":"1px solid #35f"});
+		$('.three').prevAll('li').css({"backgroundColor":"#ccc"});
+		$('.three').next('li').css({"border":"1px solid #f35"});
+		$('.three').nextAll('li').css({"backgroundColor":"#aca"});
+
+		$('.other_01').siblings().css({"marginBottom":"2rem", "width":"400px"});
 
 
+		$('.four').parentsUntil('body').css({
+															"padding":"2rem", 
+															"backgroundColor":"#333", 
+															"borderRadius":"3rem",
+															"border":"2px solid #fff"
+															});
+
+		$(".four").parents().siblings("h2").css({"backgroundColor":'#fa0'});
+
+	
+
+		var fourI = $('.four').parent().index();
+		// console.log(fourI);			
+		// console.log( $('li').length );
+
+		$('li').eq(fourI + 1).children('span').css({'textShadow':'0.2rem 0.2rem 0.2rem #fff'});
+
+		
 	})(jQuery);
