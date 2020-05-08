@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- jq_apiBasic_02.html -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5">
+
+	<!-- <link rel="stylesheet" href="../font/gyeonggi/gyeonggi.css"> -->
+
+	<link rel="stylesheet" href="../css/base/reset.css">
+	<link rel="stylesheet" href="../css/base/common.css">
+
+	<!-- <link rel="stylesheet" href="../css/src/jq_apiBasic_02.css"> -->
+
+	<!--[if IE]>
+		<script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+		<script src="../ie/pie/PIE.js"></script>
+		<script src="../ie/respond/dist/respond.min.js"></script>
+	<![endif]-->
+
+	<title>Document</title>
+</head>
+<body>
+	<!-- layout -->
+	<div id="wrap">
+		<h1><a href="./content.html">jquery 기초 이해하기</a></h1>
+		<header id="headBox">
+			<!-- h1을 이곳에 옮겨주세요. : prepend() -->
+			<nav id="gnbBox">
+				<h2>navigation</h2>
+				<!-- h2를 숨겨주세요. class="hidden" -->
+				<ul>
+					<li>네이버 이동하기</li>
+					<li>다음 이동하기</li>
+					<li>구글 이동하기</li>
+					<li>xido 이동하기</li>
+					<!-- list를 10개 이상 생성하고, a요소를 담아주세요, a요소에 링크 주소를 담아주세요. -->
+				</ul>
+			</nav>
+		</header>
+
+		<section id="viewBox">
+			<!-- h2요소를 생성하세요. -->
+			<div class="indicator"></div>
+			<div class="view_btn">
+				<!-- button 요소를 2개 생성하세요. (각각 class이름을 next_btn, pre_btn을 생성하세요.) -->
+			</div>
+		</section>
+		
+		<article id="conBox">
+			<!-- h2요소를 생성하세요. -->
+			<div class="view_add"></div>
+			<div class="con_area">
+				<div class="con_01">
+					<div class="img_bg"></div>
+					<dl>
+						<dt>title</dt>
+						<dd>content</dd>
+						<dd>link page</dd>
+					</dl>
+				</div>
+			</div>
+
+		</article>
+
+		<footer id="footBox">
+			<address></address>
+		</footer>
+</div>
+
+	<!-- script -->
+	<script src="../js/base/jquery-3.5.1.min.js"></script>
+	<script src="../js/base/jquery-ui.min.js"></script>
+	<!-- <script src="../js/jq_apiBasic_02.js"></script> -->
+	<script src="../js/jq_apiBasic_02_test.js"></script>
+</body>
+</html>
