@@ -1,0 +1,53 @@
+/* jq_display.css */
+
+#wrap {
+	width: 960px; height: 600px;
+	margin: auto;
+	background-color: #ddd;
+}
+
+h1{
+	width: 100%; height: 40px;
+	background-color: #acc;
+	font-size: 1.2rem; text-align: center;
+	line-height: 40px;
+	text-transform:uppercase;
+}
+
+.part {
+	width: 90%; height: 500px;
+	margin:auto; margin-top:1rem;
+	border:1px solid #333;
+}
+
+.part h2 {
+	width: 100%; height: 30px;
+	font-size: 1.2em; background-color: #acc;
+}
+
+.box{
+	width: 45%; height: 450px;
+	float: left;
+	background-color: #fff;
+	padding:1rem; box-sizing: border-box;
+}
+
+.display_box{
+	width: 100%; height: 100%;
+	background-color: #fa0;
+	padding:1rem; box-sizing: border-box;
+	border-radius:0.5rem;
+}
+
+.btn {
+	width: 50%; height:auto;
+	float:right;
+}
+
+.btn button{
+	width:130px; height:50px; 
+	background-color: #05f; 
+	margin:0.2rem;
+	font-size:0.8rem;	line-height:120%;
+	color:#fff; font-weight: bold;
+}
