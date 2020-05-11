@@ -99,12 +99,14 @@
 		// console.log(dps);
 		// if(dps[1] == 'action')
 		
-		var dpAc = dpBox.hasClass('action');  // class이름('action')의 유무를 판단
-		if(dpAc === false){
-			dpBox.addClass('action');
-		}else{
-			dpBox.removeClass('action');
-		}
+		/* // class이름('action')의 유무를 판단
+		var dpAc = dpBox.hasClass('action');  
+		// if(dpAc === false){	dpBox.addClass('action');	}else{	dpBox.removeClass('action');}
+		// (dpAc === false) ? dpBox.addClass('action') : dpBox.removeClass('action');
+		 (!!!dpAc) ? dpBox.addClass('action') : dpBox.removeClass('action');
+    */
+
+		dpBox.toggleClass('action');
 
 	});
 
