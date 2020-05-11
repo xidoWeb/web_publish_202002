@@ -81,3 +81,35 @@ h2{
 	font-size: 2rem; color:#fff;
 	text-shadow:0.1rem 0.1rem 0.1rem #333;
 }
+
+
+/* =============================== */
+.accordion_menu{
+	width: 100%; height:auto;
+}
+.acc_style_01{
+	width: 100%; height:auto;
+	background-color: #fa0;
+	padding:0.5rem; box-sizing: border-box;
+}
+
+.acc_style_01 dl{
+	width: 100%; height:auto;
+	border:1px solid #333;
+	box-sizing: border-box;
+}
+.acc_style_01 dt{
+	width: 100%; height: 50px;
+	border-bottom: 0.2rem solid #75F;
+}
+.acc_style_01 button {
+	width: 100%; height: 100%;
+}
+
+.acc_style_01 dd{
+	display: none;
+	width: 100%; height: 200px;
+	padding:1rem; box-sizing: border-box;
+	background-color: #fafafa;
+}
+
