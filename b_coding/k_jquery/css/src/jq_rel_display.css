@@ -104,6 +104,12 @@ h2{
 }
 .acc_style_01 button {
 	width: 100%; height: 100%;
+	color:inherit;
+}
+
+.acc_style_01 dt.action{
+	background-color: #0af;
+	color:#fff;
 }
  
 .acc_style_01 dd{
@@ -113,3 +119,58 @@ h2{
 	background-color: #fafafa;
 }
 
+/* =============================== */
+.tab_more{
+	width: 100%; height:auto;
+	padding:1rem; box-sizing: border-box;
+	margin-bottom: 10rem;
+}
+.tab_more > h2{
+	width: 100%;  border-bottom: 1px solid #000;
+}
+
+.more_style{
+	width: 100%; height:500px;
+	border:2px solid #055;
+	box-sizing: border-box;
+}
+
+.more_style dl {
+	position:relative;
+	width: 100%; height: 100%;
+}
+
+.more_style dt {
+	float:left; 
+	width:24%; height:40px;
+	margin-right:1%;
+}
+.more_style button{
+	width: 100%; height: 100%;
+	background-color: #ccc;
+}
+.more_style button:hover{
+	background-color: #555;
+	color:#fff;
+}
+
+.more_style dt.action {
+	background-color: #555;
+	color:#fff;
+}
+.more_style dt.action button{
+	background-color: transparent;
+	color:inherit;
+}
+
+.more_style dd {
+	display: none;
+	position:absolute; left:0; bottom:0;
+	width:100%; height:460px;
+	padding:1rem; box-sizing: border-box;
+	background-color: #aca;
+}
+
+.more_style dd:first-of-type{
+	display: block;
+}
