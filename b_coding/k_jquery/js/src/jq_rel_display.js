@@ -30,18 +30,21 @@ var accSt01_dd = accSt01.find('dd');
 
 // console.log( accSt01_dt.length, accSt01_dd.length );
 
-// dt('accSt01_dt')를 클릭시
-accSt01_dt.on('click', function(){
+// dt('accSt01_dt')를 클릭시(버튼을 클릭하는 것으로 설정/focus처리)
+accSt01_dt.find('button').on('click focus', function(){
 	// 이미 열려있는 dd는 접히고,(단, 선택된 순서뒤의 내용이라면 열려있고)
-	var thisView =  $(this).next('dd').css('display');
+	var thisView =  $(this).parent('dt').next('dd').css('display');
 
-	if( thisView === 'none' ){		accSt01_dd.slideUp(); 	}
+	if( thisView === 'none' ){		accSt01_dd.stop().slideUp(); 	}
 
 	// 선택된 dt 바로 뒤에있는 dd('accSt01_dd')를 나타나게(slideDown) 해라
-	$(this).next('dd').slideDown();
+	$(this).parent('dt').next('dd').stop().slideDown();
 }); 
 
-
+// 몇가지 문제점 정리....
+// 1. slide 처리시 toggle이 중복현상
+// 2. focus 처리시 색상처리
+// 3. 변수 정리
 
 // jquery end =======================
 })(jQuery);
