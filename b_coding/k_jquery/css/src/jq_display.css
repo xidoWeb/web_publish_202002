@@ -1,7 +1,7 @@
 /* jq_display.css */
 
 #wrap {
-	width: 960px; height: 600px;
+	width: 960px; height: 1300px;
 	margin: auto;
 	background-color: #ddd;
 }
@@ -33,10 +33,16 @@ h1{
 }
 
 .display_box{
+	display: none;
 	width: 100%; height: 100%;
 	background-color: #fa0;
 	padding:1rem; box-sizing: border-box;
 	border-radius:0.5rem;
+}
+
+.display_box.action{
+	display:block;
+	background-color: #acf;
 }
 
 .btn {
