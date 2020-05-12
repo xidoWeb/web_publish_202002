@@ -1,0 +1,22 @@
+/* jq_scrollOffset.css */
+
+#wrap {
+	width: 800px; height: 3500px;
+	margin:auto; 
+	background-color: #ccc;
+}
+
+#headBox {
+	position: absolute; top:0; left:50%;
+	transform:translateX(-50%);
+
+	width:inherit; height: 120px;
+	padding:20px; box-sizing: border-box;
+	background-color: #acf;
+}
+
+#viewBox{
+	width: 100%; height: 800px;
+	padding-top:120px;
+	background-color: #fca;
+}
