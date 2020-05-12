@@ -20,15 +20,20 @@
 // offset() : 브라우서 상단에서 부터 원하는 개체(선택자)가 얼만큼 떨어져 있는지를 확인하는 기능
 // offset().top   |  offset().left
 
-$(document).on('scroll', function(){
-	var doScroll = $(this).scrollTop();
-	var doOffset =$('#headBox').offset();
+// $(document).on('scroll', function(){
+// 	var doScroll = $(this).scrollTop();
+// 	var doOffset =$('#headBox').offset();
 	
-	console.log( doScroll, doOffset );
+// 	console.log( doScroll, doOffset );
 
-	$('#headBox').offset({top:doScroll, left: doScroll});
-});
+// 	$('#headBox').offset({top:doScroll, left: doScroll});
+// });
 
+
+// =====================================
+var bodyH = $('body').height();
+// console.log(bodyH);
+$('#viewBox').height(bodyH);
 
 
 // jquery end
