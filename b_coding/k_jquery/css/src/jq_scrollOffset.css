@@ -34,7 +34,7 @@
 	position: relative;
 	width: 100%; height: 100%;
 }
-.video_bg > iframe {
+.video_bg > .video {
 	position: absolute; top: 50%; left: 50%;
 	width:auto; min-width: 100%; 
 	height:auto; min-height:100%;
@@ -44,11 +44,16 @@
 
 
 #conBox{
-	width: 100%; height:1200px;
+	width: 100%; height:auto;
 	padding-top:300px;
 	box-sizing: border-box;
 	background-color: #fafafa;
 }
+#conBox:after{
+	content:"";
+	display: block;  clear:both;
+}
+
 
 .title_bg {
 	width:40%;
@@ -66,12 +71,16 @@
 
 .con_img_bg {
 	float:right;
-	width:65%; height: 1200px;
-	padding:250px; box-sizing: border-box;
+	width:60%; height: 1200px;
+	padding:200px; box-sizing: border-box;
 	background-color: #da8;
 }
 
 .con_img {
 	width: 100%; height: 100%;
 	background-color: #0af;
+	background-image: url('../../img/funiture_01.jpg');
+	background-repeat: no-repeat;
+	background-position:50% 50%;
+	background-size:130% auto;
 }
