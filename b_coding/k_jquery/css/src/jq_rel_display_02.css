@@ -53,6 +53,7 @@ h1>a{
 .lang_member li{
 	display: none;
 	width: 100%; height: 40px;
+	background-color: rgba(255,255,255,0.7);
 }
 
 .lang_member li.action{
@@ -62,6 +63,7 @@ h1>a{
 .lang_member li:first-child{
 	display: block;
 	height:70px; line-height: 70px;
+	background-color: transparent;
 }
 .lang_member li:first-child a{
 	height:100%;
