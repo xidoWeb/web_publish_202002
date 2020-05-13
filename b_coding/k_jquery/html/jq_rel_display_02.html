@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- jq_rel_display_02.html -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5">
+
+	<!-- <link rel="stylesheet" href="../font/gyeonggi/gyeonggi.css"> -->
+	<link rel="stylesheet" href="../fonts/fontawesome-5/css/all.min.css">
+	<link rel="stylesheet" href="../css/base/reset.css">
+	<link rel="stylesheet" href="../css/base/common.css">
+
+	<link rel="stylesheet" href="../css/src/jq_rel_display_02.css">
+
+	<!--[if IE]>
+		<script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+		<script src="../ie/pie/PIE.js"></script>
+		<script src="../ie/respond/dist/respond.min.js"></script>
+	<![endif]-->
+
+	<title>display 기능 이해하기2</title>
+	<style>
+
+	</style>
+</head>
+<body>
+	<!-- layout -->
+	<div id="wrap">
+		<header id="headBox"></header>
+		<section id="viewBox"></section>
+		<article id="conBox">
+			<h2>아코디언메뉴 만들기</h2>
+			<div class="accor">
+				<dl>
+					<!-- ((dt>button[type="button"]{title_$$})+dd{lorem$})*5 -->
+					<dt><button type="button">title_01 <i class="fas fa-caret-square-down"></i></button></dt>
+					<dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, tempora.</dd>
+					<dt><button type="button">title_02 <i class="fas fa-caret-square-down"></i></button></dt>
+					<dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, delectus eveniet neque impedit libero provident sint veritatis doloribus velit dolorem.</dd>
+					<dt><button type="button">title_03 <i class="fas fa-caret-square-down"></i></button></dt>
+					<dd>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis nemo nesciunt non labore animi cumque optio itaque, officiis ad pariatur, libero quibusdam esse officia quo necessitatibus. Quasi, incidunt. Vero, unde!</dd>
+					<dt><button type="button">title_04 <i class="fas fa-caret-square-down"></i></button></dt>
+					<dd>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora perspiciatis omnis incidunt animi quibusdam molestiae! Consequatur mollitia vero modi eligendi illo id cumque, veritatis impedit magni, est accusamus nemo reiciendis totam delectus culpa placeat voluptatibus odit qui ab eos tempora?</dd>
+					<dt><button type="button">title_05 <i class="fas fa-caret-square-down"></i></button></dt>
+					<dd>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, animi. Saepe veritatis perspiciatis rem impedit voluptatum libero, rerum eveniet deserunt labore dolor tempora sed magnam, voluptatem provident incidunt atque sequi culpa. Obcaecati repellendus, ratione assumenda similique id inventore beatae ipsa sed odit nam atque! Beatae et quis illum non placeat?</dd>
+				</dl>
+			</div>
+		</article>
+		<footer id="footBox"></footer>	
+	</div>
+
+	<!-- script -->
+<script src="../js/base/jquery-3.5.1.min.js"></script>
+<script src="../js/base/jquery-ui.min.js"></script>
+	<script src="../js/src/jq_rel_display_02.js"></script>
+</body>
+</html>
