@@ -8,17 +8,20 @@
 
 	accorBtn.on('click', function(e){
 		e.preventDefault();
-		var myT      = $(this);
-		var thisNext = myT.parent('dt').next('dd');
+		var myT           = $(this);
+		var thisNext      = myT.parent('dt').next('dd');
 		var thisNextState = thisNext.css('display') == 'none';
 		
 		if(thisNextState){
 			thisNext.siblings('dd').stop().slideUp(300);
 			thisNext.stop().slideDown(300);
+			accorBtn.removeAttr('style');
+			myT.css({'backgroundColor':'#aca'});
 		}else{
 			thisNext.stop().slideUp(300);
+			myT.css({'backgroundColor':'transparent'});
 		}
-	
+	/*
 		// class 이름변경 ---------------------------------------
 		var myTinI           = myT.find('i');
 		var otherTinI        = myT.parent('dt').siblings('dt').find('i');
@@ -36,17 +39,22 @@
 			myTinI.addClass('fa-caret-square-down');
 		}
 		// ---------------------------------------
+	*/
 		
-		/*
 		// i요소 rotate기능 ---------------------------------------
 		var myTinI           = myT.children('i');
 		var otherTinI        = myT.parent('dt').siblings('dt').find('i');
 
-		myTinI.css({'transform':'rotate(180deg)', 'transition':'all 300ms ease'});
-		// otherTinI.css({'transform':'rotate(0)', 'transition':'none'});
-		otherTinI.removeAttr('style');
+		if(thisNextState){
+			myTinI.css({'transform':'rotate(180deg)', 'transition':'all 300ms ease'});
+			// otherTinI.css({'transform':'rotate(0)', 'transition':'none'});
+			otherTinI.removeAttr('style');
+		}else{
+			myTinI.removeAttr('style');
+		}
+	
 		// ------------------------------------------------
-		*/
+		
 	}); 
 // end
 })(jQuery);
