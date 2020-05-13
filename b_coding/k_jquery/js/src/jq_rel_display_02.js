@@ -2,6 +2,26 @@
 
 (function($){
 // start
+
+var headOffset = $('#headBox').offset().top;
+
+$(window).on('scroll', function(){
+	$('#headBox').css({'position':'fixed', 'bottom':'auto', 'top':0});
+	var wScroll = $(this).scrollTop();
+	if(headOffset < wScroll){
+	}else{
+		$('#headBox').removeAttr('style');
+	}
+});
+
+
+
+// =============================================================================
+ var wH = $(window).height();
+//  $('#viewBox').height(wH);
+$('#viewBox').css({'height':wH + 'px'});
+
+// =============================================================================
 	var accor = $('.accor');
 	var accorDt = accor.find('dt');
 	var accorBtn = accorDt.children('button');
