@@ -59,6 +59,10 @@ h2:after {
 	text-align: left;
 }
 
+.accor dt:hover{
+	background-color: #0bf;
+}
+
 .accor dt button{
 	width: 100%; height: auto;
 	padding:10px; box-sizing:border-box;
@@ -66,6 +70,11 @@ h2:after {
 	color:inherit; font-weight:inherit; font-size:inherit;
 	text-align:inherit;
 }
+
+.accor dt button:focus{
+	background-color: #09f;
+}
+
 
 .accor dt i{
 	float:right;
