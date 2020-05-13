@@ -51,9 +51,16 @@ h1>a{
 	width: 100%; height:auto;
 }
 .lang_member li{
+	display: none;
 	width: 100%; height: 40px;
 }
+
+.lang_member li.action{
+	display: block;
+}
+
 .lang_member li:first-child{
+	display: block;
 	height:70px; line-height: 70px;
 }
 .lang_member li:first-child a{
