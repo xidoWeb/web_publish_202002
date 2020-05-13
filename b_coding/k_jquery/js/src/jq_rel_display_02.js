@@ -31,12 +31,15 @@
 
 	// ------------------------------------
 	var gnbNav = $('.gnb_navi');
+	var gnbDl  = gnbNav.find('dl');
 	var gnbTitle = gnbNav.find('dt');
 	var gnbTitleLink = gnbTitle.children('a');
 	var gnbContent = gnbNav.find('dd');
+	// var gnbNavLink = gnbNav.find('a');
+	var gnbConLink  = gnbContent.find('a');
 
 	gnbContent.hide();
-
+/* // part별로 처리
 	gnbTitleLink.on('mouseenter focus', function(){
 		 $(this).parentsUntil('ul').siblings('li').find('dd').stop().slideUp();
 		 $(this).parent('dt').next('dd').stop().slideDown();
@@ -47,6 +50,73 @@
 	gnbContent.find('a').eq(-1).on('blur', function(){
 		gnbContent.stop().slideUp();
 	});
+*/
+
+	gnbDl.on('mouseenter', function(){
+		gnbContent.stop().slideDown();
+		gnbTitle.removeClass('action');
+		$(this).find('dt').addClass('action');		
+	});
+
+  gnbNav.on('mouseleave', function(){
+		gnbContent.stop().slideUp();
+		gnbTitle.removeClass('action');
+	});
+
+	gnbTitleLink.on('focus', function(){
+		gnbContent.stop().slideDown();
+		gnbTitle.removeClass('action');
+		$(this).parent('dt').addClass('action');
+	});
+
+	gnbConLink.on('focus', function(){
+		gnbTitle.removeClass('action');
+		$(this).parents('dd').prev('dt').addClass('action');
+		
+		gnbContent.find('li').removeClass('action');
+		$(this).parent('li').addClass('action');
+	});
+
+	gnbContent.find('a').eq(-1).on('blur', function(){
+		gnbContent.stop().slideUp();
+		gnbTitle.removeClass('action');
+	});
+
+/*
+gnbNavLink.on('keyup', function(e){
+			e.preventDefault();
+			// e.stopPropagation();
+			// console.log(e.keyCode);
+			// 왼(37), 위(38), 오른(39), 아래(40), esc(27)
+			
+			var eKey = e.keyCode;
+			var i = $(this).parent().index();
+			var thisSel =  $(this).parentsUntil('dl').eq( -1 );
+			var liI =  $(this).parentsUntil('ul').eq( -1 ).index();
+			
+			console.log();
+
+			// console.log(i);
+			// switch(eKey){
+				// case 37:
+			// 		$(this).parentsUntil('ul').parentsUntil('ul').prev('li').find('dt').find('a').focus();
+			// 		break;
+				// case 38:
+		
+				// break;
+				// case 39:
+			// 		$(this).parent('li').next('li').find('a').focus();
+					// break;
+			// 	case 40:
+			// 		$(this).parentsUntil('ul').parentsUntil('ul').next('li').find('dt').find('a').focus();
+			// 		break;
+			// 	case 27:
+			// 		gnbContent.stop().slideUp();
+			// 		break;
+			// }
+		});
+
+*/
 
 	// =============================================================================
 	var wH = $(window).height();
