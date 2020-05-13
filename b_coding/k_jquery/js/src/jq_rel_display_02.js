@@ -93,7 +93,7 @@
 		}
 	});
 
-gnbTitleLink.eq(0).focus();
+// gnbTitleLink.eq(0).focus();
 gnbNavLink.on('keyup', function(e){
 			e.preventDefault();
 			// e.stopPropagation();
