@@ -3,13 +3,12 @@
 	(function($){
 	// start
 
-
 	var headOffset = $('#headBox').offset().top;
 
 	$(window).on('scroll', function(){
-		$('#headBox').css({'position':'fixed', 'bottom':'auto', 'top':0});
 		var wScroll = $(this).scrollTop();
 		if(headOffset < wScroll){
+			$('#headBox').css({'position':'fixed', 'bottom':'auto', 'top':0});
 		}else{
 			$('#headBox').removeAttr('style');
 		}
