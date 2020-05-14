@@ -3,6 +3,7 @@
 	(function($){
 	// start
 
+
 	var headOffset = $('#headBox').offset().top;
 
 	$(window).on('scroll', function(){
@@ -96,17 +97,21 @@
 // gnbTitleLink.eq(0).focus();
 gnbNavLink.on('keyup', function(e){
 			e.preventDefault();
-			// e.stopPropagation();
+
+  		// e.stopPropagation();
 			// console.log(e.keyCode);
 			// 왼(37), 위(38), 오른(39), 아래(40), esc(27)
 			var eKey = e.keyCode;
 			var gnbUl = $('.gnb_navi').children('ul');
-			var gnbLi = gnbUl.children('li');
-			var i = $(this).parent('li').index();			
+			var gnbLi = gnbUl.children('li');		
 			var thisLi = $(this).parents('li').eq(-1).index();
 
 			// console.log($(this).parents('li'));
-			if(thisLi >= gnbLi.length-1){	thisLi = -1; }
+			if(thisLi >= gnbLi.length-1){	
+				thisLi = -1; 
+			}else if(thisLi < 0){
+				thisLi = gnbLi.length-1;
+			}
 
 			// console.log(i);
 			switch(eKey){
@@ -127,11 +132,14 @@ gnbNavLink.on('keyup', function(e){
 					gnbContent.find('li').removeClass('action');
 				break;
 				case 40:
-					console.log( $(this).parent()[0] == $('dt.action')[0] );
+					console.log( $(this).parent()[0])
+					console.log( $('dt.action')[0] );
 					if( $(this).parent()[0] == $('dt.action')[0] ){
 						$(this).parent('dt').next('dd').find('a').eq(0).focus();
+					}else{
+						$(this).parent('li').next('li').find('a').focus();
 					}
-					$(this).parent('li').next('li').find('a').focus();
+
 				break;
 				case 27:
 					gnbContent.stop().slideUp();
