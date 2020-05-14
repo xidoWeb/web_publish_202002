@@ -5,45 +5,46 @@
 	var indiLi = indi.find('li');
 	var indiLink = indiLi.children('a');
 	var addView  = $('.add_view_wrap');
+	var addViewList = addView.children('div');
 	var timed    = 500;
 
 	var indiNarr = $('.indi_narr');
 	var indiNarrLi = indiNarr.find('li');
 
-	indiLink.on('focus', function(e){
-		e.preventDefault();
-		var i = $(this).parent('li').index();
-		// console.log(i);
+  var AdViewMv = function(i){
 		var myPer = -i * 100;
-		// addView.css({'marginLeft':myPer + '%'});
+		// --------------
 		addView.stop().animate({'marginLeft':myPer + '%'}, timed);
-// ----------------------------------------------------------
-		// $(this).parent('li').addClass('action');
+		// --------------
 		indiLi.removeClass('action');
 		indiLi.eq(i).addClass('action');
-		// indiLi.eq(i).siblings('li').addClass('action');
-// ----------------------------------------------------------
+		// --------------
 		indiNarrLi.removeClass('action');
 		indiNarrLi.eq(i).addClass('action');
-		// indiNarrLi.eq(i).siblings().removeClass('action');
+	};
+
+	var i = 0;
+
+	indiLink.on('focus', function(e){
+		e.preventDefault();
+		i = $(this).parent('li').index();
+		AdViewMv(i);
 	});
 // ===============================================================
 
 	indiNarrLi.on('click', function(e){
 		e.preventDefault();
-		var i = $(this).index();
-		indiNarrLi.removeClass('action');
-		indiNarrLi.eq(i).addClass('action');
-		// indiNarrLi.eq(i).siblings().removeClass('action');
-// ----------------------------------------------------------
-		// $(this).parent('li').addClass('action');
-		indiLi.removeClass('action');
-		indiLi.eq(i).addClass('action');
-		// indiLi.eq(i).siblings('li').addClass('action');
-// ----------------------------------------------------------
-		var myPer = -i * 100;
-		// addView.css({'marginLeft':myPer + '%'});
-		addView.stop().animate({'marginLeft':myPer + '%'}, timed);
+		i = $(this).index();
+		AdViewMv(i);
 	});
 
+	setInterval( function(){
+		i+=1;
+		if(i >= addViewList.length){ i = 0	}	
+
+		AdViewMv(i);
+	}, timed*4 );
+
 })(jQuery);
+
+
