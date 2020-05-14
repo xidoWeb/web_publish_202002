@@ -1,0 +1,86 @@
+/* jq_eq_index_setInterval.css */
+
+
+#wrap {
+	width:50rem; height:auto;
+	margin:auto;
+}
+
+h1{
+	width:100%; height:3.125rem;
+	margin-bottom:1.25rem;
+	text-align: center;	font-size:2rem; 
+}
+
+#viewBox {
+	position:relative;
+	width: 100%; height: 31.25rem;
+}
+
+h2{
+	width: 100%; height: 2.5rem; 
+	margin-bottom: 0.625rem; 
+	background-color: #777;
+	color:#fff; font-size: 1.5rem;
+}
+
+.indicator {
+	position: absolute; left:12.5rem; bottom:1.25rem;
+	width:15.625rem; height:2.5rem;
+	padding:0.5rem; box-sizing: border-box;
+	border-radius:1.25rem;
+	background-color: #aaa;
+}
+.indicator ul {
+	width: 100%; height: 100%; 
+}
+
+.indicator li {
+	float: left;
+	margin-right:1.5rem;
+	width: 24px; height: 24px;
+}
+
+.indicator li:last-child{
+	margin-right: 0;
+}
+
+.indicator a {
+	display: block;
+	width: 100%; height: 100%; 
+	box-sizing: border-box;
+	border-radius:100%;
+	background-color: rgba(255,255,255,0.6);
+}
+.indicator a:focus {
+	outline:0;
+	background-color: rgba(255,255,255,1);
+	border:3px solid #f06;
+}
+
+/* ---------------------- */
+.add_view {
+	width: 100%; height: 28.125rem;
+	background-color: #acf;
+	overflow: hidden;
+}
+
+.add_view_wrap{
+	width: 500%; height:100%;
+	margin-left:-100%;
+	/* position: relative;	left:-400%; */
+	/* transform:translateX(-60%); */
+}
+
+.add_view_wrap > div {
+	float:left;
+	width:20%; height:100%; 
+	font-size:3rem;
+	text-align: center;
+}
+
+.add_01{background-color: #5fe;}
+.add_02{background-color: #f6d;}
+.add_03{background-color: #34c;}
+.add_04{background-color: #ffb;}
+.add_05{background-color: #1fa;}
