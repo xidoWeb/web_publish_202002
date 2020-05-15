@@ -69,6 +69,6 @@ h1{
 	padding:2rem; box-sizing: border-box;
 }
 
-.product li:nth-child(1){ background-color: #fa1;}
-.product li:nth-child(2){ background-color: #af1;}
-.product li:nth-child(3){ background-color: #a1f;}
+.product li.pr_01{ background-color: #fa1;}
+.product li.pr_02{ background-color: #af1;}
+.product li.pr_03{ background-color: #a1f;}

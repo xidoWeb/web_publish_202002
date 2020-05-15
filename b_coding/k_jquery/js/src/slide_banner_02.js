@@ -8,9 +8,7 @@
 	var miniParea = miniPlist.children('ul');
 	var timed = 700;
 
-
 	// miniPlist.css({'overflow':'hidden'});
-	
 	miniIndi.hide();
 /*
   miniIndiLi.on('click', function(e){
@@ -22,6 +20,17 @@
 
 	});
 */
+
+var miniPareaLi = miniParea.find('li');
+var miniPliCopy = miniPareaLi.eq(-1).clone(true);
+
+miniParea.prepend(miniPliCopy);
+// miniPareaLi = miniParea.find('li');
+
+
+var mLilenT = miniPareaLi.length;
+console.log( mLilenT );
+
 
 
 	var i = 0;
