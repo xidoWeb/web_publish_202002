@@ -8,7 +8,7 @@
 	var miniParea = miniPlist.children('ul');
 	var timed = 700;
 
-	// miniPlist.css({'overflow':'hidden'});
+	miniPlist.css({'overflow':'hidden'});
 	miniIndi.hide();
 /*
   miniIndiLi.on('click', function(e){
@@ -25,28 +25,22 @@ var miniPareaLi = miniParea.find('li');
 var miniPliCopy = miniPareaLi.eq(-1).clone(true);
 
 miniParea.prepend(miniPliCopy);
-// miniPareaLi = miniParea.find('li');
-
-
+miniPareaLi = miniParea.find('li');
 var mLilenT = miniPareaLi.length;
-console.log( mLilenT );
 
-
+miniParea.css({'width': mLilenT * 100 + '%','position':'relative','left':-100 + '%'	});
+miniPareaLi.css({width: 100 / mLilenT + '%' });
 
 	var i = 0;
   var MyProSlide = function(){
 		i += 1;
-		var pLiLen = miniParea.find('li').length;
-		if(i >= pLiLen){ i = 0;	}
-
+		// if( i >= (mLilenT-1) ){ i = -1;	}
 		var iPer = -i * 100;
-		miniParea.stop().animate({'marginLeft': iPer +'%'}, timed);
+		miniParea.stop().animate({'marginLeft': iPer +'%'}, timed, function(){
+			if( i >= mLilenT-2 ){	miniParea.css({'marginLeft': 100 + '%'});	i = -1;	}
+		});
 	};
 
-
-	setInterval(function(){	
-		MyProSlide();
-	}, timed*2);
-
+	setInterval(function(){	MyProSlide();	}, timed*2);
 
 })(jQuery);
