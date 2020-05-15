@@ -1,0 +1,74 @@
+/* slide_banner_0.css */
+
+#wrap {
+	width: 100%; min-width:60rem;
+	height:auto; min-height:700px;
+	margin:auto;
+}
+
+h1{
+	width:100%; height:70px;  
+	border-bottom:1px solid #333;
+	text-align: center;
+ }
+#con_01{
+	width: 100%; height:auto;
+	padding:1rem; box-sizing: border-box;
+	background-color: #dfdfdf;
+}
+
+#miniProduct {
+  position:relative; 
+  width:600px; height:500px; margin:auto;
+  padding-bottom: 50px; box-sizing:border-box;
+}
+
+
+.indicator{
+	position: absolute;
+	left:50%; bottom:0.5rem; 
+	width:auto; height:auto;
+	display:inline-block;
+}
+
+.indicator ul{
+	width:auto; height:auto;
+}
+
+.indicator li{
+	float:left; 
+	width:1.5rem; height:1.5rem;
+	margin-left:1rem;
+}
+
+.indicator li > a{
+	display: block; width: 100%; height: 100%;
+	background-color: #aaa;
+	border-radius:100%;
+}
+
+.indicator li > a:focus{
+	outline:0;
+	background-color: #555;
+}
+
+.product{
+	width: 100%; height: 100%; 
+	background-color: #fff;
+}
+
+.product ul {
+	width:300%; height:100%;
+}
+
+.product li{
+	float: left;
+	width: calc(100% / 3); 
+	/* width: 33.333333%;  */
+	height:100%;
+	padding:2rem; box-sizing: border-box;
+}
+
+.product li:nth-child(1){ background-color: #fa1;}
+.product li:nth-child(2){ background-color: #af1;}
+.product li:nth-child(3){ background-color: #a1f;}
