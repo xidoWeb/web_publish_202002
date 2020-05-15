@@ -67,7 +67,6 @@ miniNext.on('click', function(e){
 			n = -1; 
 			miniBanner.css({'marginLeft':100 + '%'})
 		}
-
 	});
 });
 
@@ -81,9 +80,19 @@ miniPrev.on('click', function(e){
 	});
 });
 
+var myInterval;
+var MvSlide = function(){
+	    myInterval =	setInterval(function(){	miniNext.trigger('click');}, timed*2);
+	};
 
+		MvSlide();
 
+miniP2.on('mouseenter', function(){
+	clearInterval( myInterval );
+});
 
-
+miniP2.on('mouseleave', function(){
+	MvSlide();
+});
 
 })(jQuery);
