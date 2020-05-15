@@ -4,6 +4,7 @@
 	width: 100%; min-width:60rem;
 	height:auto; min-height:700px;
 	margin:auto;
+	padding-bottom: 60rem;
 }
 
 h1{
@@ -17,12 +18,26 @@ h1{
 	background-color: #dfdfdf;
 }
 
-#miniProduct {
+#miniProduct, #miniProduct2 {
   position:relative; 
   width:600px; height:500px; margin:auto;
   padding-bottom: 50px; box-sizing:border-box;
 }
 
+.btn{
+	position: absolute; top: 50%; left: -7%; z-index:500;
+	width:114%; height:0;
+}
+.btn>button{
+	float:left;
+	width: 80px; height:200px;
+	background-color: #fff;
+	border-radius:40px;
+	transform:translateY(-50%);
+}
+.btn>button.next{
+	float: right;
+}
 
 .indicator{
 	position: absolute;
@@ -57,9 +72,7 @@ h1{
 	background-color: #fff;
 }
 
-.product ul {
-	width:300%; height:100%;
-}
+.product ul {	width:300%; height:100%;}
 
 .product li{
 	float: left;

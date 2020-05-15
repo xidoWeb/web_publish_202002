@@ -42,5 +42,48 @@ miniPareaLi.css({width: 100 / mLilenT + '%' });
 	};
 
 	setInterval(function(){	MyProSlide();	}, timed*2);
+// *****************************************************
+
+var miniP2 = $('#miniProduct2');
+var miniBtn = miniP2.find('.btn');
+var miniNext = miniBtn.children('.next');
+var miniPrev = miniBtn.children('.prev');
+
+var miniBanner = miniP2.children('.product').find('ul');
+var miniBanLast = miniBanner.find('li').eq(-1).clone(true);
+    miniBanner.prepend(miniBanLast);
+var miniBan2Len = miniBanner.children('li').length;
+		miniBanner.css({'width' : miniBan2Len * 100 + '%'});
+		miniBanner.children('li').css({'width': 100 / miniBan2Len + '%'});
+    miniBanner.css({position:'relative', 'left': -100 + '%'});
+
+var n = 0;
+
+miniNext.on('click', function(e){
+	e.preventDefault();
+	n += 1;
+	miniBanner.stop().animate({'marginLeft':n * -100 + '%'}, timed, function(){
+		if( n >= miniBan2Len - 2 ){ 
+			n = -1; 
+			miniBanner.css({'marginLeft':100 + '%'})
+		}
+
+	});
+});
+
+
+miniPrev.on('click', function(e){
+	e.preventDefault();
+	n -= 1;
+	miniBanner.stop().animate({'marginLeft':n * -100 + '%'}, timed, function(){
+		if(n < 0){ n= miniBan2Len - 2; }
+		miniBanner.css({'marginLeft':n * -100 + '%'})
+	});
+});
+
+
+
+
+
 
 })(jQuery);
