@@ -44,7 +44,17 @@ console.log(proLiLen);
 //                .pr_05 {background-image:url('../../img/minicake/minicake/tj_minicake_010.jpg');}";
 //  styleEl.text(styleT);
 
+var miniProIndiLi = miniProIndiUl.find('li').children('a');
+miniProIndiLi.on('click', function(e){
+	e.preventDefault();
+	var thisParent = $(this).parent();
+	    n = thisParent.index();
 
+	thisParent.addClass('action');
+	thisParent.siblings().removeClass('action');
+
+	productUl.stop().animate({left: -n * 100 + '%'}, timed);
+});
 
 // -------------------------------------
 

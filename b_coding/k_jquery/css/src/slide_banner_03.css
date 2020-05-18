@@ -25,9 +25,14 @@
 .indi_color ul{	display:inline-block;}
 .indi_color li{ float: left; margin-right:1rem; width:1.5rem; height:1.5rem;}
 .indi_color li:last-child{ margin-right: 0;}
-.indi_color a{ display: block; width: 100%; height: 100%; border-radius:1.5rem; background-color: #aaa;
-							outline:0;}
-.indi_color a:focus{background-color: #333;}
+.indi_color a{ display: block; width: 100%; height: 100%; border-radius:1.5rem; 
+							 background-color: #aaa;	outline:0;}
+							 
+.indi_color li.action a{background-color: #333;}
+.indi_color a:focus{
+	background-color: rgba(200,200,200,0.5);
+	box-shadow:0.1rem 0.1rem 0.1rem ease;
+}
 
 
 /* ----------------------------------------------------- */
