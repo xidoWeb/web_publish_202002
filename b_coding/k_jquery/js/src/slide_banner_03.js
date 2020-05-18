@@ -53,6 +53,9 @@ var mvSlideGo = function(){
 
 mvSlideGo();
 
-productUl.on('moueseenter', function(){
-	clearInterval( mvSlideGo );
-});
+// miniProduct.on('mouseenter', function(){	clearInterval( mvImg ); });
+var ClearFn = function(){	clearInterval( mvImg ) };
+// miniProduct.on('mouseleave', function(){	mvSlideGo(); });
+var GoFn    =  function(){	mvSlideGo()};
+
+ miniProduct.on({'mouseenter' :ClearFn , 'mouseleave':GoFn });
