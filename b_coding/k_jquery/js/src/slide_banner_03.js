@@ -45,6 +45,8 @@ console.log(proLiLen);
 //  styleEl.text(styleT);
 
 var miniProIndiLi = miniProIndiUl.find('li').children('a');
+miniProIndiUl.find('li').eq(0).addClass('action');
+
 miniProIndiLi.on('click', function(e){
 	e.preventDefault();
 	var thisParent = $(this).parent();
