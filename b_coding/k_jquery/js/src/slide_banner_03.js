@@ -1,10 +1,11 @@
 // slid_banner_03.js
 
-var miniProduct = $('#miniProduct');
-var miniBtn     = miniProduct.find('button');
-var miniBtnNext = miniProduct.find('.next');
-var miniBtnPrev = miniProduct.find('.prev');
-var timed       = 500;
+var miniProduct        = $('#miniProduct');
+
+var miniBtn            = miniProduct.find('button');
+var miniBtnNext        = miniProduct.find('.next');
+var miniBtnPrev        = miniProduct.find('.prev');
+var timed              = 500;
 
 // ----------------------------------------------
 var productUl = miniProduct.find('.product');
@@ -21,6 +22,35 @@ console.log(proLiLen);
 
  var n = 0;
  var check = true;
+ 
+// ** indicator기능 추가(indicator_color) 
+// 광고 갯수만큼(복제처리제외) indicator 처리
+ var miniProIndiBtnArea = miniProduct.find('.indicator');
+
+ miniProIndiBtnArea.after('<div class="indi_color hidden_wrap"><ul></ul></div>');
+ var miniProIndiUl = $('.indi_color').children('ul');
+
+ var i=0;
+ for(; i< proLiLen - 1 ; i++){
+	  miniProIndiUl.append('<li><a href="#"><span>광고 ' + (i + 1) + ' 설명</span></a></li>');
+ }
+
+//  $('head').append('<style></style>');
+//  var styleEl = $('head').find('style');
+//  var styleT = ".pr_01 {background-image:url('../../img/minicake/minicake/tj_minicake_006.jpg');}\
+//                .pr_02 {background-image:url('../../img/minicake/minicake/tj_minicake_007.jpg');}\
+//                .pr_03 {background-image:url('../../img/minicake/minicake/tj_minicake_008.jpg');}\
+//                .pr_04 {background-image:url('../../img/minicake/minicake/tj_minicake_009.jpg');}\
+//                .pr_05 {background-image:url('../../img/minicake/minicake/tj_minicake_010.jpg');}";
+//  styleEl.text(styleT);
+
+
+
+// -------------------------------------
+
+
+
+
 
 /*
 var prSpan = productLi.find('span');
