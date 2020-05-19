@@ -19,6 +19,15 @@ productLi.eq(n).siblings('li').css({zIndex:0, display:'none'});
 
 var bool = true;
 
+var FadeFn = function(n,k){
+	productLi.eq(n).css({zIndex:5, display:'block'});
+		productLi.eq(k).stop().fadeOut( function(){
+			productLi.eq(n).css({zIndex:10});
+			productLi.eq(n).siblings('li').css({zIndex:0});
+			bool = true;
+	});
+};
+
 productBtn.on('click', function(e){
 	e.preventDefault();
 	var k = n;
@@ -26,30 +35,14 @@ productBtn.on('click', function(e){
 	if( $(this)[0] === $('.next')[0] && bool ){
 		// next 버튼 클릭
 		bool = false;
-		// if( n >= productLi.length-1 ){ n = 0 } else { n += 1; }
 		( n >= productLi.length-1 ) ? n = 0 : n += 1; 
-
-		productLi.eq(n).css({zIndex:5, display:'block'});
-		productLi.eq(k).fadeOut( function(){
-			productLi.eq(n).css({zIndex:10});
-			productLi.eq(n).siblings('li').css({zIndex:0});
-			bool = true;
-		});
+		FadeFn(n,k);
 
 	}else if( $(this)[0] === $('.prev')[0] && bool ){
 		// prev 버튼 클릭
 		bool = false;
-		
-		// if( n < 0 ) { n = productLi.length - 1 } else { n -= 1 }
 		( n <= 0 ) ? n = productLi.length - 1 : n -= 1; 
-
-		productLi.eq(n).css({zIndex:5, display:'block'});
-		productLi.eq(k).stop().fadeOut( function(){
-			productLi.eq(n).css({zIndex:10});
-			productLi.eq(n).siblings('li').css({zIndex:0});
-			bool = true;
-		});
-
+		FadeFn(n,k);
 	}
 
 });
