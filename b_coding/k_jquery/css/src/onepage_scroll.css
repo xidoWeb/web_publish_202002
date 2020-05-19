@@ -32,6 +32,11 @@
 		float:left; margin-right:1rem; 
 		width:auto; height:100%;
 	}
+
+	#gnbBox li.action{
+		font-weight: bold; font-size: 1.5rem;
+	}
+
 	#gnbBox li a {
 		display: block; width: 100%; height: 100%;
 	}
