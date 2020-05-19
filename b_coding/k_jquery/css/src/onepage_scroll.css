@@ -1,0 +1,69 @@
+/*  */
+
+#wrap{
+	width: 100%; height:100%;
+	text-align: center;
+}
+
+	#headBox{
+		position: fixed; top: 0; left: 0; z-index:1000;
+		width: 100%; height: 120px; 
+		padding:20px 10%; box-sizing: border-box;
+		background-color: #ccf;
+		border-bottom:1px solid #777;
+	}
+	h1{
+		float: left;
+		width: 150px; height: 100%; 
+		background-color: #fa0; 
+		font-size: 1.5rem;
+	}
+
+	#gnbBox{
+		float:right;
+		width:700px; height:100%;
+		font-size: 1.3rem;
+		padding-top:1rem; box-sizing: border-box;
+	}
+	#gnbBox ul{
+		width: 100%; height: 100%;	
+	}
+	#gnbBox li {
+		float:left; margin-right:1rem; 
+		width:auto; height:100%;
+	}
+	#gnbBox li a {
+		display: block; width: 100%; height: 100%;
+	}
+
+	#gnbBox li a:hover,
+	#gnbBox li a:focus{
+		color:#077; text-decoration: underline;
+	}
+
+	#viewBox{ 
+		width:100%; height:100%; background-color: #a8f;
+		padding-top:4rem; box-sizing: border-box; font-size: 2rem;
+	}
+	#aboutBox{ 
+		width:70%; max-width:1600px; height:100%; margin:auto; background-color: #ccf;
+		padding-top:8rem; box-sizing: border-box; font-size: 2rem;
+	}
+	#newBox{ 
+		width:100%; height:100%; background-color: #a85;
+		padding-top:8rem; box-sizing: border-box; font-size: 2rem;
+	}
+	#bestBox{ 
+		width:70%; max-width:1600px; height:100%; margin:auto; background-color: #faf;
+		padding-top:8rem; box-sizing: border-box; font-size: 2rem;
+	}
+	#noticeBox{ 
+		width:70%; max-width:1200px; height:100%; margin:auto; background-color: #ddd;
+		padding-top:8rem; box-sizing: border-box; font-size: 2rem;
+	}
+	#asInfoBox{ 
+		width:100%; height:70%; background-color: #7ff; 
+		padding-top:8rem; box-sizing: border-box; font-size: 2rem;
+	}
+
+#footBox{width: 100%; height:300px; background-color: #777;}
