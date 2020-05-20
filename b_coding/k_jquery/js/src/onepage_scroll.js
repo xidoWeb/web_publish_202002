@@ -19,19 +19,19 @@
 	
   $(window).on('scroll', function(){
 		var winScroll = $(window).scrollTop();
-		if(winScroll <= scrollOffset[0]){
+		if(winScroll <= scrollOffset[1]){
 			gnbLi.eq(0).addClass('action');			gnbLi.eq(0).siblings().removeClass('action');
 
-		}else if(winScroll > scrollOffset[0] && winScroll <= scrollOffset[1]){
+		}else if(winScroll > scrollOffset[1] && winScroll <= scrollOffset[2]){
 			gnbLi.eq(1).addClass('action');			gnbLi.eq(1).siblings().removeClass('action');
 
-		}else if(winScroll > scrollOffset[1] && winScroll <= scrollOffset[2]){
+		}else if(winScroll > scrollOffset[2] && winScroll <= scrollOffset[3]){
 			gnbLi.eq(2).addClass('action');			gnbLi.eq(2).siblings().removeClass('action');
 
-		}else if(winScroll > scrollOffset[2] && winScroll <= scrollOffset[3]){
+		}else if(winScroll > scrollOffset[3] && winScroll <= scrollOffset[4]){
 			gnbLi.eq(3).addClass('action');			gnbLi.eq(3).siblings().removeClass('action');
 
-		}else if(winScroll > scrollOffset[3] && winScroll <= scrollOffset[4]){
+		}else if(winScroll > scrollOffset[4] && winScroll <= scrollOffset[5]){
 			gnbLi.eq(4).addClass('action');			gnbLi.eq(4).siblings().removeClass('action');
 
 		}else{
