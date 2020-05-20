@@ -4,6 +4,7 @@
 	var play  = $('.play');
 	var pause  = $('.pause');
 	var next  = $('.next');
+	var prev  = $('.prev');
 	var narr  = $('.narr').find('span');
 	var btn = $('.btn');
 
@@ -49,20 +50,37 @@ pause.on('click', function(e){
 	$(this).addClass('action');
 });
 
-	next.on('click', function(e){
-		e.preventDefault();
-		if(n >= playList.length-1){			n = 0;		}else{			n+=1;		}
-		console.log(n);
-		audio[0].pause();
-		aSrc(url, playList[n]);
+next.on('click', function(e){
+	e.preventDefault();
+	if(n >= playList.length-1){			n = 0;		}else{			n+=1;		}
+	console.log(n);
+	audio[0].pause();
+	aSrc(url, playList[n]);
+	btn.find('button').removeClass('action');
+	$(this).addClass('action');
+	var playingHas = audioWrap.hasClass('playing');
+	console.log(playingHas);
+	if( playingHas ){
+		audio[0].play();
 		btn.find('button').removeClass('action');
-	  $(this).addClass('action');
-		var playingHas = audioWrap.hasClass('playing');
-		console.log(playingHas);
-		if( playingHas ){
-			audio[0].play();			
-		}
-	});
+		$('.play').addClass('action');			
+	}
+});
+prev.on('click', function(e){
+	e.preventDefault();
+	if(n <= 0){			n = playList.length-1;		}else{			n-=1;		}
+	audio[0].pause();
+	aSrc(url, playList[n]);
+	btn.find('button').removeClass('action');
+	$(this).addClass('action');
+	var playingHas = audioWrap.hasClass('playing');
+	console.log(playingHas);
+	if( playingHas ){
+		audio[0].play();
+		btn.find('button').removeClass('action');
+		$('.play').addClass('action');			
+	}
+});
 
 
 })(jQuery);

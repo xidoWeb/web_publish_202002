@@ -40,7 +40,7 @@ h1{margin-bottom: 2rem;}
 .btn>button:focus{
 	background-color: #7cf;
 	color:#181818; font-weight: bold;
-	/* box-shadow:-0.2rem -0.2rem 0.2rem rgba(0,0,0,0.7); */
+	box-shadow:0.2rem 0.2rem 0.2rem rgba(0,0,0,0.7);
 }
 .btn>button.action{
 	background-color: #7cf;
