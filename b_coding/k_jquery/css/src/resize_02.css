@@ -1,0 +1,79 @@
+/*  resize_01.css */
+
+#wrap{
+	width: 100%; height:auto; min-height:31.25rem;
+	background-color: #ddd;
+}
+
+#headBox {
+	width:100%; height:7.5rem; 
+	padding:1rem; box-sizing: border-box;
+	background-color: rgba(255,255,255,0.8);
+	transition:all 500ms linear;
+}
+
+h1{
+	float:left; width:140px; height:100%; background-color: #fff;
+}
+h1>a{display: block; width: 100%; height: 100%;}
+
+#gnbBox{
+	float:right;
+	width:600px; height:50px; background-color: #fff;
+	border-bottom:0.0625rem solid #333;
+}
+
+.gnb_view_btn {
+	width:1.875rem; height:1.875rem; margin:auto;
+	background-color: #fa0; border-radius:0.3rem;
+}
+
+.gnb_view_btn button{width: 100%; height: 100%;}
+
+#gnbBox .gnb_list{
+	width: 100%; height: 100%; background-color: #0af;
+}
+
+#viewBox {
+	width: 100%; max-width:75rem; 
+	height:50rem;
+	margin:auto; background-color: #ccc; }
+/* ========================================================== */
+
+@media screen and (max-width: 700px) {
+ #wrap{ background-color: #caa; }
+ #headBox{ height:5.625rem; background-color: #171717;}
+ h1{ float:none; height:1.5625rem; margin:auto; margin-bottom:1rem; border-radius:0.2rem; 
+		 font-size:1rem; text-align: center;}		 
+		 
+#gnbBox { 
+	float:none; 
+  width:100%;
+  margin:auto; 	border:none; 
+  background-color: transparent;}
+			
+.gnb_view_btn { margin-bottom: 1rem; }
+.gnb_list {display: none;}
+
+
+}/* (max-width: 700px) */
+/* ========================================================== */
+
+@media screen and (min-width: 701px) and (max-width:1400px) {
+ #wrap {background-color: #acc;}
+ #headBox { padding:0.7rem; }
+ h1 {background-color: #055; border-radius:0.5rem; color:#fff}
+ #gnbBox {width:70%; min-width:25rem; max-width:37.5rem; }
+
+ .gnb_view_btn {display: none;}
+ #gnbBox .gnb_list.action {height: 25rem;}
+}
+/* ========================================================== */
+
+@media screen and (min-width: 1401px) {
+	#wrap {background-color: #fca;}
+	#headBox { max-width:1200px; margin:auto; }
+	h1{ border:0.3125rem solid #0ff; box-sizing: border-box; }
+	.gnb_view_btn {display: none;}
+	#gnbBox .gnb_list.action {height: 18.75rem; background-color: #cfc;}
+}
