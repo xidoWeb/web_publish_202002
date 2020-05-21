@@ -16,3 +16,12 @@ p {
 p > span {
 	font-weight: bold; color:#05a;
 }
+
+.box_size {
+	width:200px; height:200px;
+	padding:20px; padding-right:50px;
+	border:10px solid #afa; border-right:1px;
+	margin:30px; margin-left:10px;
+	background-color: #faf;
+	box-sizing:border-box;
+}
