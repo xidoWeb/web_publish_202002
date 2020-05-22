@@ -57,7 +57,8 @@
 			MotionM1('#ffc');
 		}
 	};
-	// ActiveStyle();
+	var i = deviceName.indexOf(beforeDevice);
+	ActiveStyle(deviceWidth[i].size);
 // ------------------------------------------
   win.on('resize', function(){
 		var nw = win.outerWidth(true);
@@ -65,7 +66,7 @@
 		if(beforeDevice !== afterDevice){
 			// 디바이스 상황에따른 변경내용을 수행
 			var i = deviceName.indexOf(afterDevice);
-			console.log(i);
+			// console.log(i);
 			ActiveStyle(deviceWidth[i].size);
 			beforeDevice = afterDevice;
 			console.log( 'changed : ' + beforeDevice );
