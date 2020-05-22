@@ -7,11 +7,12 @@
 		var myColor;
 		(myC  == undefined) ? myColor = '#078' : 	myColor = myC;
 		// var myColor = myC | '#078';
-
+		var j = 0;
 		m1.on('mouseenter', function(){
-			$(this).stop().animate({'backgroundColor':myColor});
-			// $(this).empty();
-			$(this).html('<p>내용이 추가로 담아졌습니다.</p>');
+			j++;
+			var sel = $(this);
+			sel.stop().animate({'backgroundColor':myColor});	
+			sel.prepend('<p>'+j+'. 내용이 추가로 담아졌습니다.</p>');
 		});
 		console.log(myColor);
 	};
@@ -51,7 +52,7 @@
 		}else if( widthSize < deviceWidth[1].size ){			
 			MotionM1('#ccc');
 		}else if( widthSize < deviceWidth[2].size ){			
-			MotionM1('#076');
+			MotionM1('#0fc');
 		}else{			                                      
 			MotionM1('#ffc');
 		}
@@ -67,6 +68,7 @@
 			console.log(i);
 			ActiveStyle(deviceWidth[i].size);
 			beforeDevice = afterDevice;
+			console.log( 'changed : ' + beforeDevice );
 		}
 	});
 })(jQuery);
