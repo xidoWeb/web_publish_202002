@@ -1,0 +1,8 @@
+/* bestNewsBox.css */
+
+#bestNewsBox{
+	width: 100%; height:auto;
+	min-height:800px;
+	margin:auto;
+	background-color: #ccc;
+}

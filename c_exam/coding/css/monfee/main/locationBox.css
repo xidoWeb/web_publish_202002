@@ -1,0 +1,7 @@
+/* locationBox.css */
+
+#locationBox{
+	width: 100%; height:auto;
+	min-height:800px;
+	background-color: #aaa;
+}
