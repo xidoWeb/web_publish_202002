@@ -1,0 +1,9 @@
+/* monfeeWrap.css */
+/* main 페이지용 */
+
+#wrap {
+	width: 100%; min-width:940px;
+	height: auto; min-height:800px;
+	margin:auto; 
+	background-color: #ccc;
+}

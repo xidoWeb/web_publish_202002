@@ -1,0 +1,17 @@
+/* monfeeHeadBox.css */
+#headBox {
+	width: 100%; height:120px;
+	background-color: #fff;
+}
+
+h1 {
+	float: left;
+	width: 220px; height: 100%;
+	background-color: #a30;
+}
+
+#gnbBox {
+	float:right;
+	width: 636px; height: 100%; 
+	background-color: #ddd;
+}
