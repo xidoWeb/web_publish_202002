@@ -5,26 +5,56 @@
 }
 
 h1 {
+	position: relative;
+	z-index:100;
 	float: left;
 	width: 220px; height: 100%;
 	background-color: #a30;
 }
+h1>a {
+	display: block; width: 100%; height: 100%; 
+	background-repeat: no-repeat;	
+	background-position: 50% 50%;
+	background-image: url('../../../img/monfee/monfee_svg_logo.svg');
+	background-size: 80% auto;
+}
+
 
 #gnbBox {
+	position: relative;
+	z-index:0;
 	float:right;
-	width: 636px; height: 100%; 
+	width: 636px; height:auto; 
+	 /* background-color: #fff;  */
+}
+#gnbBox:before,
+#gnbBox::before{
+	content:" ";
+	display: block;
+	position: absolute; 
+	z-index:-1; top:0; right:0;
+	width: 940px; height: 120px;
 	background-color: #fff;
 }
-
-.gnb_area{
-	width: 100%; height: 100%;
-	padding-top:35px; padding-bottom:20px;
-	box-sizing: border-box;
+#gnbBox:after,
+#gnbBox::after{
+	content:" ";
+	display:block;
+	z-index:-2;
+	position: absolute; top:0; right:0;
+	width: 940px; height:100%;
+	background-color: rgba(170,51,0, 0.7);
 }
 
+.gnb_area{	
+	width: 100%; height:auto;
+	padding-top:35px; 
+	box-sizing: border-box;
+	/* background-color: rgba(170,51,0, 0.7); */
+}
 .gnb_area > li{
 	float:left;
-	width:25%; height:100%;
+	width:25%; height:auto;
 	padding:0 5px; 
 	box-sizing: border-box;
 }
@@ -35,15 +65,20 @@ h1 {
 
 .gnb_area > li dl dt{
 	width: 100%; height:100%;
+	margin-bottom:20px;
 	text-align: center; 
 	font-size:1.625rem;
 	line-height: 4rem;
 	cursor: pointer;
 }
+.gnb_area > li dl dt:focus{
+	border-bottom:4px solid #a30;
+	font-weight: bold;
+}
 
 .gnb_area > li dl dd{
 	width: 100%; height:auto;
-	background-color: rgba(170,51,0, 0.7);
+	/* background-color: rgba(170,51,0, 0.7); */
 	padding:1rem 0; 
 }
 
