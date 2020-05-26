@@ -136,12 +136,6 @@ var textEl = function(i){
 	return listEl;
 };
 
-// var listEl = '<li><a href="#">\
-// 									<div class="img_bg"><span class="hidden">'+ newsList[i].imgNarr +'</span></div>\
-// 									<dl><dt>'+ newsList[i].title +'</dt>\
-// 										<dd>'+ newsList[i].content +'</dd>\
-// 									</dl>\
-// 							</a></li>';
 var i=0;
 for(; i<newsList.length; i++){	
 	bestNewsUl.append( textEl(i) );
