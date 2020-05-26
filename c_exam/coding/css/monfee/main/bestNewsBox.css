@@ -1,8 +1,73 @@
 /* bestNewsBox.css */
 
 #bestNewsBox{
-	width: 100%; height:auto;
+	width:940px; height:auto;
 	min-height:800px;
-	margin:auto;
+	margin:auto; padding-top:185px; padding-bottom:200px;
 	background-color: #ccc;
+}
+
+#bestNewsBox h2{
+	width: 100%; height: 40px;
+	margin-bottom:40px;
+	color:#a30; font-size:2.3rem;
+	text-decoration:underline;
+	text-decoration-color:#0ac;
+	/* -webkit-text-underline-offset: 1em;
+	-moz-text-underline-offset: 1em;
+	-ms-text-underline-offset: 1em;
+	-o-text-underline-offset: 1em;
+	text-underline-offset: 1em; */
+}
+#bestNewsBox>ul{
+	background-color: #aaccaa;
+}
+
+#bestNewsBox>ul:after{
+	content:" ";
+	display: block;
+	display: block;
+}
+
+#bestNewsBox li{
+	float:left;
+	width:220px; height: 400px;
+	margin-bottom:60px; margin-right:20px;
+	background-color: #fca;
+}
+#bestNewsBox li:nth-child(4n){
+	margin-right: 0;
+}
+
+/* #bestNewsBox li:nth-last-child(n):nth-last-child(-n+4){
+	margin-bottom:0;
+} */
+
+#bestNewsBox a {
+	display: block; 
+	width: 100%; height: 100%;
+}
+
+.img_bg {
+	width: 100%; height: 260px;
+	border-radius:0.2rem;
+	background-color: #777;
+}
+
+#bestNewsBox dl{
+	width:100%; height:140px;
+	padding:10px; box-sizing: border-box;
+}
+
+#bestNewsBox dt{
+	width: 100%; height:auto;
+	margin-bottom: 5px;
+	font-size:1.2rem;
+	font-weight: bold;1
+}
+#bestNewsBox dd{
+	width: 100%; height:auto;
+	font-size:0.875rem;
+	color:#656565;
+	line-height:1.1rem;
 }

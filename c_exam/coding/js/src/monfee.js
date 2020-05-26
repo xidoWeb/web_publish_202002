@@ -106,6 +106,56 @@ gnbArea.on('mouseenter', function(){
 headBox.on('mouseleave', function(){
 	gnbArea.find('dd').stop().slideUp();
 });
+// -------------------------------------------------
+// news 
+
+
+var newsList = [
+	{img:'menu_01.png', imgNarr:'이미지설명', title:'title_01', content:'ladsfasdforem........'},
+	{img:'menu_02.png', imgNarr:'이미지설명', title:'title_02', content:'lorem..asdfasdf......'},
+	{img:'menu_03.png', imgNarr:'이미지설명', title:'title_03', content:'lorem...dfs asdf adsfasdf.'},
+	{img:'menu_04.png', imgNarr:'이미지설명', title:'title_04', content:'lorem........'},
+	{img:'menu_05.png', imgNarr:'이미지설명', title:'title_05', content:'lorem........'},
+	{img:'menu_06.png', imgNarr:'이미지설명', title:'title_06', content:'lorem........'},
+	{img:'menu_07.png', imgNarr:'이미지설명', title:'title_07', content:'lorem........'}
+];
+
+var imgUrl ='../img/monfee/new_menu/';
+
+var bestNews = $('#bestNewsBox');
+bestNews.append('<ul class="clearfix"></ul>');
+var bestNewsUl = bestNews.children('ul');
+
+var textEl = function(i){
+	var	listEl = '<li><a href="#">\
+						<div class="img_bg"><span class="hidden">'+ newsList[i].imgNarr +'</span></div>\
+						<dl><dt>'+ newsList[i].title +'</dt>\
+							<dd>'+ newsList[i].content +'</dd>\
+						</dl>\
+					</a></li>';
+	return listEl;
+};
+
+// var listEl = '<li><a href="#">\
+// 									<div class="img_bg"><span class="hidden">'+ newsList[i].imgNarr +'</span></div>\
+// 									<dl><dt>'+ newsList[i].title +'</dt>\
+// 										<dd>'+ newsList[i].content +'</dd>\
+// 									</dl>\
+// 							</a></li>';
+var i=0;
+for(; i<newsList.length; i++){	
+	bestNewsUl.append( textEl(i) );
+	bestNewsUl.children('li').eq(i).find('.img_bg').css({
+															backgroundImage:'url('+ imgUrl +newsList[i].img +')',
+															backgroundRepeat:'no-repeat',
+															backgroundPosition:'50% 50%',
+															backgroundSize:'cover'
+														})
+}
+
+
+
+
 
 // ------------------------------------------
 })(jQuery);
