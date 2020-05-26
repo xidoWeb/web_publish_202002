@@ -108,11 +108,9 @@ headBox.on('mouseleave', function(){
 });
 // -------------------------------------------------
 // news 
-
-
 var newsList = [
 	{img:'menu_01.png', imgNarr:'이미지설명', title:'title_01', content:'ladsfasdforem........'},
-	{img:'menu_02.png', imgNarr:'이미지설명', title:'title_02', content:'lorem..asdfasdf......'},
+	{img:'menu_02.png', imgNarr:'이미지설명', title:'title_02', content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque eaque odit maxime vero ipsa repellendus magnam quam minus beatae? Lorem ipsum dolor sit amet consectetur adipisicing elit.'},
 	{img:'menu_03.png', imgNarr:'이미지설명', title:'title_03', content:'lorem...dfs asdf adsfasdf.'},
 	{img:'menu_04.png', imgNarr:'이미지설명', title:'title_04', content:'lorem........'},
 	{img:'menu_05.png', imgNarr:'이미지설명', title:'title_05', content:'lorem........'},
@@ -127,12 +125,14 @@ bestNews.append('<ul class="clearfix"></ul>');
 var bestNewsUl = bestNews.children('ul');
 
 var textEl = function(i){
-	var	listEl = '<li><a href="#">\
+	var	listEl = '<li>\
+	        <!-- <a href="#">\ -->\
 						<div class="img_bg"><span class="hidden">'+ newsList[i].imgNarr +'</span></div>\
 						<dl><dt>'+ newsList[i].title +'</dt>\
 							<dd>'+ newsList[i].content +'</dd>\
 						</dl>\
-					</a></li>';
+					<!--</a>\-->\
+					</li>';
 	return listEl;
 };
 
