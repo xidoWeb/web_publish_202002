@@ -109,13 +109,13 @@ headBox.on('mouseleave', function(){
 // -------------------------------------------------
 // news 
 var newsList = [
-	{img:'menu_01.png', imgNarr:'이미지설명', title:'title_01', content:'ladsfasdforem........'},
-	{img:'menu_02.png', imgNarr:'이미지설명', title:'title_02', content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque eaque odit maxime vero ipsa repellendus magnam quam minus beatae? Lorem ipsum dolor sit amet consectetur adipisicing elit.'},
-	{img:'menu_03.png', imgNarr:'이미지설명', title:'title_03', content:'lorem...dfs asdf adsfasdf.'},
-	{img:'menu_04.png', imgNarr:'이미지설명', title:'title_04', content:'lorem........'},
-	{img:'menu_05.png', imgNarr:'이미지설명', title:'title_05', content:'lorem........'},
-	{img:'menu_06.png', imgNarr:'이미지설명', title:'title_06', content:'lorem........'},
-	{img:'menu_07.png', imgNarr:'이미지설명', title:'title_07', content:'lorem........'}
+	{img:'menu_01.png',pcImg:'menu_01.png', imgNarr:'이미지설명', title:'title_01', content:'ladsfasdforem........'},
+	{img:'menu_02.png',pcImg:'menu_01.png', imgNarr:'이미지설명', title:'title_02', content:'Lorem ipsum dolor sit amet '},
+	{img:'menu_03.png',pcImg:'menu_01.png', imgNarr:'이미지설명', title:'title_03', content:'lorem...dfs asdf adsfasdf.'},
+	{img:'menu_04.png',pcImg:'menu_01.png', imgNarr:'이미지설명', title:'title_04', content:'lorem........'},
+	{img:'menu_05.png',pcImg:'menu_01.png', imgNarr:'이미지설명', title:'title_05', content:'lorem........'},
+	{img:'menu_06.png',pcImg:'menu_01.png', imgNarr:'이미지설명', title:'title_06', content:'lorem........'},
+	{img:'menu_07.png',pcImg:'menu_01.png', imgNarr:'이미지설명', title:'title_07', content:'lorem........'}
 ];
 
 var imgUrl ='../img/monfee/new_menu/';
@@ -126,12 +126,12 @@ var bestNewsUl = bestNews.children('ul');
 
 var textEl = function(i){
 	var	listEl = '<li>\
-	        <!-- <a href="#">\ -->\
+	        <a href="#">\
 						<div class="img_bg"><span class="hidden">'+ newsList[i].imgNarr +'</span></div>\
 						<dl><dt>'+ newsList[i].title +'</dt>\
 							<dd>'+ newsList[i].content +'</dd>\
 						</dl>\
-					<!--</a>\-->\
+					</a>\
 					</li>';
 	return listEl;
 };
