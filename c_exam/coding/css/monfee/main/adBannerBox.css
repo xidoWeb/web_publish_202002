@@ -1,5 +1,6 @@
 /* adBannerBox.css */
 #adBannerBox {
+	overflow: hidden;
 	position: relative; z-index:0;
 	width: 100%; height:100%;
 }
@@ -63,11 +64,24 @@
 	background-position:50% 50%;
 	background-size: contain;
 }
-.adBanner_bg p {
-	width: 100%; height:auto;
+.adBanner_bg ul {
+	position:relative;
+	width: 100%; height:100%;
 	color:#fff; 
 	font-size:1.2rem; line-height:1.2;
 }
+
+.adBanner_bg li{
+	position: absolute; top: 0; left: 0; z-index:0;
+	width: 100%; height:auto;
+	display: none;
+}
+
+.adBanner_bg li.active {
+	z-index: 10;
+}
+
+
 
 .adBanner_img{
 	position: absolute; top: 0; left: 0; z-index:-1;
