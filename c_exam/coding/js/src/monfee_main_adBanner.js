@@ -17,6 +17,7 @@
 	var adBannerLi     = adBannerImgWrap.find('li');
 	
 	// common
+	var timed = 500;
 	var n = 0;
 	var k = n;
 	var btnOk = true;
@@ -31,6 +32,18 @@
 	var liWidth = 100 / adBannerLiLen;
 	adBannerImgWrap.css({'width': adBannerLiLen * 100 +'%',transform:'translateX(-'+ liWidth +'%)'});
 	adBannerLi.css({width: liWidth + '%'});
+	
+	var AdBannerTextFn = function(){
+		if(k !== n){	
+			adBannerBgLi.eq(n).css({zIndex: 5});
+			adBannerBgLi.eq(k).fadeOut(timed/3 ,function(){
+				adBannerBgLi.eq(n).fadeIn(timed/2);
+				adBannerBgLi.removeClass('active');
+				$(this).addClass('active');
+			});
+		}
+	};
+
 
 	// button
 	adBtn.on('click', function(e){
@@ -42,16 +55,8 @@
 		if( clickIt === $('.next')[0] && btnOk){
 			// 다음버튼 클릭
 			btnOk = false;
-			n += 1;
-					
-			adBannerBgLi.eq(n).css({zIndex: 5});
-			adBannerBgLi.eq(k).fadeOut(function(){
-				adBannerBgLi.eq(n).fadeIn();
-				adBannerBgLi.removeClass('active');
-				$(this).addClass('active');
-			});
-
-
+			n += 1;					
+			AdBannerTextFn();
 			adBannerImgWrap.stop().animate({'marginLeft':n * -100 + '%'}, function(){				
 				if( n >= adBannerLiLen -2){
 					n = -1;
@@ -64,14 +69,7 @@
 			// 이전버튼 클릭
 			btnOk = false;
 			n -= 1;			
-			adBannerBgLi.eq(n).css({zIndex: 5});
-			adBannerBgLi.eq(k).fadeOut(100, function(){
-				adBannerBgLi.eq(n).fadeIn(200);
-				adBannerBgLi.removeClass('active');
-				$(this).addClass('active');
-			});
-
-
+			AdBannerTextFn();
 			adBannerImgWrap.stop().animate({'marginLeft':n * -100 + '%'}, function(){
 				if(n < 0){	
 					n = adBannerLiLen -2;	
@@ -86,27 +84,25 @@
 	});
 
 	// indicator
-	indiCatorLi.find('a').on('click', function(e){
+	indiCatorLi.find('a').on('focus', function(e){
 		e.preventDefault();
-		var clickIt = $(this).parent('li');
-		var itIndex = clickIt.index();
-		k = n;
-		n = itIndex;
+		if(btnOk){
+			btnOk=false;
 
-		adBannerBgLi.eq(n).css({zIndex: 5});
-		adBannerBgLi.eq(k).fadeOut(function(){
-			adBannerBgLi.eq(n).fadeIn();
-			adBannerBgLi.removeClass('active');
-			$(this).addClass('active');
-		});
+			var clickIt = $(this).parent('li');
+			var itIndex = clickIt.index();
+			k = n;
+			n = itIndex;
+			AdBannerTextFn();
+			adBannerImgWrap.stop().animate({'marginLeft':n * -100 + '%'}, function(){
 
-		adBannerImgWrap.stop().animate({'marginLeft':n * -100 + '%'});
+				btnOk = true;
 
-		indiCatorLi.eq(n).siblings('li').removeClass('active');
-		indiCatorLi.eq(n).addClass('active');
+			});
+			
+			indiCatorLi.eq(n).siblings('li').removeClass('active');
+			indiCatorLi.eq(n).addClass('active');
+		}
 	});
-
-
-
 
 })(jQuery);
