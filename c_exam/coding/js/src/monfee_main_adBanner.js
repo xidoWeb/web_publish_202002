@@ -17,7 +17,7 @@
 	var adBannerLi     = adBannerImgWrap.find('li');
 	
 	// common
-	var timed = 500;
+	var timed = 600;
 	var n = 0;
 	var k = n;
 	var btnOk = true;
@@ -104,5 +104,26 @@
 			indiCatorLi.eq(n).addClass('active');
 		}
 	});
+
+ // 자동슬라이드 기능
+ var SetSlideInterval;
+ var mySlideGo = function(){
+	 SetSlideInterval = setInterval(function(){
+		adBannerBox.find('.next').trigger('click');
+	 }, timed*6);
+	};
+
+ var mySlideStop = function(){
+	 clearInterval(SetSlideInterval);
+ }
+
+ mySlideGo();
+ // adBannerBox.on('mouseenter', function(){ mySlideStop() });
+ // adBannerBox.on('mouseleave', function(){ mySlideGo() });
+
+//  adBannerBox.on('mouseenter', mySlideStop);
+//  adBannerBox.on('mouseleave', mySlideGo);
+
+adBannerBox.on({mouseenter:mySlideStop, mouseleave:mySlideGo});
 
 })(jQuery);
