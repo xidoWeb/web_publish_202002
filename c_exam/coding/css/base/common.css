@@ -5,6 +5,7 @@
 .hidden {display: block; position: absolute; z-index: -1; 
          width: 0; height: 0; overflow: hidden;}
 
+.clearfix{width:100%; height:auto;}
 .clearfix:after, .clearfix::after {content:" "; display: block; clear: both;}
 .clearfix > li:first-child,
 .clearfix > div:first-child { margin-left:0; }
