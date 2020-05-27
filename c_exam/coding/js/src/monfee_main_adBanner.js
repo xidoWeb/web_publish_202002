@@ -51,9 +51,23 @@
 				btnOk = true;
 			});
 		}
+
+		indiCatorLi.eq(n).siblings('li').removeClass('active');
+		indiCatorLi.eq(n).addClass('active');
 	});
 
 	// indicator
+	indiCatorLi.find('a').on('click', function(e){
+		e.preventDefault();
+		var clickIt = $(this).parent('li');
+		var itIndex = clickIt.index();
+		n = itIndex;
+
+		adBannerImgWrap.stop().animate({'marginLeft':n * -100 + '%'});
+		
+		indiCatorLi.eq(n).siblings('li').removeClass('active');
+		indiCatorLi.eq(n).addClass('active');
+	});
 
 
 
