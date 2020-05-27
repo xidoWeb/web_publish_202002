@@ -21,27 +21,35 @@
 
 
 	var n = 0;
+	var btnOk = true;
 
 	// button
 	adBtn.on('click', function(e){
 		e.preventDefault();
 		var clickIt = $(this)[0];
-
-		if( clickIt === $('.next')[0] ){
+		console.log(n);
+		if( clickIt === $('.next')[0] && btnOk){
 			// 다음버튼 클릭
+			btnOk = false;
 			n += 1;
 			adBannerImgWrap.stop().animate({'marginLeft':n * -100 + '%'}, function(){
-				if( n >= adBannerLiLen -1){
+				if( n >= adBannerLiLen -2){
 					n = -1;
+					adBannerImgWrap.stop().css({'marginLeft':n * -100 + '%'});
 				}
+				btnOk = true;
 			});
-		}else{
+		}else if( btnOk ){
 			// 이전버튼 클릭
-			n -= 1;
-			if(n < 0){
-				n = adBannerLiLen -1;
-			}
-			adBannerImgWrap.stop().animate({'marginLeft':n * -100 + '%'});
+			btnOk = false;
+			n -= 1;			
+			adBannerImgWrap.stop().animate({'marginLeft':n * -100 + '%'}, function(){
+				if(n < 0){	
+					n = adBannerLiLen -2;	
+					adBannerImgWrap.stop().css({'marginLeft':n * -100 + '%'});
+				}
+				btnOk = true;
+			});
 		}
 	});
 
