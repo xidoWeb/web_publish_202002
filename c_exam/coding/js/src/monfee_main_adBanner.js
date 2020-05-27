@@ -9,9 +9,17 @@
 	var adBannerImg  = adBannerBox.find('.adBanner_img');
 	var adBannerImgWrap = adBannerImg.children('ul') ;
 	var adBannerLi     = adBannerImgWrap.find('li');
-	var adBannerLiLen  = adBannerLi.length;
-
+	
 	// common
+	var liLast = adBannerLi.eq(-1).clone(true);
+	adBannerImgWrap.prepend(liLast);
+	adBannerLi     = adBannerImgWrap.find('li');
+	var adBannerLiLen  = adBannerLi.length;
+	var liWidth = 100 / adBannerLiLen;
+	adBannerImgWrap.css({'width': adBannerLiLen * 100 +'%',transform:'translateX(-'+ liWidth +'%)'});
+	adBannerLi.css({width: liWidth + '%'});
+
+
 	var n = 0;
 
 	// button
