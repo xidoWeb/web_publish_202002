@@ -65,16 +65,37 @@
 	height:100%; 
 	margin:auto;
 	background-color: #777;
+	/* overflow: hidden; */
 }
 .material_area ul{
-	width:250%; height:100%;
+	width:150%; height:100%;
 }
 
 .material_area li{
 	float:left;
-	width: 140px; height: 120px;
-	margin-left:50px;
+	width: 10vw; height: 120px;
+	margin-left:5vw;
 	background-color: #caa;
 }
+.material_area li:first-child{
+	margin-left:1vw;
+}
 
-.material_area a{}
+
+
+
+.material_area a{
+	background-image: url('../../../img/monfee/material/material_icon.png');
+	background-repeat: no-repeat;
+}
+
+.mat_01 a{background-position:1% 0;}
+.mat_02 a{background-position:25% 0;}
+.mat_03 a{background-position:50% 0;}
+.mat_04 a{background-position:73% 0;}
+.mat_05 a{background-position:100% 0;}
+.mat_06 a{background-position:1% 23%;}
+.mat_07 a{background-position:24% 23%;}
+.mat_08 a{background-position:50% 23%;}
+.mat_09 a{background-position:73% 23%;}
+.mat_10 a{background-position:100% 23%;}
