@@ -117,6 +117,8 @@
 .mat_08 .mat_img{ left: calc(550 / 1100 * -100%); top:calc(132 / 680 * -100%);}
 .mat_09 .mat_img{ left: calc(790 / 1100 * -100%); top:calc(132 / 680 * -100%);}
 .mat_10 .mat_img{ left: calc(1030 / 1100 * -100%); top:calc(132 / 680 * -100%);}
+.mat_11 .mat_img{ left: calc(70 / 1100 * -100%); top:calc(276 / 680 * -100%);}
+.mat_12 .mat_img{ left: calc(310 / 1100 * -100%); top:calc(276 / 680 * -100%);}
 
 /* 
 .mat_01 a{background-position:0 0;}

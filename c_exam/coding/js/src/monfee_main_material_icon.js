@@ -10,7 +10,7 @@
 	var mvLength = 1;
 
 	// materialLi.eq(-1).prependTo(materialUl);
-	var matLiLast = materialLi.eq( (mvLength * -1) -1 ).nextAll('li');
+	var matLiLast = materialLi.eq( -(mvLength + 1) ).nextAll('li');
 	materialUl.prepend(matLiLast);
 	materialLi   = materialUl.find('li');
 	materialUl.css({width:250+'%'});
@@ -79,7 +79,7 @@ materialBtn.on('click', function(e){
 	}else if(thisOk){
 		thisOk = false;
 		materialUl.animate({left:matFirstSize + 'px'}, function(){
-			materialLi.eq((mvLength * -1) -1).nextAll().prependTo(materialUl);
+			materialLi.eq( -(mvLength + 1) ).nextAll().prependTo(materialUl);
 			materialUl.css({left:0});
 			materialLi   = materialUl.find('li');
 			thisOk= true;
