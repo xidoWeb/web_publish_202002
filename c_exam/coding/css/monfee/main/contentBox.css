@@ -1,6 +1,80 @@
 /* contentBox.css */
 #contentBox{
+	position: relative;
 	width: 100%; height:auto;
 	min-height:800px;
-	background-color: #ccc;
+	/* background-color: #ccc; */
+	background-image: url('../../../img/monfee/black_board.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
 }
+
+.content_text{
+	width:940px; height:340px;
+	padding-top:140px; padding-bottom:110px;
+	margin:auto;
+	color:#fff;
+	text-align: center;
+}
+.content_text h3{
+	font-size: 4.8125rem;
+	text-transform: uppercase;
+	margin-bottom:50px;
+}
+.content_text p{
+	font-size:1.2rem;
+	text-align: justify;
+}
+
+.material_icon{
+	position:absolute; bottom: 0;
+	width: 100%; height: 200px;
+	background-color: #a30;
+	padding:40px 0;
+	box-sizing: border-box;
+}
+
+.material_btn{
+	position: absolute; top:50%; left:0; right:0; margin:auto;
+	margin-top:-60px;
+
+	width: 85%; min-width:945px; height: 0;	
+}
+
+.material_btn button{
+	width:60px; height:120px;
+	background-image: url('../../../img/monfee/material/material_btn.png');
+	background-repeat: no-repeat;
+}
+.material_btn .next{
+	float:right;
+	background-position-x:100%;
+}
+.material_btn .prev{
+	float:left;
+	background-position-x:0;
+}
+
+.material_btn button:hover,
+.material_btn button:focus{
+	background-position-y:100%;
+}
+
+.material_area {
+	width: 55%; min-width:73.2421875%;
+	height:100%; 
+	margin:auto;
+	background-color: #777;
+}
+.material_area ul{
+	width:250%; height:100%;
+}
+
+.material_area li{
+	float:left;
+	width: 140px; height: 120px;
+	margin-left:50px;
+	background-color: #caa;
+}
+
+.material_area a{}
