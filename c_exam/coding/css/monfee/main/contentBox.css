@@ -94,7 +94,7 @@
 .material_area a:focus,{ background-color: #565656; }
 
 .material_area a>div{
-	position: absolute; left: 50%; top: 0;
+	position: absolute; left: 50%; top: 50%;
 	width: 1100px; height: 618px;
 }
 
@@ -106,19 +106,20 @@
 	background-repeat: no-repeat;
 }
 
-.mat_01 .mat_img{ left: calc(70 / 1100 * -100%); }
-.mat_02 .mat_img{ left: calc(310 / 1100 * -100%); }
-.mat_03 .mat_img{ left: calc(550 / 1100 * -100%); }
-.mat_04 .mat_img{ left: calc(790 / 1100 * -100%); }
-.mat_05 .mat_img{ left: calc(1030 / 1100 * -100%); }
+.mat_01 .mat_img{ left: calc(70 / 1100 * -100%); top:calc(70 / 680 * -100%);}
+.mat_02 .mat_img{ left: calc(310 / 1100 * -100%); top:calc(70 / 680 * -100%);}
+.mat_03 .mat_img{ left: calc(550 / 1100 * -100%); top:calc(70 / 680 * -100%);}
+.mat_04 .mat_img{ left: calc(790 / 1100 * -100%); top:calc(70 / 680 * -100%);}
+.mat_05 .mat_img{ left: calc(1030 / 1100 * -100%); top:calc(70 / 680 * -100%);}
 
-.mat_06 .mat_img{ left: calc(70 / 1100 * -100%); top:calc(132 / 680 * -100%);}
-.mat_07 .mat_img{ left: calc(310 / 1100 * -100%); top:calc(132 / 680 * -100%);}
-.mat_08 .mat_img{ left: calc(550 / 1100 * -100%); top:calc(132 / 680 * -100%);}
-.mat_09 .mat_img{ left: calc(790 / 1100 * -100%); top:calc(132 / 680 * -100%);}
-.mat_10 .mat_img{ left: calc(1030 / 1100 * -100%); top:calc(132 / 680 * -100%);}
-.mat_11 .mat_img{ left: calc(70 / 1100 * -100%); top:calc(276 / 680 * -100%);}
-.mat_12 .mat_img{ left: calc(310 / 1100 * -100%); top:calc(276 / 680 * -100%);}
+.mat_06 .mat_img{ left: calc(70 / 1100 * -100%); top:calc(205 / 680 * -100%);}
+.mat_07 .mat_img{ left: calc(310 / 1100 * -100%); top:calc(205 / 680 * -100%);}
+.mat_08 .mat_img{ left: calc(550 / 1100 * -100%); top:calc(205 / 680 * -100%);}
+.mat_09 .mat_img{ left: calc(790 / 1100 * -100%); top:calc(205 / 680 * -100%);}
+.mat_10 .mat_img{ left: calc(1030 / 1100 * -100%); top:calc(205 / 680 * -100%);}
+
+.mat_11 .mat_img{ left: calc(70 / 1100 * -100%); top:calc(370 / 680 * -100%);}
+.mat_12 .mat_img{ left: calc(310 / 1100 * -100%); top:calc(370 / 680 * -100%);}
 
 /* 
 .mat_01 a{background-position:0 0;}
