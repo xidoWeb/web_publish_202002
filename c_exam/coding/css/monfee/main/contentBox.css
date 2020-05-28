@@ -35,9 +35,9 @@
 }
 
 .material_btn{
-	position: absolute; top:50%; left:0; right:0; margin:auto;
+	position: absolute; top:50%; left:0; right:0; z-index:100;
+	margin:auto;
 	margin-top:-60px;
-
 	width: 85%; min-width:945px; height: 0;	
 }
 
@@ -80,8 +80,6 @@
 .material_area li:first-child{
 	margin-left:1vw;
 }
-
-
 
 
 .material_area a{
