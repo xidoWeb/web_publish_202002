@@ -7,10 +7,14 @@
 	var materialUl   = materialArea.find('ul');
 	var materialLi   = materialUl.find('li');
 
+	var mvLength = 1;
+
 	// materialLi.eq(-1).prependTo(materialUl);
-	var matLiLast = materialLi.eq(-1);
+	var matLiLast = materialLi.eq( (mvLength * -1) -1 ).nextAll('li');
 	materialUl.prepend(matLiLast);
 	materialLi   = materialUl.find('li');
+	materialUl.css({width:250+'%'});
+
 	/*
 	var matFirst_01 = parseInt(materialLi.eq(0).css('width'));
 	var matFirst_02 = parseInt(materialLi.eq(0).css('marginLeft'));
@@ -18,12 +22,11 @@
 	var matFirst_04 = parseInt(materialLi.eq(0).css('paddingRight'));
 	var matFirstSize = matFirst_01 +  matFirst_02 + matFirst_03 + matFirst_04;
 	*/
-	var matFirstSize = materialLi.eq(1).outerWidth(true);
-	//materialUl.css({marginLeft: -matFirstSize +'px'});
+	var matFirstSize = materialLi.eq(1).outerWidth(true) * mvLength;
+	materialUl.css({marginLeft: -matFirstSize +'px'});
 	materialUl.css({position:'relative'});
 	/*	
 			var n = 0;
-			materialUl.css({width:250+'%'});
 			var btnView = function(){
 				if(n <= 0){
 					materialBtnArea.children('.prev').hide();
@@ -58,7 +61,8 @@
 // --------------------------------------------------------------
 // v.2 클릭시 양끝 마지막요소를 반대편끝으로 붙여서 무한으로 이동하게 만들기
 
-materialUl.css({marginLeft: -matFirstSize +'px'});
+// materialUl.css({marginLeft: -matFirstSize +'px'});
+
 var thisOk = true;
 materialBtn.on('click', function(e){
 	e.preventDefault();
@@ -67,7 +71,7 @@ materialBtn.on('click', function(e){
 	if(thisIt === nextBtn && thisOk){
 		thisOk = false;
 		materialUl.animate({left: -matFirstSize + 'px'}, function(){
-			materialLi.eq(0).appendTo(materialUl);
+			materialLi.eq(mvLength).prevAll('li').appendTo(materialUl);
 			materialUl.css({left:0});
 			materialLi   = materialUl.find('li');
 			thisOk = true;
@@ -75,7 +79,7 @@ materialBtn.on('click', function(e){
 	}else if(thisOk){
 		thisOk = false;
 		materialUl.animate({left:matFirstSize + 'px'}, function(){
-			materialLi.eq(-1).prependTo(materialUl);
+			materialLi.eq((mvLength * -1) -1).nextAll().prependTo(materialUl);
 			materialUl.css({left:0});
 			materialLi   = materialUl.find('li');
 			thisOk= true;
