@@ -100,19 +100,19 @@
 				var keyCode = evt.keyCode;
 				// console.log(keyCode);
 				// 왼쪽 37, 오른쪽 39, 빠져나가기 27
-				if(keyCode == 37) {
+				if(keyCode === 37) {
 					n -= 1;
 					if( n < 0 ){ n = galleryList.thumList.length -1; }
 					bigModal.find('.big_img')
 									.css({backgroundImage:'url('+bigUrl+galleryList.bigList[n]+')'});
 									
-				}else if(keyCode == 39){
+				}else if(keyCode === 39){
 					n += 1;
 					if( n > galleryList.thumList.length -1 ){ n = 0; }
 					bigModal.find('.big_img')
 									.css({backgroundImage:'url('+bigUrl+galleryList.bigList[n]+')'});
 									
-				}else if(keyCode == 27){
+				}else if(keyCode === 27){
 					bigModal.fadeOut(400, function(){
 						p03Link.eq(0).focus();
 					});
