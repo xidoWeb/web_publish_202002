@@ -1,0 +1,16 @@
+h1,h2,h3,h4,h5,h6 {
+	width: 70%; 
+	margin:auto; margin-top: 2rem; margin-bottom:1rem; 
+	padding-bottom: 0.5rem;
+	text-align: center; background-color: #acc;
+}
+h2,h3,h4{margin-top: 0.2rem;}
+
+ul{width: 60%; margin:auto; margin-bottom: 2rem;}
+li{
+	width: 50%;
+	margin-left: 2rem;
+	padding:0.3rem;
+	text-indent: 2rem;
+	border-bottom: 1px solid #000;
+}

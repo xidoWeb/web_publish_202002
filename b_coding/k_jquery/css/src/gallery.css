@@ -1,0 +1,63 @@
+#wrap{
+	width: 100%; max-width:1400px;
+	height:auto; min-height:700px;
+	margin:auto;
+}
+
+.part{
+	width: 90%; height:auto;
+	border:1px solid #ccc;
+	margin:auto;
+	margin-top: 1rem;
+	padding:1rem; padding-bottom:5rem;
+	box-sizing: border-box;
+}
+
+.big_rec {
+	width: 100%; height: 500px;
+	background-color: #ddd;
+	border-radius:0.3rem;
+	margin-bottom: 1.5rem;
+}
+
+.part > ul{
+	width: 70%; min-width:700px; height:auto;
+	margin:auto;
+	text-align: center;
+}
+
+.part li {
+	position: relative;
+	display:inline-block;
+	width:100px; height:100px;
+	margin:0 1rem;
+}
+
+.part li >a {
+	display: block; width: 100%; height: 100%;
+	border-radius:100%;
+}
+
+.part li > a > span{
+	display: block;
+	position: absolute; left:0; right:0; bottom: -3rem; 
+	height:auto; padding:0.3rem; background-color: #acc;
+}
+
+.part .big_rec, .part li>a{
+	background-repeat: no-repeat;
+	background-size: 200%;
+	background-position: 50% 50%;
+	transition:all 200ms ease;
+}
+
+.part_01 .big_rec { background-image: url('../../img/gallery/big/gallery_01.jpg');}
+.part_01 li:nth-child(1) > a{ background-image: url('../../img/gallery/thum/gallery_01.jpg');}
+.part_01 li:nth-child(2) > a{ background-image: url('../../img/gallery/thum/gallery_02.jpg');}
+.part_01 li:nth-child(3) > a{ background-image: url('../../img/gallery/thum/gallery_03.jpg');}
+.part_01 li:nth-child(4) > a{ background-image: url('../../img/gallery/thum/gallery_04.jpg');}
+.part_01 li:nth-child(5) > a{ background-image: url('../../img/gallery/thum/gallery_05.jpg');}
+
+.part li a span {display: none;}
+.part li a:hover span {display: block;}
+.part li a:hover {background-size: 240%;}
