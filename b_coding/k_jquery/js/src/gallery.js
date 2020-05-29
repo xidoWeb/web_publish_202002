@@ -67,5 +67,40 @@
 	});
 
 	p2thumLi.eq(0).find('a').trigger('click');
- 
+ // ========================================================
+	//  3. 모달윈도우 제작하기
+	var bigModal = $('.big_modal ');
+	var bigModalBtn = bigModal.find('button');
+	var part03 = $('.part_03');
+	var part03Ul = part03.find('ul');
+
+	var part03Li = '<li><a href="#"><span></span></a></li>';
+
+	for(i=0; i<galleryList.thumList.length; i++){
+		part03Ul.append(part03Li);
+		part03Ul.find('li').eq(i).children('a').css({
+			backgroundImage:'url('+thumUrl+galleryList.thumList[i]+')'
+		});
+	}
+
+	var n=0;
+	var p03Link = part03Ul.find('li').children('a');
+  p03Link.on('click', function(e){
+		e.preventDefault();
+		var itIndex = $(this).parent().index();
+		n = itIndex;
+
+		bigModal.find('.big_img').css({
+			backgroundImage:'url('+bigUrl+galleryList.bigList[itIndex]+')',
+			backgroundSize:'cover', backgroundPosition:'50% 50%',
+			backgroundRepeat:'no-repeat'
+		});
+		bigModal.fadeIn();
+	});
+
+	bigModalBtn.on('click', function(e){
+		e.preventDefault();
+		bigModal.fadeOut(400);
+	});
+
 // })(jQuery);
