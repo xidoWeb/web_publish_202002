@@ -26,9 +26,102 @@ h1 {
 }
 
 .part_01{	background-color: #fa7;}
-.part_02{	background-color: #a7f;}
-.part_03{	background-color: #7fa;}
+.p1 {
+	width: 60%; height: 400px;
+	margin:auto; margin-top:2rem;
+	padding:2rem; font-size: 1.5rem;
+	border:1rem solid #fff;
+	border-radius:1rem;
+	box-sizing: border-box;
+	color:#fff; font-weight: bold;
+	background-color: #39a;
+	display: none;
+}
+
+
+.part_02{	background-color: #a7f;
+	padding:10rem; box-sizing: border-box;	
+}
+.part_02>div{
+	width: 40%; height:300px; 
+	border-radius:30rem; 
+	display: none;
+}
+.p2_1{background-color: #fac; float:left;}
+.p2_2{background-color: #afc;	float:right;}
+
+.part_03{
+	text-align: center;
+	background-color: #7fa;
+}
+.p3{	
+	overflow-x: hidden;
+	position: relative;
+	width: 80%; min-width:900px; height:600px;
+	margin:auto;
+}
+.p3 > div{
+	width: 200px; height: 200px; 
+	margin:3rem; 
+	padding: 2rem;
+	text-align: center; 
+	box-sizing: border-box;
+	box-shadow:0.3rem 0.3rem 0.5rem rgba(51,51,51,0.7);
+	background-color: #fff;
+}
+.p3 > div:nth-of-type(1){  
+	opacity: 0; 
+	position:absolute; left: 0; right: 0; margin:auto; margin-top: 3rem; 
+}
+.p3 > div:nth-of-type(2){ 
+	opacity: 0;
+	position:relative; left:-30rem;
+	float: left; top:-10rem;
+}
+.p3 > div:nth-of-type(3){ 
+	opacity: 0;
+	position:relative; right:-30rem;
+	float: right;  top:50rem
+}
+
+.p3 div{transition:all 500ms linear;}
+.p3.active div:nth-of-type(1){opacity: 1; top:15rem;}
+.p3.active div:nth-of-type(2){opacity: 1; left:0; top:15rem; transition-delay:200ms;}
+.p3.active div:nth-of-type(3){opacity: 1; right:0; top:15rem; transition-delay:400ms;}
+
+
 .part_04{	background-color: #f7a;}
+.part_04 ul{
+	width: 800px; 
+	margin:auto;
+	padding:1rem; border:1px solid #333;
+	box-sizing: border-box;
+}
+.part_04 li {
+	position: relative;	float:left;
+	width: 160px; height: 200px;
+	margin-left: 2.3rem;
+	text-align: center; font-size: 3rem; word-break: keep-all;
+	transform-style: preserve-3d;	transition:all 300ms ease; }
+
+.part_04 .front {
+	position: absolute; top: 0; left: 0; 
+	width: 100%; height: 100%; background-color: #fff;
+	backface-visibility: hidden; }
+
+.part_04 .back { 
+	position: absolute; top: 0; left: 0;
+	width: 100%; height: 100%; background-color: #fa0;
+	transform:rotateY(180deg); }
+.part_04:hover li {	transform:rotateY(180deg);}
+
+
 .part_05{	background-color: #7af;}
 
-h2{display: none;}
+h2{display: none;
+	padding: 1rem; padding-top: 3rem;
+	font-size: 2rem;
+	text-align: center; 
+	font-weight: bold;
+	text-decoration:underline;
+}
