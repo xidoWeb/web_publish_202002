@@ -1,0 +1,34 @@
+/* landing.css */
+#wrap{
+	width: 100%; height: 100%; 
+}
+
+h1 {
+	padding: 1rem; background-color: #ccc;
+	text-align: center; font-size:2rem;
+	border-bottom:2px solid #333;
+}
+.fixed_text{
+	position: fixed; top: 0; right: 0; z-index: 300;
+	width:250px; height:40px;
+	padding:0.7rem; font-size: 1.2rem; 
+	background-color: #fff;
+}
+
+.fixed_text span {
+	font-size: 1.4rem; font-weight: bold; color:#077;
+}
+
+#wrap > div{
+	width:100%; height:100%;
+	border-bottom:2px solid #07f;
+	box-sizing: border-box;
+}
+
+.part_01{	background-color: #fa7;}
+.part_02{	background-color: #a7f;}
+.part_03{	background-color: #7fa;}
+.part_04{	background-color: #f7a;}
+.part_05{	background-color: #7af;}
+
+h2{display: none;}
