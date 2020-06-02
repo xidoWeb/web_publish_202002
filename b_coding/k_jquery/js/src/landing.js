@@ -1,6 +1,5 @@
 // landing.js
 (function($){
-
 	var ft = $('.fixed_text').find('span');
 	var part = [];
 	    part[0] = $('.part_01');
@@ -14,27 +13,28 @@
 	for(; i < part.length; i += 1){
 		partOffset[i] = part[i].offset().top;
 	}
+// -----------------------------------------
+var win = $(window);
+var winH = win.innerHeight();
+var thisTop = win.scrollTop() + (winH/4*3);
+ft.text(thisTop);
 
-	part[0].css({backgroundImage: 'linear-gradient(30deg, #acf, #afc)'});
-
-	var thisTop = $(window).scrollTop();
-	ft.text(thisTop);
-
-	var win = $(window);
-
-	var ViewSet = function(n){
-		if(thisTop < partOffset[n]){
-			// part[n].siblings().find('h2').hide();
-			part[n].find('h2').fadeIn();
+// -----------------------------------------
+var ScrollView = function(){
+	for(var j=0; j<partOffset.length; j++){
+		if(thisTop > partOffset[j]){
+			part[j].find('h2').slideDown();
 		}
-	};
-	ViewSet(0);
+	}
+};
+ScrollView();
 
-	win.on('scroll', function(e){
-		thisTop = $(this).scrollTop() - 500;
-		ft.text(thisTop);
-		var j=0;
-		for(; j < partOffset.length; j++ ){	ViewSet(j);	}
-	});
+// -----------------------------------------
+win.on('scroll', function(e){
+	thisTop = $(this).scrollTop() + 800;
+	ft.text(thisTop);
+	ScrollView();
+});
 
+// -----------------------------------------
 })(jQuery);
