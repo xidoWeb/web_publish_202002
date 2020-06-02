@@ -23,6 +23,28 @@ ft.text(thisTop);
 // 추가 내용 세팅
 var p1 = $('.p1');
 var p2 = $('.part_02').children('div');
+var p3 = $('.part_03');
+var p4 = $('.part_04 ').find('li');
+var p5 = $('.part_05');
+var p5Day = p5.find('.day');
+var yy   = p5Day.find('.yy');
+var mm   = p5Day.find('.mm');
+var dd   = p5Day.find('.dd');
+var myDay = [2020, 6, 2];
+
+var z = 0;
+var setIY;
+var myCount = function(){
+	setIY = setInterval(function(){ 
+		if(z <= (myDay[0] - 100)){
+			z+=5;
+		}else if(z < myDay[0]){
+			z+=1;
+		}
+		yy.text(z);
+	}, 10);
+};
+
 // -----------------------------------------
 var ScrollView = function(){
 	thisTop = win.scrollTop() + (winH/4*3);
@@ -42,10 +64,20 @@ var ScrollView = function(){
 				}, 100);
 				break;
 				case 2:
-					$('.p3').addClass('active');
+					p3.addClass('active');
+				break;
+				case 3:
+					setTimeout(function(){ p4.eq(0).addClass('active'); }, 0);
+					setTimeout(function(){ p4.eq(1).addClass('active'); }, 400);
+					setTimeout(function(){ p4.eq(2).addClass('active'); }, 800);
+					setTimeout(function(){ p4.eq(3).addClass('active'); }, 1200);						
+				break;
+				case 4:
+					setTimeout(function(){
+						myCount();
+					}, 500);
 				break;
 			}
-			
 		}
 	}
 };
@@ -58,4 +90,15 @@ win.on('scroll', function(e){
 });
 
 // -----------------------------------------
+// for(var z=0; z <= 2020; z++){
+// }
+	
+
+
+
+
+
+
+
+
 })(jQuery);
