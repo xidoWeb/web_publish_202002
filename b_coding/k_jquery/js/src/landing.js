@@ -21,6 +21,7 @@ ft.text(thisTop);
 
 // -----------------------------------------
 var ScrollView = function(){
+	thisTop = win.scrollTop() + (winH/4*3);
 	for(var j=0; j<partOffset.length; j++){
 		if(thisTop > partOffset[j]){
 			part[j].find('h2').slideDown();
@@ -31,7 +32,6 @@ ScrollView();
 
 // -----------------------------------------
 win.on('scroll', function(e){
-	thisTop = $(this).scrollTop() + 800;
 	ft.text(thisTop);
 	ScrollView();
 });
