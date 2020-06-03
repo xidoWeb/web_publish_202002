@@ -1,0 +1,56 @@
+/* parallax.css */
+
+#wrap{
+	width: 100%; height:100%;
+}
+
+#introBox{
+	position: relative;
+	width:100%; height:100%; min-height:600px;
+	background-color: #ccc;
+	/* background-image: url('../../img/firewatch/keyart-mobile.jpg'); */
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	background-size: cover;
+}
+
+#introBox>div{
+	position: absolute; top: 0; left: 0;
+	width: 100%; height: 100%;
+	background-repeat: no-repeat;
+	background-position-x: 50%;
+}
+
+.parallax_01 {background-image: url('../../img/firewatch/parallax0.png');}
+.parallax_02 {background-image: url('../../img/firewatch/parallax1.png');}
+.parallax_03 {background-image: url('../../img/firewatch/parallax2.png');}
+.parallax_04 {background-image: url('../../img/firewatch/parallax3.png');}
+.parallax_05 {background-image: url('../../img/firewatch/parallax4.png');}
+.parallax_06 {background-image: url('../../img/firewatch/parallax5.png');}
+.parallax_07 {background-image: url('../../img/firewatch/parallax6.png');}
+.parallax_08 {background-image: url('../../img/firewatch/parallax7.png');}
+.parallax_09 {background-image: url('../../img/firewatch/parallax8.png');}
+
+#bestBox{
+	width:100%; height:1500px;
+	background-color: #210002;
+	margin:auto;
+}
+#conBox{
+	width:100%; height:2000px;
+	background-image:linear-gradient(#cca, #daf);
+}
+#footbox{
+	width: 100%; height:300px;
+	background-color: #333;
+}
+
+@media screen and (max-width:640px) {
+
+	#introBox{
+		background-image: url('../../img/firewatch/keyart-mobile.jpg');
+	}
+
+	#introBox>div{display: none;}
+
+}
