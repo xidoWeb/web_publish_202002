@@ -63,6 +63,7 @@
 .img_layout .img{
 	width:40%; height:100%; 	background-color: #fff;
 	background-repeat: no-repeat;	background-position-x:50%;
+	background-size:150%;
 }
 .img_layout p{
 	position: absolute; top: 150px; z-index:100;
@@ -74,6 +75,15 @@
 .img_layout:nth-of-type(2n + 1) p{	right:0; }
 .img_layout:nth-of-type(2n + 2) p{	left:0; }
 
+.img_set_01{ background-image: url('../../img/gallery/big/gallery_01.jpg');}
+.img_set_02{ background-image: url('../../img/gallery/big/gallery_02.jpg');}
+.img_set_03{ background-image: url('../../img/gallery/big/gallery_03.jpg');}
+.img_set_04{ background-image: url('../../img/gallery/big/gallery_04.jpg');}
+
+
+
+
+/* ---------------------------------------------------- */
 #footbox{
 	width: 100%; height:300px;
 	background-color: #333;
