@@ -37,9 +37,43 @@
 	margin:auto;
 }
 #conBox{
-	width:100%; height:2000px;
-	background-image:linear-gradient(#cca, #daf);
+	width:100%; height:auto; min-height:2000px;
+	padding-bottom:4rem;
+	background-image:linear-gradient(90deg, #cca, #daf);
 }
+
+#conBox h2{
+	width:70%; height:auto;
+	margin:auto; margin-bottom:1rem;
+	border-bottom:3px solid #fff;
+	text-align: center;	font-size: 2rem;
+	color:#fff;	text-transform:uppercase;
+	padding-top:2rem;	
+}
+
+.con_area {
+	width: 80%; max-width:1600px; height:auto;
+	margin:auto;
+}
+
+.img_layout {
+	position: relative;	width: 100%; height:500px;	
+	margin-bottom:5rem;	border:1px solid #fff;
+}
+.img_layout .img{
+	width:40%; height:100%; 	background-color: #fff;
+	background-repeat: no-repeat;	background-position-x:50%;
+}
+.img_layout p{
+	position: absolute; top: 150px; z-index:100;
+	width:70%; height:300px;	color:#fff; font-size:2rem;
+	padding:1rem; box-sizing: border-box;	background-color: #97a;
+}
+.img_layout:nth-of-type(2n + 1) .img{	float:left; }
+.img_layout:nth-of-type(2n + 2) .img{	float:right; }
+.img_layout:nth-of-type(2n + 1) p{	right:0; }
+.img_layout:nth-of-type(2n + 2) p{	left:0; }
+
 #footbox{
 	width: 100%; height:300px;
 	background-color: #333;
