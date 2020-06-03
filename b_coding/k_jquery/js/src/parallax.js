@@ -1,6 +1,8 @@
 // parallax.js
 (function($){
 
+	// $('body, html').css({overflowX:'hidden'});
+
 	var win = $(window);
 	var winW = win.innerWidth();
 	var winH = win.innerHeight();
@@ -14,6 +16,7 @@
 	for( ; i < divImg.length ; i++ ){
 		imgArr[i] =	divImg.eq(i).offset().top;
 	}
+
 	// console.log(imgArr);
 
 	if(winW < 640){
@@ -29,7 +32,7 @@
 	win.on('scroll', function(e){
 		e.preventDefault();
 		var winTop = win.scrollTop();
-		var winTop2 = winTop + winH;
+		var winTop2 = winTop + winH + 20;
 		// console.log(winTop);
 		// 상단 #introBox-------------------------------------------
 		introDiv.eq(0).css({backgroundPositionY:winTop/16*16});
@@ -60,10 +63,6 @@
 			divImg.eq(3).css({backgroundPositionY:-(imgArr[3] - winTop2)/20 + '%'});
 			divImg.eq(3).next('p').css({top:-(imgArr[3] - winTop2)/25});
 		}
-
-
 	});
-
-
-
+	
 })(jQuery);
