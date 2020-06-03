@@ -46,15 +46,19 @@
 		if(winTop2 > imgArr[0]){
 			// console.log('!!!!!!!!!-----------------1');
 			divImg.eq(0).css({backgroundPositionY:-(imgArr[0] - winTop2)/20 + '%'});
+			divImg.eq(0).next('p').css({top:-(imgArr[0] - winTop2)/5});
 		}
 		if(winTop2 > imgArr[1]){
 			divImg.eq(1).css({backgroundPositionY:-(imgArr[1] - winTop2)/20 + '%'});
+			divImg.eq(1).next('p').css({left:-(imgArr[1] - winTop2)/5});
 		}
 		if(winTop2 > imgArr[2]){
 			divImg.eq(2).css({backgroundPositionY:-(imgArr[2] - winTop2)/20 + '%'});
+			divImg.eq(2).next('p').css({right:(imgArr[2] - winTop2)/5});
 		}
 		if(winTop2 > imgArr[3]){
 			divImg.eq(3).css({backgroundPositionY:-(imgArr[3] - winTop2)/20 + '%'});
+			divImg.eq(3).next('p').css({top:-(imgArr[3] - winTop2)/25});
 		}
 
 
