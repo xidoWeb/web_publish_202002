@@ -5,6 +5,15 @@
 	var n = 0;
 	
 	var mw = $('.mw');
+
+	var mwUl = mw.find('ul');
+	var mwLi = mwUl.find('li');
+	
+	for(var i =0; i < mwLi.length; i++){
+		mwLi.eq(i).css({backgroundColor:colorArr[i]});
+	}
+
+
 	var mouseOk = true;
 	mw.on('mousewheel DOMMouseScroll', function(e){
 		// console.log(e.type);
@@ -29,10 +38,10 @@
 			}else if(mouseResult > 0 && n < colorArr.length){
 				n += 1;
 			}
-			mw.text(colorArr[n]);
-			mw.stop().animate({backgroundColor: colorArr[n]},300 , function(){
-				mouseOk = true;
-			});
+			// mw.text(colorArr[n]);
+			// mw.stop().animate({backgroundColor: colorArr[n]},300 , function(){
+			// 	mouseOk = true;
+			// });
 	});
 
 })(jQuery);

@@ -10,3 +10,14 @@
 	background-color: #565656;
 	box-shadow:0.5rem 0.5rem 0.5rem rgba(100,100,100,0.7);
 }
+
+.mw > ul {
+	width: 500%; 
+	height: 100%;
+}
+.mw  li {
+	float: left;
+	width: 20%;
+	height: 100%;
+}
+
