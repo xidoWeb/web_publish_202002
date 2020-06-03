@@ -4,12 +4,17 @@
 }
 
 .mw{
-	width: 100%; height: 400px;
-	border:1rem solid #ddd; padding: 1rem;	border-radius:0.3rem;	box-sizing: border-box;
+	width: 100%; height: 400px;/* padding: 1rem;*/
+	border:1rem solid #ddd; 	border-radius:0.3rem;	box-sizing: border-box;
 	color:#fff;	font-size: 2rem;
 	background-color: #565656;
 	box-shadow:0.5rem 0.5rem 0.5rem rgba(100,100,100,0.7);
 }
+
+/* .mw{
+	overflow: hidden;
+	overflow-x: auto;
+} */
 
 .mw > ul {
 	width: 500%; 

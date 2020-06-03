@@ -5,7 +5,8 @@
 	var n = 0;
 	
 	var mw = $('.mw');
-
+	mw.css({overflow:'hidden'});
+	
 	var mwUl = mw.find('ul');
 	var mwLi = mwUl.find('li');
 	
@@ -25,23 +26,30 @@
 			var mouseResult;
 			if( evt.wheelDelta ){
 				// mouseResult = 'wheelDelta가 존재한다';
-				mouseResult = evt.wheelDelta;
+				mouseResult = -evt.wheelDelta;
 			}else{
 				// mouseResult = 'wheelDelta가 없다';
-				mouseResult = evt.detail * -40;
+				mouseResult = evt.detail * 40;
 			}
 		}
+
 		//  console.log(mouseResult);
 		// ----------------------------
 		 if(mouseResult < 0 && n > 0){
 				n -= 1;
-			}else if(mouseResult > 0 && n < colorArr.length){
+			}else if(mouseResult > 0 && n < colorArr.length-1){
 				n += 1;
 			}
 			// mw.text(colorArr[n]);
 			// mw.stop().animate({backgroundColor: colorArr[n]},300 , function(){
 			// 	mouseOk = true;
 			// });
+
+			// console.log(n);
+			mwUl.stop(true, false).animate({marginLeft: n * -100+ '%'},200, 'easeInExpo' , function(){
+				mouseOk = true;
+			});
+
 	});
 
 })(jQuery);

@@ -1,0 +1,28 @@
+#wrap{
+	position: relative;
+	width: 100%; height: 100%;
+}
+
+#headBox{
+	position: fixed; top: 0; left: 0;
+	width: 20%; height: 50px; 
+	background-color: #ccc;
+	border-radius:0 0 50px 0;
+	text-indent:1rem;
+	box-shadow:0 0 0.4rem rgba(100,100,100,0.7);
+}
+
+.page{
+	width: 100%; height: 100%;
+}
+
+.page_01 { background-color: #aff;}
+.page_02 { background-color: #faf;}
+.page_03 { background-color: #ffa;}
+.page_04 { background-color: #faa;}
+.page_05 { background-color: #aaf;}
+
+
+#footBox {
+	width: 100%; height: 300px; background-color: #333;
+}
