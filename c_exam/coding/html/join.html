@@ -25,8 +25,55 @@
 <body>
 	<!-- layout -->
 	<div id="wrap">
-		<h1>회원가입 페이지 만들기</h1>
-		
+		<h1><span>회원가입 페이지 만들기</span></h1>
+		<div class="joinBox">
+			<form action="#" method="POST">
+				<fieldset class="user_set">
+					<legend class="hidden">계정 설정</legend>
+					<dl>
+						<dt>
+							<label for="userId">
+								<span class="hidden">사용할 </span>
+								아이디
+								<span class="hidden">를 입력해주세요.</span>
+							</label>
+						</dt>
+						<dd class="input_area">
+							<input type="text" name="userId" id="userId" value="" />
+							<span>@naver.com</span>
+						</dd>
+						<dd class="confirm_text">내용을 입력하세요.</dd>
+					</dl>
+					<dl>
+						<dt><label for="userPw">비밀번호</label></dt>
+						<dd class="input_area error">
+							<input type="password" id="userPw" name="userPs" value="" />
+							<strong><span>사용불가</span><i class="fas fa-lock"></i></strong>
+						</dd>
+						<dd class="confirm_text error">내용을 입력하세요.</dd>
+					</dl>
+					<dl>
+						<dt><label for="userPw2">비밀번호 재확인</label></dt>
+						<dd class="input_area">
+							<input type="password" id="userPw2" name="userPw2" value="">
+							<strong>
+								<span>adsfasdfdsf</span>
+								<i class="fas fa-lock"></i></strong>
+						</dd>
+						<dd class="confirm_text success">내용을 입력하세요.</dd>
+					</dl>
+				</fieldset>
+				<fieldset class="user_info">
+					<legend class="hidden">개인 정보</legend>
+				</fieldset>
+				<fieldset class="user_certi">
+					<legend class="hidden">인증 확인</legend>
+				</fieldset>
+				<fieldset class="confirm_send">
+					<legend class="hidden">최종 확인 및 전송</legend>
+				</fieldset>
+			</form>
+		</div>
 	</div>
 
 	<!-- script -->

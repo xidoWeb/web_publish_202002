@@ -1,1 +1,60 @@
 /* join.css */
+#wrap{
+	width: 100%; height:auto;	min-height:900px;
+	padding-top:3rem;
+	background-color: #f5f6f7;	
+}
+
+h1{ 
+	width: 350px; height: 80px;
+	margin:auto; margin-bottom:1rem;
+ }
+
+ .joinBox {
+	width: 460px; height:auto; min-height:500px;
+	margin:auto;
+ }
+
+ .joinBox > form,
+ .joinBox fieldset { width: 100%; height:auto; }
+
+.user_set {	 margin-bottom: 38px; }
+.user_info { margin-bottom: 18px;}
+.user_certi { margin-bottom:30px; }
+
+
+.joinBox dl {
+	width: 100%; height:auto; min-height: 78px;
+	margin-bottom: 16px;
+}
+.joinBox dl:last-of-type{
+	margin-bottom: 0;
+}
+
+.joinBox dt{ 
+	width: 100%; height: 18px; margin-bottom: 10px; 
+	font-size:1rem; font-weight: bold;
+	text-indent:0.2rem;
+}
+.input_area{ 
+	width: 100%; height: 50px; background-color: #fff;
+	border:1px solid #dadada;
+	box-sizing: border-box;
+}
+
+.input_area strong>span {	display:none; }
+.input_area.error strong>span {	
+	display:inline-block; color:#d00;
+}
+
+
+.confirm_text {
+	width: 100%; height:25px;
+	font-size:0.875rem;
+	line-height: 25px;
+	color:#777;
+}
+
+.confirm_text.error {	color:#d00; }
+.confirm_text.success {	color:#0d0; }
+
