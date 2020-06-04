@@ -1,2 +1,116 @@
 /* login.css */
 
+#wrap{
+	width: 100%; min-width:1024px; height:auto; min-height:600px;
+	margin:auto; padding:5rem 0; 
+	background-color:#4257ce;
+	background-image:linear-gradient(50deg, #4257ce 40%, #c94ec0 60%);
+}
+h1{ text-align: center; margin-bottom: 1rem; color:#fff; text-decoration: underline; }
+
+#loginBox{
+	width: 1076px; height: 543px;
+	margin:auto; 
+	padding:85px 80px 65px 100px;
+	border-radius:0.375rem;
+	box-sizing: border-box;
+	background-color: #fff;
+}
+
+#loginBox h2 {
+	float:left;
+	width: 270px; height: 270px;
+	margin-top: 50px;
+	border-radius:100%;
+	background-image: url('../../img/icon/001-businessman.svg');
+	background-repeat: no-repeat;
+	background-position: 90% 130%;
+	background-size: 85%;
+	background-color: #f5f5f5;
+	box-shadow:0.2rem 0.5rem 1.5rem #ccc;
+}
+
+form{
+	float:right;
+	width: 380px; height: 390px;
+}
+
+.user_input {
+	width:100%; height:auto;
+	margin-bottom: 32px;
+}
+
+.user_input legend {
+	position:static; 
+	width: 100%; height: 52px;
+	margin-bottom: 25px;
+	text-align: center;	font-size:1.75rem; font-weight: bold;
+	padding-top:0.5rem;
+	/* text-transform:capitalize; */
+}
+ 
+/* .user_input legend::first-letter,
+.user_input legend span::first-letter{
+	text-transform:capitalize;
+} */
+
+.user_input legend span{
+	word-spacing:-0.55rem;
+}
+
+.user_input ul{
+	width: 100%; height: auto;
+}
+.user_input li{
+	position: relative;
+	width: 100%; height:66px;
+	margin-bottom: 12px;
+}
+.user_input label{
+	position: absolute; top: 50%; left:24px;
+	width:24px; height: 24px; 
+	margin-top:-12px; 
+	font-size:1.5rem;
+	color:#676767;
+}
+
+.user_input label i {
+	display: block;
+}
+
+.user_input li input{
+	width: 100%; height: 100%; border:0;
+	border-radius:33px;
+	text-indent:3.5rem;
+	font-size:1.1rem;
+	background-color: #eeeeee;
+}
+.user_input li input:focus{
+	border:0; outline:0;
+	color:#fff; font-weight: bold;
+	background-color: #676767;
+}
+.user_input li input::placeholder {	color:#333; }
+.user_input li input:focus::placeholder {	color:#fff; }
+.user_input li input:focus + label {color:#fff;}
+
+.user_check {	width:100%; height:auto; }
+.send{ width: 100%; height: 66px; }
+
+.send input{
+	width: 100%; height: 100%; border-radius:33px; border:0; 
+	color:#fff; font-weight: bold; font-size: 1.5rem;	word-spacing:-0.4rem;
+	background-color: #59b747;
+}
+
+.send input:focus{
+	outline:0; 
+	background-color: #c94ec0;
+}
+
+.refind{
+	margin-top:22px;
+	width: 100%; height:auto;
+	text-align: center;
+	font-size:0.875rem;
+}
