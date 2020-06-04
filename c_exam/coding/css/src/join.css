@@ -31,6 +31,13 @@ h1{
 	margin-bottom: 0;
 }
 
+.joinBox dl.error .end_icon,
+.joinBox dl.error .confirm_text{	color:#d00; }
+
+.joinBox dl.success .end_icon,
+.joinBox dl.success .confirm_text {	color:#0d0; }
+
+
 .joinBox dt{ 
 	width: 100%; height: 18px; margin-bottom: 10px; 
 	font-size:1rem; font-weight: bold;
@@ -38,23 +45,43 @@ h1{
 }
 .input_area{ 
 	width: 100%; height: 50px; background-color: #fff;
+	padding:10px;
 	border:1px solid #dadada;
 	box-sizing: border-box;
 }
 
-.input_area strong>span {	display:none; }
+.end_icon > span {	display:none; }
 .input_area.error strong>span {	
 	display:inline-block; color:#d00;
 }
 
+.input_area input{
+	float:left;
+	width:70%;  height: 100%;
+	box-sizing: border-box;
+	border:0;
+	border-radius:0.2rem;
+}
+.input_area input:focus {
+	border:2px solid #333;
+}
+
+.end_icon {
+	float:right;
+	color:inherit;
+}
+.end_icon i{
+	margin-left:0.5rem;
+	color:inherit;
+}
+
+/* ----------------------- */
 
 .confirm_text {
+	display: none;
 	width: 100%; height:25px;
 	font-size:0.875rem;
 	line-height: 25px;
 	color:#777;
 }
-
-.confirm_text.error {	color:#d00; }
-.confirm_text.success {	color:#0d0; }
 
