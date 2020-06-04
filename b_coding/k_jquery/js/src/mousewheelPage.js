@@ -14,7 +14,12 @@
 	// console.log(page.length);
 
 	win.on('mousewheel DOMMouseScroll', function(e){
+		// e.preventDefault();
+	// e.bubbles()
+	  e.bubbles == false;
+
 		var evt = e.originalEvent;
+
 		var result;
 		( evt.wheelDelta ) ? result = -evt.wheelDelta  :  result = evt.detail * 40 ;
 		// console.log(evt);
@@ -29,7 +34,7 @@
 				n = 0;
 			}			
 			console.log(n);
-			$('html, body').animate({scrollTop: winH * n}, function(){
+			$('#wrap').animate({top: -winH * n}, function(){
 				mvTrue = true;		
 			});
 		}
