@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- login.html -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5">
+
+<!-- <link rel="stylesheet" href="../font/gyeonggi/gyeonggi.css"> -->
+<link rel="stylesheet" href="../fonts/fontawesome-5/css/all.min.css">
+
+	<link rel="stylesheet" href="../css/base/reset.css">
+	<link rel="stylesheet" href="../css/base/common.css">
+
+	<link rel="stylesheet" href="../css/src/login.css">
+
+	<!--[if IE]>
+		<script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+		<script src="../ie/pie/PIE.js"></script>
+		<script src="../ie/respond/dist/respond.min.js"></script>
+	<![endif]-->
+
+	<title>login</title>
+</head>
+<body>
+	<!-- layout -->
+	<div id="wrap">
+		<h1>로그인 페이지 만들기</h1>
+		<div id="loginBox">
+			<h2><span class="hidden">로그인 페이지</span></h2>
+
+			<form action="#" method="POST">
+				<fieldset class="user_input">
+					<legend>user <span>log in</span></legend>
+					<ul>
+						<li>
+							<label for="userId"><i></i>
+								<span class="hidden">이메일형식의 아이디를 입력하세요.</span>
+							</label>
+							<input type="text" id="userId" name="userId" value="">
+						</li>
+						<li>
+							<label for="userPw"><i></i>
+								<span class="hidden">사용자의 비밀번호를 입력하세요.</span>
+							</label>
+							<input type="password" id="userPw" name="userPw" value="">
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset class="user_check">
+					<legend class="hidden">확인 및 사용자 정보체크</legend>
+					<div class="send">
+						<input type="submit" name="sendBtn" value="log in">
+					</div>
+					<p class="refind">
+						forgot <a href="#">username</a> / <a href="#">password ?</a>
+					</p>
+				</fieldset>
+			</form>
+	</div>
+	</div>
+
+	<!-- script -->
+<script src="../js/base/jquery-3.5.1.min.js"></script>
+<script src="../js/base/jquery-ui.min.js"></script>
+	<script src="../js/src/login.js"></script>
+</body>
+</html>
