@@ -1,7 +1,7 @@
 /* join.css */
 #wrap{
 	width: 100%; height:auto;	min-height:900px;
-	padding-top:3rem;
+	padding-top:3rem; padding-bottom: 10rem;
 	background-color: #f5f6f7;	
 }
 
@@ -44,8 +44,9 @@ h1{
 	text-indent:0.2rem;
 }
 .input_area{ 
-	width: 100%; height: 50px; background-color: #fff;
-	padding:10px;
+	width: 100%; height: 50px; 
+	background-color: #fff;
+	padding-right: 10px;
 	border:1px solid #dadada;
 	box-sizing: border-box;
 }
@@ -55,19 +56,69 @@ h1{
 	display:inline-block; color:#d00;
 }
 
-.input_area input{
+.input_area div {
 	float:left;
-	width:70%;  height: 100%;
+	padding:10px; box-sizing: border-box;
+	width: 100%; height: 100%;
+}
+
+.user_set .input_area div {	width: 70%; }
+
+.birth .input_area {
+	border:0;
+	background-color: transparent;
+}
+
+.birth .input_area div {
+	float:left; 
+	width:30%; 
+	margin-right:5%;
+	background-color: #fff;
+	border:1px solid #dadada;
+}
+
+.birth .input_area div:last-of-type {
+	margin-right:0;
+}
+
+.user_certi .input_area {
+	margin-bottom:10px;
+}
+.user_certi .input_area:last-of-type{
+	margin-bottom: 0;
+}
+
+.confirm_send .input_area{
+	height:60px;
+	padding-right: 0;
+}
+
+.confirm_send .input_area input{
+	cursor: pointer;
+	background-color: #03c75a;
+	color:#fff;
+	font-size:2rem;
+	border-radius:0;
+	text-shadow:0.1rem 0.1rem 0.3rem #171717;
+}
+
+
+.input_area input,
+.input_area select{
+	width:100%;  height: 100%;
 	box-sizing: border-box;
 	border:0;
 	border-radius:0.2rem;
 }
-.input_area input:focus {
+
+.input_area input:focus,
+.input_area select:focus{
 	border:2px solid #333;
 }
 
 .end_icon {
 	float:right;
+	padding-top:10px;
 	color:inherit;
 }
 .end_icon i{
