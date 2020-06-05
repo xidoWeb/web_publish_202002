@@ -9,26 +9,15 @@
 	var tpTerms = tp.nextAll('.terms').eq(0);
 	var tlTerms = tl.nextAll('.terms').eq(0);
 	var taTerms = ta.nextAll('.terms').eq(0);
-/*
-	var termsService;
-	$.ajax({
-		url:'../terms/termsService.txt',
-		dataType:'txtv',	async:false,
-		success: function(data){
-			termsService = data;
-			return termsService;
-		}
-	});
-	
-	ts.append(termsService);
-*/
-tsTerms.load('../terms/termsService.html');
-tpTerms.load('../terms/termsPrivacy.txt');
-tlTerms.load('../terms/termsLocation.txt');
-taTerms.load('../terms/termsAlert.txt');
+
+	tsTerms.load('../terms/termsService.html');
+	tpTerms.load('../terms/termsPrivacy.txt');
+	tlTerms.load('../terms/termsLocation.txt');
+	taTerms.load('../terms/termsAlert.txt');
 // =======================================================
 var inputCk = $('input[type="checkbox"]');
 var inputCheckList = [ts, tp, tl, ta];
+
 
 // 전체 동의 체크 사항 ---------------------------------
 ac.on('click', function(e){
@@ -56,6 +45,7 @@ var AllCk = function(state){
 	}
 };
 
+// 각각의 상태 파악 ----------------------------------------
 var EachCk = function(){
 	var nowState;
 	for(var i=0; i< inputCheckList.length;  i++){
@@ -64,25 +54,33 @@ var EachCk = function(){
 	}
 	return nowState;
 }
+// -------------------------------------------------------
+// 각각의 요소 클릭 ----------------------------------------
 
-$.each(inputCheckList, function(){
+// $.each() : 선택자 여러개를 각각 수행하게 만들기위한 jQuery 반복수행구문(for와 유사)
+// $('input[type="checkbox"]').not('#allCheck').on('click' ...)
+
+$.each(inputCheckList, function(data){
 	$(this).on('click', function(e){
 		var thisIt = $(this);
 		var nowCk = thisIt.is(':checked');
 		
+		// 선택요소에 대해 체크상태 파악
 		if(nowCk === false){
 			thisIt.attr({'checked':false});
 			thisIt.removeClass('check');
 		}else{
 			thisIt.attr({'checked':true});
 			thisIt.addClass('check');
+			
 			allState = false;
 		}	
-
-		allCk = EachCk();
+	// 각각 상태 파악, 
+	 allCk = EachCk();
+	// 하나라도 false처리되면 false를 반환하여, 전체 해제
+	// true를 반환시 전체체크 
 		AllCk(allCk);
-		
-});	
+	});	
 });
-
+// ---------------------------------------------------------
 })(jQuery);
