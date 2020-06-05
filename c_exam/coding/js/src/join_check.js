@@ -82,5 +82,14 @@ $.each(inputCheckList, function(data){
 		AllCk(allCk);
 	});	
 });
+
 // ---------------------------------------------------------
+// 확인버튼 클릭시 체크사항
+$('[type="submit"]').on('click', function(e){
+	e.preventDefault();
+	
+});
+
+
+
 })(jQuery);
