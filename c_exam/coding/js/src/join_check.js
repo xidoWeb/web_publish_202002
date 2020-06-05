@@ -87,7 +87,44 @@ $.each(inputCheckList, function(data){
 // 확인버튼 클릭시 체크사항
 $('[type="submit"]').on('click', function(e){
 	e.preventDefault();
-	
+
+	var tsSt,tpSt, sendCk = true;
+	var reqInput = [ts, tp];
+
+/* 
+// 1
+	( ts.hasClass('check') ) ? tsSt=true : tsSt = false ;
+	( tp.hasClass('check') ) ? tpSt=true : tpSt = false ;
+	(tsSt === true && tpSt === true) ? sendCk = true : sendCk = false;
+*/
+
+/* 
+// 2
+	for(var i=0; i < reqInput.length; i++){
+		if( reqInput[i].hasClass('check') === false){
+			sendCk = false;
+			break;
+		}
+	}
+*/
+// 3
+	$.each(reqInput, function(data){
+		if($(this).hasClass('check') === false){
+			sendCk = false;
+		}
+	});
+
+	// console.log(sendCk);
+	if(!sendCk){
+		$('p.error').remove();
+		$('.send_cancle').before('<p class="error">네이버 이용약관과 <br /> 개인정보 수집 및 이용에 대한 안내 모두 동의해주세요.</p>');
+	}else{
+		// 문제없이 체크시 페이지로 이동
+		// 필수/선택요소 내용정의후
+		var tlSt = 'termsLocation='+tl.hasClass('check') + '_&&_termsAlert=' + tp.hasClass('check');
+		location = './join.html?'+ tlSt;
+	}
+
 });
 
 

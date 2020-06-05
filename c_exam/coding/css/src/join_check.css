@@ -111,3 +111,9 @@
 	font-size:2rem;
 	background-color: #f07; color:#fff;
 }
+
+.error {
+	width: 100%; height:auto;
+	color:#f07;
+	margin-bottom: 1rem;
+}
