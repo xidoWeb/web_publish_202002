@@ -40,9 +40,36 @@
 				</fieldset>
 				<fieldset class="require_check">
 					<legend>필수 동의 확인</legend>
+					<input type="checkbox" name="termsService" id="termsService" value="네이버이용약관동의확인" />
+					<div class="check_area">
+						<!-- <i class="fas fa-check-circle"></i> -->
+						<label for="termsService">					
+							네이버 이용약관 동의 <strong>(필수)</strong></label>
+					</div>
+<!-- 
+	 .require_check .check_area > label:after { content:"(필수)"; font-size:0.8rem; color:#070;}
+   .option_check .check_area > label:after { content:"(선택)"; font-size:0.8rem; color:#777;} 
+-->
+
+					<input type="checkbox" name="termsPrivacy" id="termsPrivacy" value="개인정보 수집 이용 동의" />
+					<div class="check_area">
+						<!-- <i class="fas fa-check-circle"></i> -->
+						<label for="termsPrivacy">개인정보 수집 및 이용에 대한 안내 <strong>(필수)</strong></label>
+					</div>
 				</fieldset>
 				<fieldset class="option_check">
 					<legend>선택 동의 확인</legend>
+					<input type="checkbox" name="termsLocation" id="termsLocation" value="개인정보 수집 이용 동의" />
+					<div class="check_area">
+						<!-- <i class="fas fa-check-circle"></i> -->
+						<label for="termsLocation">위치정보 이용약관 동의 <strong>(선택)</strong></label>
+					</div>
+
+					<input type="checkbox" name="termsAlert" id="termsAlert" value="개인정보 수집 이용 동의" />
+					<div class="check_area">
+						<!-- <i class="fas fa-check-circle"></i> -->
+						<label for="termsAlert">이벤트 등 프로모션 알림 메일 수신 <strong>(선택)</strong></label>
+					</div>
 				</fieldset>
 				<fieldset class="send_cancle">
 					<legend>내용 동의사항 전송 및 취소</legend>
