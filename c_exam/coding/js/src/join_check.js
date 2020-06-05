@@ -27,49 +27,62 @@ tpTerms.load('../terms/termsPrivacy.txt');
 tlTerms.load('../terms/termsLocation.txt');
 taTerms.load('../terms/termsAlert.txt');
 // =======================================================
+var inputCk = $('input[type="checkbox"]');
 var inputCheckList = [ts, tp, tl, ta];
 
+// 전체 동의 체크 사항 ---------------------------------
 ac.on('click', function(e){
-	// e.preventDefault();
 	var acAttr = ac.is(':checked');
+	AllCk(acAttr);
+
 	if(acAttr){
-		// ac.attr({'checked': 'checked'});
-		// ac.attr({'checked': true});
-		// ac.addClass('check');
-
-		// ts.attr({'checked':true});
-		// tp.attr({'checked':true});
-		// tl.attr({'checked':true});
-		// ta.attr({'checked':true});
-
-		$('input[type="checkbox"]').addClass('check');
-		$('input[type="checkbox"]').attr({'checked': true});
-
+		inputCk.addClass('check');
+		inputCk.attr({'checked': true});
 	}else{
-		// ac.removeAttr('checked');
-		// ac.attr({'checked': false});
-		// ac.removeClass('check');
-
-		// ts.attr({'checked': false});
-		// tp.attr({'checked': false});
-		// tl.attr({'checked': false});
-		// ta.attr({'checked': false});
-		$('input[type="checkbox"]').removeClass('check');
-		$('input[type="checkbox"]').attr({'checked': false});
-	}
-	
-	console.log(acAttr);
+		inputCk.removeClass('check');
+		inputCk.attr({'checked': false});
+	}	
 });
+// -----------------------------------------------------
 
-
-$('input[type="checkbox"]').on('click', function(){
-	// console.log( $(this) );
-	var nowCk = $(this).is(':checked');
-	if(nowCk === false){
+var allState;
+var AllCk = function(state){
+	if(state === true){
+		ac.attr({'checked':true});
+		ac.addClass('check');
+	}else {
 		ac.attr({'checked': false});
-		// ac.removeAttr({'checked': false});
+		ac.removeClass('check');
 	}
-});	
+};
 
+var EachCk = function(){
+	var nowState;
+	for(var i=0; i< inputCheckList.length;  i++){
+		var hasCheck = inputCheckList[i].hasClass('check') == false;
+		if(hasCheck){	nowState = false; break; }else{	nowState = true; }
+	}
+	return nowState;
+}
+
+$.each(inputCheckList, function(){
+	$(this).on('click', function(e){
+		var thisIt = $(this);
+		var nowCk = thisIt.is(':checked');
+		
+		if(nowCk === false){
+			thisIt.attr({'checked':false});
+			thisIt.removeClass('check');
+		}else{
+			thisIt.attr({'checked':true});
+			thisIt.addClass('check');
+			allState = false;
+		}	
+
+		allCk = EachCk();
+		AllCk(allCk);
+		
+});	
+});
 
 })(jQuery);
