@@ -64,7 +64,7 @@
 		outline:2px dotted #00c850;
 	}
 
-	input[type="checkbox"]:checked + 
+	input[type="checkbox"].check + 
 	.check_area > label:before{ color:#f07;}
 
 /*
