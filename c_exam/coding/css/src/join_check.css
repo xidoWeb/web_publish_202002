@@ -17,10 +17,6 @@
 	fieldset{
 		width: 100%; height:auto; 
 		margin-bottom:25px;
-		/* ----------------------------임시 */
-		min-height:10px;
-		background-color: #fff;
-		/* ----------------------------임시 */
 	}	
 
 	input[type="checkbox"] {
@@ -34,15 +30,16 @@
 		font-size: 1rem; color:#333; font-weight: bold;
 		word-break:keep-all;
 
-		margin-bottom: 26px;
 	}
 
 	.check_area label{
 		position: relative;
+		display:block; 
 		width: 100%; height:auto;
+		min-height:28px;
 		padding-left:1.875rem;
 		box-sizing: border-box;
-	}	
+	}
 
 	.all_check label{
 		display: block;
@@ -77,3 +74,29 @@
 
 .require_check  .check_area  strong { font-weight:normal; font-size:0.8rem; color:#00c850; }
 .option_check  .check_area  strong { font-weight:normal; font-size:0.8rem; color:#8e8e8e; }
+
+
+/*  --------------------------------------------------------------- */
+.terms {
+	width: 100%; height:90px;
+	overflow: auto;
+	overflow-x: hidden;
+	padding:12px;
+	box-sizing: border-box;
+	border:1px solid #dadada;
+	background-color: #fff;	
+	margin-top:10px;
+	margin-bottom: 26px;
+	font-size:0.875rem;
+	color:#777;
+}
+
+.terms dl {
+	width: 100%; margin-top:10px;
+	border-top:1px solid #777;
+}
+.terms dt {
+	font-size:.95rem;
+	font-weight: bold;
+	margin-bottom: 0.3rem;
+}
