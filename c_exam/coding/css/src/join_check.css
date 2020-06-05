@@ -1,0 +1,22 @@
+ /* join_check.html */
+
+  #wrap {
+		width: 100%; height:auto; min-height:100%;
+		padding:5rem; box-sizing: border-box;
+		background-color: #f5f6f7;
+	}
+	h1{
+		text-align: center; margin-bottom:56px;
+	}
+	
+	#formBox{
+		width: 460px; height:auto;
+		margin:auto;
+	}
+
+	fieldset{
+		width: 100%; height:auto; min-height:100px;
+		margin-bottom:25px;
+		background-color: #fff;
+	}
+	
