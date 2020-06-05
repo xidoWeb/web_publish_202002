@@ -34,22 +34,28 @@ ac.on('click', function(e){
 	var acAttr = ac.is(':checked');
 	if(acAttr){
 		// ac.attr({'checked': 'checked'});
-		ac.attr({'checked': true});
+		// ac.attr({'checked': true});
+		// ac.addClass('check');
 
-		ts.attr({'checked':true});
-		tp.attr({'checked':true});
-		tl.attr({'checked':true});
-		ta.attr({'checked':true});
+		// ts.attr({'checked':true});
+		// tp.attr({'checked':true});
+		// tl.attr({'checked':true});
+		// ta.attr({'checked':true});
+
+		$('input[type="checkbox"]').addClass('check');
+		$('input[type="checkbox"]').attr({'checked': true});
 
 	}else{
-
 		// ac.removeAttr('checked');
-		ac.attr({'checked': false});
+		// ac.attr({'checked': false});
+		// ac.removeClass('check');
 
-		ts.attr({'checked': false});
-		tp.attr({'checked': false});
-		tl.attr({'checked': false});
-		ta.attr({'checked': false});
+		// ts.attr({'checked': false});
+		// tp.attr({'checked': false});
+		// tl.attr({'checked': false});
+		// ta.attr({'checked': false});
+		$('input[type="checkbox"]').removeClass('check');
+		$('input[type="checkbox"]').attr({'checked': false});
 	}
 	
 	console.log(acAttr);
