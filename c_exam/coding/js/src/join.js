@@ -35,40 +35,31 @@
 	userId.on('blur', function(e){
 		e.preventDefault();
 
-		var val = $(this).val();
-		console.log( val );
+		var rel = $(this).val();
+		// var ck  = /^([a-z0-9]|[-_])*([a-z0-9]|[*-_]){5,20}$/i; 
+
+		// 영문(대/소), 숫자, 특수(-_)글자 5~20글자
+		var ck  = /^([a-z0-9]|[-_]){5,20}$/i; 
+		var relTest = ck.test( rel );
+		var dl  =  $(this).parents('dl');
+		var conT   = $(this).parents('dd').eq(0).next('.confirm_text');
+
+		if(rel == ""){
+			dl.addClass('error');
+			dl.removeClass('success');
+			conT.text('id는 반드시 입력해야합니다.');
+		}else if( !relTest ){
+			dl.addClass('error');
+			dl.removeClass('success');
+			conT.text('5~20자의 영문 소문자, 숫자와 특수기호(_),(-)만 사용 가능합니다.');
+		}else{
+			dl.addClass('success');
+			dl.removeClass('error');
+			conT.text('좋은 id입니다. 사용하셔도 좋습니다.');
+		}
 
 	});
 
-
-	var date = new Date();
-	// console.log( date );
-	var yy = date.getFullYear();
-	var mm = date.getMonth() + 1;
-	var dd = date.getDate();
-	// console.log( dd );
-	
-	// var obj = new Object();
-	var obj = {};
-	obj.one = 'apple';
-	obj.two = 'grape';	
-	// console.log(obj);
-	
-	// var arr = new Array();
-	var arr = [];
-	arr[0] = '001';
-	arr[1] = 'remote';
-	arr[2] = 'mouse';	
-	// console.log(arr);
-
-	// var exp = new RegExp("^abc");
-	var exp = /^abc/;
-	// console.log(exp);
-
-
-	var myRe = /d(b+)d/g;
-	var myArray = myRe.exec("cdbbdbsbz");
-	// console.log( myArray );
 	$('#userOtherMail').on('blur', function(){
 		var thisMail = $(this).val();
 		var ck = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;

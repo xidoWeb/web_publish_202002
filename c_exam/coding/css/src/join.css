@@ -32,11 +32,10 @@ h1{
 }
 
 .joinBox dl.error .end_icon,
-.joinBox dl.error .confirm_text{	color:#d00; }
+.joinBox dl.error .confirm_text{display:block;	color:#d00; }
 
 .joinBox dl.success .end_icon,
-.joinBox dl.success .confirm_text {	color:#0d0; }
-
+.joinBox dl.success .confirm_text {display:block;	color:#0a0; }
 
 .joinBox dt{ 
 	width: 100%; height: 18px; margin-bottom: 10px; 
