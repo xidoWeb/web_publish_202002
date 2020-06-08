@@ -60,11 +60,80 @@
 
 	});
 
+// 비밀번호 -----------------------------------------------
+
+
+var pwResult;
+var userPw = $('#userPw');
+
+userPw.on('blur', function(e){
+	e.preventDefault();
+
+	var rel = $(this).val();
+	pwResult = rel;
+	var ck  = /^([a-z0-9]|[*!@#$^=-_]){10, 20}$/i; // (){}[]+\/ 글자는 제한
+	var relTest = ck.test( rel );
+	// console.log( relTest );
+	var dl = $(this).parents('dl');
+	var conDt = $(this).parents('dd').eq(0).next('.confirm_text');
+
+	if( !rel ){
+		dl.addClass('error').removeClass('success');
+		conDt.text('비밀번호는 10~20글자, 영문/숫자/특수문자(*!@#$^=-_)를 입력하세요.');
+	}else{
+		dl.addClass('success').removeClass('error');
+		conDt.text('비밀번호 내용이 입력되었습니다.');
+	}
+});
+
+var userPw2 = $('#userPw2');
+userPw2.on('blur', function(e){
+	e.preventDefault();
+	var rel = $(this).val();
+	var dl = $(this).parents('dl');
+	var conDt = $(this).parents('dd').eq(0).next('.confirm_text');
+
+	if(rel !== pwResult){
+		dl.addClass('error').removeClass('success');
+		conDt.text('비밀번호 내용이 동일하지 않습니다 올바르게 작성해 주세요.');
+	}else{
+		dl.addClass('success').removeClass('error');
+		conDt.text('비밀번호가 확인되었습니다.');
+	}
+});
+
+var pwIcon = userPw.parents('dl').find('i');
+pwIcon.css({cursor:'pointer'});
+pwIcon.on('mouseenter', function(){
+	$(this).removeClass('fa-lock');
+	$(this).addClass('fa-eye');
+});	
+
+pwIcon.on('mouseleave', function(){
+	$(this).removeClass('fa-eye');
+	$(this).addClass('fa-lock');
+});	
+
+pwIcon.on('mousedown', function(e){
+	e.preventDefault();
+	// 마우스 왼버튼 확인
+	if ( e.button == 0 ){
+		userPw.attr({type:'text'});
+	}
+});
+
+pwIcon.on('mouseup', function(e){
+	e.preventDefault();
+	userPw.attr({type:'password'});
+});
+
+// -----------------------------------------------
+
 	$('#userOtherMail').on('blur', function(){
 		var thisMail = $(this).val();
-		var ck = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+		var ck = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,12}$/i;
 		var test = ck.test( thisMail );
-		console.log
+		
 
 	});
 
