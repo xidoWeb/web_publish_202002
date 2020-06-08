@@ -31,4 +31,54 @@
 	// var date = new Date();
 	// console.log(date);
 
+	var userId = $('#userId');
+	userId.on('blur', function(e){
+		e.preventDefault();
+
+		var val = $(this).val();
+		console.log( val );
+
+	});
+
+
+	var date = new Date();
+	// console.log( date );
+	var yy = date.getFullYear();
+	var mm = date.getMonth() + 1;
+	var dd = date.getDate();
+	// console.log( dd );
+	
+	// var obj = new Object();
+	var obj = {};
+	obj.one = 'apple';
+	obj.two = 'grape';	
+	// console.log(obj);
+	
+	// var arr = new Array();
+	var arr = [];
+	arr[0] = '001';
+	arr[1] = 'remote';
+	arr[2] = 'mouse';	
+	// console.log(arr);
+
+	// var exp = new RegExp("^abc");
+	var exp = /^abc/;
+	// console.log(exp);
+
+
+	var myRe = /d(b+)d/g;
+	var myArray = myRe.exec("cdbbdbsbz");
+	// console.log( myArray );
+	
+	$('#mobileNumber').on('blur', function(){
+
+		var ck = /^01.{1}\d{3,4}\d{4}$/;
+		var thisNum = ck.test( $(this).val()  );
+		console.log( thisNum );
+
+	});
+
+
+
+
 })(jQuery);
