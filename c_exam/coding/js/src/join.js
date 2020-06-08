@@ -69,7 +69,15 @@
 	var myRe = /d(b+)d/g;
 	var myArray = myRe.exec("cdbbdbsbz");
 	// console.log( myArray );
-	
+	$('#userOtherMail').on('blur', function(){
+		var thisMail = $(this).val();
+		var ck = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+		var test = ck.test( thisMail );
+		console.log
+
+	});
+
+
 	$('#mobileNumber').on('blur', function(){
 
 		var ck = /^01.{1}\d{3,4}\d{4}$/;
