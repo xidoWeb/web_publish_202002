@@ -134,7 +134,6 @@ pwIcon.on('mouseup', function(e){
 		var ck = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,12}$/i;
 		var test = ck.test( thisMail );
 		
-
 	});
 
 
@@ -144,6 +143,9 @@ pwIcon.on('mouseup', function(e){
 		var thisNum = ck.test( $(this).val()  );
 		console.log( thisNum );
 
+		$('#mobileCerti').css({display:'block', position:'absolute', width:'100%', height:'100%', top:0, left:0});
+
+		$('#mobileCerti').attr({'placeholder':'전송된 인증번호를 입력하세요.'});
 	});
 
 

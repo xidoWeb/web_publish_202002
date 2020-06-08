@@ -40,7 +40,7 @@
 						</dt>
 						<dd class="input_area">
 							<div>
-								<input type="text" maxlength="20" 
+								<input type="text" maxlength="20" required autofocus
 											 name="userId" id="userId" value="" />
 							</div>
 							<span class="end_icon">@naver.com</span>
@@ -51,7 +51,7 @@
 						<dt><label for="userPw">비밀번호</label></dt>
 						<dd class="input_area">
 							<div>
-								<input type="password" id="userPw" name="userPw" value="" />
+								<input type="password" required id="userPw" name="userPw" value="" />
 							</div>
 							<strong  class="end_icon"><span>사용불가</span><i class="fas fa-lock"></i></strong>
 						</dd>
@@ -61,7 +61,7 @@
 						<dt><label for="userPw2">비밀번호 재확인</label></dt>
 						<dd class="input_area">
 							<div>
-								<input type="password" id="userPw2" name="userPw2" value="">
+								<input type="password" required id="userPw2" name="userPw2" value="">
 							</div>
 							<strong  class="end_icon">
 								<i class="fas fa-lock"></i></strong>
@@ -76,7 +76,7 @@
 						<dt><label for="userName">이름</label></dt>
 						<dd class="input_area">
 							<div>
-								<input type="text" id="userName" name="userName" value="">
+								<input type="text" required id="userName" name="userName" value="">
 							</div>
 						</dd>
 						<dd class="confirm_text">내용을 입력하세요.</dd>
@@ -87,7 +87,7 @@
 							<!-- <input type="text" id="userBirth" name="userBirth" value=""> -->
 							<div>
 								<input type="text" name="birthYear" id="birthYear" value=""
-												placeholder="년(4자)">
+								required	placeholder="년(4자)">
 							</div>
 							<div>
 								<label for="birthMonth" class="hidden">생일 중 월 선택</label>
@@ -110,7 +110,7 @@
 							<div>
 								<label for="birthDay" class="hidden">생일 중 날짜 입력</label>
 								<input type="text" name="birthDay" id="birthDay" value=""
-												placeholder="일">
+								required	placeholder="일">
 							</div>
 						</dd>
 						<dd class="confirm_text">내용을 입력하세요.</dd>
@@ -153,7 +153,7 @@
 						<dd class="input_area">
 							<div>
 								<label for="mobileNumber" class="hidden">휴대전화번호를 입력</label>
-								<input type="text" id="mobileNumber" name="mobileNumber" value="">
+								<input type="tel" id="mobileNumber" required name="mobileNumber" value="">
 							</div>
 						</dd>
 						<dd class="input_area">
@@ -161,8 +161,7 @@
 								<label for="mobileCerti">
 									<span class="hidden">전송된</span> 
 									인증번호를 입력 하세요.</label>
-								<input type="text" id="mobileCerti"
-								       class="hidden" name="mobileCerti" value="">
+								<input type="text" id="mobileCerti" required name="mobileCerti" value="">
 							</div>
 						</dd>
 						<dd class="confirm_text">내용을 입력하세요.</dd>
