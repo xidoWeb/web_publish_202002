@@ -1,7 +1,7 @@
 #wrap {
-	width: 100%;  height:auto;
-	max-width:1600px; min-height:800px;
+	width: 100%;  height:20000px;
 	margin:auto;
+	background-image:linear-gradient(180deg, #000, #fff, #fac, #acf, #f7f, #7fc);
 }
 
 .move_mouse {
@@ -17,7 +17,7 @@
 	color:#777;
 }
 .movie_image{
-	position: absolute;
+	position: fixed;
 	width: 100%; height: 100%;
 	top: 0; left: 0; z-index: -1;
 	background-color: #acc;

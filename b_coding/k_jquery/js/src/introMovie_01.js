@@ -9,7 +9,8 @@
 		imgArea.append('<img src="../img/introMovie/introMovie_'+ (i + 1) +'.png" alt="배경 인트로이미지 처리">');
 	}
 	var imgObj = imgArea.find('img');
-
+/* 
+//001- 마우스 움직였을경우에 이미지변경되게 만들기 
 	mouseMv.on('mousemove', function(e){
 		// 마우스 좌표 파악하는 기능 
 		// offsetX | offsetY : 선택영역기준
@@ -21,12 +22,27 @@
 		// %재는 방법 : 값 / 기준 * 100 -> 마우스위치 / mouseMvWidth * 105
 		var mvRel = e.originalEvent.offsetX;
 		var myRel = parseInt(mvRel / mouseMvWidth * imgLen);
-		// console.log( myRel );
-		// $('.movie_image').css({left: -myRel / 3 + 'px'});
-		
+
 		imgObj.eq(myRel).stop().show();
 		imgObj.eq(myRel).siblings().stop().hide();
-
 	});
+*/
+
+// 002 - 스크롤 이동시 이미지 변경되게 만들기
+$(window).on('scroll', function(e){
+	var offsetTop = $(this).scrollTop();
+	var myScroll = parseInt( offsetTop / ($('#wrap').outerHeight( )/2) *  imgLen );
+
+	// console.log( myScroll );
+if( myScroll < imgLen ){
+	imgObj.eq(myScroll).stop().show();
+	imgObj.eq(myScroll).siblings().stop().hide();
+}else{
+	imgArea.css({top:(-myScroll + imgLen)+ 'rem'});
+}
+
+});	
+
+
 
 })(jQuery);
