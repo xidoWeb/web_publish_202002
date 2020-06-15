@@ -72,5 +72,19 @@
 			SplitTextInterval();
 		}
 	});
+//** 문제점(수정해야할 사항):  스크롤시 setInterval 기능이 반복수행됨.
+
+var arr2 = [ [], [] ];
+for(var i=0; i<4; i++){	arr2[0][i] = 429 * -i;  }
+for(var j=0; j<11; j++){ arr2[1][j] = 378 * -j;  }
+console.log( arr2 );
+
+
+
+
+
+
 
 })(jQuery)
+
+
