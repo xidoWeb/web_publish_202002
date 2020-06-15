@@ -94,31 +94,18 @@ for(var i=0; i<4; i++){	arr2[0][i] = 429 * -i;  }
 
 // y값 위치(세로 378px 간격)
 for(var j=0; j<11; j++){ arr2[1][j] = 378 * -j;  }
-// console.log( arr2 );
+
 var split_text_02 = $('.split_text_02');
+var splitText02Img = split_text_02.find('img');
+
 var splitText02_offset = split_text_02.offset().top;
 
-var s2 = arr2[0].length + arr2[1].length;
+var s2 = arr2[0].length * arr2[1].length;
 console.log(s2);
 var s2_01 = 0;
 var s2_02 = 0;
 var count = 0;
- var ForFn = function(){
-	// for(s2_01 = 0; s2_01<11; s2_01 += 1 ){
-	// 	for(s2_02 = 0; s2_02 < 4; s2_02 +=1 ){
-	// 		console.log( s2_02, s2_01 );
-	// 	}
-	// }
-	setInterval(function(){
-		count += 1;
-		if(count >= s2){
-			clearInterval()
-		}
-	});
- };
- ForFn();
-
-
+ 
 var scroll2Bool = true;
 var scroll2Go;
 
@@ -128,11 +115,16 @@ var Set2Interval = function(){
 		scroll2Go = setInterval(function(){
 			count += 1;
 			var l = parseInt(count / 4);
+			var l2 = parseInt(count % 4);
 			// 나누기 4를 통해 몫과, 나머지값을 구하고, 
 			// 나머지값을 이용하여 x값의 위치를 처리 후
 			// 몫의 값을 이요하여  y값의 위치를 처리
-
-
+			// console.log(count);
+			// console.log(l);
+			// console.log(l, l2)
+			console.log(arr2[0]);
+			// splitText02Img.css({left:arr2[l2][l] + 'px', top:arr2[l2][l] + 'px'});
+			// if(l == 0){			}if(l == 1){			}if(l == 2){			}
 			if(count >= s2){
 				clearInterval(scroll2Go);
 			}
