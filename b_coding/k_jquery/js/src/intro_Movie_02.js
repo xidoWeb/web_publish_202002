@@ -51,27 +51,35 @@
 	
 	stT01_Img.css({position:'absolute',top:0, left:0, width:'100%', height:'auto'});
 	var imgP = [];
-	for(var k=0; k < 42; k++){
-		imgP[k] = -380 * k;
-	}
-	console.log(imgP);
+	for(var k=0; k < 42; k++){		imgP[k] = -380 * k;	}
 	var l=0;
-
-	var stIterval = {};
-	var SplitTextInterval = function(){
-		stIterval = setInterval(function(){
-			l+=1;
-			stT01_Img.css({top:imgP[l]}, 3000);
-			if(l >= 42){ clearInterval(stIterval);}
-		}, 100);
+	var Go= {};
+	var Got = true;
+	function SetI(){
+		if(Got){
+			Got = false;
+			Go = setInterval(function(){
+						l += 1;
+						stT01_Img.css({top:imgP[l]});
+						if(l > 42) { clearInterval(Go); }
+							// console.log(l)
+						}, 30);				
+		}
 	};
-	
+
 	win.on('scroll', function(e){
-		var st = $(this).scrollTop() + (winH/2);
-		if(st >= spT01Offset){
-			SplitTextInterval();
+		var st = $(this).scrollTop();
+		if(st + (winH/2) >= spT01Offset){
+			SetI();
+		}else if(st < winH/2){
+			clearInterval(Go);
+			l=0;
+			stT01_Img.css({top:imgP[l]});
+			Got = true;
 		}
 	});
+
+
 //** 문제점(수정해야할 사항):  스크롤시 setInterval 기능이 반복수행됨.
 
 var arr2 = [ [], [] ];
