@@ -1,0 +1,23 @@
+#wrap {
+	width: 100%;  height:auto;
+	max-width:1600px; min-height:800px;
+	margin:auto;
+}
+
+.move_mouse {
+	position: relative; z-index: 0;
+	width: 100%; height: auto;
+	min-height:800px; 
+	background-color: #ddd;
+}
+
+.move_mouse > p {
+	width: 100%; text-align: center;
+	padding-top: 1rem; font-size: 1.2em;
+	color:#777;
+}
+.movie_image{
+	position: absolute;
+	width: 100%; height: 100%;
+	top: 0; left: 0; z-index: -1;
+}
