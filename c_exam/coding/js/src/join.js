@@ -133,12 +133,9 @@ pwIcon.on('mouseup', function(e){
 		var thisMail = $(this).val();
 		var ck = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,12}$/i;
 		var test = ck.test( thisMail );
-		
 	});
 
-
 	$('#mobileNumber').on('blur', function(){
-
 		var ck = /^01.{1}\d{3,4}\d{4}$/;
 		var thisNum = ck.test( $(this).val()  );
 		console.log( thisNum );

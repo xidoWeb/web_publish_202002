@@ -126,7 +126,7 @@ h1{
 	color:inherit;
 }
 
-[for="mobileCerti"]{display: block; width:100%; height:100%; opacity: 0.3; }
+label[for="mobileCerti"]{display: block; width:100%; height:100%; opacity: 0.3; }
 #mobileCerti{display: none;}
 
 /* ----------------------- */
