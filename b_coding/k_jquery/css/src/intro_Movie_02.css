@@ -16,11 +16,17 @@
 
 
 .split_text_01 , .split_text_02{
+	position: relative;
 	width: 430px; height: 380px;
 	margin:auto;
 	margin-top:55rem;
-	background-color: #ddd;
+	/* background-color: #ddd; */
 	overflow: hidden;
+	text-align: center;
+}
+
+.split_text_02 img{
+	position: absolute; top: 0; left: 0;
 }
 
 .split_m_01{

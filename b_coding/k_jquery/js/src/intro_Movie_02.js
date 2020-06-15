@@ -19,27 +19,32 @@
 
 	var j=0;
 	var intervalImg = {};
-
+	var firstTrue = true;
 	var SetIntervalImg = function(){
-		intervalImg = setInterval(function(){		
-			j += 1;		
-			// console.log(j); 	
-			imgArea.find('img').eq(j).show();
-			imgArea.find('img').eq(j).siblings().hide();
+		if(firstTrue){
+			firstTrue = false;
+			intervalImg = setInterval(function(){		
+				j += 1;		
+				// console.log(j); 	
+				imgArea.find('img').eq(j).show();
+				imgArea.find('img').eq(j).siblings().hide();
 
-			if(j >= imgLen){		
-				clearInterval( intervalImg );	
-			}
-		}, 30);
+				if(j >= imgLen){		
+					clearInterval( intervalImg );	
+				}
+			}, 30);
+		}
 	};
 
-	// SetIntervalImg();
+	 SetIntervalImg();
+	/*
 	$(window).on('scroll', function(){
 		var st = $(this).scrollTop();
 		if(st >= 50){
 			SetIntervalImg();
 		}
 	});
+	*/
 
 	// ------------------------------------------
 
@@ -100,8 +105,8 @@ var splitText02Img = split_text_02.find('img');
 
 var splitText02_offset = split_text_02.offset().top;
 
-var s2 = arr2[0].length * arr2[1].length;
-console.log(s2);
+var s2 = (arr2[0].length * arr2[1].length) -2;
+// console.log(s2);
 var s2_01 = 0;
 var s2_02 = 0;
 var count = 0;
@@ -113,21 +118,15 @@ var Set2Interval = function(){
 	if(scroll2Bool){
 		scroll2Bool = false;
 		scroll2Go = setInterval(function(){
-			count += 1;
 			var l = parseInt(count / 4);
 			var l2 = parseInt(count % 4);
+			count += 1;
 			// 나누기 4를 통해 몫과, 나머지값을 구하고, 
 			// 나머지값을 이용하여 x값의 위치를 처리 후
-			// 몫의 값을 이요하여  y값의 위치를 처리
-			// console.log(count);
-			// console.log(l);
-			// console.log(l, l2)
-			console.log(arr2[0]);
-			// splitText02Img.css({left:arr2[l2][l] + 'px', top:arr2[l2][l] + 'px'});
-			// if(l == 0){			}if(l == 1){			}if(l == 2){			}
-			if(count >= s2){
-				clearInterval(scroll2Go);
-			}
+			// 몫의 값을 이용하여  y값의 위치를 처리
+			// console.log(l2, l);
+			splitText02Img.css({left:arr2[0][l2] + 'px', top:arr2[1][l] + 'px'});
+			if(count >= s2){	clearInterval(scroll2Go);		}
 		}, 30);
 	}
 };
@@ -144,7 +143,11 @@ win.on('scroll', function(){
 	}else if( (thisScroll-1000) < splitText02_offset ){
 
 		clearInterval(scroll2Go);
-		s2 = 0;
+		count = 0;
+		splitText02Img.css({
+			left: arr2[0][0] + 'px',
+			top: arr2[1][0] + 'px'
+		});
 		scroll2Bool = true;
 
 	}
