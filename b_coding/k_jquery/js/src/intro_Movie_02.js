@@ -50,19 +50,20 @@
 	var spT01Offset = splitText_01.offset().top;
 	
 	stT01_Img.css({position:'absolute',top:0, left:0, width:'100%', height:'auto'});
+	
 	var imgP = [];
 	for(var k=0; k < 42; k++){		imgP[k] = -380 * k;	}
+
 	var l=0;
 	var Go= {};
 	var Got = true;
-	function SetI(){
+	var SetI = function (){
 		if(Got){
 			Got = false;
 			Go = setInterval(function(){
 						l += 1;
 						stT01_Img.css({top:imgP[l]});
 						if(l > 42) { clearInterval(Go); }
-							// console.log(l)
 						}, 30);				
 		}
 	};
@@ -81,15 +82,82 @@
 
 
 //** 문제점(수정해야할 사항):  스크롤시 setInterval 기능이 반복수행됨.
-// setInterval 중복 조건처리기능을 반복수행하지 못하게해서 처리
+// setInterval 중복 조건처리기능을 반복수행하지 못하게해서 처리했음 
 
+// ---------------------------------------------------------------------
+// 행/열 방식으로 이미지를 배치한 경우
 
-var arr2 = [ [], [] ];
+// x,y값에 따른 배치
+var arr2 = [ [], [] ];  
+// x값 위치(가로 429px 간격)
 for(var i=0; i<4; i++){	arr2[0][i] = 429 * -i;  }
+
+// y값 위치(세로 378px 간격)
 for(var j=0; j<11; j++){ arr2[1][j] = 378 * -j;  }
-console.log( arr2 );
+// console.log( arr2 );
+var split_text_02 = $('.split_text_02');
+var splitText02_offset = split_text_02.offset().top;
+
+var s2 = arr2[0].length + arr2[1].length;
+console.log(s2);
+var s2_01 = 0;
+var s2_02 = 0;
+var count = 0;
+ var ForFn = function(){
+	// for(s2_01 = 0; s2_01<11; s2_01 += 1 ){
+	// 	for(s2_02 = 0; s2_02 < 4; s2_02 +=1 ){
+	// 		console.log( s2_02, s2_01 );
+	// 	}
+	// }
+	setInterval(function(){
+		count += 1;
+		if(count >= s2){
+			clearInterval()
+		}
+	});
+ };
+ ForFn();
 
 
+var scroll2Bool = true;
+var scroll2Go;
+
+var Set2Interval = function(){
+	if(scroll2Bool){
+		scroll2Bool = false;
+		scroll2Go = setInterval(function(){
+			count += 1;
+			var l = parseInt(count / 4);
+			// 나누기 4를 통해 몫과, 나머지값을 구하고, 
+			// 나머지값을 이용하여 x값의 위치를 처리 후
+			// 몫의 값을 이요하여  y값의 위치를 처리
+
+
+			if(count >= s2){
+				clearInterval(scroll2Go);
+			}
+		}, 30);
+	}
+};
+
+
+
+win.on('scroll', function(){
+	var thisScroll = win.scrollTop();
+	var thisScrollPlus = thisScroll + (winH/3*2);
+	if(thisScrollPlus > splitText02_offset){
+
+		Set2Interval();
+
+	}else if( (thisScroll-1000) < splitText02_offset ){
+
+		clearInterval(scroll2Go);
+		s2 = 0;
+		scroll2Bool = true;
+
+	}
+
+});
 
 
 
