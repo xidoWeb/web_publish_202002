@@ -34,13 +34,12 @@ $(window).on('scroll', function(e){
 	var myScroll = parseInt( offsetTop / ($('#wrap').outerHeight( )/2) *  imgLen );
 
 	// console.log( myScroll );
-if( myScroll < imgLen ){
-	imgObj.eq(myScroll).stop().show();
-	imgObj.eq(myScroll).siblings().stop().hide();
-}else{
-	imgArea.css({top:(-myScroll + imgLen)+ 'rem'});
-}
-
+	if( myScroll < imgLen ){
+		imgObj.eq(myScroll).stop().show();
+		imgObj.eq(myScroll).siblings().stop().hide();
+	}else{
+		imgArea.stop().animate({top:(-myScroll + imgLen)+ 'rem'});
+	}
 });	
 
 
