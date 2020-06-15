@@ -15,10 +15,11 @@
 
 
 
-.split_text_01 {
+.split_text_01 , .split_text_02{
 	width: 430px; height: 380px;
 	margin:auto;
 	margin-top:55rem;
+	background-color: #ddd;
 	overflow: hidden;
 }
 
