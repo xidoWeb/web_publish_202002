@@ -12,3 +12,17 @@
 	width: 100%; height: 100%;
 	background-color: #acc;
 }
+
+
+
+.split_text_01 {
+	width: 430px; height: 380px;
+	margin:auto;
+	margin-top:55rem;
+	overflow: hidden;
+}
+
+.split_m_01{
+	position: relative;
+	width: 100%; height: 100%;
+}
