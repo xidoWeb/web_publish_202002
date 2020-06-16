@@ -107,8 +107,6 @@ var splitText02_offset = split_text_02.offset().top;
 
 var s2 = (arr2[0].length * arr2[1].length) -2;
 // console.log(s2);
-var s2_01 = 0;
-var s2_02 = 0;
 var count = 0;
  
 var scroll2Bool = true;
@@ -124,7 +122,7 @@ var Set2Interval = function(){
 			// 나누기 4를 통해 몫과, 나머지값을 구하고, 
 			// 나머지값을 이용하여 x값의 위치를 처리 후
 			// 몫의 값을 이용하여  y값의 위치를 처리
-			// console.log(l2, l);
+			console.log(l2, l);
 			splitText02Img.css({left:arr2[0][l2] + 'px', top:arr2[1][l] + 'px'});
 			if(count >= s2){	clearInterval(scroll2Go);		}
 		}, 30);
