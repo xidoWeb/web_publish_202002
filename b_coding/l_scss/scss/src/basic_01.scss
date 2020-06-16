@@ -1,0 +1,128 @@
+// scss를 통한 한줄 주석
+/* css에서도 사용한 여러줄 주석 */
+
+// "../setting/_variable.scss";
+// @import "../setting/_variable.scss";
+
+/* ============================================== 
+1. scss 는 주석 표현방법이 2가지
+  - 여러줄 주석: css와 동일한 내용을 담는다.
+	- 한줄 주석 : css로 변환이 되지 않는다.
+
+2. 외부파일 불러오기
+  - @import url();  : css에서 사용하는 기법, 파일까지 같이 가져간다
+	- @import "";     : scss에서 사용하는 기법, 내용을 내장해서 변환
+	- scss에서 가져올때 참고파일은 앞에 '_'를 붙여 파일을 외부에 노출시키지 않을 수 있으며, 
+		확장자명 붙이지 않아도 된다.
+		
+3. 변수 사용하기
+	- $color : #acffca;
+	- $l1    : 1px;
+	- $line  : $l1 solid $color;
+
+  - 사용하려는 기능을 이름을 붙여 해당하는 이름을 호출하여 사용하는 기법
+	- 변수의 이름을 할당하려면 '$'를 앞에 붙이고 사용하려는 이름을 작성한다
+	- 지정된 변수를 다른곳에서 추가로 불러와서 변수로 할당 할 수 있다.
+
+4. 컬러 설정하기
+	- darken(색상, 값%)
+	- lighten(색상, 값%)
+	- rgba(색상, 투명도)
+	- hsla(색상, 투명도)
+	- 특정 색상을 어둡게 하거나, 밝게할 수 있고, 해당값을 투명도를 쉽게 조정이 가능하다.
+	- 변수를 활용하면 더욱더 편리하게 사용할 수 있다.
+
+5. 계산기능
+	- width : 100 / 3 + %;
+	- width : 30 / 340 * 100 + %;
+	- calc에서 사용하던 기법을 calc없이 직접 입력으로 사용가능
+	- 일부 기능에서는 calc보다 더 원활하게 동작
+	- 단, 무조건 동작하지는 않으므로 신중하게 써야한다
+	
+6. 중첩기법(nesting)
+	#gnb{	width: 100%; height: 100%;
+		>h2{width: 100px; height: 100px;
+		> a{	display: block;} // a
+		> a > span {text-align: center;	}
+		> a:hover > span{color:#aaa;	}
+		}// h2
+	} // #gnb
+// 중첩기능시: 4단계이상은 사용하지 말자
+// 시인성이 떨어지면 사용하지 말자
+// 끝나는 곳엔 반드시 주석으로 표기하자
+============================================== */
+
+
+
+@import "../setting/variable";
+
+
+// ---------------------------------
+#wrap {
+	width: 100%; height: 100%; 
+	background-color:darken($primary, 20%);
+	color:lighten($primary, 40%);
+	border:$baseLine;
+}
+
+#headBox {
+	width: (150px / 1920px * 100) + vw;
+	background-color: rgba($primary, 0.5);
+}
+/*
+#gnb{  }
+#gnb > h2 {  }
+#gnb > h2 > a {  }
+#gnb > h2 > a > span {}
+*/
+
+#gnb{	width: 100%; height: 100%;
+  >h2{width: 100px; height: 100px;
+	>a{	display: block;
+			> span {text-align: center;	}
+		&:hover >span{color:#aaa;	}
+		} // a
+	}// h2
+} // #gnb
+// 중첩기능시: 4단계이상은 사용하지 말자
+// 시인성이 떨어지면 사용하지 말자
+// 끝나는 곳엔 반드시 주석으로 표기하자
+
+// list함수
+$size : (0, 20, 30, 45, 170, 200);
+/* // 01
+.list > li:nth-child(1){	background-position-X:0;}
+.list > li:nth-child(2){	background-position-X:20;}
+.list > li:nth-child(2){	background-position-X:40;}
+.list > li:nth-child(2){	background-position-X:80;}
+.list > li:nth-child(2){	background-position-X:120;}
+.list > li:nth-child(2){	background-position-X:150;}
+*/
+/* // 02
+.list > li:nth-child(1){	background-position-X: nth($size, 1); }
+.list > li:nth-child(2){	background-position-X: nth($size, 2); }
+.list > li:nth-child(3){	background-position-X: nth($size, 3); }
+.list > li:nth-child(4){	background-position-X: nth($size, 4); }
+.list > li:nth-child(5){	background-position-X: nth($size, 5); }
+.list > li:nth-child(6){	background-position-X: nth($size, 6); }
+*/
+
+// 03
+// @for $i from 1 through 6 {
+// 	.list > li:nth-child(#{$i}){	
+// 		background-position-X: nth($size, $i); 
+// 	}
+// }
+
+// 04
+@for $i from 1 through length($size) {
+	.list > li:nth-child(#{$i}){	
+		background-position-X: nth($size, $i); 
+	}
+}
+
+// 선택자에는 변수의 이름을 그대로 들어갈 수 없다.
+// 그래서 interpolation기법(보간법)을 이용하여 처리 (앞에 #붙이고 {}감싸면 끝)
+
+// '../../img/img_0'+ i +'.jpg'
+// `../../img/img_0${i}.jpg`
