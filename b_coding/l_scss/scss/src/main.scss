@@ -1,0 +1,14 @@
+// main.scss
+/* main.css */
+@import url("../page/header.css");
+@import "../setting/variable";
+
+#wrap {
+	@import "../page/header";
+	@import "../page/footer";
+}
+
+@media screen and (max-width:640px) {
+	@import "../page/header";
+	@import "../page/footer";
+}

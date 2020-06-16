@@ -50,9 +50,30 @@
 // 중첩기능시: 4단계이상은 사용하지 말자
 // 시인성이 떨어지면 사용하지 말자
 // 끝나는 곳엔 반드시 주석으로 표기하자
-============================================== */
 
+7. lists 기법
+	$li : ($primary, $sub1, $sub2, $black);
+	- 해당하는 순서의 값을 쓰기위해서 리스트로 처리
+	- nth(변수, 순서값)  : 해당변수의 순서번째의 값을 사용
+	- length(변수)       :  리스트형식의 변수의 갯수를 파악
+	- 문법 @for문과 함께 사용하기에 편리하다
+		(단, 선택자 사용시에는 순서를 입력할때에는 보간법( #{변수명} )을 사용)
+		
+8. @for 기법
+	 @for 임의변수 form 1 through 포함할끝수(작거나같다) {   기능수행  }
+	 @for 임의변수 form 1 to 끝수의다음수(작다의의미) {   기능수행  }
+	 
+샘플 ============================================== */
+	 $li: ('graph', 'apple', 'tomato', 'banana', 'stawberry');
+	 @for $i from 1 through length($li) {
+		 .#{nth($li, $i)}_coffee {color:#fac;}
+	}
 
+// .graph_coffee {color:#fac;}
+// .apple_coffee {color:#fac;}
+// .tomato_coffee {color:#fac;}
+// .banana_coffee {color:#fac;}
+// .stawberry_coffee {color:#fac;}
 
 @import "../setting/variable";
 
@@ -126,3 +147,4 @@ $size : (0, 20, 30, 45, 170, 200);
 
 // '../../img/img_0'+ i +'.jpg'
 // `../../img/img_0${i}.jpg`
+
