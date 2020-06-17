@@ -200,12 +200,13 @@ h6{ @extend	%Select; }
 */
 
 @mixin RecRem($s){
-	width:$s + px;
-	width: $s/16 + rem;
+	$r : $s / 16;
+	width:$s   + px;
+	width: $r  + rem;
 	height: $s + px;
-	height: $s + rem; 
-	border-radius:($s/4/16)+px;
-	border-radius:($s/4)+rem;
+	height: $r + rem; 
+	border-radius:($s/4) + px;
+	border-radius:($r/4) + rem;
 }
 
 $yellow:#ff0;

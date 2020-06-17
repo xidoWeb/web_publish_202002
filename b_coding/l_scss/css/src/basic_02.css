@@ -149,8 +149,8 @@ h1, h2, h3 {
   width: 50px;
   width: 3.125rem;
   height: 50px;
-  height: 50rem;
-  border-radius: 0.78125px;
-  border-radius: 12.5rem;
+  height: 3.125rem;
+  border-radius: 12.5px;
+  border-radius: 0.78125rem;
   background-color: #ff0;
 }
