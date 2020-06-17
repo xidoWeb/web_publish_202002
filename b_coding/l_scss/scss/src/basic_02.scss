@@ -1,0 +1,15 @@
+// basic_02.scss
+/* basic_02.css */
+
+@import "../setting/variable";
+
+
+// ---------------------------------
+// $url:"../result/img/";
+
+#wrap {
+	background-color: map-get($sampleColor , yellow);
+	color: map-get($fontColor, black);
+	background-image: url($url + 'img_001.jpg');
+}
+

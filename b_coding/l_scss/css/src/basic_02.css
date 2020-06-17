@@ -1,0 +1,10 @@
+/* basic_02.css */
+#gnb {
+  font-family: "myriad pro", "din", "arial", "malgun gothic", "noto sans", dotum, sans-serif;
+}
+
+#wrap {
+  background-color: #a70;
+  color: #0a0a0a;
+  background-image: url("../../../img/base/img_001.jpg");
+}
