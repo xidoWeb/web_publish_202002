@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* basic_02.css */
 #gnb {
   font-family: "myriad pro", "din", "arial", "malgun gothic", "noto sans", dotum, sans-serif;
@@ -101,4 +102,55 @@ h5, h6 {
 
 h1, h2, h3 {
   font-size: 1rem;
+}
+
+/*
+// 01: map 
+		- $변수 : (키: 값, 키:값, 키:값);
+	 - map은 다른 언어기준(js)의 형식에서는 객체 라고 불리우는 형식과 매우 유사한 타입
+	 - 호출하여 사용할 경우에는  map-get($변수명, 키)
+	 - 개별 변수형태보다 여러개의 값을 가질 수 있다는 장점,
+	 - 리스트형태보다 키명이 존재하여 그값을 파악하기 쉽다는 장점
+
+// ---------------------------------------------------------
+// 02: @each
+	 - @each는 @for문의 형식을 간소화하여 처리하는 기능이지만, @for구문보다 다양한 기능을 사용할 수 있다.
+	 - @each $임의변수 in $리스트변수 {  }
+	 - @each $임의변수1, $임의변수2 in $map형식변수 {  }
+	 - @each $임의변수1, $임의변수2, $임의변수3 .. in $이중리스트형식의변수 { }
+
+// 03: @function
+	 - @function 함수의 기능을 사용하는 것으로 js에서의 function과 매우 유사하다
+	 - 반환( @return )되는 값이 존재해야하며, 반환값은 하나여야 한다.
+	 - @function 함수이름(매개변수) {  기능수행....   @return 반환값;  }
+
+// 04: @if
+	 - @if는 조건문의 형식을 가지고 있는 형태로서, 상황에 맞게 기능을 수행하게 만드는 것
+	 - @function이나 @mixin형식 내부에서 동작하는 것이 가장 사용하기 쉬운 형태
+	 - @if true {   } @else if true {} @else {  }
+
+// 05: @extend || %select{}
+   - 선택자의 경우 ,를 이용 하여 멀티선택을 할 수 있도록 제작된 형태의 기능
+	 - 가상의 클래스 형식( %선택자이름 {} ) 을 제작하여 사용할 수도 있고,
+	 - 기존의 선택자를 대신 사용하여 함께 붙여서 처리할 수도 있다.
+	 - 단, 사용상의 위치가 애매해 지거나, 한번에 해석하기 꽤 어려운 부분들이 있어 
+	 - 가급적 사용을 자제할 것을 권장
+	 - .box {width:100px; height200px; background-color:#777; }
+		 .box2 { @extend .box }
+		 => .box, .box2 {width:100px; height200px; background-color:#777; }
+
+// 06: @mixin
+		- @mixin의 형태는 복잡하고 다양한 선택자, 기능, 속성 등의 형태를 
+			한번에 수행가능하도록 만들어진 기능
+		- @mixin은 생성할때 만들어지는 형태, 불러올 경우에는 @include를 이용하여 불러오게 된다.- @mixin Test(){}    =>호출   @include Test();
+		
+*/
+#size {
+  width: 50px;
+  width: 3.125rem;
+  height: 50px;
+  height: 50rem;
+  border-radius: 0.78125px;
+  border-radius: 12.5rem;
+  background-color: #ff0;
 }
