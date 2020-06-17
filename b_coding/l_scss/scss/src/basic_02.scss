@@ -13,3 +13,57 @@
 	background-image: url($url + 'img_001.jpg');
 }
 
+$juice : ('apple', 'mango', 'kiwi', 'grape', 'orange');
+$juiceC : (#acc, #1ff, #faa, #fa5, #359);
+//1
+// @for $i from 1 through length($juice) {
+// 	.#{nth($juice,$i)}_juice {
+// 		color:nth($juiceC, $i);
+// 	}
+// }
+
+// 2 : 해당 값이 선택자 또는 값이 동일한경우에 사용
+// @each $j in $juice {
+// 	.#{$j}_juice { background-color:#aff; }
+// }
+
+// 3
+$myJuice : (
+	'apple'  : #f33, 
+	'mango'  : #fc9,
+	'kiwi'   : #7a6,
+	'grape'  : #a4a,
+	'orange' : #f70,
+	);
+
+	@each $juiceName, $juiceColor in $myJuice {
+		.#{$juiceName}_juice { background-color:$juiceColor; }
+	}
+
+
+$mainSlide :  (
+	'event' : 'eventMain.jpg',
+	'best'  : 'bestCut.jpg',
+	'info'  : 'infoMessage.jpg',
+	'guide' : 'guideThum.png'
+);
+
+@each $sel, $img in $mainSlide {
+	.slide_#{$sel} {
+		background-image: url($url + $img);
+	}
+}
+
+$color: #acc, #Fac, #acf;
+$wire : (
+	('#headBox',    100px,  200px, nth($color, 1)),
+	('#sectionBox', 100%,   300px, nth($color,2)),
+	('#conBox',     100%,   200px, nth($color,3))
+);
+
+@each $select, $width, $height, $color in $wire {
+	#{$select} {
+		width: $width; height:$height; background-color: $color;
+	}
+}
+

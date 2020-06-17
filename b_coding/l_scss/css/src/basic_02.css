@@ -8,3 +8,57 @@
   color: #0a0a0a;
   background-image: url("../../../img/base/img_001.jpg");
 }
+
+.apple_juice {
+  background-color: #f33;
+}
+
+.mango_juice {
+  background-color: #fc9;
+}
+
+.kiwi_juice {
+  background-color: #7a6;
+}
+
+.grape_juice {
+  background-color: #a4a;
+}
+
+.orange_juice {
+  background-color: #f70;
+}
+
+.slide_event {
+  background-image: url("../../../img/base/eventMain.jpg");
+}
+
+.slide_best {
+  background-image: url("../../../img/base/bestCut.jpg");
+}
+
+.slide_info {
+  background-image: url("../../../img/base/infoMessage.jpg");
+}
+
+.slide_guide {
+  background-image: url("../../../img/base/guideThum.png");
+}
+
+#headBox {
+  width: 100px;
+  height: 200px;
+  background-color: #acc;
+}
+
+#sectionBox {
+  width: 100%;
+  height: 300px;
+  background-color: #Fac;
+}
+
+#conBox {
+  width: 100%;
+  height: 200px;
+  background-color: #acf;
+}
