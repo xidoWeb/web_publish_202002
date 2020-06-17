@@ -115,3 +115,46 @@ $device : (
 
 .box_01 {	width: Pc(500); height: vw(200, 800);}
 .box_02 {	@include Rec(100);}
+
+
+// -----------------------------------------
+
+#fnb {
+	background-color: #fff;
+	color: #333;
+}
+
+$b : #333;
+@function IfColor($color){
+	@if $color == #333 {
+		@return #fff;
+	}@else if $color == #fff {
+		@return #333;
+	}@else {
+		@return #676767;
+	}
+}
+
+@mixin MyColor($c){
+	background-color: $c;
+	color:IfColor($c);
+}
+
+#footBox {
+	@include MyColor(#aaa);
+}
+
+%Select { border:1px solid #fff; 
+	        box-sizing: border-box; }
+
+
+h1{	font-size: 1rem;}
+h2{ @extend h1;}
+h3{	@extend h1; }
+h4{	@extend #footBox; }
+h5{	@extend %Select; }
+h6{ @extend	%Select; }
+
+//
+// ----------------------------------------
+
