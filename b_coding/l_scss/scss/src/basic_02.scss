@@ -67,3 +67,51 @@ $wire : (
 	}
 }
 
+// function -----------------------------------------------
+// $device : (640, 1280, 1920);
+$device : (
+	mob : 640,
+	tab : 1024,
+	laptop: 1600,
+	pcfull : 1920
+);
+
+@function Mob($val) {
+	$convert : $val / map-get($device, mob) * 100;
+	@return $convert + vw;
+}
+
+@function Tab($val) {
+	$convert : $val / map-get($device, tab) * 100;
+	@return $convert + vw;
+}
+
+@function Laptop($val) {
+	$convert : $val / map-get($device, laptop) * 100;
+	@return $convert + vw;
+}
+
+@function Pc($val) {
+	$convert : $val / map-get($device, pcfull) * 100;
+	@return $convert + vw;
+}
+
+@function vw($val, $device) {
+	$convert : $val / $device * 100;
+	@return $convert + vw;
+}
+
+@mixin Rec($s){
+	width:($s)+px; height:($s)+px; 
+	border-radius: ($s/3)+px;
+	width:($s/16)+rem; height:($s/16)+rem; 
+	border-radius: ($s/3/16)+rem;
+
+	&>a{
+		display:block;
+		width: 100%; height: 100%; background-color: inherit;
+	}
+}
+
+.box_01 {	width: Pc(500); height: vw(200, 800);}
+.box_02 {	@include Rec(100);}
