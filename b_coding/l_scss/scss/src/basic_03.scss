@@ -33,3 +33,17 @@ h1 {
 		background-color: #FCF;
 	}
 }
+
+
+.box ul{
+	width:auto;
+	@include Clearfix();
+}
+.link {
+	$url:'../../img/log/';
+	width: 100px; height: 100px;
+	border-radius:5px;
+	@include LinkBg('logo.png'){
+		padding: 1rem; box-sizing: border-box;
+	};
+}

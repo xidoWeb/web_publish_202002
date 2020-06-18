@@ -1,6 +1,32 @@
 //  _mixin.scss
 // mixin은 형태를 미리 만들어놓고 불러오는 형태이다.
 
+@mixin Clearfix(){
+	&:after, &::after{
+		content:" "; display: block;
+		width: 0; height: 0; clear:both;
+	}
+}
+
+@mixin LinkBg($i, $r:no-repeat, $p:50% 50%, $z:cover, $in:true){
+	& a{ display: block; width: 100%; height: 100%; 
+		background-image: url($url + $i);
+		background-repeat: $r; 
+		background-position:$p;
+		background-size: $z;
+		@content;
+
+		@if $in == true {
+			& span{
+				display: block; position: absolute; z-index:-1;
+				width: 0; height: 0; overflow: hidden;
+			}
+		}
+	}
+}
+
+
+
 
 $url : '../../img/main/';
 
@@ -34,15 +60,50 @@ $url : '../../img/main/';
 	}
 }
 
+$deviceWidth : (
+	mob    : 640,
+	tab    : 1024,
+	laptop : 1400,
+	pc     : 1920
+);
 
 @mixin Mob (){
- @media screen and (max-width:480px){
-	 @content;
- }
-}
-
-@mixin Tab(){
-	@media screen and (max-width:768px) {
+	@media all and (max-width:  map-get($deviceWidth, mob) + px ){
 		@content;
 	}
 }
+
+@mixin Tab(){
+	@media all and (min-width: map-get($deviceWidth, mob) + 1 + px ) 
+	              and (max-width: map-get($deviceWidth, tab) + px ) {
+		@content;
+	}
+}
+
+@mixin Laptop(){
+	@media all and (min-width:map-get($deviceWidth, tab) + 1  + px) 
+	              and (max-width: map-get($deviceWidth, laptop) + px ) {
+		@content;
+	}
+}
+
+@mixin PcFull(){
+	@media all and (min-width:map-get($deviceWidth, laptop) + 1 + px) {
+		@content;
+	}
+}
+
+@mixin myDevice($s){
+	@media all and (max-width: $s + px ) {
+		@content;
+	}
+}
+
+@function vw($s, $d){
+	$n : 	$s / map-get($deviceWidth, $d) * 100;
+	@return $n + vw;
+}
+
+// #test {
+// 	width: vw(10, 'mob');
+// }
