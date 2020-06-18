@@ -1,0 +1,35 @@
+// basic_03.scss
+/* basic_03.css */
+
+@import "../setting/mixin";
+
+h1 { 	
+	@include Img($i:'logo.png', $r:repeat-x); 
+}
+
+#headBox {
+	@include Size(200, 400);
+}
+
+.conBox {
+	@include Con {width:100px; height:500x;};
+}
+
+
+#wrap {
+	width:100%; max-width:1200px; 
+	margin:auto;
+	background-color: #FCA;
+
+	@include Mob {
+		width:90%;
+		max-width:620px;
+		background-color: #acc;
+	}
+
+	@include Tab {
+		width: 80%; 
+		max-width:960px;
+		background-color: #FCF;
+	}
+}

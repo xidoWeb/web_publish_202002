@@ -1,0 +1,47 @@
+/* basic_03.css */
+h1 {
+  background-image: url("../../img/main/logo.png");
+  background-repeat: repeat-x;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+#headBox {
+  width: 200px;
+  width: 12.5rem;
+  height: 400px;
+  height: 25rem;
+}
+
+.conBox {
+  display: block;
+}
+
+.conBox > span {
+  opacity: 0.5;
+  width: 100px;
+  height: 500x;
+}
+
+#wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #FCA;
+}
+
+@media screen and (max-width: 480px) {
+  #wrap {
+    width: 90%;
+    max-width: 620px;
+    background-color: #acc;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #wrap {
+    width: 80%;
+    max-width: 960px;
+    background-color: #FCF;
+  }
+}

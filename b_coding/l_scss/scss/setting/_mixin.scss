@@ -1,0 +1,48 @@
+//  _mixin.scss
+// mixin은 형태를 미리 만들어놓고 불러오는 형태이다.
+
+
+$url : '../../img/main/';
+
+@mixin Img(
+					$i , 
+					$r : no-repeat, 
+					$p : 50% 50%, 
+					$s : contain
+					){
+	background-image:url($url + $i);
+	background-repeat:$r;
+	background-position: $p;
+	background-size: $s;
+}
+
+@mixin Size($s, $h){
+	$size : $s / 16 ;
+	$hSize : $h / 16;
+
+	width:$s + px;
+	width:$size + rem;
+	height:$h + px;
+	height: $hSize + rem;
+}
+
+@mixin Con(){
+	display:block;
+	>span{
+		opacity:0.5;
+    @content;
+	}
+}
+
+
+@mixin Mob (){
+ @media screen and (max-width:480px){
+	 @content;
+ }
+}
+
+@mixin Tab(){
+	@media screen and (max-width:768px) {
+		@content;
+	}
+}
