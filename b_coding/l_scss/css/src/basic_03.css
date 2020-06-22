@@ -71,7 +71,7 @@ h1 {
   background-image: url("../../img/main/logo.png");
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: cover;
+  background-size: contain;
   padding: 1rem;
   box-sizing: border-box;
 }

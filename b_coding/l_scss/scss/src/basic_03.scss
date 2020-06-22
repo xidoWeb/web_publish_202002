@@ -43,7 +43,7 @@ h1 {
 	$url:'../../img/log/';
 	width: 100px; height: 100px;
 	border-radius:5px;
-	@include LinkBg('logo.png'){
+	@include LinkBg('logo.png', $z:contain){
 		padding: 1rem; box-sizing: border-box;
 	};
 }
