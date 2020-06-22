@@ -25,6 +25,7 @@ h2, h3, h4, h5, h6, p, div, ul, li, ol, dl, dt, dd {
 #popupBox {
   width: 100%;
   height: 90px;
+  background-color: #8e8e8e;
 }
 #popupBox .popup_area {
   width: 100%;
@@ -44,6 +45,14 @@ h2, h3, h4, h5, h6, p, div, ul, li, ol, dl, dt, dd {
   padding-top: 36px;
   padding-bottom: 17px;
   box-sizing: border-box;
+  background-color: #fff;
+  border-bottom: 1px solid #2d2c2c;
+}
+#headBox.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 #headBox .head_area {
   width: 100%;
@@ -53,6 +62,37 @@ h2, h3, h4, h5, h6, p, div, ul, li, ol, dl, dt, dd {
 }
 
 /* viewBox ---------------------------------- */
+#viewBox {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  margin: auto;
+}
+#viewBox .btn {
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%);
+  margin-left: 50%;
+  margin-top: -28px;
+  width: 1520px;
+  height: 0;
+}
+#viewBox .btn > button {
+  width: 50px;
+  height: 56px;
+  float: left;
+  background-image: url("../../../img/stcoImg/icon.png");
+  background-repeat: no-repeat;
+  background-position: -10px -90px;
+  background-size: auto auto;
+}
+#viewBox .btn > button:first-child {
+  float: right;
+}
+#viewBox .btn > button:first-child {
+  background-position: -180px -90px;
+}
+
 /* trendOn ---------------------------------- */
 /* keyword ---------------------------------- */
 /* bestItem ---------------------------------- */

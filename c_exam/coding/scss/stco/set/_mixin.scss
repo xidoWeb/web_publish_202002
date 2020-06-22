@@ -7,10 +7,28 @@
 	@content;
 }
 
-$url :'../../../img/stcoImg/';
+$url :'./';
 @mixin bg($i, $r:no-repeat, $p: 0 0, $s:auto auto){
 	background-image: url($url + $i);
 	background-repeat: $r;
 	background-position: $p;
 	background-size: $s;
+}
+
+$baseWidth: 1400;
+@mixin centerBtn($fw:100, $w:50, $h:56){
+	position:absolute;
+	top:50%;
+	transform:translateX(-50%);
+	margin-left:50%;
+	margin-top:-$h/ 2 + px;
+	width:$baseWidth + $fw + px;
+	height:0;
+	>button{
+		width:$w + px;
+		height:$h + px;
+		float:left;
+		@content;
+		&:first-child{float:right;}
+	}	
 }

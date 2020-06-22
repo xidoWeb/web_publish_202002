@@ -3,5 +3,13 @@
 	width: 100%; height: 87px;
 	padding-top: 36px; padding-bottom:17px;
 	box-sizing: border-box;
+	background-color: $white;
+	border-bottom:$border1;
+
+	&.fixed {
+		position: fixed; top: 0; left: 0; z-index: 1000;
+	}
+
 	.head_area{ @include max1400();}
 }
+

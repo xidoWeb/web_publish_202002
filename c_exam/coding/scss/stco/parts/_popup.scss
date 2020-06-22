@@ -1,8 +1,10 @@
 // popup.scss
 /* popup ---------------------------------- */
+$url:'../../../img/stcoImg/';
 
 #popupBox {
 	width: 100%; height:90px;
+	background-color: #8e8e8e;
 	.popup_area{
 		@include max1400;
 		@include bg('popup/top_banner_8e8e8e_200618.jpg');
