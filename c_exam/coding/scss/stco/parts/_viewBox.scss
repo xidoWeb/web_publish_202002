@@ -1,27 +1,44 @@
 /* viewBox ---------------------------------- */
 $url:'../../../img/stcoImg/';
+$folder: 'adbanner/';
+$bannerImg : (
+	'banner_01':$folder + 'main_rolling_w_0421.jpg',
+	'banner_02':$folder + 'main_rolling_w_0429don.jpg',
+	'banner_03':$folder + 'main_rolling_w_0608.jpg',
+	'banner_04':$folder + 'main_rolling_w_200601.jpg',
+	'banner_05':$folder + 'main_rolling_w_200616.jpg',
+	'banner_06':$folder + 'main_rolling_w_200618.jpg',
+	'banner_07':$folder + 'main_rolling_w_SSE.jpg',
+	'banner_08':$folder + 'main_rolling_w_yejidong.jpg',
+	'banner_09':$folder + 'main_rolling_w_w2.jpg',
+);
 
+// -------------------------------------------------
 #viewBox{
 	position: relative;
 	width: 100%; height: 700px;
 	margin:auto;
 
-	.btn{	
-		z-index:500;
-		@include centerBtn($fw:120){
-			@include bg('icon.png', $p:-10px -90px);
-		}
-		>button:first-child{
-			background-position: -180px -90px;
-		}
+	.btn{	z-index:500;
+		@include centerBtn($fw:120){@include bg('icon.png', $p:-10px -90px);}
+		>button:first-child{background-position: -180px -90px;}
 	}
 
-	$count: 11;
+	$count:length($bannerImg);
 	.indicator{
 		@include indicator($c:$count, $w:15, $mr:16, $h:15, $b:40);
 	} // .indicator
 
-	// .view_area{}
-
+	.view_area{position: relative;
+		width: 100%; height: 100%;
+			>ul{width:100% * ($count + 1); height:100%; margin-left:-100%;
+				li{ float: left;	width: 100% / ($count + 1); height:100%;
+					background-repeat: no-repeat; background-position: 0 0;}
+		}
+		@each $key, $value in $bannerImg {
+			// .#{$key} { background-image: url($url + $value); }
+			.#{$key} { @include bg( $i: $value , $s: cover) }
+		}
+	}
 }// #viewBox
 

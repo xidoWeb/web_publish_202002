@@ -15,6 +15,6 @@
 		>button:first-child{background-position: -180px -170px;}
 	}
 	.indicator{$count:16; $size:10;
-		@include indicator($c:$count, $w:$size, $mr:16, $h:$size, $b:30);
+		@include indicator($count, $size, 16, $size, 30);
 	}
 } // .trend_area
