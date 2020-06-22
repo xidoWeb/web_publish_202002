@@ -1,0 +1,26 @@
+$sample: #ccc;
+
+// color
+$primary:#b50202;
+$black:#121212 !default;
+$fontColor:#2d2c2c;
+$indiPoint:#4c4c4c;
+$indicator:#e2e2e2;
+$gray:#666666;
+$gray2:#acacac ;
+$productPoint:#744343;
+$lightGray:#f3f3f3;
+$white : #fff !default;
+
+// border
+$border1 : 1px solid $fontColor;
+$border2 : 1px solid $gray;
+
+// font
+$fontFamily:'Noto Sans KR','Nanum Gothic', '돋움','Dotum',Helvetica,'AppleGothic',Sans-serif;
+$fontSize    : 16px !default;
+$titleFont   : 28px / $fontSize + rem;
+$titleFont2  : 28px / $fontSize / 4 * 3 + rem;
+$navFont     : 15px / $fontSize + rem;
+$productFont : 14px / $fontSize + rem;
+

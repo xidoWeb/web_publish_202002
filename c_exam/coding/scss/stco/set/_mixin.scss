@@ -1,0 +1,16 @@
+// mixin.scss
+
+@mixin max1400(){
+	width: 100%; max-width:1400px;
+	height: 100%; 
+	margin:auto;
+	@content;
+}
+
+$url :'../../../img/stcoImg/';
+@mixin bg($i, $r:no-repeat, $p: 0 0, $s:auto auto){
+	background-image: url($url + $i);
+	background-repeat: $r;
+	background-position: $p;
+	background-size: $s;
+}

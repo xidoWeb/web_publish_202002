@@ -1,0 +1,7 @@
+/* headBox ---------------------------------- */
+#headBox{
+	width: 100%; height: 87px;
+	padding-top: 36px; padding-bottom:17px;
+	box-sizing: border-box;
+	.head_area{ @include max1400();}
+}

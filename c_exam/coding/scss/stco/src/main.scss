@@ -1,0 +1,35 @@
+// main.scss
+/* main.css */
+
+// base setting
+@import "../set/variable";
+@import "../set/function";
+@import "../set/mixin";
+
+
+// -------------------------------------------------------
+h2{ font-size:$titleFont; }
+h3{ font-size:$titleFont2; }
+h2,h3,h4,h5,h6,p,div,ul,li,ol,dl,dt,dd{ font-family:$fontFamily; }
+// -------------------------------------------------------
+#wrap {
+	width: 100%; min-width:1400px; 
+	height:auto; min-height:900px;
+	margin:auto;
+	background-color: $sample;
+} // #wrap
+
+	// popup
+	@import "../parts/popup";
+	
+	// design layout
+	@import "../parts/headBox";
+	@import "../parts/viewBox";
+	@import "../parts/trendOn";
+	@import "../parts/keyword"; 
+	@import "../parts/bestItem";
+	@import "../parts/hotDeal";
+	@import "../parts/category";
+	@import "../parts/sns";
+	@import "../parts/footBox";
+	

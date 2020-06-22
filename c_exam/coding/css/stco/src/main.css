@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/* main.css */
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.3125rem;
+}
+
+h2, h3, h4, h5, h6, p, div, ul, li, ol, dl, dt, dd {
+  font-family: "Noto Sans KR", "Nanum Gothic", "돋움", "Dotum", Helvetica, "AppleGothic", Sans-serif;
+}
+
+#wrap {
+  width: 100%;
+  min-width: 1400px;
+  height: auto;
+  min-height: 900px;
+  margin: auto;
+  background-color: #ccc;
+}
+
+/* popup ---------------------------------- */
+#popupBox {
+  width: 100%;
+  height: 90px;
+}
+#popupBox .popup_area {
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  margin: auto;
+  background-image: url("../../../img/stcoImg/popup/top_banner_8e8e8e_200618.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: auto auto;
+}
+
+/* headBox ---------------------------------- */
+#headBox {
+  width: 100%;
+  height: 87px;
+  padding-top: 36px;
+  padding-bottom: 17px;
+  box-sizing: border-box;
+}
+#headBox .head_area {
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  margin: auto;
+}
+
+/* viewBox ---------------------------------- */
+/* trendOn ---------------------------------- */
+/* keyword ---------------------------------- */
+/* bestItem ---------------------------------- */
+/* hotDeal ---------------------------------- */
+/* category ---------------------------------- */
+/* sns ---------------------------------- */
+/* footBox ---------------------------------- */
