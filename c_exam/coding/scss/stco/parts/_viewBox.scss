@@ -1,5 +1,5 @@
 /* viewBox ---------------------------------- */
-// $url:'../../../img/stcoImg/adbanner/';
+$url:'../../../img/stcoImg/';
 
 #viewBox{
 	position: relative;
@@ -7,15 +7,21 @@
 	margin:auto;
 
 	.btn{	
+		z-index:500;
 		@include centerBtn($fw:120){
-			$url:'../../../img/stcoImg/';
 			@include bg('icon.png', $p:-10px -90px);
-		};
+		}
 		>button:first-child{
 			background-position: -180px -90px;
 		}
 	}
 
-	// .indicator{}
+	$count: 11;
+	.indicator{
+		@include indicator($c:$count, $w:15, $mr:16, $h:15, $b:40);
+	} // .indicator
+
 	// .view_area{}
-}
+
+}// #viewBox
+

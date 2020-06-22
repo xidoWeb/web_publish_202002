@@ -1,5 +1,7 @@
 // mixin.scss
 
+$baseWidth: 1400;
+
 @mixin max1400(){
 	width: 100%; max-width:1400px;
 	height: 100%; 
@@ -15,7 +17,6 @@ $url :'./';
 	background-size: $s;
 }
 
-$baseWidth: 1400;
 @mixin centerBtn($fw:100, $w:50, $h:56){
 	position:absolute;
 	top:50%;
@@ -31,4 +32,42 @@ $baseWidth: 1400;
 		@content;
 		&:first-child{float:right;}
 	}	
+}
+
+@mixin hidden(){
+	display: block;
+	position: absolute; z-index:-1;
+	width: 0; height: 0; overflow: hidden;
+}
+
+@mixin full($c){
+	display: block; width: 100%; height: 100%;
+	background-color: $c;
+	@content;
+	>span{ @include hidden; }
+}
+
+@mixin lastMargin0(){
+	float:left;
+	@content;	
+	&:last-child{margin-right: 0;	}
+}
+
+// $count:1;
+@mixin indicator($c:10, $w:10, $mr:16, $h:10, $b:33){
+	position:absolute;
+		left: 50%; bottom:$b + px; z-index:500;
+		width:$c *($w + $mr) - 16 + px; height:$h + px;		
+		transform:translateX(-50%);
+		>ul{width: 100%;	height: 100%;
+			>li{
+				@include lastMargin0(){
+					width: $w + px; height: 100%;
+					margin-right:$mr + px; padding:1px; 
+					box-sizing: border-box;
+				};
+			}
+			a{@include full($indicator){border-radius:100%;	}}
+			li.active a{ background-color: $indiPoint; }
+		}
 }

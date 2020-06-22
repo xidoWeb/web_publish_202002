@@ -69,6 +69,7 @@ h2, h3, h4, h5, h6, p, div, ul, li, ol, dl, dt, dd {
   margin: auto;
 }
 #viewBox .btn {
+  z-index: 500;
   position: absolute;
   top: 50%;
   transform: translateX(-50%);
@@ -92,8 +93,131 @@ h2, h3, h4, h5, h6, p, div, ul, li, ol, dl, dt, dd {
 #viewBox .btn > button:first-child {
   background-position: -180px -90px;
 }
+#viewBox .indicator {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  z-index: 500;
+  width: 325px;
+  height: 15px;
+  transform: translateX(-50%);
+}
+#viewBox .indicator > ul {
+  width: 100%;
+  height: 100%;
+}
+#viewBox .indicator > ul > li {
+  float: left;
+  width: 15px;
+  height: 100%;
+  margin-right: 16px;
+  padding: 1px;
+  box-sizing: border-box;
+}
+#viewBox .indicator > ul > li:last-child {
+  margin-right: 0;
+}
+#viewBox .indicator > ul a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #e2e2e2;
+  border-radius: 100%;
+}
+#viewBox .indicator > ul a > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+#viewBox .indicator > ul li.active a {
+  background-color: #4c4c4c;
+}
 
 /* trendOn ---------------------------------- */
+#trendBox {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 780px;
+  padding-bottom: 100px;
+}
+
+.trend_area {
+  width: 100%;
+  max-width: 1400;
+  margin: 50px auto;
+}
+.trend_area .btn {
+  z-index: 500;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%);
+  margin-left: 50%;
+  margin-top: -28px;
+  width: 1540px;
+  height: 0;
+}
+.trend_area .btn > button {
+  width: 50px;
+  height: 56px;
+  float: left;
+  background-image: url("../../../img/stcoImg/icon.png");
+  background-repeat: no-repeat;
+  background-position: -10px -170px;
+  background-size: auto auto;
+}
+.trend_area .btn > button:first-child {
+  float: right;
+}
+.trend_area .btn > button:first-child {
+  background-position: -180px -170px;
+}
+.trend_area .indicator {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  z-index: 500;
+  width: 400px;
+  height: 10px;
+  transform: translateX(-50%);
+}
+.trend_area .indicator > ul {
+  width: 100%;
+  height: 100%;
+}
+.trend_area .indicator > ul > li {
+  float: left;
+  width: 10px;
+  height: 100%;
+  margin-right: 16px;
+  padding: 1px;
+  box-sizing: border-box;
+}
+.trend_area .indicator > ul > li:last-child {
+  margin-right: 0;
+}
+.trend_area .indicator > ul a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #e2e2e2;
+  border-radius: 100%;
+}
+.trend_area .indicator > ul a > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.trend_area .indicator > ul li.active a {
+  background-color: #4c4c4c;
+}
+
 /* keyword ---------------------------------- */
 /* bestItem ---------------------------------- */
 /* hotDeal ---------------------------------- */

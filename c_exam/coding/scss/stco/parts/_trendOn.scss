@@ -1,1 +1,20 @@
 /* trendOn ---------------------------------- */
+
+#trendBox {
+	position: relative;
+	width: 100%; height:auto;
+	min-height:780px;
+	padding-bottom:100px;
+}
+.trend_area{
+	width: 100%; max-width:$baseWidth;	margin:50px auto;
+	.btn{	z-index:500;
+		@include centerBtn($fw:140){
+			@include bg('icon.png', $p:-10px -170px);
+		}
+		>button:first-child{background-position: -180px -170px;}
+	}
+	.indicator{$count:16; $size:10;
+		@include indicator($c:$count, $w:$size, $mr:16, $h:$size, $b:30);
+	}
+} // .trend_area
