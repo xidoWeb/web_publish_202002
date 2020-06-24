@@ -146,24 +146,20 @@ var secondScrollStart = 850;
 		if(winScrollPlus >= retinaImgOffset){
 			rep = (winScrollPlus - retinaImgOffset) / winH * 30;
 			var peopleWp = retinaImgPercent + rep;
-			if(peopleWp < 100){retinaImg.css({width:peopleWp + 'vw'});	}
-			else{
-				retinaImg.css({width:100 + 'vw'});
-			}
+			(peopleWp < 100) ?retinaImg.css({width:peopleWp + 'vw'}) : retinaImg.css({width:100 + 'vw'});
 		}
 
 		if(winScroll >= retinaImgOffset){
 			rep2 = 120 - (winScroll - retinaImgOffset) / winH * 100;
 			retinaImg.css({position:'fixed', top:0});
-			people.css({height:rep2 + '%'});
-			
+			people.css({height:rep2 + '%'});			
 		}else{retinaImg.css({position:'relative', top:'auto'});	}
 
-		// if(rep2 <= 0){
-		// 	rep3 = winScrollPlus - retinaImgOffset / winH * 30;
-		// 	console.log( rep3 )
-		// 	// retinaImg.css({width:, height:});
-		// }
+		if(rep2 <= 0){
+			rep3 = winScrollPlus - retinaImgOffset / winH * 30;
+			console.log( rep3 )
+			// retinaImg.css({width:, height:});
+		}
 
 	});
 	// ----------------------------------------------------------------------
