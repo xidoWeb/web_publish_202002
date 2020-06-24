@@ -1,0 +1,5 @@
+// function.scss
+
+@function rem($unit){
+		@return $unit / 16 + rem;
+}

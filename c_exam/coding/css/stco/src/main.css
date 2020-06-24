@@ -96,10 +96,10 @@ h2, h3, h4, h5, h6, p, div, ul, li, ol, dl, dt, dd {
 #viewBox .indicator {
   position: absolute;
   left: 50%;
-  bottom: 40px;
+  bottom: 2.5rem;
   z-index: 500;
-  width: 263px;
-  height: 15px;
+  width: 16.4375rem;
+  height: 0.9375rem;
   transform: translateX(-50%);
 }
 #viewBox .indicator > ul {
@@ -108,10 +108,10 @@ h2, h3, h4, h5, h6, p, div, ul, li, ol, dl, dt, dd {
 }
 #viewBox .indicator > ul > li {
   float: left;
-  width: 15px;
+  width: 0.9375rem;
   height: 100%;
-  margin-right: 16px;
-  padding: 1px;
+  margin-right: 1rem;
+  padding: 0.0625rem;
   box-sizing: border-box;
 }
 #viewBox .indicator > ul > li:last-child {
@@ -249,10 +249,10 @@ h2, h3, h4, h5, h6, p, div, ul, li, ol, dl, dt, dd {
 .trend_area .indicator {
   position: absolute;
   left: 50%;
-  bottom: 30px;
+  bottom: 1.875rem;
   z-index: 500;
-  width: 400px;
-  height: 10px;
+  width: 25rem;
+  height: 0.625rem;
   transform: translateX(-50%);
 }
 .trend_area .indicator > ul {
@@ -261,10 +261,10 @@ h2, h3, h4, h5, h6, p, div, ul, li, ol, dl, dt, dd {
 }
 .trend_area .indicator > ul > li {
   float: left;
-  width: 10px;
+  width: 0.625rem;
   height: 100%;
-  margin-right: 16px;
-  padding: 1px;
+  margin-right: 1rem;
+  padding: 0.0625rem;
   box-sizing: border-box;
 }
 .trend_area .indicator > ul > li:last-child {
