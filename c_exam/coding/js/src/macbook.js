@@ -1,5 +1,9 @@
 (function($){
 	var win          = $(window);
+	var winH         = win.innerHeight();
+	var winHPart     = winH / 3 * 2;
+
+// #openLaptop
 	var openLaptop   = $('#openLaptop');
 	var openH2       = openLaptop.find('h2');
 	var macbook      = openLaptop.find('.macbook');
@@ -8,6 +12,11 @@
 	var j='0000';
 	var imgLength = 92;
 
+// #laptopSize
+	var laptopSize  = $('#laptopSize');
+	var laptopSizeOffset = laptopSize.offset().top;
+
+	// #openLaptop영역 처리  ---------------------------------------------------
 	for(var i=0; i<imgLength; i++){
 		
 		if(i < 10){
@@ -53,4 +62,18 @@ var secondScrollStart = 850;
 		}
 
 	});	
+	// #openLaptop영역 처리 끝 ---------------------------------------------------
+
+	// #laptopSize 영역 처리 ------------------------------------------------
+	win.on('scroll', function(){
+		var winScroll = $(this).scrollTop();
+		if(winScroll >= (laptopSizeOffset - winHPart) ){
+			console.log('laptopSizeOffset 스타트!!!');
+		}
+
+	});
+
+
+
+
 })(jQuery);
