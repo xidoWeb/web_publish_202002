@@ -1,7 +1,10 @@
 (function($){
+
 	var win          = $(window);
 	var winH         = win.innerHeight();
 	var winHPart     = winH / 4 * 3;
+	
+	win.animate({scrollTop:0},10);
 
 // #openLaptop
 	var openLaptop   = $('#openLaptop');
@@ -105,9 +108,19 @@ var secondScrollStart = 850;
 					macbookDl.eq(i).css({opacity: op});
 				}
 			}
+			// 동영상 동작하게 만들기
+			if( !macbookVideo.hasClass('active') ){
+				macbookVideo.addClass('active');
+				macbookVideo.find('video').get(0).play();
+			}
 		}
 	});
-
+	
+	// macbookVideo.on('click', function(e){
+	// 	e.preventDefault();
+	// 	macbookVideo.find('video').get(0).play();
+	// 	console.log(  macbookVideo.find('video')[0] )
+	// });
 
 
 
