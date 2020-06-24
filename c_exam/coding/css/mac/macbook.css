@@ -4,7 +4,6 @@
   min-height: 3000px;
   margin: auto;
   padding-top: 90px;
-  background-image: linear-gradient(#dfdfdf, #afafaf);
 }
 
 #headBox {
@@ -23,8 +22,9 @@
   top: 0;
   left: 0;
   right: 0;
-  width: 1400px;
-  height: 2000px;
+  width: 1100px;
+  height: auto;
+  min-height: 1000px;
   margin: auto;
   transform: translateY(100px);
 }
@@ -59,7 +59,7 @@
   height: auto;
 }
 #openLaptop p {
-  width: 1100px;
+  width: 1070px;
   height: auto;
   margin: auto;
   margin-top: 5rem;
@@ -75,7 +75,7 @@
 }
 
 #laptopSize {
-  margin-top: 2000px;
+  margin-top: 2300px;
   width: 1400px;
   height: auto;
   min-height: 1000px;

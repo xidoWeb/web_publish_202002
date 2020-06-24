@@ -6,7 +6,7 @@
 	var macbookInImg = '<img src="" alt="맥북이미지" />';
 	var url          = '../img/mac/';
 	var j='0000';
-	var imgLength = 93;
+	var imgLength = 92;
 
 	for(var i=0; i<imgLength; i++){
 		
