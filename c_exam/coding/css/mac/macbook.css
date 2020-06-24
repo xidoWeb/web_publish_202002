@@ -157,7 +157,6 @@ body {
   height: auto;
   min-height: 500px;
   margin-bottom: 5rem;
-  background-color: #ffa;
 }
 #retinaDisplay .mobile {
   display: none;
@@ -178,12 +177,13 @@ body {
 }
 #retinaDisplay .retina_image {
   position: relative;
+  top: 0;
   left: 50%;
   z-index: 500;
   transform: translateX(-50%);
   width: 1400px;
   height: auto;
-  background-color: #acf;
+  overflow: hidden;
 }
 #retinaDisplay .retina_image > div {
   position: absolute;
@@ -203,10 +203,24 @@ body {
 }
 #retinaDisplay .retina_image > div.artwork {
   z-index: 5;
-  background-image: url("../../img/mac_other/retins_bg_img.jpg");
+  background-image: url("../../img/mac_other/retina_laptop.jpg");
   background-repeat: no-repeat;
   background-position: 50% 0;
-  background-size: auto;
+  background-size: contain;
+  transform: scale(2);
+}
+#retinaDisplay .retina_image > div > .artwork_display {
+  position: absolute;
+  filter: grayscale(1);
+  top: 0;
+  bottom: 7%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 68%;
+  height: 80%;
+  background-position: 50% bottom;
+  background-image: url("../../img/mac_other/retins_bg_img.jpg");
 }
 #retinaDisplay p {
   width: 1050px;
@@ -229,9 +243,9 @@ body {
 }
 
 .dermi {
-  margin-top: 2000px;
+  margin-top: 4500px;
   width: 1400px;
   height: auto;
-  min-height: 1000px;
+  min-height: 3000px;
   background-color: #aff;
 }

@@ -95,8 +95,7 @@ body{
 #retinaDisplay{
 	width:$baseWidth; height:auto; min-height:500px;
 	margin-bottom:5rem;
-	background-color: #ffa;
-	
+		
 	.mobile {display: none;}
 	>h2{
 		width:80%; height:auto; margin:auto; margin-bottom:5rem;
@@ -110,10 +109,10 @@ body{
 	}
 
 	.retina_image{
-		position: relative; left: 50%; z-index:500;
+		position: relative; top:0; left: 50%; z-index:500;
 		transform:translateX(-50%);
 		width:$baseWidth; height:auto; 
-		background-color: #acf;
+		overflow: hidden;
 		>div{
 			position:absolute; top: 0; left: 0;
 			width:100%; max-width:100vw; height:100%;
@@ -125,10 +124,19 @@ body{
 				background-size: auto;
 			}
 			&.artwork{z-index:5;
-				background-image: url('../../img/mac_other/retins_bg_img.jpg');
+				background-image: url('../../img/mac_other/retina_laptop.jpg');
 				background-repeat: no-repeat;
 				background-position: 50% 0;
-				background-size: auto;
+				background-size: contain;
+				transform: scale(2);
+			}
+
+			>.artwork_display{ 
+				position: absolute;filter:grayscale(1);
+				top:0; bottom:7%; left: 0; right: 0; margin:auto;
+				width: 68%; height: 80%; 
+				background-position: 50% bottom;
+				background-image: url('../../img/mac_other/retins_bg_img.jpg');
 			}
 		}
 	}
@@ -140,8 +148,8 @@ body{
 
 }
 .dermi{
-	margin-top:2000px;
-	width:$baseWidth; height:auto; min-height:1000px;
+	margin-top:4500px;
+	width:$baseWidth; height:auto; min-height:3000px;
 	background-color: #aff;
 }
 

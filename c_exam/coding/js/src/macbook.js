@@ -4,7 +4,7 @@
 	var winH         = win.innerHeight();
 	var winHPart     = winH / 4 * 3;
 	
-	win.animate({scrollTop:0},10);
+	win.scrollTop(0);
 
 // #openLaptop
 	var openLaptop   = $('#openLaptop');
@@ -25,9 +25,10 @@
 
 // #retinaDisplay
 	var retinaDisplay     = $('#retinaDisplay');
-	var retinaImg         = retinaDisplay.find('.retina_image');
+	var retinaImg         = $('.retina_image');
 	var people            = retinaImg.find('.people');
 	var artwork           = retinaImg.find('.artwork');
+	var artworkDp           = retinaImg.find('.artwork_display');
 
 	
 
@@ -133,12 +134,14 @@ var secondScrollStart = 850;
 	var retinaImgWidth = retinaImg.outerWidth();
 	var winWidth       = win.outerWidth();
 	var retinaImgPercent = retinaImgWidth / winWidth * 100;
+	var retinaDptoImgOff = retinaDisplay.offset().top - retinaImgOffset;
+
 	// console.log(retinaImgPercent);
 	retinaImg.css({width: retinaImgPercent + 'vw'});
 	var rep = 0;
 	var rep2 = 100;
 	var rep3 = 0;
-
+	
 	win.on('scroll', function(){
 		var winScroll = $(this).scrollTop();
 		var winScrollPlus = winScroll + winHPart;
@@ -150,17 +153,27 @@ var secondScrollStart = 850;
 		}
 
 		if(winScroll >= retinaImgOffset){
+
 			rep2 = 120 - (winScroll - retinaImgOffset) / winH * 100;
-			retinaImg.css({position:'fixed', top:0});
-			people.css({height:rep2 + '%'});			
-		}else{retinaImg.css({position:'relative', top:'auto'});	}
+			retinaDisplay.css({position:'fixed', top:retinaDptoImgOff});
+			people.css({height:rep2 + '%'});
+			artworkDp.css({filter:'grayscale('+ rep2*0.1 +')'});	
 
-		if(rep2 <= 0){
-			rep3 = winScrollPlus - retinaImgOffset / winH * 30;
-			console.log( rep3 )
-			// retinaImg.css({width:, height:});
+		}else{retinaDisplay.css({position:'relative', top:0});	}
+
+		// if(rep2 <= 0){
+		// 	rep3 = winScroll - retinaImgOffset + winH / winH * 30;
+		// 	console.log( rep3 )
+		// 	// retinaImg.css({width:, height:});
+		// }
+
+		if(winScroll >= retinaImgOffset + winH){
+			rep3 = 2 - ((winScroll - (retinaImgOffset + winH)) / winH);
+			console.log((winScroll - (retinaImgOffset + winH)));
+			
+			if(rep3 >= 0.7){artwork.css({transform:'scale('+rep3+')'});}
+			if(rep3 <= 0) {retinaDisplay.css({top: retinaDptoImgOff + (rep3*winH*2)+'px'})}
 		}
-
 	});
 	// ----------------------------------------------------------------------
 })(jQuery);
