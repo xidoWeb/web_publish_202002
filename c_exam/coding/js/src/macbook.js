@@ -25,7 +25,7 @@
 
 // #retinaDisplay
 	var retinaDisplay     = $('#retinaDisplay');
-	var retinaImg         = $('.retina_image');
+	var retinaImg         = retinaDisplay.find('.retina_image');
 	var people            = retinaImg.find('.people');
 	var artwork           = retinaImg.find('.artwork');
 
@@ -95,7 +95,7 @@ var secondScrollStart = 850;
 	for( var i=0; i < macbookDl.length; i++ ){
 		dlOffset[i] = macbookDl.eq(i).offset().top;
 	}
-	console.log(dlOffset);
+	// console.log(dlOffset);
 
 	win.on('scroll', function(){
 		var winScroll = $(this).scrollTop();
@@ -130,15 +130,40 @@ var secondScrollStart = 850;
 	retinaImg.height(winH);
 	
 	var retinaImgOffset = retinaImg.offset().top;
+	var retinaImgWidth = retinaImg.outerWidth();
+	var winWidth       = win.outerWidth();
+	var retinaImgPercent = retinaImgWidth / winWidth * 100;
+	// console.log(retinaImgPercent);
+	retinaImg.css({width: retinaImgPercent + 'vw'});
+	var rep = 0;
+	var rep2 = 100;
+	var rep3 = 0;
 
 	win.on('scroll', function(){
 		var winScroll = $(this).scrollTop();
+		var winScrollPlus = winScroll + winHPart;
+		
+		if(winScrollPlus >= retinaImgOffset){
+			rep = (winScrollPlus - retinaImgOffset) / winH * 30;
+			var peopleWp = retinaImgPercent + rep;
+			if(peopleWp < 100){retinaImg.css({width:peopleWp + 'vw'});	}
+			else{
+				retinaImg.css({width:100 + 'vw'});
+			}
+		}
 
 		if(winScroll >= retinaImgOffset){
+			rep2 = 120 - (winScroll - retinaImgOffset) / winH * 100;
 			retinaImg.css({position:'fixed', top:0});
-		}else{
-			retinaImg.css({position:'relative', top:'auto'});
-		}
+			people.css({height:rep2 + '%'});
+			
+		}else{retinaImg.css({position:'relative', top:'auto'});	}
+
+		// if(rep2 <= 0){
+		// 	rep3 = winScrollPlus - retinaImgOffset / winH * 30;
+		// 	console.log( rep3 )
+		// 	// retinaImg.css({width:, height:});
+		// }
 
 	});
 	// ----------------------------------------------------------------------

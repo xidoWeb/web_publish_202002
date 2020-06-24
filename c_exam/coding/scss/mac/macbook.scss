@@ -2,6 +2,12 @@
 
 @import "./setting";
 
+body{
+	width:100%; 
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+
 #wrap{
 	width: $baseWidth; height:auto; min-height:3000px; 
 	margin:auto; padding-top:90px;
@@ -104,14 +110,26 @@
 	}
 
 	.retina_image{
-		position: relative; left: 0; right: 0; margin:auto; z-index:500;
+		position: relative; left: 50%; z-index:500;
+		transform:translateX(-50%);
 		width:$baseWidth; height:auto; 
 		background-color: #acf;
 		>div{
 			position:absolute; top: 0; left: 0;
-			width:100%; height:100%;
-			&.people{z-index:10; background-color: #0fc;}
-			&.artwork{z-index:5; background-color: #a8c;}
+			width:100%; max-width:100vw; height:100%;
+			&.people{z-index:10;
+				background-image: url('../../img/mac_other/retina_people.jpg');
+				background-color: #f2f2f2;
+				background-repeat: no-repeat;
+				background-position: 50% 0;
+				background-size: auto;
+			}
+			&.artwork{z-index:5;
+				background-image: url('../../img/mac_other/retins_bg_img.jpg');
+				background-repeat: no-repeat;
+				background-position: 50% 0;
+				background-size: auto;
+			}
 		}
 	}
 
