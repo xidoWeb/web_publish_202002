@@ -15,9 +15,11 @@
 }
 
 #openLaptop{
-	position: fixed; top:100px; left: 0; right: 0;
+	position: fixed; top:0; left: 0; right: 0;
 	width: $baseWidth; height:2000px;
 	margin:auto;
+	transform:translateY(100px);
+
 	>h2{
 		position: relative;  z-index:500;
 		width: 70%; height:auto; 
@@ -39,9 +41,10 @@
 		}
 	}
 
-	p{width:$baseWidth;	height:auto;
+	p{width:$baseWidth - 300px;	height:auto;
+		margin:auto;
 		margin-top:5rem; margin-bottom: 2rem;
-		font-size: 3rem; color:#555; font-weight: bold;
+		font-size: 2rem; color:#555; font-weight: bold;
 		word-break:keep-all;
 		}
 	.movie_link{width:$baseWidth; font-size: 2rem;}
