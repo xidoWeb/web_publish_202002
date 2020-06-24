@@ -9,3 +9,14 @@ $baseWidth: 1400px;
 // color
 $black:#202020; 
 
+// mixin
+@mixin content(){
+	  width:$baseWidth - 350px;	height:auto;
+		margin:auto; 
+		position: relative; 
+		top: 2rem;
+		opacity: 0;
+		margin-top:5rem; margin-bottom: 2rem;
+		font-size: 2rem; color:lighten($black, 35%); font-weight: 700;
+		word-break:keep-all;
+}

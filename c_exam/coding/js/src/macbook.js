@@ -115,13 +115,6 @@ var secondScrollStart = 850;
 			}
 		}
 	});
-	
-	// macbookVideo.on('click', function(e){
-	// 	e.preventDefault();
-	// 	macbookVideo.find('video').get(0).play();
-	// 	console.log(  macbookVideo.find('video')[0] )
-	// });
-
 
 
 })(jQuery);

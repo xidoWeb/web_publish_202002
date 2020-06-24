@@ -40,27 +40,19 @@
 			width: 100%; height:auto;
 		}
 	}
-
-	p{width:$baseWidth - 350px;	height:auto;
-		margin:auto; position: relative; top: 2rem;
-		opacity: 0;
-		margin-top:5rem; margin-bottom: 2rem;
-		font-size: 2rem; color:lighten($black, 40%); font-weight: 700;
-		word-break:keep-all;
-		}
+	p{ @include content;}
 	.movie_link{width:$baseWidth; font-size: 2rem;}
 }
 
 
 #laptopSize{
-	margin-top:2300px;
-	width:$baseWidth; height:auto; min-height:1000px;
-	margin-bottom:5rem;
-	background-color: #faf;
+	width:$baseWidth; height:auto; min-height:700px;
+	margin-top:2300px; margin-bottom:5rem;
 
 	.macbook{
 		position:relative;
-		width: 100%; height:600px; background-color: rgba(255,255,255,0.3);}
+		width: 100%; height:600px; 
+		background-color: rgba(255,255,255,0.3);}
 
 	.macbook_option{
 		position:absolute; top:0; left:0; right:0; z-index:500;
@@ -93,13 +85,42 @@
 
 
 
-
+// -------------------------------------------------
 #retinaDisplay{
 	width:$baseWidth; height:auto; min-height:500px;
 	margin-bottom:5rem;
 	background-color: #ffa;
+	
+	.mobile {display: none;}
+	>h2{
+		width:80%; height:auto; margin:auto; margin-bottom:5rem;
+		color:$black;
+		font-size:4rem; line-height:1.2;
+		> em {
+			display: block;
+			color:lighten($black, 45%);
+			font-style: normal; 
+		}
+	}
+
+	.retina_image{
+		position: relative;
+		width: 100%; height:auto; min-height:600px;
+		background-color: #acf;
+	}
+
+	p{ @include content;
+		opacity: 1; top:0;	
+		span {color:$black;	}
+	}
+
 }
 .dermi{
 	width:$baseWidth; height:auto; min-height:1000px;
 	background-color: #aff;
 }
+
+
+// @media all and (max-width:768px) {
+// 	.mobile{display: block;}
+// }

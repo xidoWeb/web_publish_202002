@@ -73,7 +73,7 @@
   margin-top: 5rem;
   margin-bottom: 2rem;
   font-size: 2rem;
-  color: #868686;
+  color: #797979;
   font-weight: 700;
   word-break: keep-all;
 }
@@ -83,12 +83,11 @@
 }
 
 #laptopSize {
-  margin-top: 2300px;
   width: 1400px;
   height: auto;
-  min-height: 1000px;
+  min-height: 700px;
+  margin-top: 2300px;
   margin-bottom: 5rem;
-  background-color: #faf;
 }
 #laptopSize .macbook {
   position: relative;
@@ -153,6 +152,49 @@
   min-height: 500px;
   margin-bottom: 5rem;
   background-color: #ffa;
+}
+#retinaDisplay .mobile {
+  display: none;
+}
+#retinaDisplay > h2 {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-bottom: 5rem;
+  color: #202020;
+  font-size: 4rem;
+  line-height: 1.2;
+}
+#retinaDisplay > h2 > em {
+  display: block;
+  color: #939393;
+  font-style: normal;
+}
+#retinaDisplay .retina_image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 600px;
+  background-color: #acf;
+}
+#retinaDisplay p {
+  width: 1050px;
+  height: auto;
+  margin: auto;
+  position: relative;
+  top: 2rem;
+  opacity: 0;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #797979;
+  font-weight: 700;
+  word-break: keep-all;
+  opacity: 1;
+  top: 0;
+}
+#retinaDisplay p span {
+  color: #202020;
 }
 
 .dermi {
