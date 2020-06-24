@@ -23,6 +23,16 @@
 	var macbookDl         = macbookDiv.children('dl');
 	var macbookVideo      = laptopSize.find('.macbook_video');
 
+// #retinaDisplay
+	var retinaDisplay     = $('#retinaDisplay');
+	var retinaImg         = $('.retina_image');
+	var people            = retinaImg.find('.people');
+	var artwork           = retinaImg.find('.artwork');
+
+	
+
+
+// 기능 수행============================================================================
 	// #openLaptop영역 처리  ---------------------------------------------------
 
 	openH2.animate({opacity:1, top:0, lineHeight:6+'rem'}, 800);
@@ -116,5 +126,20 @@ var secondScrollStart = 850;
 		}
 	});
 
+	// #retinaDisplay -------------------------------------------------------------
+	retinaImg.height(winH);
+	
+	var retinaImgOffset = retinaImg.offset().top;
 
+	win.on('scroll', function(){
+		var winScroll = $(this).scrollTop();
+
+		if(winScroll >= retinaImgOffset){
+			retinaImg.css({position:'fixed', top:0});
+		}else{
+			retinaImg.css({position:'relative', top:'auto'});
+		}
+
+	});
+	// ----------------------------------------------------------------------
 })(jQuery);

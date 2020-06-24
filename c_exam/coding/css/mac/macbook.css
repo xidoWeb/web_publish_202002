@@ -172,10 +172,28 @@
 }
 #retinaDisplay .retina_image {
   position: relative;
-  width: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 500;
+  width: 1400px;
   height: auto;
-  min-height: 600px;
   background-color: #acf;
+}
+#retinaDisplay .retina_image > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#retinaDisplay .retina_image > div.people {
+  z-index: 10;
+  background-color: #0fc;
+}
+#retinaDisplay .retina_image > div.artwork {
+  z-index: 5;
+  background-color: #a8c;
 }
 #retinaDisplay p {
   width: 1050px;
@@ -198,6 +216,7 @@
 }
 
 .dermi {
+  margin-top: 2000px;
   width: 1400px;
   height: auto;
   min-height: 1000px;
