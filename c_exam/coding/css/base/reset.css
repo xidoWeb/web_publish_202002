@@ -2,7 +2,7 @@
 /* reset.css */
 :root{font-size:16px;}
 
-html,body{width:100%; height:100%; font-family:sans-serif;}
+html,body{width:100%; height:100%; font-family:'Noto Sans KR', sans-serif;}
 html,body,div,h1,h2,h3,h4,h5,h6,p,pre,
 ul,ol,li,dl,dt,dd,
 img, figure, figcaption, hr,

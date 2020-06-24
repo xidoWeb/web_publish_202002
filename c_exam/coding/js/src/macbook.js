@@ -17,6 +17,10 @@
 	var laptopSizeOffset = laptopSize.offset().top;
 
 	// #openLaptop영역 처리  ---------------------------------------------------
+
+	openH2.animate({opacity:1, top:0}, 800);
+	openLaptop.find('p').delay(200).animate({opacity:1, top:0}, 800);
+
 	for(var i=0; i<imgLength; i++){
 		
 		if(i < 10){
