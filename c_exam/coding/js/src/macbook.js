@@ -1,7 +1,7 @@
 (function($){
 	var win          = $(window);
 	var winH         = win.innerHeight();
-	var winHPart     = winH / 3 * 2;
+	var winHPart     = winH / 4 * 3;
 
 // #openLaptop
 	var openLaptop   = $('#openLaptop');
@@ -13,12 +13,16 @@
 	var imgLength = 92;
 
 // #laptopSize
-	var laptopSize  = $('#laptopSize');
-	var laptopSizeOffset = laptopSize.offset().top;
+	var laptopSize        = $('#laptopSize');
+	var laptopSizeOffset  = laptopSize.offset().top;
+	var laptopSizeMacbook = laptopSize.find('.macbook');
+	var macbookDiv        = laptopSizeMacbook.children('div').children('div');
+	var macbookDl         = macbookDiv.children('dl');
+	var macbookVideo      = laptopSize.find('.macbook_video');
 
 	// #openLaptop영역 처리  ---------------------------------------------------
 
-	openH2.animate({opacity:1, top:0}, 800);
+	openH2.animate({opacity:1, top:0, lineHeight:6+'rem'}, 800);
 	openLaptop.find('p').delay(200).animate({opacity:1, top:0}, 800);
 
 	for(var i=0; i<imgLength; i++){
@@ -55,7 +59,7 @@ var secondScrollStart = 850;
 			imgSelect = imgLength-1;			
 		}
 
-		console.log(secondScrollStart);
+		// console.log(secondScrollStart);
 
 		macbook.find('img').eq( imgSelect ).show();
 		macbook.find('img').eq( imgSelect ).siblings().hide();
@@ -69,12 +73,39 @@ var secondScrollStart = 850;
 	// #openLaptop영역 처리 끝 ---------------------------------------------------
 
 	// #laptopSize 영역 처리 ------------------------------------------------
+
+	// $.each(macbookDl, function(data){	$(this).css({opacity:0});	});
+	macbookDl.css({opacity:0});
+	
+	// dl의 offset값을 각각 파악
+	var dlOffset = []; 
+	for( var i=0; i < macbookDl.length; i++ ){
+		dlOffset[i] = macbookDl.eq(i).offset().top;
+	}
+	console.log(dlOffset);
+
 	win.on('scroll', function(){
 		var winScroll = $(this).scrollTop();
-		if(winScroll >= (laptopSizeOffset - winHPart) ){
-			console.log('laptopSizeOffset 스타트!!!');
-		}
+		var winScrollPlus = winScroll + winHPart;
+		var op = 0;
+		// laptopSize 위치값파악하여 동작체크
+		// if(winScrollPlus >= laptopSizeOffset ){
+		// 	// console.log('laptopSizeOffset 스타트!!!');
+		// 	var op1 =	(winScrollPlus - laptopSizeOffset) / 400;
+		// 	// console.log( op1 );
+		// 	laptopSize.css({opacity: op1});
+		// }
 
+		// laptopSize 위치값파악 후 dl값의 위치에따라 투명도 처리
+		if(winScrollPlus >= laptopSizeOffset ){
+			// dl값을 각각 파악하여 매번 순환체크하도록 처리
+			for(var i=0; i< macbookDl.length; i++){
+				if( winScrollPlus  >= dlOffset[i]){
+					op = (winScrollPlus - dlOffset[i]) / 400;
+					macbookDl.eq(i).css({opacity: op});
+				}
+			}
+		}
 	});
 
 
