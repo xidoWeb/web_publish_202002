@@ -71,4 +71,7 @@ h1{
 		border:5px solid #ccc;
 		box-shadow:0.2rem 0.2rem 0.2rem rgba(51,51,51,0.7);
 		background-color: #fff;
+		background-size:400%;
+		background-repeat: no-repeat;
+		background-position: 0 0;
 	}
