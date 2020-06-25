@@ -1,0 +1,51 @@
+/* zoom.css */
+
+#wrap{ 
+	width:1400px; height:auto; min-height:700px;
+	margin:auto;	border:1px solid #777;	padding:1rem; border-radius:0.5rem;
+	background-color: #dfdfdf;
+ } 
+
+h1{
+	padding: 0.5rem;
+	border-bottom: 1px solid #777;	margin-bottom: 1rem;
+	text-align: center; color:#fff;	font-size:1.5rem; font-weight: bold;
+	background-color: #333;
+}
+.product{	width: 100%; height:auto; }
+.product:after{	content:" "; display: block; clear:both; }
+
+	.gallery{
+		float:left;
+		width: 49%; height:600px; 
+	}
+		.big{
+			width:100%; height:500px;
+			border:2px solid #555;
+			box-sizing: border-box;
+		}
+		.thum{
+			width: 100%; height:100px;
+			padding:1rem;
+			box-sizing: border-box; background-color: #fff;
+		}
+		.thum>ul{width: 100%; height:auto;}
+		.thum>ul:after{content:""; display: block; clear:both;}
+		.thum li{
+			width:70px; height:70px; border-radius:1rem;
+			margin-right:1rem; background-color: #caa;
+		}
+		.thum a{
+			display: block; width: 100%; height: 100%;
+		}
+		.thum span{
+			display: block; position: absolute; z-index: -1; width: 0; height: 0; overflow:hidden;
+		}
+	
+	.zoom{
+		float:right;
+		width:49%; height:600px;
+		background-color: #fff;
+		background-repeat: no-repeat;
+		background-size: 200% auto;
+	}
