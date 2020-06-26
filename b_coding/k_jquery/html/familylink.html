@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- familylink.html -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5">
+
+<!-- <link rel="stylesheet" href="../font/gyeonggi/gyeonggi.css"> -->
+<link rel="stylesheet" href="../fonts/fontawesome-5/css/all.min.css">
+
+	<link rel="stylesheet" href="../css/base/reset.css">
+	<link rel="stylesheet" href="../css/base/common.css">
+
+	<link rel="stylesheet" href="../css/src/familylink.css">
+
+	<!--[if IE]>
+		<script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+		<script src="../ie/pie/PIE.js"></script>
+		<script src="../ie/respond/dist/respond.min.js"></script>
+	<![endif]-->
+
+	<title>jquery</title>
+</head>
+<body>
+	<!-- layout -->
+	<h1><a href="./content.html">jQuery</a></h1>
+
+	<h2>family 사이트 이동하는 기능만들기</h2>
+	<div class="family_link clearfix">
+		<div class="family type_01">
+			<h3>select 태그를 이용하기</h3>
+			<select id="linkpage">
+				<option>family page</option>
+				<option value="http://google.com">구글</option>
+				<option value="http://xidoweb.com">시도웹</option>
+				<option value="http://naver.com">네이버</option>
+				<option value="http://w3schools.com">w3cschools</option>
+				<option value="http://daum.net">다음</option>
+			</select>
+		</div>
+		<div class="family type_02">
+			<h3>list이용하여 바로 가기 만들기</h3>
+			<dl>
+				<dt><button type="button">family page</button></dt>
+				<dd><a href="http://google.com">구글</a></dd>
+				<dd><a href="http://xidoweb.com">시도웹</a></dd>
+				<dd><a href="http://naver.com">네이버</a></dd>
+				<dd><a href="http://w3schools.com">w3cschools</a></dd>
+				<dd><a href="http://daum.net">다음</a></dd>
+			</dl>
+		</div>
+		<div class="family type_03">
+			<h3>list이용하여 디자인하고, 링크버튼 별도로 만들기</h3>
+			<dl>
+				<dt><button type="button">family page</button></dt>
+				<dd><button type="button" data-link="구글" data-href="http://google.com">구글</button></dd>
+				<dd><button type="button" data-link="시도웹" data-href="http://xidoweb.com">시도웹</button></dd>
+				<dd><button type="button" data-link="네이버" data-href="http://naver.com">네이버</button></dd>
+				<dd><button type="button" data-link="w3cschools" data-href="http://w3schools.com">w3cschools</button></dd>
+				<dd><button type="button" data-link="다음" data-href="http://daum.net">다음</button></dd>
+			</dl>
+			<div class="page_go"><a href="#" aria-valuetext="이동할 페밀리페이지를 선택하세요.">이동</a></div>
+		</div>
+		<div class="family type_04">
+			<h3>family페이지 링크경로/세팅 array형태</h3>
+		</div>
+	</div>
+
+	<!-- script -->
+<script src="../js/base/jquery-3.5.1.min.js"></script>
+<script src="../js/base/jquery-ui.min.js"></script>
+	<script src="../js/src/familylink.js"></script>
+</body>
+</html>

@@ -5,7 +5,8 @@
 	var winHPart     = winH / 4 * 3;
 	
 	win.scrollTop(0);
-
+	win.animate({scrollTop:0},0);
+	
 // #openLaptop
 	var openLaptop   = $('#openLaptop');
 	var openH2       = openLaptop.find('h2');
