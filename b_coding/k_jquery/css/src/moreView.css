@@ -33,6 +33,8 @@ h2{
 	width: 100%; height:auto;
 	padding:1rem; box-sizing: border-box;
 	background-color: #cdf;
+	margin-bottom: 1rem;
+	border-radius:0.5rem;
 }
 .content > div:after{
 	content:" "; display: block; clear: both; }
