@@ -12,9 +12,10 @@
 
   // content.append(sampleCode);
 
+
 	$.ajax({
 		url:"../data/people.json",
-	}).done(function(data){
+	}).done(function(jsonResult){
 		var i=0;
 		var person;
 		var firstView = 20;
@@ -26,11 +27,11 @@
 			var k = n || myView;
 			var j = i + k;		
 			for(; i<j; i++){			
-				content.append(sampleCode);
+				content.append(sampleCode).eq(i);
 				person = $('.person');
-				person.eq(i).find('span.num').text( i + 1 );
-				person.eq(i).find('.peopleName').text( data[i].name );
-				person.eq(i).find('.email').text( data[i].email );
+				person.find('span.num').text( i + 1 );
+				person.find('.peopleName').text( jsonResult[i].name );
+				person.find('.email').text( jsonResult[i].email );
 			}
 			if(i >= maxN){ moreBtn.hide() }
 		}; // LoadData(n);
