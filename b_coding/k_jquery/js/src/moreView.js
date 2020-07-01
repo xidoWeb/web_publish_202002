@@ -27,8 +27,8 @@
 			var k = n || myView;
 			var j = i + k;		
 			for(; i<j; i++){			
-				content.append(sampleCode).eq(i);
-				person = $('.person');
+				content.append(sampleCode);
+				person = $('.person').eq(i);
 				person.find('span.num').text( i + 1 );
 				person.find('.peopleName').text( jsonResult[i].name );
 				person.find('.email').text( jsonResult[i].email );
