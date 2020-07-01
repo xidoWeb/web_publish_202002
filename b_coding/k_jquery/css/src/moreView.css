@@ -30,12 +30,22 @@ h2{
 }
 
 .content > div {
+	position: relative;
 	width: 100%; height:auto;
 	padding:1rem; box-sizing: border-box;
 	background-color: #cdf;
 	margin-bottom: 1rem;
 	border-radius:0.5rem;
 }
+
+.num {
+	display: block;
+	position: absolute;
+	top: 1rem; right: 1rem;
+	text-align: right;
+	font-weight: bold;
+}
+
 .content > div:after{
 	content:" "; display: block; clear: both; }
 
