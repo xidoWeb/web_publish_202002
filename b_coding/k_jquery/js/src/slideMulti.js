@@ -1,0 +1,5 @@
+// slideMulti.js
+(function($){
+
+	
+})(jQuery);
