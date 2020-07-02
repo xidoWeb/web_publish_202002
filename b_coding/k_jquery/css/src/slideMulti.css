@@ -138,11 +138,12 @@ h1{
 
 .slide_banner li.active span{	transform:translateY(0); }
 .slide_banner li .con_01{	transition-delay:0; }
-.slide_banner li .con_02{	transition-delay:150ms; }
-.slide_banner li .con_03{	transition-delay:300ms; }
+.slide_banner li .con_02{	transition-delay:100ms; }
+.slide_banner li .con_03{	transition-delay:200ms; }
 
 .slide_banner li.up span{
-	
+	transform:translateY(-5rem);
+	transition:all 500ms ease-out;
 }
 
 /* -------------------------------- */
