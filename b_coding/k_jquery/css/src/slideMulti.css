@@ -93,15 +93,16 @@ h1{
 
 /* ---------------------------------------------------------------------- */
 .slide_banner li p{	
-	display: none; 
 	position: absolute; top: 50%; left: -2rem;
 	width:200%; height:	auto;
 	font-size:4rem; font-weight: bold;
 	color:var(--base-color);
 
+	opacity: 0;
+	transition:all 500ms ease;
 }
 
-/* .slide_banner li.active p {	display: block;	} */
+.slide_banner li.active p {	opacity: 1; }
 
 .slide_banner li span {	display: block; width: 100%; height:auto;	margin-bottom: 1rem;}
 .slide_banner li .con_01{	text-transform: uppercase;}
@@ -129,6 +130,21 @@ h1{
 .slide_banner li .con_03{
 	font-size:1.2rem;
 }
+
+.slide_banner li span{
+	transform:translateY(1.5rem);
+	transition:all 600ms ease;
+}
+
+.slide_banner li.active span{	transform:translateY(0); }
+.slide_banner li .con_01{	transition-delay:0; }
+.slide_banner li .con_02{	transition-delay:150ms; }
+.slide_banner li .con_03{	transition-delay:300ms; }
+
+.slide_banner li.up span{
+	
+}
+
 /* -------------------------------- */
 .back_img{
 	width: 100%; height: 100%; background-color: #aca;

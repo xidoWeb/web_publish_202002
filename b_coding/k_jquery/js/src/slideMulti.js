@@ -21,16 +21,16 @@ var btnTrue = true;
 
 btn.on('click', function(e){
 	e.preventDefault();
+	
 	var nBtn = $(this)[0] === $('.next')[0];
-
+	
   // 정면에 보이는 배너순서 찾기(.active 찾기)
 	for(var i=0; i<slideLi.length; i++){
 		hasActive = slideLi.eq(i).hasClass('active');
-		if(hasActive){
-			q = i;
-			break;
-		}
+		if(hasActive){q = i;	break;}
 	}
+
+	slideLi.removeClass('active');
 
 	if( nBtn && btnTrue){ 
 		//next 버튼 클릭시
@@ -50,8 +50,7 @@ btn.on('click', function(e){
 			transform:'translate3D(0, 0, 0) scale(1) rotateY(0)',	zIndex:100,
 			transition:'all 500ms linear'
 		});
-		setTimeout(function(){
-			slideLi.removeClass('active');
+		setTimeout(function(){			
 			slideLi.eq(0).appendTo(slideUl);		
 			slideLi     = slideUl.find('li');
 			slideLi.eq(1).addClass('active');
@@ -76,7 +75,6 @@ btn.on('click', function(e){
 				transition:'all 500ms linear'
 			});
 			setTimeout(function(){
-				slideLi.removeClass('active');
 				slideLi.eq(-1).prependTo(slideUl);		
 				slideLi     = slideUl.find('li');
 				slideLi.eq(1).addClass('active');
