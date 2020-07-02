@@ -33,21 +33,25 @@ btn.on('click', function(e){
 
 	if( nBtn ){ 
 		//next 버튼 클릭시
-		slideLi.eq(-1).css({
-			transform:'translateX(0) scale(1) rotateY(0)',	zIndex:100,
-			transition:'all 500ms ease'
-		});
-
-		slideLi.eq(q).css({
-			transform:'translateX(-100%) scale(0.8) rotateY(45deg)',zIndex:-1,
-			transition:'all 500ms ease'
-		});
-
 		slideLi.eq(0).css({
-			transform:'translateX(100%) scale(0.8) rotateY(-45deg)',zIndex:-1,
-			transition:'all 700ms ease'
+			transform:'translate3D(100%, 0, 0) scale(0.8) rotateY(-45deg)',
+			transition:'all 800ms linear'
+		});	
+		slideLi.eq(q).css({
+			transform:'translate3D(-100%, 0, 0) scale(0.8) rotateY(45deg)',zIndex:-1,
+			transition:'all 500ms linear'
 		});
-		
+		slideLi.eq(-1).css({
+			transform:'translate3D(0, 0, 0) scale(1) rotateY(0)',	zIndex:100,
+			transition:'all 800ms linear'
+		});
+		setTimeout(function(){
+			slideLi.removeClass('active');
+			slideLi.eq(0).appendTo(slideUl);		
+			slideLi     = slideUl.find('li');
+			slideLi.eq(1).addClass('active');
+		}, 1000);
+
 	}
 	/*else{
 		// prev 버튼 클리기

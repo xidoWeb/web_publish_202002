@@ -72,6 +72,7 @@ h1{
 	margin:auto;	box-sizing: border-box;	padding-top:250px;
 	background-color: #fff;
 	background-repeat: no-repeat;	background-position: 50% 50%;	background-size: cover;
+	/* transition:all 500ms linear; */
 }
 
 .slide_banner li:first-child{	
@@ -84,9 +85,9 @@ h1{
 	transform:translateX(100%) rotateY(-45deg) scale(0.8);	
 }
 
-.banner_01{ background-image:url('../../img/gallery/big/gallery_01.jpg');}
-.banner_02{ background-image:url('../../img/gallery/big/gallery_02.jpg');}
-.banner_03{ background-image:url('../../img/gallery/big/gallery_03.jpg');}
+.banner_01{ background-image:url('../../img/gallery/thum/gallery_01.jpg');}
+.banner_02{ background-image:url('../../img/gallery/thum/gallery_02.jpg');}
+.banner_03{ background-image:url('../../img/gallery/thum/gallery_05.jpg');}
 
 /* ---------------------------------------------------------------------- */
 .slide_banner li p{	
