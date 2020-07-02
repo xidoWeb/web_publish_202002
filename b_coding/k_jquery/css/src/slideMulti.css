@@ -1,4 +1,10 @@
 /* slideMulti.css */
+:root{
+	--base-color:#17aaff;
+}
+
+
+
 #wrap{
 	width: 90%; min-width:900px; max-width:1600px; height:auto;
 	margin:auto;	
@@ -6,8 +12,11 @@
 
 h1{
 	padding: 1rem; 
-	text-align: center; background-color: #555;
-	color:#fff; 
+	text-align: center; 
+	/* background-color: #555; */
+	background-color: var(--base-color);
+	/* color:#fff;  */
+	color:var(--text-color);
 }
 
 .viewBox{
@@ -25,6 +34,15 @@ h1{
 	width: 100%; height: 800px;
 	background-color: #ccc;
 }
+
+.slide_banner:after{
+	content:" "; display: block;
+	position: absolute; top: 0; left: 0;
+	z-index:300;
+	width: 100%; height: 100%;
+	background-color:rgba(0,0,0,0.7);
+}
+
 /* -----------------------------------------  */
 .btn{
 	position: absolute; top: 50%; left: 50%; z-index:1000;
@@ -35,8 +53,8 @@ h1{
 .btn > button {
 	/* display: block; */
 	float:left;
-	font-size:4rem;
-	transform:translateY(-50%);
+	font-size:4rem;	transform:translateY(-50%);
+	color:#fff;
 }
 .btn > button.next {	float:right; }
 /*  ---------------------------------------- */
@@ -49,55 +67,60 @@ h1{
 }
 
 .slide_banner li {
-	position: absolute; top:0; bottom:0; left:0; right:0; margin:auto;
+	position: absolute; top:0; bottom:0; left:0; right:0; 
 	width: 40%; height:600px;
+	margin:auto;	box-sizing: border-box;	padding-top:250px;
 	background-color: #fff;
-	box-sizing: border-box;
-	padding-top:250px;
+	background-repeat: no-repeat;	background-position: 50% 50%;	background-size: cover;
 }
 
-.slide_banner li p{	display: none; }
-
-.slide_banner li:first-child{
+.slide_banner li:first-child{	
 	z-index:-1;
 	transform:translateX(-100%) rotateY(45deg) scale(0.8);	
 }
 
-.slide_banner li:last-child{
+.slide_banner li:last-child{	
 	z-index:-1;
 	transform:translateX(100%) rotateY(-45deg) scale(0.8);	
 }
 
-.slide_banner li.active p {
-	display: block;
+.banner_01{ background-image:url('../../img/gallery/big/gallery_01.jpg');}
+.banner_02{ background-image:url('../../img/gallery/big/gallery_02.jpg');}
+.banner_03{ background-image:url('../../img/gallery/big/gallery_03.jpg');}
+
+/* ---------------------------------------------------------------------- */
+.slide_banner li p{	
+	display: none; 
 	position: absolute; top: 50%; left: -2rem;
 	width:200%; height:	auto;
 	font-size:4rem; font-weight: bold;
+	color:var(--base-color);
+
 }
 
-.slide_banner li span {	
-	display: block; width: 100%; height:auto;
-	margin-bottom: 1rem;
-}
-.slide_banner li .con_01{
-	text-transform: uppercase;
-}
+.slide_banner li.active p {	display: block;	}
+
+.slide_banner li span {	display: block; width: 100%; height:auto;	margin-bottom: 1rem;}
+.slide_banner li .con_01{	text-transform: uppercase;}
 .slide_banner li .con_02{
 	position: relative; left:50px;
 	text-transform: uppercase;
 	font-size:3rem;
 	margin-bottom: 2rem;
 }
+
 .slide_banner li .con_02:before{
 	content:""; 
 	position: absolute; top: 50%; left:-50px;
 	width:40px; height:0.5rem; 
 	background-color: #171717;
+	background-color: var(--base-color);
 }
 .slide_banner li .con_02:after{
 	content:""; position: absolute;
 	left:-50px; bottom:-0.5rem; width:80px; height:0.2rem;
 	background-color: #171717;
+	background-color: var(--base-color);
 }
 
 .slide_banner li .con_03{
