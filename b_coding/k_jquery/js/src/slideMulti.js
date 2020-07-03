@@ -23,7 +23,7 @@ var WhereActive = function(){
 		hasActive = slideLi.eq(i).hasClass('active');
 		if(hasActive){q = i;	break;}
 	}
-	return q;
+	console.log(q)
 };
 
 WhereActive();
@@ -60,6 +60,7 @@ btn.on('click', function(e){
 			slideLi.eq(1).addClass('active');
 			slideLi.removeClass('up');
 			btnTrue = true;
+			WhereActive();
 		}, 500);
 
 	}else if(btnTrue){
@@ -87,6 +88,7 @@ btn.on('click', function(e){
 				slideLi.eq(1).addClass('active');
 				slideLi.removeClass('up');
 				btnTrue = true;
+				WhereActive();
 			}, 500);
 	}
 });
@@ -96,19 +98,30 @@ btn.on('click', function(e){
 // 카드에 마우스 올렸을때 움직임처리
 // console.log(q);
 
-slideLi.eq(q).on('mousemove', function(e){
+slideLi.on('mousemove', function(e){
 	// 마우스 위치파악
-	var mouseX = e.originalEvent.offsetX;
-	var cardHalfWidth = $(this).outerWidth() / 2;
-
-	if(mouseX <= cardHalfWidth){
-		$(this).css({transform:'rotateY(-15deg)', transition:'all 300ms ease'});
-	}else{
-		$(this).css({transform:'rotateY(15deg)', transition:'all 300ms ease'});
+	var ha = $(this).hasClass('active');
+ if(ha){
+	 var mouseX = e.originalEvent.offsetX;
+	 var cardHalfWidth = $(this).outerWidth() / 2;
+	 console.log(mouseX);
+	 
+	 if(mouseX <= cardHalfWidth){
+		 $(this).css({transform:'rotateY(-15deg)', transition:'all 300ms ease'});
+		 $(this).find('p').css({transform:'rotateY(10deg) perspective(500px)', transition:'all 350ms ease 50ms'});
+		}else{
+			$(this).css({transform:'rotateY(15deg)', transition:'all 300ms ease'});
+			$(this).find('p').css({transform:'rotateY(-10deg) perspective(500px)', transition:'all 350ms ease 50ms'});
+		}
 	}
-	
 });
-
+	
+	slideLi.on('mouseleave', function(){
+		var ha = $(this).hasClass("active");
+		if(ha){
+			$(this).css({transform:'rotateY(0)'})
+		}
+	});
 
 
 

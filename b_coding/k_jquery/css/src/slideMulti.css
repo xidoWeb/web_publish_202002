@@ -127,24 +127,20 @@ h1{
 	background-color: var(--base-color);
 }
 
-.slide_banner li .con_03{
-	font-size:1.2rem;
-}
+.slide_banner li .con_03{ font-size:1.2rem; }
 
-.slide_banner li span{
-	transform:translateY(1.5rem);
-	transition:all 600ms ease;
-}
 
-.slide_banner li.active span{	transform:translateY(0); }
-.slide_banner li .con_01{	transition-delay:0; }
-.slide_banner li .con_02{	transition-delay:100ms; }
-.slide_banner li .con_03{	transition-delay:200ms; }
 
-.slide_banner li.up span{
-	transform:translateY(-5rem);
-	transition:all 500ms ease-out;
-}
+.slide_banner li span{	transform:translateY(2rem); }
+/* .slide_banner li.active span{	transform:translateY(0); } */
+.slide_banner li.action .con_01{	transform:translateY(0); transition:all 300ms ease 0; }
+.slide_banner li.action .con_02{	transform:translateY(0); transition:all 500ms ease 100ms; }
+.slide_banner li.action .con_03{	transform:translateY(0); transition:all 700ms ease 200ms; }
+
+.slide_banner li.up span{	transition:all 500ms ease-out; }
+.slide_banner li.up .con_01{	transform:translateY(-5rem); transition:all 800ms ease 0; }
+.slide_banner li.up .con_02{	transform:translateY(-3rem);  transition:all 800ms ease 200ms; }
+.slide_banner li.up .con_03{	transform:translateY(-1rem);  transition:all 800ms ease 400ms; }
 
 /* -------------------------------- */
 .back_img{
