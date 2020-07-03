@@ -60,7 +60,7 @@ btn.on('click', function(e){
 			slideLi.eq(1).addClass('active');
 			slideLi.removeClass('up');
 			btnTrue = true;
-			WhereActive();
+			// WhereActive();
 		}, 500);
 
 	}else if(btnTrue){
@@ -88,7 +88,7 @@ btn.on('click', function(e){
 				slideLi.eq(1).addClass('active');
 				slideLi.removeClass('up');
 				btnTrue = true;
-				WhereActive();
+				// WhereActive();
 			}, 500);
 	}
 });
@@ -108,10 +108,10 @@ slideLi.on('mousemove', function(e){
 	 
 	 if(mouseX <= cardHalfWidth){
 		 $(this).css({transform:'rotateY(-15deg)', transition:'all 300ms ease'});
-		 $(this).find('p').css({transform:'rotateY(10deg) perspective(500px)', transition:'all 350ms ease 50ms'});
+		 $(this).find('p').css({transform:'rotateY(10deg) perspective(500px)', transformOrigin:'50% 50%', transition:'all 350ms ease 50ms'});
 		}else{
 			$(this).css({transform:'rotateY(15deg)', transition:'all 300ms ease'});
-			$(this).find('p').css({transform:'rotateY(-10deg) perspective(500px)', transition:'all 350ms ease 50ms'});
+			$(this).find('p').css({transform:'rotateY(-10deg) perspective(500px)', transformOrigin:'50% 50%', transition:'all 350ms ease 50ms'});
 		}
 	}
 });
