@@ -74,19 +74,17 @@
 	(function(){
 		var i=0;
 		var j = true;
+		var samt;
+
 		setInterval(function(){
 			if(i < t3Arr.length && j == true){
 				inputText3.append(t3Arr[i]);
 				i += 1;
-				if(i >= t3Arr.length){
-					// i = 0;
-					j = false;
-				}
+				if(i >= t3Arr.length){ j = false; }
 			}else if(j == false && i > 0){
-				i -= 1;
-				var samt = inputText3.text().slice(0, -1);
+				samt = inputText3.text().slice(0, -1);
 				inputText3.text(samt); 
-				// console.log(i)
+				i -= 1;
 			}else{
 				j = true;
 			}

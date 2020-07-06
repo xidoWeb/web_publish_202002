@@ -66,7 +66,7 @@ h1 {
 	margin-left: 0.5rem;
 	width:0.5rem; height:3rem; 
 	background-color: #fff;
-	animation:lampPoint 400ms infinite;
+	animation:lampPoint 1s infinite;
 }
 
 @keyframes lampPoint {
