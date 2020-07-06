@@ -39,9 +39,8 @@
 	var inputText2 = $('.text_02');
 	var text2Con   = inputText2.text();
 	var t2Arr = text2Con.split('');
-	console.log(t2Arr);
+	// console.log(t2Arr);
 	inputText2.empty();
-
 	(function(){
 		var i = 0;
 		var j = 0;
@@ -53,7 +52,6 @@
 			}else if(i > t2Arr.length){
 				inputText2.find('.end_box').remove();
 				i = t2Arr.length -1;
-
 				j += 1;
 				// console.log(j);
 				if(j >= 5){
@@ -66,6 +64,33 @@
 		}, 300);
 	})()
 	
-	//
+	// 세번째 기능
+
+	inputText2.after('<p class="input_text text_03"></p>');
+	var inputText3 = $('.text_03');
+	var t3Text = "세번째 기능을 만들기!";
+	var t3Arr  = t3Text.split('');
+	// console.log(t3Arr);
+	(function(){
+		var i=0;
+		var j = true;
+		setInterval(function(){
+			if(i < t3Arr.length && j == true){
+				inputText3.append(t3Arr[i]);
+				i += 1;
+				if(i >= t3Arr.length){
+					// i = 0;
+					j = false;
+				}
+			}else if(j == false && i > 0){
+				i -= 1;
+				var samt = inputText3.text().slice(0, -1);
+				inputText3.text(samt); 
+				// console.log(i)
+			}else{
+				j = true;
+			}
+		}, 300);
+	})()
 
 })(jQuery);

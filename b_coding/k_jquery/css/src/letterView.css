@@ -11,7 +11,7 @@ h1 {
 
 #viewBox {
 	position: relative; left:50%;
-	width: 100vw; height:500px;
+	width: 100vw; min-height:500px;
 	background-color: #a5a;
 	transform:translateX(-50%);
 	padding:4rem; box-sizing: border-box;
@@ -57,3 +57,23 @@ h1 {
 .link>a:focus:after,.link>a:hover:after,
 .link>a:focus:before,.link>a:hover:before{ left:0; top:0}
 .link>a:hover, .link>a:focus{color:#fff;}
+
+
+.text_03:after{
+	content:"";
+	display:inline-block;
+	position: relative; top: 0.5rem;
+	margin-left: 0.5rem;
+	width:0.5rem; height:3rem; 
+	background-color: #fff;
+	animation:lampPoint 400ms infinite;
+}
+
+@keyframes lampPoint {
+	0% { opacity:0; }
+	20%{opacity: 0;}
+	40%{opacity: 1;}
+	60%{opacity: 1;}
+	80%{opacity: 0;}
+	100%{opacity: 0;}
+}
