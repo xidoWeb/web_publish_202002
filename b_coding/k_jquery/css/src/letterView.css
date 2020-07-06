@@ -12,15 +12,25 @@ h1 {
 #viewBox {
 	position: relative; left:50%;
 	width: 100vw; height:500px;
-	background-color: #fca;
+	background-color: #a5a;
 	transform:translateX(-50%);
 	padding:4rem; box-sizing: border-box;
 }
 
 .input_text{
-	font-size: 1.3rem;
+	width:50%; height:70px;
+	border-bottom:1px solid #fff;
+	font-size: 2.5rem;
 	font-weight: bold;
-	margin-top: 2rem; 	
+	margin-top: 1.5rem; 	
+	color:#fff;
+	text-shadow:0.1rem 0.1rem 0.1rem rgba(0,0,0,0.6);
+}
+.end_box{
+	display:inline-block;
+	width: 0.5rem; height:2.5rem;
+	margin-left:1rem;
+	background-color: #fff;
 }
 
 .link {
