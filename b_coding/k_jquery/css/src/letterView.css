@@ -1,0 +1,49 @@
+
+#wrap {
+	width: 960px; height: auto;
+	margin:auto; padding:2rem;
+}
+
+h1 {
+	padding: 1rem; background-color: #acc;
+	margin-bottom: 2rem;
+}
+
+#viewBox {
+	position: relative; left:50%;
+	width: 100vw; height:500px;
+	background-color: #fca;
+	transform:translateX(-50%);
+	padding:4rem; box-sizing: border-box;
+}
+
+.input_text{
+	font-size: 1.3rem;
+	font-weight: bold;
+	margin-top: 2rem; 	
+}
+
+.link {
+	position: relative; overflow: hidden;
+	width:200px; height:25px;
+	margin: 2rem; margin-left: 0;	padding:2rem;
+	border:2px solid #707;
+	font-weight: bold;
+	transition:all 200ms linear 100ms;
+}
+.link>a{display: block; width: 100%; height: 100%;}
+
+.link>a:after, .link>a:before{
+	content:""; display: block;
+	position: absolute; left: -190%; top:50%; z-index: -1;
+	width: 200%; height: 100%;
+	background-color: #707;	
+	border-top-right-radius:120px;
+	border-bottom-right-radius:120px;
+	transition:all 300ms linear;
+}
+.link>a:before{left:90%; top:-50%;}
+
+.link>a:focus:after,.link>a:hover:after,
+.link>a:focus:before,.link>a:hover:before{ left:0; top:0}
+.link>a:hover, .link>a:focus{color:#fff;}

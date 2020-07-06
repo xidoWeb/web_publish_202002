@@ -1,11 +1,14 @@
 // slideMulti.js
 (function($){
-// 선택자
+
+	
+	// 선택자
 	var slideBanner = $('.slide_banner');
 	var btn         = $('.btn').find('button');
 	var slideUl     = slideBanner.children('ul');
 	var slideLi     = slideUl.find('li');
 	
+	slideBanner.css({overflow:'hidden'});
 // ---------------------------------------
 // 순서 변경, .active삭제 및 재설정
 slideLi.removeClass('active');
