@@ -11,9 +11,9 @@ ctx.fillStyle = baseColor;
 
 var MyGraph = function(x, y, p, s){
 
-	var posX = x || 200;
-	var posY = y || 200;
-	var percent = p || 70; 
+	var posX = x * 250 - 100;
+	var posY = y * 250 - 100;
+	var percent = p ; 
 	var skill = s || 'program';
 
 	var myP = function(percent){
@@ -26,18 +26,50 @@ var MyGraph = function(x, y, p, s){
 	ctx.arc(posX,posY,100, Math.PI * 1.5 , myP(percent), false);
 	ctx.stroke();
 
-	ctx.font = "bolder 35px sans-serif";
-	ctx.fillText(skill, posX, posY);
-	ctx.font = "bold 25px sans-serif";
-	ctx.fillText(percent+ '%', posX, posY + 35);
+	ctx.font = "normal 35px sans-serif";
+	ctx.fillText(skill, posX, posY-15);
+	ctx.font = "bold 40px sans-serif";
+	ctx.fillText(percent+ '%', posX, posY + 40);
 
 }// MyGraph(x좌표, y좌표, percent, 스킬명);
 
-MyGraph(150, 150, 90, 'HTML');
-MyGraph(400, 150, 95, 'CSS');
-MyGraph(650, 150, 95, 'SCSS');
-MyGraph(150, 400, 85, 'Js');
-MyGraph(400, 400, 85, 'jQuery');
-MyGraph(150, 650, 70, 'Photoshop');
-MyGraph(400, 650, 70, 'Illustrator');
-MyGraph(650, 650, 70, 'Indesign');
+var MyBar = function(x, y, p, t){
+
+	var per = p * 2;
+
+	ctx.globalAlpha = 0.3;
+	ctx.lineWidth = 30;
+
+	ctx.beginPath();
+	ctx.moveTo(x,y);
+	ctx.lineTo(x+200, y);
+	ctx.stroke();
+	
+	ctx.globalAlpha = 1;
+	ctx.beginPath();
+	ctx.moveTo(x,y);
+	ctx.lineTo(x+ per, y);
+	ctx.stroke();
+
+	ctx.fillStyle = baseColor;
+	ctx.font = "bold 30px myriadPro";
+	ctx.textAlign = "left";
+	ctx.fillText(t, x-15, y+55);
+
+	ctx.textAlign = "right";
+	ctx.fillStyle = "#f07";
+	ctx.fillText(p + '%', x+225, y+55)
+}
+
+
+MyGraph(1,1, 90, 'HTML');
+MyGraph(2,1, 95, 'CSS');
+MyGraph(3,1, 95, 'SCSS');
+MyGraph(1,2, 85, 'Js');
+MyGraph(2,2, 85, 'jQuery');
+// MyGraph(1,3, 70, 'Photoshop');
+// MyGraph(2,3, 70, 'Illustrator');
+// MyGraph(3,3, 70, 'Indesign');
+MyBar(100,570, 70, 'Photoshop');
+MyBar(500,570, 95, 'Illustator');
+MyBar(100,700, 90, 'Indesign');
