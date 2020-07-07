@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- canvas_03.html -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5">
+
+<!-- <link rel="stylesheet" href="../font/gyeonggi/gyeonggi.css"> -->
+<link rel="stylesheet" href="../fonts/fontawesome-5/css/all.min.css">
+
+	<link rel="stylesheet" href="../css/base/reset.css">
+	<link rel="stylesheet" href="../css/base/common.css">
+
+	<link rel="stylesheet" href="../css/src/canvas_01.css">
+
+	<!--[if IE]>
+		<script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+		<script src="../ie/pie/PIE.js"></script>
+		<script src="../ie/respond/dist/respond.min.js"></script>
+	<![endif]-->
+
+	<title>Document</title>
+</head>
+<body>
+	<!-- layout -->
+	<div id="wrap">
+		<h1><a href="../index.html">javascript</a></h1>
+		<h2>canvas 곡선그리기</h2>
+		
+		<p>곡선은 표현 메소드가 4가지 이다.</p>
+		<p>arc, arcTo, quardraticCurveTo, bezierCurbeTo</p>
+		<ul>
+			<li><em>arc</em>: x, y, 지름, 시작점, 끝점, 방향(시계/반시계)</li>
+			<li><em>arcTo</em>: moveTo, lineTo 와 함께 사용하는 형태로, 두개의 선의 모서리 곡선형태</li>
+			<li><em>quardraticCurveTo</em>: 베지어곡선 포인트 1개를 이용하여 그리는 곡선형태</li>
+			<li><em>bezierCurbeTo</em>: 베지어곡선 포인트 2개를 이용하여 그리는 곡선형태</li>
+		</ul>
+
+		<div id="viewBox">
+			<canvas class="paper" width="800px" height="800px">
+				<p>브라우저 미지원입니다.</p>
+			</canvas>
+		</div>	
+	</div>
+
+	<!-- script -->
+<script src="../js/base/jquery-3.5.1.min.js"></script>
+<script src="../js/base/jquery-ui.min.js"></script>
+	<script src="../js/src/canvas_03.js"></script>
+</body>
+</html>
