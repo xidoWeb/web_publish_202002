@@ -1,0 +1,34 @@
+/* canvas_01.css */
+:root{
+	--black : #333;
+}
+
+
+#wrap {
+	width: 800px; height:auto;
+	margin:auto;
+}
+
+h1{
+	text-transform: uppercase;
+	padding-bottom:0.5rem;
+	border-bottom:1px solid var(--black);
+}
+
+h2{
+	padding: 0.5rem;
+	background-color: #acc;
+}
+
+
+#viewBox{
+	width: 400px; height:400px;
+	margin:auto; margin-top:2rem;
+	/* background-color: #dfdfdf; */
+	border:1px solid var(--black);
+}
+
+.paper{
+	width: 100%; height: 100%;
+	background-color: #caa;
+}
