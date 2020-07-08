@@ -31,8 +31,17 @@ mm.innerHTML = month;        // $('.mm').html(month);
 dd.innerHTML = day;          // $('.dd').html(day);
 wd.innerHTML = weekDay;      // $('.week_day').html(weekDay);
 
-setInterval(function(){
-	var myTime  = new Date().toLocaleTimeString();  
-	ti.innerHTML = myTime;         // $('.time').html(time);
-},100);
+// setInterval(function(){
+// 	var myTime  = new Date().toLocaleTimeString();  
+// 	ti.innerHTML = myTime;         // $('.time').html(time);
+// },100);
 
+var TimeCheck = function(){
+	var myTime  = new Date().toLocaleTimeString();
+	ti.innerHTML = myTime;
+	requestAnimationFrame(TimeCheck);
+};
+TimeCheck();
+
+
+// --------------------------------------------------------------
