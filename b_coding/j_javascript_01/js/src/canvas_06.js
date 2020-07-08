@@ -45,7 +45,9 @@ TimeCheck();
 
 // --------------------------------------------------------------
 var canvas = document.querySelector('.paper');
+var canvasImg = document.querySelector('.canvas_to_img');
 var ctx = canvas.getContext('2d');
+
 
 var Deg = function(d){
 	var Pi = d /360 * 2 + 1.5;
@@ -125,11 +127,18 @@ var RenderTime = function(){
 	ctx.font = "normal 25px Arial";
 	ctx.fillText(nowTime, centerX, centerY+140);
 
+	
+	var imgData   = canvas.toDataURL();  // png
+	// var imgData   = canvas.toDataURL('image/jpeg'); // jpg
+	canvasImg.src = imgData;
+	canvasImg.alt = nowTime;
+
 	requestAnimationFrame( RenderTime );
 };
 
 // setInterval(function(){
 // 	RenderTime();
 // }, 40)
-
+	canvas.style = "display:none";
 	RenderTime();
+
