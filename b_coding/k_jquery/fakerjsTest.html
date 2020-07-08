@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		#wrap{width: 800px; height: auto; margin:auto; background-color: #ddd; padding:1rem; margin-bottom:10rem;}
+		#wrap:after, ul:after{content:""; display: block; clear: both;}
+		ul,li{padding: 0; list-style: none;}
+		li{float:left; width: 230px; height: 250px; background-color: #577; margin: 1rem;
+			text-align: center; font-size: 2rem; box-sizing: border-box; padding:2rem; padding-top: 3.5rem; color:#fff;}
+
+		ul{width: 100%; height:auto; border:1px solid #333; box-sizing: border-box;}
+
+		.more{ width: 100px; height: 50px; margin:auto; margin-top: 1rem; }
+		.more>button{ border: none; width: 100%; height: 100%; background-color: #acc; border-radius:1rem; 
+		              font-weight: bold; box-shadow: 0.1rem 0.1rem 0.1rem black; outline: 0;}
+		.more>button:focus{ background-color: #7ff; }
+
+		.modal{ display: none;
+			    position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 100; 
+		      width: 500px; height: 200px; margin:auto;
+					}
+		.close, .close>button{
+			position: absolute; right: 0; right: 0; width: 30px; height: 30px; background-color: #171717; color:#fff;
+			border:none;
+		}
+		.modal> .img{
+			width: 100%; height: 100%; background-color: #fa0;
+			background-color:#fff; border-radius:1rem; box-shadow: 0.1rem 0.1rem 0.1rem black;
+		}
+		.modal > .bg{
+			content:""; display: block;
+			position: fixed; top:0; left:0; z-index: -1;
+			width: 100%; height: 100%; background-color:rgba(0,0,0,0.3);
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div class="view_list">
+			<ul>
+				
+			</ul>
+			<div class="more">
+				<button type="button">더보기</button>
+			</div>
+		</div>
+
+		<div class="modal">
+			<div class="close"><button type="button">X</button></div>
+			<div class="img"></div>
+			<div class="bg"></div>
+		</div>
+	</div>
+
+
+
+	<script src = "http://unpkg.com/jquery"></script>
+	<script>
+		var ul = $('ul');
+		var li;//  = ul.children('li');
+		var liT = '<li></li>';
+		var more = $('.more').find('button');
+		var imgBox = $('.img');
+		var data;
+		var viewN = 0;
+		var modalBox = $('.modal');
+		var i=0; 
+		var loadL = 6; // 보일갯수
+		var listViewLen = loadL; // 현재 보이는 갯수
+
+		$.ajax({
+			type:'GET',
+			url:'./data/people2.json',
+			async:false,
+			success:(function(db){
+			// console.log(data.length);
+			data = db;
+			})
+		 });
+
+		
+			var viewLen = function(){	
+				var myLen = i+loadL;
+				listViewLen = myLen;
+				for(; i<myLen; i++){					
+					if(i >= data.length){	
+						more.hide();	
+						$('#wrap').css({backgroundColor:'#ccf'});
+						break;
+					}
+					ul.append(liT);
+					li = ul.children('li');
+					li.eq(i).text(data[i].displayName);
+					// li.eq(i).css({backgroundImage:'url('+ data[i].image +')'});			
+				}
+				// console.log(i)			
+			};
+			viewLen();
+
+					more.on('click', function(){
+						viewLen();
+					});
+
+
+		//  modal-------------------------------------------
+
+		$(document).find('ul').on('click','li', function(e){
+			var liImg = $(this);
+			var index = liImg.index();
+			viewN = index;
+			
+			
+			modalBox.fadeIn(50, function(){
+				console.log(data[index].image )
+				imgBox.css({backgroundImage:'url('+ data[index].image +')'});
+			});
+		});
+
+		$(document).on('keyup', imgBox, function(e){
+			var key = e.key.toLowerCase();
+			console.log(key);
+			switch(key){
+				case 'arrowup':
+				case 'arrowleft':
+					viewN -= 1;
+					break;
+
+				case 'arrowright':
+				case 'arrowdown':
+					viewN += 1;
+					break;
+
+				case 'escape':
+					modalBox.fadeOut(300);
+					break;
+			}
+
+			// 현재 로드된 이미지 갯수파악후 처리
+			if(viewN >= listViewLen || viewN < 0){
+				// 갯수가 넘으면 모달 사라지게 만들기
+				modalBox.fadeOut(300);
+			}else{
+				imgBox.css({backgroundImage:'url('+ data[viewN].image +')'});
+			}
+			console.log(viewN)
+		});
+
+		modalBox.find('button').on('click', function(e){
+			e.preventDefault();
+			modalBox.fadeOut(300);
+		});
+	// })
+	// });
+	</script>
+</body>
+</html>
