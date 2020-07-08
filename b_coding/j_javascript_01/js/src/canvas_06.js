@@ -48,9 +48,9 @@ var canvas = document.querySelector('.paper');
 var ctx = canvas.getContext('2d');
 
 var Deg = function(d){
-	var Pi = Math.PI / 180;
-	return Mydeg = Pi * d;
-	// return Mydeg;
+	var Pi = d /360 * 2 + 1.5;
+	var myResult = Math.PI * Pi;
+	return myResult;
 };
 
 
@@ -89,17 +89,17 @@ var RenderTime = function(){
 	
 	// Hours
 	ctx.beginPath();
-	ctx.arc(centerX, centerY, 300, Deg(270) , Deg(h * 15/2));
+	ctx.arc(centerX, centerY, 300, Deg(0), Deg(h * 30));
 	ctx.stroke();
 
 	// Minutes
 	ctx.beginPath();
-	ctx.arc(centerX, centerY, 250, Deg(270), Deg(m * 6));
+	ctx.arc(centerX, centerY, 250, Deg(0), Deg(m * 6));
 	ctx.stroke();
 
 	// Seconds
 	ctx.beginPath();
-	ctx.arc(centerX, centerY, 200, Deg(270), Deg(s * 6));
+	ctx.arc(centerX, centerY, 200, Deg(0), Deg(s * 6));
 	ctx.stroke();
 
 	// console.log( Deg(s * 6) );
