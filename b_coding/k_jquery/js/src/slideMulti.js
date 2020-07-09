@@ -84,6 +84,14 @@ btn.on('click', function(e){
 			// WhereActive();
 		}, 500);
 
+		// 배경 이미지 배치
+		backImgUl.stop().animate({marginLeft:-200+'%'}, function(){
+			backLi.eq(0).appendTo(backImgUl);
+			backLi      = backImgUl.find('li');
+			backImgUl.css({marginLeft:-100 + '%'});
+		});
+
+
 	}else if(btnTrue){
 		// prev 버튼 클릭
 			// 버튼 중복기능 방지
@@ -111,6 +119,13 @@ btn.on('click', function(e){
 				btnTrue = true;
 				// WhereActive();
 			}, 500);
+
+		// 배경 이미지 배치
+		backImgUl.stop().animate({marginLeft:0}, function(){
+			backLi.eq(-1).prependTo(backImgUl);
+			backLi      = backImgUl.find('li');
+			backImgUl.css({marginLeft:-100 + '%'});
+		});
 	}
 });
 

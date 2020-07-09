@@ -43,7 +43,7 @@ h1{
 	position: absolute; top: 0; left: 0;
 	z-index:300;
 	width: 100%; height: 100%;
-	/* background-color:rgba(0,0,0,0.7); */
+	background-color:rgba(0,0,0,0.5);
 }
 
 /* -----------------------------------------  */
@@ -148,12 +148,13 @@ h1{
 /* -------------------------------- */
 .back_img{
 	position: absolute; top: 0; left: 0; z-index: -1;
-	width: 100%; height: 100%; background-color: #aca;
+	width: 100%; height: 100%;
+	 /* background-color: #aca; */
 }
 
 .back_img > ul{
 	width: 300%; height: 100%; margin-left:-100%;
-	background-color: #acf;
+	/* background-color: #acf; */
 }
 .back_img li{
 	float:left; width:calc(100% / 3); height:100%;
