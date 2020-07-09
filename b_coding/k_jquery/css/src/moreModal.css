@@ -41,7 +41,13 @@ h2{
 	border-radius:0.3rem;
 	overflow: hidden;
 }
-
+#listViewBox span{
+	display: block;
+	padding-left: 1rem;
+	color:#fff; 
+	font-size: 3rem;
+	font-weight: bold;
+}
 
 .more_btn {
 	width: 200px; height: 40px;
