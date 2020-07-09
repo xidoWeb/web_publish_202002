@@ -1,0 +1,96 @@
+/* moreModal.css */
+
+#wrap {
+	width: 1024px; height:auto;
+	margin:auto;
+	padding-bottom: 15rem;
+}
+
+h1{
+	padding: 1rem; text-align: center;
+	background-color: #acc;
+}
+
+h2{ 
+	padding: 1rem; border-bottom: 1px solid #777; 
+}
+
+#listViewBox {
+	width: 100%; height: auto;
+	padding: 1rem; margin-top: 2rem;
+	box-sizing: border-box;
+	border:1px solid #777;
+	padding-bottom: 2rem;
+}
+
+#listViewBox .list{
+	width: 100%; height: auto; min-height:100px;
+}
+
+#listViewBox li {
+	float: left; width:33%; height:450px;
+	padding:0.5rem; box-sizing: border-box;
+}
+
+#listViewBox li:nth-child(3n-1){ transform:translateY(-250px)}
+#listViewBox li:nth-child(2){ transform:translateY(0); height:200px;}
+
+#listViewBox li a{
+	display: block; width: 100%; height: 100%;
+	background-color: #ccc;
+	border-radius:0.3rem;
+	overflow: hidden;
+}
+
+
+.more_btn {
+	width: 200px; height: 40px;
+	margin:auto; margin-top: 10rem;
+}
+
+.more_btn button{
+	width: 100%; height: 100%; background-color: #077;
+	color:#fff;
+}
+
+
+
+#modalBox {
+	display: none;
+	position: fixed; top: 0; left: 0; z-index:5000;
+	width: 100%; height: 100%; 
+}
+
+.modal_view {	
+	position: absolute; top: 0; bottom: 0; left: 0;right: 0;
+	margin:auto;
+	width: 900px; height: 600px;
+	background-color: #fff;
+	border:2px solid #777;
+	border-radius: 0.5rem;
+	box-shadow: 0.2rem 0.2rem 0.2rem rgba(0,0,0,0.5);
+}
+
+.modal_close{
+	position:absolute; top: -20px; right: -20px; 
+	width: 70px; height: 70px; 
+}
+.modal_close button{ 
+	display: block; 
+	width: 100%; height: 100%; 
+	background-color: #171717;
+	color:#fff; font-weight: bold; font-size: 1.2rem;
+	border-radius: 100%;
+}
+
+.modal_image{
+	width: 100%; height: 100%;
+	background-color: #cda;
+	overflow: hidden;
+}
+
+.modal_bg {
+	position: absolute; width: 100%; height: 100%; z-index:-1;
+	background-color: rgba(0,0,0,0.5);
+}
+
