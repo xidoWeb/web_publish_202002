@@ -59,8 +59,8 @@ modalView.on('mousemove', function(e){
 					break;
 
 					case 'escape':
+						listUl.find('li').eq(cardI).find('a').focus();
 						modalWin.fadeOut();
-						listUl.find('li').eq(indexCard).find('a').focus();
 					break;
 				}
 				console.log(cardI);
