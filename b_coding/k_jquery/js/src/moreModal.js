@@ -2,6 +2,7 @@
 
 var listData;
 var colorArr = [];
+var NowListLen;
 
 (function($){
 	var listView = $('#listViewBox');
@@ -15,15 +16,21 @@ var colorArr = [];
 	i = 0; 
 	
 	var InsertLi = function(db ,color){
-		var NowListLen = i + 3;
+		NowListLen = i + 10;
 		
 		for(; i<NowListLen; i+=1){
-			listUl.append(liCode);
-			// console.log(i);
-			listUl.find('li').eq(i).children('a').css({
-				backgroundColor:color[i]
-			});
-			listUl.find('li').eq(i).find('span').text(db[i].displayName);
+			console.log(i,  db.length)
+			if(i >= db.length){
+				moreBtn.hide();
+				break;
+			}else{				
+				listUl.append(liCode);
+				// console.log(i);
+				listUl.find('li').eq(i).children('a').css({
+					backgroundColor:color[i]
+				});
+				listUl.find('li').eq(i).find('span').text(db[i].displayName);
+			}
 		}
 	};
 	
@@ -40,6 +47,7 @@ var colorArr = [];
 				colorArr[colorI] ='hsla(' + parseInt(Math.random() * 360) + ', ' + '50%, 50%, 1)';
 			}
 			// --------------------------------------------------
+			// 더보기 버튼 클릭
 			InsertLi(listData, colorArr);
 			moreBtn.on('click', function(){
 				InsertLi(listData, colorArr);
