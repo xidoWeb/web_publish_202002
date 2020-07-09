@@ -3,33 +3,51 @@
 
 	
 	// 선택자
+	var viewBox    = $('.viewBox');
 	var slideBanner = $('.slide_banner');
 	var btn         = $('.btn').find('button');
-	var slideUl     = slideBanner.children('ul');
-	var slideLi     = slideUl.find('li');
-	
+	var slideUl     = slideBanner.children('.slide_card');
+	var slideLi     = slideUl.find('li');	
+	// -------------------------------------------------
 	slideBanner.css({overflow:'hidden'});
-// ---------------------------------------
-// 순서 변경, .active삭제 및 재설정
-slideLi.removeClass('active');
-slideLi.eq(-1).prependTo(slideUl);
-slideLi     = slideUl.find('li');
-slideLi.eq(1).addClass('active');
+	// -------------------------------------------------
+	var backImg = $('.back_img');
+	var backImgUl = backImg.children('ul');
+	var backLi    = backImgUl.find('li');
 
 
-// 정면에 보이는 배너순서 찾기(.active 찾기)
-var hasActive;
-var q;
-var WhereActive = function(){
-  // 정면에 보이는 배너순서 찾기(.active 찾기)
-	for(var i=0; i<slideLi.length; i++){
-		hasActive = slideLi.eq(i).hasClass('active');
-		if(hasActive){q = i;	break;}
-	}
-	console.log(q)
-};
+	// ------------------------------------------------
+	setTimeout(function(){
+		slideBanner.css({transform:'scale(1)', opacity:1, transition:'all 500ms ease-in'});
+	}, 500);
+	// --------------------------------------------------
+	// 순서 변경, .active삭제 및 재설정
+	// 카드배너 순서
+	slideLi.removeClass('active');
+	slideLi.eq(-1).prependTo(slideUl);
+	slideLi     = slideUl.find('li');
+	slideLi.eq(1).addClass('active');
+	
+	// 배경배너 순서
+	backLi.eq(-1).prependTo(backImgUl);
+	backLi      = backImgUl.find('li');
+	backLi.css({filter:'blur(10px) grayscale(0.5)'});
+	// --------------------------------------------------
 
-WhereActive();
+
+	// 정면에 보이는 배너순서 찾기(.active 찾기)
+	var hasActive;
+	var q;
+	var WhereActive = function(){
+		// 정면에 보이는 배너순서 찾기(.active 찾기)
+		for(var i=0; i<slideLi.length; i++){
+			hasActive = slideLi.eq(i).hasClass('active');
+			if(hasActive){q = i;	break;}
+		}
+		console.log(q)
+	};
+
+	WhereActive();
 // --------------------------------------
 // 버튼 클릭시 내용 변경1
 var btnTrue = true;
@@ -125,6 +143,8 @@ slideLi.on('mousemove', function(e){
 			$(this).css({transform:'rotateY(0)'})
 		}
 	});
+
+// ------------------------------------------------
 
 
 
