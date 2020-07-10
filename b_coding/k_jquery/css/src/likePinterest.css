@@ -17,7 +17,7 @@
 
 #cardBox{
 	width: 100%; height:auto; min-height:600px;
-	background-color: #cdf;
+	/* background-color: #cdf; */
 }
 
 h2{
@@ -32,10 +32,8 @@ h2{
 
 .card { 
 	/* float: left; */
-	border:1px solid #333;
-
+	/* border:1px solid #333; */
 	position:absolute;
-
 	width:250px; height:350px; 
 	background-color: #fff;
 	box-sizing: border-box;
@@ -48,6 +46,7 @@ h2{
 	}
 	.card > a:hover,
 	.card > a:focus{
+		z-index:1000;
 		transform:scale(1.1);
 		box-shadow:0.2rem 0.2rem 0.2rem #379;;
 	}

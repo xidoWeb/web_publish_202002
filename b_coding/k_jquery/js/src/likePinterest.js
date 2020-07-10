@@ -20,7 +20,9 @@
 	// --------------------------------------
 	// 불러올 카드 높이값 설정
 	var cardHeight = [];
-	for(var i=0; i<1000; i+=1){
+	var maxCardLength = 1000;
+
+	for(var i=0; i<maxCardLength; i+=1){
 		cardHeight[i] = parseInt(Math.random() * 600) + 200;
 	}
 
@@ -67,7 +69,7 @@
 		var nowScroll = win.scrollTop();
 		var cardOffset = card.offset().top - win.outerHeight();
 
-		if(nowScroll >= cardOffset){
+		if(nowScroll >= cardOffset && jCount <= maxCardLength){
 			RepeatCard(25);
 		}
 	});
