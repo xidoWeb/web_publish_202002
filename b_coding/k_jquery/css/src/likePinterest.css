@@ -34,25 +34,38 @@ h2{
 	/* float: left; */
 	/* border:1px solid #333; */
 	position:absolute;
-	width:250px; height:350px; 
-	background-color: #fff;
+	width:250px; height:auto; 
+	background-color: rgba(255,255,255,0.5);
 	box-sizing: border-box;
 	padding:0.5rem;
+	display: none;
+	transition:all 500ms ease;
+	border-radius:0.7rem;
+	color:#171717;
+	overflow: hidden;
  }
  .card > a{
 	 display: block; width: 100%; height: 100%;
-	 background-color: #fff;
-	 transition:all 300ms ease;
+	 background-color:inherit;	 
 	}
-	.card > a:hover,
-	.card > a:focus{
-		z-index:1000;
-		transform:scale(1.1);
-		box-shadow:0.2rem 0.2rem 0.2rem #379;;
-	}
+
+	/* .card > a:after{
+		content:" ";	display: block;	
+		position: absolute; top: 0; left: 0;
+		width: 100%; height: 100%;
+		background-color: rgba(0,0,0,0);
+		transition: all 200ms ease;
+	} */
+
+	/* .card > a:hover:after,
+	.card > a:focus:after{	
+		background-color: rgba(0,0,0,0.3);
+	} */
 
 	.link_area {
 		width: 100%; height:calc(100% - 40px);
+		padding:1rem;
+		box-sizing: border-box;
 		background-color: #7af;
 		border-radius:0.5rem;
 		font-size:5rem; color:#fff;
@@ -63,7 +76,7 @@ h2{
  .link_area img{width: 100%; height:auto;}
 
  .text_area{
-	 width:100%; height:40px; 
+	 width:100%; height:auto; 
 	 box-sizing: border-box;
 	 padding: 0.5rem;
 	 font-size:0.875rem;
