@@ -1,0 +1,78 @@
+
+#wrap{
+	width: 1400px; height:auto; min-width:600px;
+	padding:30px; padding-top:120px;
+	margin:auto; background-color: #ddd;
+}
+
+#headBox {
+	position: fixed; top: 0; left: 0; right: 0; z-index:1500;
+	width:auto; height:60px; 
+	padding:10px 50px; margin:auto;	border-bottom:1px solid #777;
+	background-image:linear-gradient(#999, #777);
+	background-color: #aaa;
+	color:#fff;
+}
+
+#cardBox{
+	width: 100%; height:auto; min-height:600px;
+	background-color: #cdf;
+}
+
+h2{
+	background-color: #077;
+	padding:0.5rem; color:#fff;
+	margin-bottom:3rem;
+}
+
+.card_wrap{
+	position: relative;	width: 100%; height:auto;
+}
+
+.card { 
+	width:250px; height:350px; 
+	background-color: #fff;
+	box-sizing: border-box;
+	padding:0.5rem;
+ }
+ .card > a{
+	 display: block; width: 100%; height: 100%;
+	 background-color: #fff;
+	 transition:all 300ms ease;
+	}
+	.card > a:hover,
+	.card > a:focus{
+		transform:scale(1.1);
+		box-shadow:0.2rem 0.2rem 0.2rem #379;;
+	}
+
+	.link_area {
+		width: 100%; height:calc(100% - 40px);
+		background-color: #7af;
+		border-radius:0.5rem;
+		font-size:5rem; color:#fff;
+		font-weight: bold;
+		text-shadow:0.3rem 0.3rem 0.3rem #379;
+		text-align: right;
+ }
+ .link_area img{width: 100%; height:auto;}
+
+ .text_area{
+	 width:100%; height:40px; 
+	 box-sizing: border-box;
+	 padding: 0.5rem;
+	 font-size:0.875rem;
+	 
+	 overflow: hidden;
+	 white-space: nowrap;
+	 text-overflow:ellipsis;
+
+	 /* overflow: hidden;
+	 white-space: normal;
+	 text-overflow: ellipsis;
+	 word-break: break-word;
+	 display:-webkit-box;
+	-webkit-lin-clamp:4;
+	-webkit-box-orient:vertical; */
+
+ }
