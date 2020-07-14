@@ -142,38 +142,44 @@ var movePoint;   // 마우스 이동시(pageX) 계산 결과값
 p03Wrap.css({position:'relative'});
 var l = 0;
 var p03True = true;
+var p03moveOn = false;
 
-part_03.on('touchstart', function(e){
+part_03.on('touchstart mousedown', function(e){
 	if(p03True){
 		p03True = false;
+		
 		var eType = e.type;
-		var posX = e.touches[0].pageX;
+		var posX;
+		
+		if(eType == 'touchstart'){
+			posX = e.touches[0].pageX;
+		}else if(eType == 'mousedown'){
+			p03moveOn = true;
+			posX = e.originalEvent.pageX;
+		}
 		startPoint = posX;
 	}
 });
 
-part_03.on('touchmove', function(e){
-	var eType = e.type;
-	var posX = e.changedTouches[0].pageX;	
+part_03.on('touchmove mousemove', function(e){
+	var eType = e.type;	var posX;
+	
+	if(eType == 'touchmove'){	posX = e.changedTouches[0].pageX;		}
+	else if(eType == 'mousemove' && p03moveOn == true){	posX = e.originalEvent.pageX;	}
+
 	movePoint = startPoint - posX;		
 	p03Wrap.css({left: -movePoint +'px'});
 });
 
+part_03.on('touchend mouseup', function(e){	
+	if(movePoint > 150 && l < p03List.length-1){ l += 1; }
+	else if(movePoint < -150 && l > 0){ l -= 1; }
+	else{	l = l;	}		
 
-
-part_03.on('touchend', function(e){
-	if(movePoint > 150 && l < p03List.length-1){
-		l += 1;
-	}else if(movePoint < -150 && l > 0){
-		l -= 1;
-	}else{
-		l = l;
-	}
-
+	p03moveOn = false;
 	p03Wrap.animate({left:0, marginLeft : -p03MarginLeft[l]}, 300, function(){
 		p03True = true;
 	});
-
 });
 
 
