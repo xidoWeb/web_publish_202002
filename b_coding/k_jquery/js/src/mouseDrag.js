@@ -122,5 +122,22 @@ part_02.on('touchend mouseup', function(e){
 	touchOn = false;
 	doubleClick = true;
 });
+//  ==========================================================
+//  part_03
+
+var part_03 = $('.part_03');
+var p03Wrap = part_03.children('.slide_wrap');
+var p03List = p03Wrap.children('div');
+
+var p03MarginLeft = [];
+var i=0; 
+for(; i < p03List.length; i++){
+	p03MarginLeft[i] = p03List.eq(i).offset().left - p03List.eq(0).offset().left;
+}
+console.log(p03MarginLeft);
+
+part_03.on('touchstart mousedown', function(){});
+part_03.on('touchmove mousemove', function(){});
+part_03.on('touchend mouseup', function(){});
 	
 })(jQuery);
