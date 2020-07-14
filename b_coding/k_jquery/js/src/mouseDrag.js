@@ -71,17 +71,42 @@ part_02.css({cursor:'move'});
 
 // 최초위치(marginLeft) - 터치첫지점 - 터치이동지점 * -1
 var startPosX;
+var touchOn = false;
+var doubleClick = true;
 
-part_02.on('touchstart', function(e){
-	var start = e.touches[0].pageX;
-	var part_02Left = parseInt( part_02Wrap.css('marginLeft') );
+part_02.on('touchstart mousedown', function(e){
+	var start;
+	var part_02Left;
+	var eType = e.type;
+
+	// e.which 기능으로 마우스 왼버튼,오른버튼,가운데버튼 등 다양한 옵션설정을 추가로 해야한다.
+
+	if(eType == 'touchstart'){
+		start = e.touches[0].pageX;
+	}else if(eType == 'mousedown' && e.which == 1 && doubleClick){
+		start = e.originalEvent.pageX;
+		touchOn = true;
+		doubleClick = false;
+	}
+
+	part_02Left = parseInt( part_02Wrap.css('marginLeft') );
 	startPosX = part_02Left - start;
 });
+// ---------------------
 
-part_02.on('touchmove', function(e){
-	var nowPosX = e.changedTouches[0].pageX;
-	var nowMoveX = parseInt(startPosX - nowPosX * -1);
-	// console.log(nowMoveX);
+part_02.on('touchmove mousemove', function(e){
+	var nowPosX;
+	var nowMoveX;
+	var eType = e.type;
+	
+	if(eType == 'touchmove'){
+		nowPosX = e.changedTouches[0].pageX;
+	}else if(eType == 'mousemove' && touchOn == true){
+		nowPosX = e.originalEvent.pageX;
+	}
+
+	nowMoveX = parseInt(startPosX - nowPosX * -1);
+
 	if(nowMoveX > 0){
 		nowMoveX = 0;
 	}else if( nowMoveX <= -(p02Width - part02MinWidth) ){
@@ -90,8 +115,12 @@ part_02.on('touchmove', function(e){
 		part_02Wrap.css({marginLeft:nowMoveX + 'px'});
 	}
 
-
 });
 
+part_02.on('touchend mouseup', function(e){	
+	e.preventDefault();
+	touchOn = false;
+	doubleClick = true;
+});
 	
 })(jQuery);
