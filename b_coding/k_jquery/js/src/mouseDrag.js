@@ -122,6 +122,7 @@ part_02.on('touchend mouseup', function(e){
 	touchOn = false;
 	doubleClick = true;
 });
+
 //  ==========================================================
 //  part_03
 
@@ -134,10 +135,46 @@ var i=0;
 for(; i < p03List.length; i++){
 	p03MarginLeft[i] = p03List.eq(i).offset().left - p03List.eq(0).offset().left;
 }
-console.log(p03MarginLeft);
 
-part_03.on('touchstart mousedown', function(){});
-part_03.on('touchmove mousemove', function(){});
-part_03.on('touchend mouseup', function(){});
-	
+var startPoint;  // 클릭시 위치값(pageX) 최초츼 계산값
+var movePoint;   // 마우스 이동시(pageX) 계산 결과값
+
+p03Wrap.css({position:'relative'});
+var l = 0;
+var p03True = true;
+
+part_03.on('touchstart', function(e){
+	if(p03True){
+		p03True = false;
+		var eType = e.type;
+		var posX = e.touches[0].pageX;
+		startPoint = posX;
+	}
+});
+
+part_03.on('touchmove', function(e){
+	var eType = e.type;
+	var posX = e.changedTouches[0].pageX;	
+	movePoint = startPoint - posX;		
+	p03Wrap.css({left: -movePoint +'px'});
+});
+
+
+
+part_03.on('touchend', function(e){
+	if(movePoint > 150 && l < p03List.length-1){
+		l += 1;
+	}else if(movePoint < -150 && l > 0){
+		l -= 1;
+	}else{
+		l = l;
+	}
+
+	p03Wrap.animate({left:0, marginLeft : -p03MarginLeft[l]}, 300, function(){
+		p03True = true;
+	});
+
+});
+
+
 })(jQuery);
