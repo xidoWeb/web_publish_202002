@@ -46,6 +46,16 @@
 		e.preventDefault();
 		var thisIndex = $(this).parent('li').index();
 		cardIndex = thisIndex;
+		// --------------------------------
+			// gallery 창에 내용 삽입
+			var gDataI =  gData[cardIndex].gallery;
+	var imgUrl = '../img/minicake/macaron/';
+			gallery.find('.img_bg').css({backgroundImage:'url('+ imgUrl + gDataI.image +')',
+																	backgroundSize:'cover', backgoundRepeat:'no-repeat'
+																	});
+			gallery.find('dt').text(gDataI.title);
+			gallery.find('dd').eq(0).text(gDataI.content);
+		// --------------------------------
 		gallery.addClass('active');
 	});
 
