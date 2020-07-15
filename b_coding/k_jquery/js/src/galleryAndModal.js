@@ -12,10 +12,13 @@
 	var galleryLink = gallery.find('a');
 	var detail   = $('.detail_wrap');
 	var detailClose = detail.find('.detail_close');
+	var detailBg = detail.find('.dteail_background');
+	var cardIndex;
 
 	conLi.on('click', 'a' , function(e){
 		e.preventDefault();
 		var thisIndex = $(this).parent('li').index();
+		cardIndex = thisIndex;
 		gallery.addClass('active');
 	});
 
@@ -27,16 +30,21 @@
 	galleryLink.on('click', function(e){
 		e.preventDefault();
 		gallery.removeClass('active');
-		
+
 		detail.fadeIn(function(){
 			detailClose.find('button').focus();
 		});
 	});
-
-	detailClose.on('click', function(e){
+　　
+	// -------------------------------------
+  var detailHide = function(e){
 		e.preventDefault();
 		detail.fadeOut();
-	});
+		conLi.eq(cardIndex).find('a').focus();
+	};
 
+	detailClose.on('click', detailHide);
+	detailBg.on('click', detailHide);	
+ // --------------------------------------
 
 })(jQuery);
