@@ -141,13 +141,12 @@ var movePoint;   // 마우스 이동시(pageX) 계산 결과값
 
 p03Wrap.css({position:'relative'});
 var l = 0;
-var p03True = true;
-var p03moveOn = false;
+var p03True = true;  // 마우스 수행에따라 중복처리현상을 막기위한
+var p03moveOn = false; // 마우스를 누르고있는상황에서 마우스를 움직일때 수행하기위한 처리 (드래그처리)
 
 part_03.on('touchstart mousedown', function(e){
 	if(p03True){
 		p03True = false;
-		
 		var eType = e.type;
 		var posX;
 		
@@ -162,13 +161,17 @@ part_03.on('touchstart mousedown', function(e){
 });
 
 part_03.on('touchmove mousemove', function(e){
-	var eType = e.type;	var posX;
-	
-	if(eType == 'touchmove'){	posX = e.changedTouches[0].pageX;		}
-	else if(eType == 'mousemove' && p03moveOn == true){	posX = e.originalEvent.pageX;	}
+	var eType = e.type;	
+	var posX;
+
+	if(eType == 'touchmove'){	
+		posX = e.changedTouches[0].pageX;		
+	}else if(eType == 'mousemove' && p03moveOn){
+		posX = e.originalEvent.pageX;	
+	}
 
 	movePoint = startPoint - posX;		
-	p03Wrap.css({left: -movePoint +'px'});
+	p03Wrap.css({left: -movePoint +'px'}); 
 });
 
 part_03.on('touchend mouseup', function(e){	
