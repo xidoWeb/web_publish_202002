@@ -2,10 +2,37 @@
 
 (function($){
 	// card list 생성
+	var galleryModalData;
+	$.ajax({
+		url:'../data/gallleryModalData.json',
+		async:false,
+		success:function(data){
+			// console.log(data);
+			galleryModalData = data;
+		}
+	});
+	console.log(galleryModalData);
+
+	var cardCon = '<li><a href="#"><figure class="img_wrap"><img src="" alt=""><figcaption class="hidden"></figcaption></figure><dl><dt></dt><dd></dd></dl></a></li>';
+	var imgUrl = '../img/minicake/macaron/';
+
+	var conBox = $('#conBox');
+	var conUl = conBox.children('ul');
+	var selLi;
+	// ----------------------------
+	var gData = galleryModalData;
+	for(var i=0; i<gData.length; i++){
+		conUl.append(cardCon);
+		selLi = conUl.children('li').eq(i);
+		selLi.find('img').attr({src:imgUrl + gData[i].thumb.img.src , 
+														alt:gData[i].thumb.img.alt});
+		selLi.find('figcaption').text(gData[i].thumb.img.narr);
+		selLi.find('dt').text(gData[i].thumb.title);
+		selLi.find('dd').text(gData[i].thumb.content);
+	}
 
 	// ----------------------------
 	// 카드 클릭시 갤러리 창 띄우기
-	var conBox = $('#conBox');
 	var conLi  = conBox.find('li');
 	var gallery = $('.gallery_wrap');
 	var galleryClose = gallery.find('.close_btn');
