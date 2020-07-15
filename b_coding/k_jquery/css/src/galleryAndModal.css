@@ -19,6 +19,8 @@ h1{
 	position: relative;
 	width: 100%; height:auto;
 	background-color: #faa;
+	overflow-x: hidden;
+	overflow-y: visible;
 }
 #conBox > .thum_list{
 	width: 100%; height:auto;
